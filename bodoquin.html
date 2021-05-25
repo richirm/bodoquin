@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./bodoquin.css"/>
+  </head>
+  <body>
+    <header>
+      <h1 class="titulo_principal" id="titulo_bodoquin">Bodoquin</h1>
+      
+      <div class="burbuja burbuja_principal">3</div>
+      
+      <!-- usuario -->
+      <!-- buscador -->
+      <!-- logo -->
+      <!-- herramientas -->
+    </header>
+    
+    <nav>
+      <!-- menu navegacion -->
+    </nav>
+    
+    <main>          
+      <div>
+        <div class="tarjeta">
+          <h1>
+            <span>
+              Tortas
+              <div class="burbuja tarjeta_burbuja">2</div>
+            </span>
+          </h1>         
+          
+          <h3><span>Tortas humedas</span></h3>
+
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <a 
+                    class="tarjeta_producto"
+                    href="https://www.google.com/" 
+                    target="_blank">
+                    <span>torta de leche </span>
+                  </a>
+                </th>
+                <th>
+                  <a 
+                    class="tarjeta_producto"
+                    href="https://web.facebook.com/" 
+                    target="_blank"><span>selva negra</span></a>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <img 
+                    height="150px" 
+                    src="./assets/img/img_pastel_de_fresa.jpg" />
+                </td>
+                <td>
+                  <img 
+                    height="150px"
+                    src="./assets/img/img_pastel_selva_negra.jpg" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <br/>
+        </div>
+        
+        <div class="tarjeta">
+          <h1>
+            <span>
+              Kekes
+              <div class="burbuja tarjeta_burbuja">2</div>
+            </span>
+          </h1> 
+          
+          <h3><span>Kekes de piña</span></h3>
+          
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <a 
+                    class="tarjeta_producto"
+                    href="https://www.google.com/" 
+                    target="_blank"><span>keke de piña 1</span></a>
+                </th>
+                <th>
+                  <a 
+                    class="tarjeta_producto"
+                    href="https://web.facebook.com/" 
+                    target="_blank"><span>keke de piña 2</span></a>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <img 
+                    height="150px" 
+                    src="./assets/img/kekek_pina_1.jpg" />
+                </td>
+                <td>
+                  <img 
+                    height="150px"
+                    src="./assets/img/kekek_pina_2.jpg" />
+                </td>
+              </tr>
+            </tbody>
+          </table>    
+
+          <br/><br/>        
+        </div>
+        
+        <div class="tarjeta">
+          <h1>
+            <span>
+              Pedido
+              <div class="burbuja tarjeta_burbuja">1</div>
+            </span>
+          </h1> 
+      
+          <form>
+            <label>Nombre postre*: </label>
+            <input 
+              name="nombre_postre"
+              type="text" 
+              required 
+              placeholder="Ingrese el nombre..." />
+            
+            <br/>
+            
+            <label>Cantidad*: </label>
+            <input 
+              name="cantidad"
+              type="number" 
+              required />
+            
+            <br/>
+            
+            <label>Correo*: </label>
+            <input 
+              name="correo"
+              type="email" 
+              required />
+                  
+            <br/>
+            
+            <label>Departamento: </label>
+            <select name="departamento">
+              <option>Lima</option>
+              <option>Arequipa</option>
+              <option>Cuzco</option>
+            </select>
+                  
+            <br/>
+            
+            <label>Provincia: </label>
+            <select name="provincia">
+              <option>Lima</option>
+              <option>Callao</option>
+            </select>
+                  
+            <br/>
+            
+            <label>Distrito: </label>
+            <select name="distrito">
+              <option>Villa Maria</option>
+              <option>San Juan M.</option>
+              <option>Independencia</option>
+            </select>
+                  
+            <br/>
+            
+            <label>Comentario: </label>
+            <textarea name="comentario"></textarea>
+            
+            <br/><br/>
+            <button type="button" onClick="realizarPedido();">Realizar pedido</button>
+            <button type="button" onClick="agregarPedido();">Agregar al carrito</button>
+          </form>
+
+          <br/><br/>
+        </div>
+        
+        <div class="tarjeta">
+          <h1>
+            <span>
+              Socios bodoquin
+              <div class="burbuja tarjeta_burbuja">4</div>
+            </span>
+          </h1>
+      
+          <table>
+            <thead>
+              <tr>
+                <th>N°</th>
+                <th>Primer Apellido</th>
+                <th>Segundo Apellido</th>
+                <th>Nombres</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Rosales</td>
+                <td>Maldonado</td>
+                <td>Ricardo Alfredo</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Rosales</td>
+                <td>Maldonado</td>
+                <td>David Daniel</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Ayala</td>
+                <td>Rivera</td>
+                <td>Yoisi</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Chipana</td>
+                <td>Isidro</td>
+                <td>Vanessa</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <p>
+            Esta aplicación se ha realizado gracias a la colaboración de nuestro desarrolladores expertos
+          </p>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <!-- datos de contactabilidad -->
+    </footer>
+
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    
+    <script src="./bodoquin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+h1 {
+  color: #ff0000;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(./assets/fonts/Roboto/Roboto-Light.ttf);
+}
+
+* {
+  font-family: Roboto;
+}
+
+.titulo_principal {
+  font-size: 50px;  
+}
+
+#titulo_bodoquin {
+  font-style: oblique;
+}
+
+.tarjeta {
+  border: 1px solid #ccc;
+  box-shadow: 3px 4px #ccc;  
+  background-color: #9098b514;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.tarjeta h1 {
+  color: #e32d8b;
+}
+
+.tarjeta h3 {
+  color: blue;
+  font-size: 20px;
+}
+
+.tarjeta h3 span:hover {
+  background-color: red;
+}
+
+.tarjeta h1 span {
+  position: relative;
+}
+
+.tarjeta .tarjeta_producto {
+  color: green;
+}
+
+.tarjeta:first-child .tarjeta_producto {
+  font-size: 20px;
+}
+
+.tarjeta:nth-child(2) .tarjeta_producto {
+  font-style: oblique;
+}
+
+.burbuja {
+  width: 30px;
+  height: 24px;
+  background-color: blue;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 4px;
+  border-radius: 50%;
+}
+
+.burbuja_principal {
+  position: absolute;
+  top: 40px;
+  left: 203px;
+}
+
+.tarjeta_burbuja {
+  position: absolute;
+  top: -9px;
+  right: -19px;
+  font-size: 17px;
+}
+
+input:disabled {
+  border: 1px solid red;
+}
+
+input:focus {
+  border: 1px solid blue;
+  width: 200px;
+}
+
+input:not(:disabled) {
+  border: 1px solid green;
+}
+
+table {
+  width: 100%;
+}
+
+table td {
+  width: 50%;
+}
+
+table td img {
+  width: 100%;
+}

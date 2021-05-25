@@ -21,6 +21,17 @@ Aplicación bodoquin
         null
         objetos
         arrays
-  - GIT: herramienta para sincronizar trabajo y código fuente      
+  - GIT: herramienta para sincronizar trabajo y código fuente  
+      comandos:
+        git clone <url>
+  - GITHUB: repositorio web para proyectos git
+  - tortoise git: herramienta de interfaz grafica para ejecutar operaciones con GIT
+        
+        
+        
+        
+        
+        
+        
    
   

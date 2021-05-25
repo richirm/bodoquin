@@ -28,6 +28,7 @@ Aplicación bodoquin
         git add .
         git commit -m "comentario"
         git push origin master
+        git pull origin master
   - GITHUB: repositorio web para proyectos git
   - tortoise git: herramienta de interfaz grafica para ejecutar operaciones con GIT
         

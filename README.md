@@ -24,6 +24,10 @@ Aplicación bodoquin
   - GIT: herramienta para sincronizar trabajo y código fuente  
       comandos:
         git clone <url>
+        git status
+        git add .
+        git commit -m "comentario"
+        git push origin master
   - GITHUB: repositorio web para proyectos git
   - tortoise git: herramienta de interfaz grafica para ejecutar operaciones con GIT
         

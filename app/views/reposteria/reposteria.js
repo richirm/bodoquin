@@ -37,7 +37,7 @@ function realizarPedido() {
     comentario: comentario,
   };
   
-  console.log(pedido);  
+  console.log(pedido);
 }
 
 function agregarPedido() {

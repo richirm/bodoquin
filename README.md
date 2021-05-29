@@ -28,10 +28,10 @@ Aplicación bodoquin
       comandos:
         git --version
         git clone <url>  => descarga todo el repositorio en tu local
-        git status        
-        git add .        
-        git commit -m "comentario"        
-        git push origin master        
+        git status =>nos muestra los archivos que han sido modificados        
+        git add .      => preconfirmacion de archivos modificados  
+        git commit -m "comentario"   => confirmacion final de los archivos     
+        git push origin master       => los archivos confirmados se suben al repositorio 
         git pull origin master     => descarga los ultimos cambios del repositorio en tu local.    
   - GITHUB: servidor o repositorio web para proyectos git
   - tortoise git: herramienta de interfaz grafica para ejecutar operaciones con GIT de manera simple

@@ -26,13 +26,14 @@ Aplicación bodoquin
 3. Herramientas:
   - GIT: herramienta para sincronizar trabajo y código fuente y nos sirve para ver el historial de cambios de un archivo  
       comandos:
-        git --version
+        git --version => me indica la versión instalada del git
         git clone <url>  => descarga todo el repositorio en tu local
         git status =>nos muestra los archivos que han sido modificados        
         git add .      => preconfirmacion de archivos modificados  
         git commit -m "comentario"   => confirmacion final de los archivos     
         git push origin master       => los archivos confirmados se suben al repositorio 
-        git pull origin master     => descarga los ultimos cambios del repositorio en tu local.    
+        git pull origin master     => descarga los ultimos cambios del repositorio en tu local.   
+        git diff <nombre-archivo> => muestra los cambios realizados en el archivo
   - GITHUB: servidor o repositorio web para proyectos git
   - tortoise git: herramienta de interfaz grafica para ejecutar operaciones con GIT de manera simple
 

@@ -1,0 +1,26 @@
+h1 {
+  color: #3e440c91;
+  
+}
+h3{
+  color: #3e440c91;
+}
+
+body{
+  background-color: rgb(172 169 202 / 32%);
+}
+@font-face {
+  font-family: roboto;
+ 
+}
+
+* {
+  font-family: roboto;
+  
+}
+
+.titulo_principal {
+  font-size: 41px;
+  text-align:center;
+  
+}

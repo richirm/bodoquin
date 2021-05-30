@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <link rel="stylesheet" href="./juguetes.css"/>
+  </head>
+  <body>
+    <header>
+      <h1 class="titulo_principal" id="titulo_bodoquin">Juguetes</h1>
+    
+      <div class="diseño diseño_principal">5</div>
+    </header>
+    
+    <nav>
+    </nav>
+    
+    <main>  
+      <div>
+        <div class="tarjeta">
+          <h2>
+            <span>
+              Juguetes
+              <div class="diseño tarjeta_diseño">5</div>
+            </span>
+          </h2>
+          
+          <h3><span>Juguetes de 0-2</span></h3>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                    <a
+                      class="tarjeta_producto"
+                      href="https://www.google.com/"
+                      target="_blank"><span>piano</span></a>
+                </th>
+                <th>
+                    <a
+                      class="tarjeta_producto"
+                      href="https://www.facebook.com/"
+                      target="_blank"><span>juguete tortuga</span></a>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                    <img 
+                      width="200px"
+                      height="150px"
+                      src="../../../assets/img/piano.jpg"/>
+                </td>
+                <td>
+                    <img 
+                        width="200px" 
+                        height="150px"
+                        src="../../../assets/img/tortuga.jpg"/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      
+        <div class="tarjeta">
+          <h2>Juguetes </h2>
+          <h3><span>juguetes 3-5</span></h3> 
+
+          <br/>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                    <a
+                      class="tarjeta_producto"
+                      href="https://www.google.com/"
+                      target="_blank"><span>muñeco</span></a>
+                </th>
+                <th>
+                    <a
+                      class="tarjeta_producto"
+                      href="https://www.facebook.com/"
+                      target="_blank"><span>coche</span></a>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                    <img 
+                      width="200px"
+                      height="150px"
+                      src="../../../assets/img/muñeco.jpg"/>
+                </td>
+                <td>
+                    <img 
+                      width="200px"
+                      height="150px"
+                      src="../../../assets/img/coche.jpg"/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="tarjeta">
+          <h1>Pedidos:</h1>
+
+          <form>
+            <label>Nombre postre*: </label>
+            <input type="text" />
+            
+            <br/>
+            
+            <label>Cantidad*: </label>
+            <input type="text" />
+            
+            <br/>
+            
+            <label>Correo*: </label>
+            <input type="text" />
+            
+            <br/>
+            
+            <label>Departamento: </label>
+            <select>
+              <option>Lima</option>
+              <option>Callao</option>
+              <option>Cuzco</option>
+            <select>
+            
+            <br/>
+            
+            <label>Distrito: </label>
+            <select name="distrito">
+              <option>Villa Maria</option>
+              <option>CSan juan de miraflores</option>
+              <option>Independencia</option>
+            </select>
+            
+            <br/>
+            
+            <label>Comentario: </label>
+            <textarea name="comentario"></textarea>
+            
+            <br/> <br/>
+            <button"onClick="realizarPedido();">Realizar pedido</button>
+          </form>
+          
+          <br/><br/>
+        </div>
+        
+        <div class="tarjeta">
+          <h2>Socios bodoquin: </h2>      
+          
+          <table>
+            <thead>
+              <tr>
+                <th>N°</th>
+                <th>Primer apellido</th>
+                <th>Segundo apellido</th>
+                <th>Nombres</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Rosales</td>
+                <td>Maldonado</td>
+                <td>Ricardo Alfredo</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Rosales</td>
+                <td>Maldonado</td>
+                <td>David Daniel</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Rosales</td>
+                <td>Maldonado</td>
+                <td>Robert</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    
+    <script src="./bodoquin.js"></script>
+    
+  </body>
+</html>

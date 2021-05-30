@@ -1,0 +1,94 @@
+h1 {
+  color: #f6f0f0;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(./asset/fonts/Roboto/Roboto-Light.ttf);
+}
+
+.titulo_principal {
+  font-size: 50px;
+  background-color: #bf5fcab0;
+}
+
+#titulo_bodoquin {
+  font-style: italic;
+}
+
+.tarjeta {
+  border: 1px solid #ccc;
+  box-shadow: 3px 4px #e014d942;
+  padding: 10px;
+  background-color: #9035d514;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+input:disabled {
+  border: 1px solid red;
+}
+
+input:focus {
+  border: 1px solid red;
+  width: 200px;
+}
+
+input:not(:disabled) {
+  border: 1px solid green;
+}
+
+.tarjeta h1 {
+  color: #c351d1;
+
+}
+
+@font-face {
+  font-family
+}
+
+.tarjeta h2 {
+  color: #ae47c6;
+  font-size: 35px;
+
+}
+.tarjeta h3 {
+  color: #9035d5de;
+  font-size: 25px;
+}
+
+.tarjeta h3 span:hover {
+  background-color:#bf5fcaa6;
+}
+
+.tarjeta .tarjeta_producto {
+  color: #9035d5de;
+}
+
+.tarjeta:first-child .tarjeta_producto {
+  font-size: 20px;
+}
+
+.diseño_principal {
+  position: absolute;
+  top: 40px;
+  left: 203px;
+}
+
+.tarjeta_diseño {
+  position: absolute;
+  top: 23px;
+  left:100px;
+}
+
+.diseño {
+  width: 30px;
+  height: 24px;
+  background-color: #ae47c6;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 4px;
+  border-radius: 50%;
+  position: relative;
+}
+

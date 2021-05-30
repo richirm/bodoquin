@@ -36,6 +36,9 @@ Aplicación bodoquin
         git diff <nombre-archivo> => muestra los cambios realizados en el archivo
   - GITHUB: servidor o repositorio web para proyectos git
   - tortoise git: herramienta de interfaz grafica para ejecutar operaciones con GIT de manera simple
+  
+4. Metodología del proyecto:
+  - SCRUM: es una metodología agil para dividirnos el desarrollo
 
   
         

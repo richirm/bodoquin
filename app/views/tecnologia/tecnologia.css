@@ -1,0 +1,99 @@
+h1 {
+  color: red;
+}
+h3{
+  color: red;
+}
+
+body{
+  background-color: #e9ff0021;
+}
+@font-face {
+  font-family: roboto;
+  src: url(
+  )
+}
+
+* {
+  font-family: roboto;
+  
+}
+
+.titulo_principal {
+  font-size: 41px;
+}
+
+
+
+
+
+    
+.tarjeta {
+  border: 1px solid #ccc;
+  box-shadow: 6px -2px 12px 4px #ccc;
+  padding: 10px;
+  background-color: #9098b514;
+  margin: 10px;
+  border-radius: 20px; 
+  width: 450px
+}
+.tarjeta h1 span {
+  border: 1px solid #ccc;
+  box-shadow: inset -4px -2px 11px 6px #ccc;
+  padding: 10px;
+  background-color:  rgb(121 196 110 / 8%);
+  margin: 10px;
+  border-radius: 20px; 
+}
+
+.tarjeta h1 {
+  color: green;
+}
+.tarjeta h1 span:hover {
+  background-color: pink; 
+}
+
+
+.titulo h3 span:hover {
+  background-color: pink; 
+}
+.tarjeta_burbuja:hover {
+  background-color: red; 
+}
+
+
+.tarjeta .tarjeta_productofirst-child {
+  color: blue ;
+  font-size: 20px;
+}
+
+
+.tarjeta h1 span{
+  position: relative
+}
+
+
+.burbuja_principal{
+  background-color: blue;
+  position: absolute;
+  top: 40px;
+  left: 203px;
+}
+.tarjeta_burbuja{
+  position: absolute;
+  top: -9px;
+  right: -19px;
+  font-size: 17px;
+}
+
+  
+
+
+input:focus{
+  border: 1px red;
+  width: 200px;
+}
+
+input:not(:disabled){
+  border: 1px solid green 
+}

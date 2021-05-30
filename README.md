@@ -46,6 +46,10 @@ Aplicación bodoquin
   
 4. Metodología del proyecto:
   - SCRUM: es una metodología agil para dividirnos el desarrollo
+    - feature => una mejora 
+    - backlog => conjunto de tareas o mejoras a realizar (features)
+      - implementar panel de efectos 3D
+      - implementar zoom de imagen
 
   
         

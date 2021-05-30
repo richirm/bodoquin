@@ -19,7 +19,9 @@
       <!-- menu navegacion -->
     </nav>
     
-    <main>          
+    <main> 
+      <span class="oferta"></span>
+      
       <div>
         <div class="tarjeta">
           <h1>
@@ -137,6 +139,7 @@
             <input 
               name="cantidad"
               type="number" 
+              onkeyup="construirOferta('selva negras', 'porciones de gelatinas')"
               required />
             
             <br/>

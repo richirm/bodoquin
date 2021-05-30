@@ -23,6 +23,13 @@ Aplicación bodoquin
         objects => { }
         arrays => [ ]
         
+      Operaciones entre variables:
+        - operaciones entre numeros (sumas, restas, etc...)
+        - operaciones entre textos
+          - textos simples (concatenación)
+          - textos complejos (reemplazar variables en un texto)  
+          - Construir un mensaje del HTML usando javascript        
+        
 3. Herramientas:
   - GIT: herramienta para sincronizar trabajo y código fuente y nos sirve para ver el historial de cambios de un archivo  
       comandos:

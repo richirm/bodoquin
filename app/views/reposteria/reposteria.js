@@ -63,3 +63,12 @@ function agregarPedido() {
   
   console.log(pedidos);
 }
+
+function construirOferta(desProducto, desRegalo) {
+  var cantProductos = document.querySelector('[name="cantidad"]').value;
+  var cantRegalos = cantProductos / 2;
+  
+  var desOferta = `Compra ${cantProductos} ${desProducto} y te ganas ${cantRegalos} ${desRegalo}`;
+  
+  document.querySelector('.oferta').innerHTML = desOferta;
+}

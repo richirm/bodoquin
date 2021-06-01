@@ -47,9 +47,32 @@ Aplicación bodoquin
 4. Metodología del proyecto:
   - SCRUM: es una metodología agil para dividirnos el desarrollo
     - feature => una mejora 
-    - backlog => conjunto de tareas o mejoras a realizar (features)
-      - implementar panel de efectos 3D
-      - implementar zoom de imagen
+    - pesos: 1, 2, 3, 5, 8
+    - Features: (Lista de tareas - tablero KANBAN)      
+      - Implementar un header para la aplicación (Dani - 5)
+        - colocar un logo
+        - input de busqueda
+        - icono del usuario de sesión
+      - Implementar un header comprimido al bajar el scroll (Vanessa - 5)
+        - colocar un logo
+        - input de busqueda
+        - icono del usuario de sesión
+      - Implementar un menu colapsable con las 4 vistas (Yoisi - 5)
+        - colocar un icono de menu en el header para mostrar el menu
+      - Implementar los 4 accesos a las vistas en el header (Ricardo - 2)
+    - backlog => conjunto de tareas o mejoras a realizar (features futuros)
+      - Implementar una home (Dani)
+        - poner 4 tarjetas descriptivas de las lineas de productos 
+        - poner 4 tarjetas de ofertas
+      - Implementar un footer con los datos de contactabilidad (Vanessa)
+      - Implementar en cada vista un panel para información del producto (Yoisi)
+        - mostrar imagen
+        - titulo
+        - precio
+        - boton agregar
+      - Implementar un formulario de sesión (Ricardo)
+      
+    
 
   
         

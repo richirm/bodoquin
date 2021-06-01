@@ -22,11 +22,6 @@ body{
 .titulo_principal {
   font-size: 41px;
 }
-
-
-
-
-
     
 .tarjeta {
   border: 1px solid #ccc;
@@ -45,6 +40,15 @@ body{
   margin: 10px;
   border-radius: 20px; 
 }
+.burbuja {
+  width: 30px;
+  height: 24px;
+  background-color: blue;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 4px;
+  border-radius: 50%;
+}
 
 .tarjeta h1 {
   color: green;
@@ -62,10 +66,6 @@ body{
 }
 
 
-.tarjeta .tarjeta_productofirst-child {
-  color: blue ;
-  font-size: 20px;
-}
 
 
 .tarjeta h1 span{

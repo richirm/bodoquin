@@ -1,17 +1,10 @@
-h1 {
-  color: red;
-}
-h3{
-  color: red;
+body {
+  margin: 0;
 }
 
-body{
-  background-color: #32183269;
-}
 @font-face {
   font-family: roboto;
-  src: url(
-  )
+  src: url(../../../assets/fonts/Roboto/Roboto-Light.ttf);
 }
 
 * {
@@ -19,8 +12,31 @@ body{
   
 }
 
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #80a3ea;
+  z-index: 2;
+  padding: 10px;
+}
+
+main {
+  margin-top: 102px;
+  padding-top: 10px;
+}
+
+h1 {
+  color: red;
+}
+
+h3{
+  color: red;
+}
+
 .titulo_principal {
-  font-size: 41px;
+  font-size: 24px;
+  color: #ffffff;
 }
     
 .tarjeta {

@@ -45,8 +45,9 @@ h3{
   padding: 10px;
   background-color: #9098b514;
   margin: 10px;
-  border-radius: 20px; 
-  width: 450px
+  border-radius: 24px;
+  width: 446px;
+  margin-top: 40px;
 }
 .tarjeta h1 span {
   border: 1px solid #ccc;
@@ -112,4 +113,24 @@ input:focus{
 
 input:not(:disabled){
   border: 1px solid green 
+}
+.input_busqueda {
+    color: #333!important;
+    text-align: left;
+    max-width: 100%;
+    width: 55%;
+    margin: 0 auto;
+    height: 41px;
+    font-size: 16px;
+    background: #ecfcf4;
+    border: none;
+    border-radius: 30px;
+    padding: 5px 15px 5px 12px;
+    position: relative;
+    font-weight: 400;
+    text-shadow: none;
+}
+.input_busqueda {
+    padding: 5px 15px 5px 19px;
+    text-align: left;
 }

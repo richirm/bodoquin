@@ -1,94 +1,150 @@
-h1 {
-  color: #f6f0f0;
+body {
+  margin: 0;
 }
 
 @font-face {
-  font-family: Roboto;
-  src: url(./asset/fonts/Roboto/Roboto-Light.ttf);
+  font-family: roboto;
+  src: url(../../../assets/fonts/Roboto/Roboto-Light.ttf);
 }
 
-.titulo_principal {
-  font-size: 50px;
-  background-color: #bf5fcab0;
+* {
+  font-family: roboto;
 }
 
-#titulo_bodoquin {
-  font-style: italic;
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #80a3ea;
+  z-index: 2;
+  padding: 10px;
+  height: 42px;
+}
+
+main {
+  margin-top: 102px;
+  padding-top: 10px;
+}
+
+.header_titulo {
+  font-size: 24px;
+  color: #ffffff;
+  display: inline-block;
+  margin: 0;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.header_acciones_notificacion {
+  position: relative;
+}
+
+.header_notificacion {
+  width: 20px;
+  height: 20px;
+  background-color: #FF0000;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 0px;
+  border-radius: 50%;
+}
+
+.header_notificacion-principal {
+  position: absolute;
+  top: -15px;
+  right: -3px;
+}
+
+.header_busqueda {
+  position: relative;
+}
+
+.header_busqueda input {
+  width: 300px;
+  height: 38px;
+  border: none;
+  outline: none;
+  padding-left: 35px;
+  border-radius: 20px;
+}
+
+.header_busqueda i {
+  position: absolute;
+  left: 10px;
+  top: 0px;
+}
+
+.header_acciones {
+  float: right;
+  width: 120px;
+  padding-top: 5px;
+}
+
+.header_acciones i {
+  font-size: 28px;
+  color: #ffffff;
+  margin-left: 18px;
+  cursor: pointer;
 }
 
 .tarjeta {
   border: 1px solid #ccc;
-  box-shadow: 3px 4px #e014d942;
-  padding: 10px;
-  background-color: #9035d514;
-  margin: 10px;
+  box-shadow: 3px 4px #ccc;  
+  background-color: #9098b514;
   border-radius: 20px;
-}
-
-input:disabled {
-  border: 1px solid red;
-}
-
-input:focus {
-  border: 1px solid red;
-  width: 200px;
-}
-
-input:not(:disabled) {
-  border: 1px solid green;
+  padding: 10px;
+  margin: 10px;
 }
 
 .tarjeta h1 {
-  color: #c351d1;
-
+  color: #e32d8b;
 }
 
-@font-face {
-  font-family
-}
-
-.tarjeta h2 {
-  color: #ae47c6;
-  font-size: 35px;
-
-}
 .tarjeta h3 {
-  color: #9035d5de;
-  font-size: 25px;
+  color: blue;
+  font-size: 20px;
 }
 
 .tarjeta h3 span:hover {
-  background-color:#bf5fcaa6;
+  background-color: red;
+}
+
+.tarjeta h1 span {
+  position: relative;
 }
 
 .tarjeta .tarjeta_producto {
-  color: #9035d5de;
+  color: green;
 }
 
 .tarjeta:first-child .tarjeta_producto {
   font-size: 20px;
 }
 
-.diseño_principal {
-  position: absolute;
-  top: 40px;
-  left: 203px;
+.tarjeta:nth-child(2) .tarjeta_producto {
+  font-style: oblique;
 }
 
-.tarjeta_diseño {
+.tarjeta_burbuja {
   position: absolute;
-  top: 23px;
-  left:100px;
+  top: -9px;
+  right: -19px;
+  font-size: 17px;
 }
 
-.diseño {
-  width: 30px;
-  height: 24px;
-  background-color: #ae47c6;
-  color: #ffffff;
-  text-align: center;
-  padding-top: 4px;
-  border-radius: 50%;
-  position: relative;
+input:disabled {
+  border: 1px solid red;
+}
+
+table {
+  width: 100%;
+}
+
+table td {
+  width: 50%;
+}
+
+table td img {
+  width: 100%;
 }
 

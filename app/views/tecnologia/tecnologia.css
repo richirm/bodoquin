@@ -9,7 +9,6 @@ body {
 
 * {
   font-family: roboto;
-..
 }
 
 header {
@@ -50,7 +49,7 @@ main {
 .header_notificacion-principal {
   position: absolute;
   top: -15px;
-  right: -50px;
+  right: -3px;
 }
 
 .header_busqueda {

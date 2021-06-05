@@ -13,6 +13,7 @@ Aplicación bodoquin
 2. Lengujes:
   - HTML5 => conjunto de etiquetas que me permiten diseñar el esqueleto o la maqueta de mi aplicación, y por defecto me brinda un estilo y una lógica
   - CSS3 => conjunto de selectores y estilos que me van a permitir diseñar mi aplicación 
+    - Nomenclatura BEM: Bloque_Elemento--Modificador
   - Javascript => 
       tipos de datos:
         string => 'hola'

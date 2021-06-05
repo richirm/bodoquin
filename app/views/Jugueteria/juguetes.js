@@ -1,7 +1,8 @@
+var pedidos = [];
+
 function sumarYAlertarValores(campo1, campo2) {
   var sumaDeValores = campo1 + campo2;
   alert(sumaDeValores);
-  console.log(sumaDeValores);
   return sumaDeValores;
 }
 
@@ -19,11 +20,55 @@ function sumarYMultiplicarYAlertarValores(campo1, campo2, campo3) {
 
 function realizarPedido() {
   var nombrePostre = document.querySelector('[name="nombre_postre"]').value;
+  var cantidad = document.querySelector('[name="cantidad"]').value;
+  var correo = document.querySelector('[name="correo"]').value;
+  var departamento = document.querySelector('[name="departamento"]').value;
+  var provincia = document.querySelector('[name="provincia"]').value;
+  var distrito = document.querySelector('[name="distrito"]').value;
+  var comentario = document.querySelector('[name="comentario"]').value;
   
+  var pedido = {
+    nombrePostre: nombrePostre,
+    cantidad: cantidad,
+    correo: correo,
+    departamento: departamento,
+    provincia: provincia,
+    distrito: distrito,
+    comentario: comentario,
+  };
+  
+  console.log(pedido);
 }
 
+function agregarPedido() {
+  var nombrePostre = document.querySelector('[name="nombre_postre"]').value;
+  var cantidad = document.querySelector('[name="cantidad"]').value;
+  var correo = document.querySelector('[name="correo"]').value;
+  var departamento = document.querySelector('[name="departamento"]').value;
+  var provincia = document.querySelector('[name="provincia"]').value;
+  var distrito = document.querySelector('[name="distrito"]').value;
+  var comentario = document.querySelector('[name="comentario"]').value;
+  
+  var pedido = {
+    nombrePostre: nombrePostre,
+    cantidad: cantidad,
+    correo: correo,
+    departamento: departamento,
+    provincia: provincia,
+    distrito: distrito,
+    comentario: comentario,
+  };
+  
+  pedidos.push(pedido);
+  
+  console.log(pedidos);
+}
 
-
-function realizarPedido() {
-  console.log(123);
+function construirOferta(desProducto, desRegalo) {
+  var cantProductos = document.querySelector('[name="cantidad"]').value;
+  var cantRegalos = cantProductos / 2;
+  
+  var desOferta = `Compra ${cantProductos} ${desProducto} y te ganas ${cantRegalos} ${desRegalo}`;
+  
+  document.querySelector('.oferta').innerHTML = desOferta;
 }

@@ -18,6 +18,7 @@ header {
   background-color: #80a3ea;
   z-index: 2;
   padding: 10px;
+  height: 42px;
 }
 
 main {
@@ -29,7 +30,9 @@ main {
   font-size: 24px;
   color: #ffffff;
   display: inline-block;
+  margin: 0;
   margin-right: 10px;
+  vertical-align: middle;
 }
 
 .header_acciones_notificacion {
@@ -53,17 +56,28 @@ main {
 }
 
 .header_busqueda {
-  width: 331px;
+  position: relative;
+}
+
+.header_busqueda input {
+  width: 300px;
   height: 38px;
   border: none;
   outline: none;
-  padding-left: 10px;
+  padding-left: 35px;
+  border-radius: 20px;
+}
+
+.header_busqueda i {
+  position: absolute;
+  left: 10px;
+  top: 0px;
 }
 
 .header_acciones {
   float: right;
   width: 120px;
-  padding-top: 18px;
+  padding-top: 5px;
 }
 
 .header_acciones i {
@@ -133,5 +147,3 @@ table td {
 table td img {
   width: 100%;
 }
-
-

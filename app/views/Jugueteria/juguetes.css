@@ -26,6 +26,13 @@ main {
   padding-top: 10px;
 }
 
+.header_menu {
+  color: #ffffff;
+  font-size: 28px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
 .header_titulo {
   font-size: 24px;
   color: #ffffff;
@@ -85,6 +92,69 @@ main {
   color: #ffffff;
   margin-left: 18px;
   cursor: pointer;
+}
+
+nav {
+  position: fixed;
+  top: 62px;
+  width: 270px;
+  height: 100%;
+  background-color: #F0F5FF;
+  z-index: 2;
+  box-shadow: 3px 1px 6px 0px #cccccc;
+  transition: transform 0.5s;
+}
+
+nav.colapsado {
+  transform: translateX(-275px);
+}
+
+nav h2 {
+  font-size: 18px;
+  background-color: #FFF1F1;
+  margin: 0;
+  padding: 20px;
+  border-bottom: 1px solid #FF0000;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  padding: 20px 35px;
+  border-bottom: 1px solid #80A3EA;
+  cursor: pointer;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+nav ul li i {
+  font-size: 20px;
+}
+
+nav ul li.nav_menu--seleccionado {  
+  background-color: #dee6f5;
+}
+
+nav ul li.nav_menu--seleccionado a {
+  font-weight: bold;
+  color: #264fa0;
+}
+
+nav ul li span {
+  float: right;
+  margin-top: 4px;
+  display: none;
+}
+
+nav ul li.nav_menu--seleccionado span {
+  display: initial;
 }
 
 .tarjeta {
@@ -147,4 +217,3 @@ table td {
 table td img {
   width: 100%;
 }
-

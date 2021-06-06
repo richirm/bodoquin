@@ -1,4 +1,5 @@
 var pedidos = [];
+var menuColapsado = true;
 
 function sumarYAlertarValores(campo1, campo2) {
   var sumaDeValores = campo1 + campo2;
@@ -71,4 +72,14 @@ function construirOferta(desProducto, desRegalo) {
   var desOferta = `Compra ${cantProductos} ${desProducto} y te ganas ${cantRegalos} ${desRegalo}`;
   
   document.querySelector('.oferta').innerHTML = desOferta;
+}
+
+function colapsarExpandirMenu() {  
+  if(menuColapsado === true) {
+    document.querySelector('nav').classList.remove('colapsado');
+    menuColapsado = false;
+  } else {
+    document.querySelector('nav').classList.add('colapsado');
+    menuColapsado = true;
+  }
 }

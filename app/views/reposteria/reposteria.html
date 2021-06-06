@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-      <i class="bi bi-list header_menu"></i>
+      <i class="bi bi-list header_menu" onClick="colapsarExpandirMenu();"></i>
       
       <h1 class="header_titulo">
         Repostería 
@@ -34,25 +34,34 @@
       <!-- herramientas -->
     </header>
     
-    <nav>
+    <nav class="colapsado">
       <div>
         <h2>Menú opciones</h2>
         <ul>
           <li>
-            <i class="bi bi-truck-flatbed"></i> Juguetería
-            <span>&gt;</span></li>
+            <a href="../Jugueteria/juguetes.html">
+              <i class="bi bi-truck-flatbed"></i> Juguetería
+              <span>&gt;</span>
+            </a>
           </li>
           <li>
-            <i class="bi bi-screwdriver"></i> Moda
-            <span>&gt;</span></li>
+            <a href="../moda/moda.html">
+              <i class="bi bi-screwdriver"></i> Moda
+              <span>&gt;</span>
+            </a>
           </li>
           <li>
-            <i class="bi bi-laptop"></i> Tecnología
-            <span>&gt;</span></li>
+            <a href="../tecnologia/tecnologia.html">
+              <i class="bi bi-laptop"></i> Tecnología
+              <span>&gt;</span>
+            </a>
           </li>
           <li class="nav_menu--seleccionado">
-            <i class="bi bi-life-preserver"></i> Repostería 
-            <span>&gt;</span></li>
+            <a href="./reposteria.html">
+              <i class="bi bi-life-preserver"></i> Repostería 
+              <span>&gt;</span>
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

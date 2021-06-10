@@ -21,7 +21,11 @@ header {
 
 main {
   margin-top: 102px;
-  padding-top: 10px;
+  padding-top: 45px;
+}
+
+body.con-scroll main {
+  padding-top: 0px;
 }
 
 .header_principal {
@@ -35,6 +39,10 @@ main {
   box-shadow: 0px 2px 5px 0px #cccccc;
   padding: 10px;
   text-align: center;
+}
+
+body.con-scroll .header_secundario {
+  display: none;
 }
 
 .header_secundario .header_menu_secundario {

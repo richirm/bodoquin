@@ -83,3 +83,12 @@ function colapsarExpandirMenu() {
     menuColapsado = true;
   }
 }
+
+function detectarScroll() {
+  if(window.pageYOffset === 0) {
+    document.querySelector('body').classList.remove('con-scroll');
+  } else {
+    document.querySelector('body').classList.add('con-scroll');
+  }
+}
+

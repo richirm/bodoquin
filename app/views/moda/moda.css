@@ -61,6 +61,10 @@ main {
   font-size: 25px;
 }
 
+.header_menu_secundario--seleccionado {
+  border-bottom: 3px solid #80a3ea;
+}
+
 .header_menu {
   color: #ffffff;
   font-size: 28px;

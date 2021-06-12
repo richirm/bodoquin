@@ -264,3 +264,37 @@ table td {
 table td img {
   width: 100%;
 }
+
+footer {
+  background-color: #F6F6F6;
+  padding: 20px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.footer_contacto {
+  width: calc(50% - 5px);
+  display: inline-block;
+  vertical-align: top;
+  border-right: 1px solid #D1D1D1;
+}
+
+.footer_contacto h3 {
+  margin-top: 0;
+}
+
+.footer_siganos {
+  width: calc(50% - 20px);
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 20px;
+}
+
+.footer_siganos h3 {
+  margin-top: 0;
+}
+
+.footer_siganos i {
+  color: #80a3ea;
+  font-size: 25px;
+  margin-right: 10px;
+}

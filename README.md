@@ -67,6 +67,13 @@ Aplicación bodoquin
         - boton agregar
       - Implementar un formulario de sesión (Ricardo)
       
+    - Requerimientos funcionales:
+      - poner un logo
+    
+    - Requerimientos no funcionales:
+      - titulos centrados
+      - iconos con color
+      - 
     
 
   

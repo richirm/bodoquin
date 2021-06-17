@@ -42,6 +42,10 @@ Aplicación bodoquin
         git push origin master       => los archivos confirmados se suben al repositorio 
         git pull origin master     => descarga los ultimos cambios del repositorio en tu local.   
         git diff <nombre-archivo> => muestra los cambios realizados en el archivo
+        git checkout -b <nombre-rama>
+        git checkout <nombre-rama>
+        git fetch
+        pull request
   - GITHUB: servidor o repositorio web para proyectos git
   - tortoise git: herramienta de interfaz grafica para ejecutar operaciones con GIT de manera simple
   

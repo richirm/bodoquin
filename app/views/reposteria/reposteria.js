@@ -95,7 +95,7 @@ function detectarScroll() {
 }
 
 function mostrarOcultarUsuarioPopup() {
-  if(modalInicioSesionVisible === true) {
+  if(usuarioPopupVisible === true) {
     document.querySelector('.header_acciones_usuario_backdrop').style.display = "none";
     document.querySelector('.header_acciones_usuario_flecha').style.display = "none";
     document.querySelector('.header_acciones_usuario_popup').style.display = "none";

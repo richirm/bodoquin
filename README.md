@@ -70,6 +70,7 @@ Aplicación bodoquin
         - precio
         - boton agregar
       - Implementar un formulario de sesión (Ricardo)
+      - modal cerrar sesion
       
     - Requerimientos funcionales:
       - poner un logo

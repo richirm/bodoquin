@@ -208,6 +208,10 @@ body.con-scroll .header_secundario {
   display: none;
 }
 
+.header_acciones .modal_registrarse {
+  display: none;
+}
+
 nav {
   position: fixed;
   top: 62px;
@@ -425,6 +429,7 @@ footer {
   margin-right: 10px;
 }
 
+/***** ESTILOS PARA MODAL *****/
 .modal {
   position: fixed;
   left: 0;
@@ -455,7 +460,7 @@ footer {
 .modal .modal_contenedor .modal_header {
   width: calc(100% - 20px);
   padding: 10px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ececec;
 }
 
 .modal .modal_contenedor .modal_header h1 {
@@ -473,15 +478,14 @@ footer {
 
 .modal .modal_contenedor .modal_body {
   min-height: 50px;
-  width: calc(100% - 20px);
-  padding: 10px;
+  width: calc(100% - 30px);
+  padding: 10px 15px;
 }
 
 .modal .modal_contenedor .modal_footer {
-  height: 50px;
-  width: calc(100% - 20px);
-  padding: 10px;
-  border-top: 1px solid #cccccc;
+  width: calc(100% - 30px);
+  padding: 10px 15px;
+  border-top: 1px solid #ececec;
 }
 
 .modal .modal-sm {
@@ -499,3 +503,42 @@ footer {
 .modal .modal-xl {
   width: 950px;
 }
+/**********************************/
+
+/**** ESTILOS PARA FORMULARIO *****/
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group .form-label {
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.form-group .form-control {
+  width: calc(100% - 14px);
+  height: 34px;
+  padding-left: 10px;
+  border: 1px solid #cccccc;
+  font-size: 18px;
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+}
+/**********************************/
+
+/******* ESTILOS PARA BOTONES *****/
+.btn {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  border-radius: .25rem;
+  font-size: 18px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn.btn-primary {  
+  background-color: #80A3EA;
+  color: #ffffff;
+}
+

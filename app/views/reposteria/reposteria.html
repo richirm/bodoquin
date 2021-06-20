@@ -32,9 +32,9 @@
                   <span>Iniciar sesion</span>
                 </li>
                 
-                <li>
+                <li onClick="mostrarOcultarModalRegistrarse(); mostrarOcultarUsuarioPopup();">
                   <i class="bi bi-person"></i>
-                  <span>Perfil</span>
+                  <span>Registrarse</span>
                 </li>
                 
                 <li>
@@ -54,14 +54,55 @@
             <div class="modal_backdrop" onclick="mostrarOcultarModalInicioSesion()"></div>
             <div class="modal_contenedor modal-sm">
               <div class="modal_header">
-                <h1>Mi titulo</h1>
+                <h1>Iniciar sesión</h1>
                 <i class="bi bi-x" onclick="mostrarOcultarModalInicioSesion()"></i>
               </div>
               <div class="modal_body">
-              
+                <form>
+                  <div class="form-group">
+                    <label class="form-label">Correo electrónico:</label>
+                    <input type="text" class="form-control" />
+                  </div>
+    
+                  <div class="form-group">
+                    <label class="form-label">Contraseña:</label>
+                    <input type="text" class="form-control" />
+                  </div>      
+                </form>
               </div>
               <div class="modal_footer">
-              
+                <button class="btn btn-primary">Ingresar</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal modal_registrarse">
+            <div class="modal_backdrop" onclick="mostrarOcultarModalRegistrarse()"></div>
+            <div class="modal_contenedor modal-sm">
+              <div class="modal_header">
+                <h1>Registrarse</h1>
+                <i class="bi bi-x" onclick="mostrarOcultarModalRegistrarse()"></i>
+              </div>
+              <div class="modal_body">
+                <form>
+                  <div class="form-group">
+                    <label class="form-label">Nombre usuario:</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  
+                  <div class="form-group">
+                    <label class="form-label">Correo electrónico:</label>
+                    <input type="text" class="form-control" />
+                  </div>
+    
+                  <div class="form-group">
+                    <label class="form-label">Contraseña:</label>
+                    <input type="text" class="form-control" />
+                  </div> 
+                </form>     
+              </div>
+              <div class="modal_footer">
+                <button class="btn btn-primary">Ingresar</button>                
               </div>
             </div>
           </div>

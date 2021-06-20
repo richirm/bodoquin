@@ -2,6 +2,7 @@ var pedidos = [];
 var menuColapsado = true;
 var usuarioPopupVisible = false;
 var modalInicioSesionVisible = false;
+var modalRegistrarseVisible = false;
 
 function sumarYAlertarValores(campo1, campo2) {
   var sumaDeValores = campo1 + campo2;
@@ -115,6 +116,16 @@ function mostrarOcultarModalInicioSesion() {
   } else {
     document.querySelector('.modal_inicio_sesion').style.display = "block";
     modalInicioSesionVisible = true;
+  }
+}
+
+function mostrarOcultarModalRegistrarse() {
+  if(modalRegistrarseVisible === true) {
+    document.querySelector('.modal_registrarse').style.display = "none";
+    modalRegistrarseVisible = false;
+  } else {
+    document.querySelector('.modal_registrarse').style.display = "block";
+    modalRegistrarseVisible = true;
   }
 }
 

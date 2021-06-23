@@ -21,7 +21,111 @@
             <i class="bi bi-bell-fill"></i>
             <div class="header_notificacion header_notificacion-principal">3</div>   
           </span>
-          <i class="bi bi-person-fill"></i>
+          <span class="header_acciones_usuario">              
+            <i class="bi bi-person-fill" onclick="mostrarOcultarUsuarioPopup();"></i>
+            <div class="header_acciones_usuario_backdrop" onclick="mostrarOcultarUsuarioPopup();"></div>            
+            <div class="header_acciones_usuario_flecha"></div>            
+            <div class="header_acciones_usuario_popup">
+              <ul>
+                <li onClick="mostrarOcultarModalInicioSesion(); mostrarOcultarUsuarioPopup();">
+                  <i class="bi bi-arrow-bar-right"></i>
+                  <span>Iniciar sesion</span>
+                </li>
+                
+                <li onClick="mostrarOcultarModalRegistrarse(); mostrarOcultarUsuarioPopup();">
+                  <i class="bi bi-person"></i>
+                  <span>Registrarse</span>
+                </li>
+                
+                <li>
+                  <i class="bi bi-basket"></i>
+                  <span>Mis pedidos</span>
+                </li>
+              
+                <li onClick="mostrarOcultarModalCerrarSesion(); mostrarOcultarUsuarioPopup();">
+                  <i class="bi bi-arrow-bar-left"></i>
+                  <span>Cerrar sesion</span>
+                </li>
+              </ul>
+            </div>
+          </span>
+          
+          <div class="modal modal_inicio_sesion">
+            <div class="modal_backdrop" onclick="mostrarOcultarModalInicioSesion()"></div>
+            <div class="modal_contenedor modal-sm">
+              <div class="modal_header">
+                <h1>Iniciar sesión</h1>
+                <i class="bi bi-x" onclick="mostrarOcultarModalInicioSesion()"></i>
+              </div>
+              <div class="modal_body">
+                <form>
+                  <div class="form-group">
+                    <label class="form-label">Correo electrónico:</label>
+                    <input type="text" class="form-control" />
+                  </div>
+    
+                  <div class="form-group">
+                    <label class="form-label">Contraseña:</label>
+                    <input type="text" class="form-control" />
+                  </div>      
+                </form>
+              </div>
+              <div class="modal_footer">
+                <button class="btn btn-primary">Ingresar</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal modal_registrarse">
+            <div class="modal_backdrop" onclick="mostrarOcultarModalRegistrarse()"></div>
+            <div class="modal_contenedor modal-sm">
+              <div class="modal_header">
+                <h1>Registrarse</h1>
+                <i class="bi bi-x" onclick="mostrarOcultarModalRegistrarse()"></i>
+              </div>
+              <div class="modal_body">
+                <form>
+                  <div class="form-group">
+                    <label class="form-label">Nombre usuario:</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  
+                  <div class="form-group">
+                    <label class="form-label">Correo electrónico:</label>
+                    <input type="text" class="form-control" />
+                  </div>
+    
+                  <div class="form-group">
+                    <label class="form-label">Contraseña:</label>
+                    <input type="text" class="form-control" />
+                  </div> 
+                </form>     
+              </div>
+              <div class="modal_footer">
+                <button class="btn btn-primary">Ingresar</button>                
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal modal_confirmacion modal_cerrar_sesion">
+            <div class="modal_backdrop" onclick="mostrarOcultarModalCerrarSesion()"></div>
+            <div class="modal_contenedor modal-sm">
+              <div class="modal_header">
+                <h1>Cerrar Sesión</h1>
+                <i class="bi bi-x" onclick="mostrarOcultarModalCerrarSesion()"></i>
+              </div>
+              <div class="modal_body">
+                <p class="texto-centrado">
+                  ¿Está seguro que desea<br>
+                  cerrar sesión?
+                </p>
+              </div>
+              <div class="modal_footer">
+                <button class="btn btn-primary">Aceptar</button>
+                <button class="btn btn-secundario">Cancelar</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       
@@ -92,7 +196,7 @@
       <div class="tarjetas">
         <div class="tarjeta2">             
           <div class="tarjeta2_header">         
-            <img src="../../../assets/img/img_pastel_chocolate_fresa.jpg">
+            <img src="../../../assets/img/torta_chocolate_fresa.jpg">
           </div>
           <div class="tarjeta2_body">      
             <span>Torta húmeda</span><br>
@@ -110,15 +214,45 @@
         
         <div class="tarjeta2">             
           <div class="tarjeta2_header">         
-            <img src="../../../assets/img/img_pastel_chocolate_fresa.jpg">
+            <img src="../../../assets/img/torta_selva_negra.jpg">
           </div>
           <div class="tarjeta2_body">      
             <span>Torta húmeda</span><br>
-            <span><b>Torta de leche de Óreo</b></span>
-            <p>Torta rica en su sabor,  ha 
-              ganado el premio internacional, 
-              hecha con agua manantial</p>
-            <span class="tarjeta2_body_precio">S/. 60.25</span>
+            <span><b>Selva negra de cerezas</b></span>
+            <p>Compuesta por capas de bizcochuelo de chocolate embebido en kirsch e intercaladas con nata y cerezas.</p>
+            <span class="tarjeta2_body_precio">S/. 55.50</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/keke_pina.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>Kekes</span><br>
+            <span><b>Keke de piña</b></span>
+            <p>Muy rico, sabroso y esponjoso, con piñas azucaradas y dulces como a todos nos gusta</p>
+            <span class="tarjeta2_body_precio">S/. 24.00</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/keke_zanahoria.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>Kekes</span><br>
+            <span><b>keke de zanahoria</b></span>
+            <p>Keke de Zanahoria con Manjar Blanco y Castañas, a precio de promición, sólo por hoy.</p>
+            <span class="tarjeta2_body_precio">S/. 42.00</span>
           </div>
           
           <div class="tarjeta2_footer">
@@ -129,101 +263,7 @@
     
       <span class="oferta"></span>
       
-      <div>
-        <div class="tarjeta">
-          <h1>
-            <span>
-              Tortas
-              <div class="burbuja tarjeta_burbuja">2</div>
-            </span>
-          </h1>         
-          
-          <h3><span>Tortas humedas</span></h3>
-
-          <table>
-            <thead>
-              <tr>
-                <th>
-                  <a 
-                    class="tarjeta_producto"
-                    href="https://www.google.com/" 
-                    target="_blank">
-                    <span>torta de leche </span>
-                  </a>
-                </th>
-                <th>
-                  <a 
-                    class="tarjeta_producto"
-                    href="https://web.facebook.com/" 
-                    target="_blank"><span>selva negra</span></a>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <img 
-                    height="150px" 
-                    src="../../../assets/img/img_pastel_de_fresa.jpg" />
-                </td>
-                <td>
-                  <img 
-                    height="150px"
-                    src="../../../assets/img/img_pastel_selva_negra.jpg" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <br/>
-        </div>
-        
-        <div class="tarjeta">
-          <h1>
-            <span>
-              Kekes
-              <div class="burbuja tarjeta_burbuja">2</div>
-            </span>
-          </h1> 
-          
-          <h3><span>Kekes de piña</span></h3>
-          
-          <table>
-            <thead>
-              <tr>
-                <th>
-                  <a 
-                    class="tarjeta_producto"
-                    href="https://www.google.com/" 
-                    target="_blank"><span>keke de piña 1</span></a>
-                </th>
-                <th>
-                  <a 
-                    class="tarjeta_producto"
-                    href="https://web.facebook.com/" 
-                    target="_blank"><span>keke de piña 2</span></a>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <img 
-                    height="150px" 
-                    src="../../../assets/img/kekek_pina_1.jpg" />
-                </td>
-                <td>
-                  <img 
-                    height="150px"
-                    src="../../../assets/img/kekek_pina_2.jpg" />
-                </td>
-              </tr>
-            </tbody>
-          </table>    
-
-          <br/><br/>        
-        </div>
-        
+      <div>        
         <div class="tarjeta">
           <h1>
             <span>

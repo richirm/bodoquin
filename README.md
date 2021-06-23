@@ -42,43 +42,41 @@ Aplicación bodoquin
         git push origin master       => los archivos confirmados se suben al repositorio 
         git pull origin master     => descarga los ultimos cambios del repositorio en tu local.   
         git diff <nombre-archivo> => muestra los cambios realizados en el archivo
-        git checkout -b <nombre-rama>
-        git checkout <nombre-rama>
-        git fetch
-        pull request
+        git checkout -b <nombre-rama> => para crear y posicionarme en una nueva rama
+        git checkout <nombre-rama> => para posicionarme en una rama
+        git fetch => para descargar las ramas que están en el repositorio pero no en mi local
+        pull request => para enviar una solicitud de unión de mi rama hacia develop
   - GITHUB: servidor o repositorio web para proyectos git
   - tortoise git: herramienta de interfaz grafica para ejecutar operaciones con GIT de manera simple
   
 4. Metodología del proyecto:
   - SCRUM: es una metodología agil para dividirnos el desarrollo
     - feature => una mejora 
-    - pesos: 1, 2, 3, 5, 8
-    - Features: (Lista de tareas - tablero KANBAN)      
-      - Implementar un header comprimido al bajar el scroll (Vanessa - 5)
-        - colocar un logo
-        - input de busqueda
-        - icono del usuario de sesión
-      - Implementar los 4 accesos a las vistas en el header (Ricardo - 2)
-      - Implementar un footer con los datos de contactabilidad (Vanessa - 3)
-    - backlog => conjunto de tareas o mejoras a realizar (features futuros)
-      - Implementar una home (Dani)
-        - poner 4 tarjetas descriptivas de las lineas de productos 
-        - poner 4 tarjetas de ofertas
-      - Implementar en cada vista un panel para información del producto (Yoisi)
-        - mostrar imagen
-        - titulo
-        - precio
-        - boton agregar
-      - Implementar un formulario de sesión (Ricardo)
-      - modal cerrar sesion
+    - pesos: 0.5 1, 2, 3, 5, 8, 13
+    - Features: (Lista de tareas - tablero KANBAN)  
+        - Implementar una home 13
+          - carrusel de ofertas
+          - poner 4 tarjetas descriptivas de las lineas de productos 
+          - poner 4 tarjetas de ofertas
+            - mostrar imagen
+            - categoria
+            - titulo
+            - descripcion
+            - precio
+          - metodos de entrega
+        - modal cerrar sesion 0.5
       
-    - Requerimientos funcionales:
-      - poner un logo
+    - backlog => conjunto de tareas o mejoras a realizar (features futuros)
+       - Requerimientos funcionales:
+        - poner un logo
+      
+      - Requerimientos no funcionales:
+        - titulos centrados
+        - iconos con color
+        - aplicación responsive
+      
+      
     
-    - Requerimientos no funcionales:
-      - titulos centrados
-      - iconos con color
-      - 
     
 
   

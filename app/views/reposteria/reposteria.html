@@ -42,7 +42,7 @@
                   <span>Mis pedidos</span>
                 </li>
               
-                <li>
+                <li onClick="mostrarOcultarModalCerrarSesion(); mostrarOcultarUsuarioPopup();">
                   <i class="bi bi-arrow-bar-left"></i>
                   <span>Cerrar sesion</span>
                 </li>
@@ -103,6 +103,26 @@
               </div>
               <div class="modal_footer">
                 <button class="btn btn-primary">Ingresar</button>                
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal modal_confirmacion modal_cerrar_sesion">
+            <div class="modal_backdrop" onclick="mostrarOcultarModalCerrarSesion()"></div>
+            <div class="modal_contenedor modal-sm">
+              <div class="modal_header">
+                <h1>Cerrar Sesión</h1>
+                <i class="bi bi-x" onclick="mostrarOcultarModalCerrarSesion()"></i>
+              </div>
+              <div class="modal_body">
+                <p class="texto-centrado">
+                  ¿Está seguro que desea<br>
+                  cerrar sesión?
+                </p>
+              </div>
+              <div class="modal_footer">
+                <button class="btn btn-primary">Aceptar</button>
+                <button class="btn btn-secundario">Cancelar</button>
               </div>
             </div>
           </div>

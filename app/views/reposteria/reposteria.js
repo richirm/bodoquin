@@ -3,6 +3,7 @@ var menuColapsado = true;
 var usuarioPopupVisible = false;
 var modalInicioSesionVisible = false;
 var modalRegistrarseVisible = false;
+var modalCerrarSesionVisible = false;
 
 function sumarYAlertarValores(campo1, campo2) {
   var sumaDeValores = campo1 + campo2;
@@ -126,6 +127,16 @@ function mostrarOcultarModalRegistrarse() {
   } else {
     document.querySelector('.modal_registrarse').style.display = "block";
     modalRegistrarseVisible = true;
+  }
+}
+
+function mostrarOcultarModalCerrarSesion() {
+  if(modalCerrarSesionVisible === true) {
+    document.querySelector('.modal_cerrar_sesion').style.display = "none";
+    modalCerrarSesionVisible = false;
+  } else {
+    document.querySelector('.modal_cerrar_sesion').style.display = "block";
+    modalCerrarSesionVisible = true;
   }
 }
 

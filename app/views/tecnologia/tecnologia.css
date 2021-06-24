@@ -46,7 +46,7 @@ body.con-scroll .header_secundario {
 }
 
 .header_secundario .header_menu_secundario {
-  width: 90px;
+  width: calc(25% - 5px);
   text-align: center;
   margin: 0 auto;
   display: inline-block;
@@ -400,12 +400,12 @@ table td img {
 }
 
 footer {
-  background-color: #F6F6F6;
   padding: 20px;
   border-top: 1px solid #e8e8e8;
 }
 
 .footer_contacto {
+  background-color: #F6F6F6;
   width: calc(50% - 5px);
   display: inline-block;
   vertical-align: top;
@@ -417,6 +417,7 @@ footer {
 }
 
 .footer_siganos {
+  background-color: #F6F6F6;
   width: calc(50% - 20px);
   display: inline-block;
   vertical-align: top;
@@ -431,6 +432,39 @@ footer {
   color: #80a3ea;
   font-size: 25px;
   margin-right: 10px;
+}
+
+.footer_access {
+  width: 100%;
+  font-size: 18px;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #ffffff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer_access .footer_menu_secundario {
+  width: calc(25% - 5px);
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+  cursor: pointer;
+  padding-bottom: 4px;
+  font-size : 23px;
+}
+
+.footer_access .footer_menu_secundario span {
+  float : right;
+  color : #8a8df6;
+}
+
+.footer_access .footer_menu_secundario i {
+  font-size : 60px;
+  color : #8a8df6;
+}
+
+.footer_access .footer_menu_secundario:hover {
+  background-color: #F6F6F6;
 }
 
 /***** ESTILOS PARA MODAL *****/

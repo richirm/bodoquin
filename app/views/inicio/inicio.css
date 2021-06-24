@@ -22,6 +22,33 @@ header {
 main {
   margin-top: 102px;
   padding-top: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+main .tarjeta_acceso {
+  width: 320px;
+  box-shadow: 0 4px 20px rgb(0 0 0 / 16%);
+  height: 220px;
+  border: 1px solid #e7e7e7;
+  padding: 0 20px;
+  margin-right: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+main .tarjeta_acceso button {
+  width: 50%;
+  vertical-align: middle;
+}
+
+main .tarjeta_acceso img {
+  width: 100px;
+  vertical-align: middle;
+  position: relative;
+  right: -60px;
+  height: 70px;
 }
 
 body.con-scroll main {
@@ -46,7 +73,7 @@ body.con-scroll .header_secundario {
 }
 
 .header_secundario .header_menu_secundario {
-  width: 90px;
+  width: 130px;
   text-align: center;
   margin: 0 auto;
   display: inline-block;
@@ -87,6 +114,11 @@ body.con-scroll .header_secundario {
   margin: 0;
   margin-right: 10px;
   vertical-align: middle;
+}
+
+.header_titulo a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .header_acciones_notificacion {
@@ -469,7 +501,12 @@ footer {
   cursor: pointer;
 }
 
-.btn.btn-primary {  
+.btn a {
+  text-decoration: none;
+}
+
+.btn.btn-primary, 
+.btn.btn-primary a {  
   background-color: #80A3EA;
   color: #ffffff;
 }

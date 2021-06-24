@@ -212,6 +212,10 @@ body.con-scroll .header_secundario {
   display: none;
 }
 
+.header_acciones .modal_cerrar_sesion {
+  display: none;
+}
+
 nav {
   position: fixed;
   top: 62px;
@@ -486,6 +490,11 @@ footer {
   width: calc(100% - 30px);
   padding: 10px 15px;
   border-top: 1px solid #ececec;
+  text-align: center;
+}
+
+.modal.modal_confirmacion .modal_footer button {
+  width: 45%;
 }
 
 .modal .modal-sm {
@@ -541,4 +550,16 @@ footer {
   background-color: #80A3EA;
   color: #ffffff;
 }
+/**********************************/
 
+/**** ESTILOS PARA ALINEACION *****/
+.texto-centrado {
+  text-align: center;
+}
+.texto-izquierda {
+  text-align: left;
+}
+.texto-derecha {
+  text-align: right;
+}
+/**********************************/

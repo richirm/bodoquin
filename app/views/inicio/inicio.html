@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./reposteria.css"/>
+    <link rel="stylesheet" href="./inicio.css"/>
     <link rel="stylesheet" href="../../../assets/icons/bootstrap/bootstrap-icons.css">
   </head>
   <body onscroll="detectarScroll()">
@@ -193,199 +193,7 @@
     </nav>
     
     <main> 
-      <div class="tarjetas">
-        <div class="tarjeta2">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/torta_chocolate_fresa.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Torta húmeda</span><br>
-            <span><b>Torta de leche de Óreo</b></span>
-            <p>Torta rica en su sabor,  ha 
-              ganado el premio internacional, 
-              hecha con agua manantial</p>
-            <span class="tarjeta2_body_precio">S/. 60.25</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/torta_selva_negra.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Torta húmeda</span><br>
-            <span><b>Selva negra de cerezas</b></span>
-            <p>Compuesta por capas de bizcochuelo de chocolate embebido en kirsch e intercaladas con nata y cerezas.</p>
-            <span class="tarjeta2_body_precio">S/. 55.50</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/keke_pina.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Kekes</span><br>
-            <span><b>Keke de piña</b></span>
-            <p>Muy rico, sabroso y esponjoso, con piñas azucaradas y dulces como a todos nos gusta</p>
-            <span class="tarjeta2_body_precio">S/. 24.00</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/keke_zanahoria.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Kekes</span><br>
-            <span><b>keke de zanahoria</b></span>
-            <p>Keke de Zanahoria con Manjar Blanco y Castañas, a precio de promición, sólo por hoy.</p>
-            <span class="tarjeta2_body_precio">S/. 42.00</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-      </div>
-    
-      <span class="oferta"></span>
       
-      <div>        
-        <div class="tarjeta">
-          <h1>
-            <span>
-              Pedido
-              <div class="burbuja tarjeta_burbuja">1</div>
-            </span>
-          </h1> 
-      
-          <form>
-            <label>Nombre postre*: </label>
-            <input 
-              name="nombre_postre"
-              type="text" 
-              required 
-              placeholder="Ingrese el nombre..." />
-            
-            <br/>
-            
-            <label>Cantidad*: </label>
-            <input 
-              name="cantidad"
-              type="number" 
-              onkeyup="construirOferta('selva negras', 'porciones de gelatinas')"
-              required />
-            
-            <br/>
-            
-            <label>Correo*: </label>
-            <input 
-              name="correo"
-              type="email" 
-              required />
-                  
-            <br/>
-            
-            <label>Departamento: </label>
-            <select name="departamento">
-              <option>Lima</option>
-              <option>Arequipa</option>
-              <option>Cuzco</option>
-            </select>
-                  
-            <br/>
-            
-            <label>Provincia: </label>
-            <select name="provincia">
-              <option>Lima</option>
-              <option>Callao</option>
-            </select>
-                  
-            <br/>
-            
-            <label>Distrito: </label>
-            <select name="distrito">
-              <option>Villa Maria</option>
-              <option>San Juan M.</option>
-              <option>Independencia</option>
-            </select>
-                  
-            <br/>
-            
-            <label>Comentario: </label>
-            <textarea name="comentario"></textarea>
-            
-            <br/><br/>
-            <button type="button" onClick="realizarPedido();">Realizar pedido</button>
-            <button type="button" onClick="agregarPedido();">Agregar al carrito</button>
-          </form>
-
-          <br/><br/>
-        </div>
-        
-        <div class="tarjeta">
-          <h1>
-            <span>
-              Socios bodoquin
-              <div class="burbuja tarjeta_burbuja">4</div>
-            </span>
-          </h1>
-      
-          <table>
-            <thead>
-              <tr>
-                <th>N°</th>
-                <th>Primer Apellido</th>
-                <th>Segundo Apellido</th>
-                <th>Nombres</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Rosales</td>
-                <td>Maldonado</td>
-                <td>Ricardo Alfredo</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Rosales</td>
-                <td>Maldonado</td>
-                <td>David Daniel</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Ayala</td>
-                <td>Rivera</td>
-                <td>Yoisi</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Chipana</td>
-                <td>Isidro</td>
-                <td>Vanessa</td>
-              </tr>
-            </tbody>
-          </table>
-          
-          <p>
-            Esta aplicación se ha realizado gracias a la colaboración de nuestro desarrolladores expertos
-          </p>
-        </div>
-      </div>
     </main>
     
     <footer>
@@ -435,6 +243,6 @@
       </div>
     </footer>
     
-    <script src="./reposteria.js"></script>
+    <script src="./inicio.js"></script>
   </body>
 </html>

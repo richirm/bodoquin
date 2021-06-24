@@ -89,6 +89,11 @@ body.con-scroll .header_secundario {
   vertical-align: middle;
 }
 
+.header_titulo a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 .header_acciones_notificacion {
   position: relative;
 }

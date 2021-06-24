@@ -75,7 +75,11 @@ Aplicación bodoquin
         - iconos con color
         - aplicación responsive
       
-      
+5. Plataformas:
+  - zoom: https://us05web.zoom.us/j/88522391492?pwd=UExqSW1vVlFuaXVOZzgxamJkQXo0QT09
+  - mural: https://app.mural.co/t/bodoquin3213/m/bodoquin3213/1623554095180/58abc96e720510263625d3e7e4bb43151d7faa2f
+  - trello: https://trello.com/b/0RXHhEKT/bodoquin
+  - github: https://github.com/richirm/bodoquin
     
     
 

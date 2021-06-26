@@ -27,7 +27,7 @@ main {
   padding-bottom: 20px;
 }
 
-main .tarjeta_acceso {
+main .tarjeta-acceso {
   width: 320px;
   box-shadow: 0 4px 20px rgb(0 0 0 / 16%);
   height: 220px;
@@ -38,17 +38,104 @@ main .tarjeta_acceso {
   margin-bottom: 20px;
 }
 
-main .tarjeta_acceso button {
+main .tarjeta-acceso button {
   width: 50%;
   vertical-align: middle;
 }
 
-main .tarjeta_acceso img {
+main .tarjeta-acceso img {
   width: 100px;
   vertical-align: middle;
   position: relative;
   right: -60px;
   height: 70px;
+}
+
+main .tarjetas-oferta {
+  
+}
+
+main .tarjetas-oferta .tarteja-oferta {
+  width: 360px;
+  margin-right: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0px 4px 1px 4px rgb(172 172 172 / 15%);
+  height: 169px;
+  font-size: 18px;
+}
+
+main .tarjetas-oferta .tarteja-oferta .tarjeta-oferta_descuento {
+  width: 80px;
+  display: inline-block;
+  height: calc(100% - 60px);
+  background-color: #E3ECFF;
+  padding: 30px 25px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+main .tarjetas-oferta .tarteja-oferta .tarjeta-oferta_descuento .tarjeta-oferta_descuento_hoy {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+main .tarjetas-oferta .tarteja-oferta .tarjeta-oferta_descuento .tarjeta-oferta_descuento_valor {
+  color: #80A3EA;
+  font-weight: bold;
+  margin-top: 12px;
+  display: block;
+}
+
+main .tarjetas-oferta .tarteja-oferta .tarjeta-oferta_producto {
+  display: inline-block;
+  height: 100%;
+  width: calc(100% - 135px);
+  vertical-align: middle;
+}
+
+main .tarjetas-oferta .tarteja-oferta .tarjeta-oferta_producto .tarjeta-oferta_producto_imagen {
+  width: 90px;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  position: relative;
+}
+
+main .tarjetas-oferta .tarteja-oferta .tarjeta-oferta_producto .tarjeta-oferta_producto_imagen img {
+  width: 100%;
+  vertical-align: middle;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+main .tarjetas-oferta .tarteja-oferta .tarjeta-oferta_producto .tarjeta-oferta_producto_detalle {
+  width: calc(100% - 106px);
+  display: inline-block;
+  height: calc(100% - 20px);
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 20px;
+}
+
+main .tarjetas-oferta .tarteja-oferta .tarjeta-oferta_producto .tarjeta-oferta_producto_detalle .tarjeta-oferta_producto_nombre {
+  margin-top: 10px;
+  display: block;
+  font-weight: bold;
+}
+
+main .tarjetas-oferta .tarteja-oferta .tarjeta-oferta_producto .tarjeta-oferta_producto_detalle .tarjeta-oferta_producto_precio {
+  background-color: #FFF1F1;
+  border-radius: 15px;
+  margin-top: 10px;
+  display: block;
+  font-size: 25px;
+  padding: 10px;
+  color: #FF0000;
+  font-weight: bold;
 }
 
 body.con-scroll main {

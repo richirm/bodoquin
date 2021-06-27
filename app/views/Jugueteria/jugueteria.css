@@ -46,7 +46,7 @@ body.con-scroll .header_secundario {
 }
 
 .header_secundario .header_menu_secundario {
-  width: 90px;
+  width: 130px;
   text-align: center;
   margin: 0 auto;
   display: inline-block;
@@ -87,6 +87,11 @@ body.con-scroll .header_secundario {
   margin: 0;
   margin-right: 10px;
   vertical-align: middle;
+}
+
+.header_titulo a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .header_acciones_notificacion {
@@ -474,7 +479,7 @@ footer {
   color: #80a3ea;
   font-size: 25px;
   margin-right: 10px;
-}s
+}
 
 /***** ESTILOS PARA MODAL *****/
 .modal {

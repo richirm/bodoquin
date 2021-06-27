@@ -3,6 +3,7 @@ var usuarioPopupVisible = false;
 var modalInicioSesionVisible = false;
 var modalRegistrarseVisible = false;
 var modalCerrarSesionVisible = false;
+var posicionBannerActual = 1;
 
 function colapsarExpandirMenu() {  
   if(menuColapsado === true) {
@@ -65,4 +66,29 @@ function mostrarOcultarModalCerrarSesion() {
     modalCerrarSesionVisible = true;
   }
 }
+
+function mostrarBanner(posicionBannerSeleccionado) {
+  document.querySelector(`.carousel_banner:nth-child(${posicionBannerActual})`).style.display = 'none';
+  document.querySelector(`.carousel_banner:nth-child(${posicionBannerSeleccionado})`).style.display = 'block';
+  posicionBannerActual = posicionBannerSeleccionado;
+}
+
+function mostrarSiguienteBanner() {
+  if(posicionBannerActual === 4) {
+    mostrarBanner(1);
+  } else {
+    mostrarBanner(posicionBannerActual + 1);
+  }
+}
+
+function mostrarAnteriorBanner() {
+  if(posicionBannerActual === 1) {
+    mostrarBanner(4);
+  } else {
+    mostrarBanner(posicionBannerActual - 1);
+  }
+}
+
+
+
 

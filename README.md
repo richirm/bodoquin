@@ -53,27 +53,37 @@ Aplicación bodoquin
   - SCRUM: es una metodología agil para dividirnos el desarrollo
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13
-    - Features: (Lista de tareas - tablero KANBAN)  
-        - Implementar una home 13
-          - carrusel de ofertas
-          - poner 4 tarjetas descriptivas de las lineas de productos 
-          - poner 4 tarjetas de ofertas
-            - mostrar imagen
-            - categoria
-            - titulo
-            - descripcion
-            - precio
-          - metodos de entrega
-        - modal cerrar sesion 0.5
+    - Features: (Lista de tareas - tablero KANBAN) 
+      - revisar otras webs para tomar ideas (plaza vea, saga, lacuracao, etc) 2
+      - lluvia de ideas 1
+      - combinar el blanco con otros colores en la pantalla de inicio 1
+      - aplicación responsive 3
+      - titulos centrados 1
+      - iconos con color 1
+      - el carousel con movimiento automático 2
+      - el carousel con botones de colores de la aplicación 0.5
+      - aumentar hasta 9 productos por cada vista 1
       
-    - backlog => conjunto de tareas o mejoras a realizar (features futuros)
-       - Requerimientos funcionales:
+    - backlog => conjunto de tareas o mejoras a realizar (features futuros)      
+      - Requerimientos funcionales:
         - poner un logo
+        - el carousel con transición de desplazamiento
+        - el carousel con pasos
+        - implementar un chat con boton FAB
+        - implementar vistas de detalle de producto
+          - productos relacionados
+        - implementar vista de resumen de la compra
+        - en la vista de inicio: tarjetas de acceso tengan un efecto en el hover
+        - en la vista de inicio: implementar mini banners por cada linea de producto con efecto en el hover
+        - implementar sección de anuncios y/o publicidad
+        - modal de confirmacion de recojo
+        - modal de carrito de compra
+        - integrarnos con bootstrap
+        - en cada vista de producto, al seleccionar un producto, se tiene que mostrar la 
+          funcionalidad para seguir agregando o  disminuyendo productos, o eliminar
+        
       
-      - Requerimientos no funcionales:
-        - titulos centrados
-        - iconos con color
-        - aplicación responsive
+      - Requerimientos no funcionales:       
       
 5. Plataformas:
   - zoom: https://us05web.zoom.us/j/88522391492?pwd=UExqSW1vVlFuaXVOZzgxamJkQXo0QT09

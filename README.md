@@ -76,11 +76,16 @@ Aplicación bodoquin
         - en la vista de inicio: tarjetas de acceso tengan un efecto en el hover
         - en la vista de inicio: implementar mini banners por cada linea de producto con efecto en el hover
         - implementar sección de anuncios y/o publicidad
-        - modal de confirmacion de recojo
+        - modal de confirmacion de recojo (hubicación)
         - modal de carrito de compra
         - integrarnos con bootstrap
         - en cada vista de producto, al seleccionar un producto, se tiene que mostrar la 
           funcionalidad para seguir agregando o  disminuyendo productos, o eliminar
+        - Tarjeta de oferta fija que aparezca al abrir el home 
+        - implementar sección de productos en remate en cada pantalla  
+        - Implementar opciones de ayuda
+        - Pantalla de cambios y devoluciones
+        - Pantalla de nuestras tiendas
         
       
       - Requerimientos no funcionales:       

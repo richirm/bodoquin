@@ -15,13 +15,12 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  background-color: #80a3ea;
+  background-color: #383e3e;
   z-index: 2;
 }
 
 main {
-  margin-top: 102px;
-  padding-top: 45px;
+  padding-top: 138px;
 }
 
 body.con-scroll main {
@@ -46,7 +45,7 @@ body.con-scroll .header_secundario {
 }
 
 .header_secundario .header_menu_secundario {
-  width: 90px;
+  width: 130px;
   text-align: center;
   margin: 0 auto;
   display: inline-block;
@@ -87,6 +86,11 @@ body.con-scroll .header_secundario {
   margin: 0;
   margin-right: 10px;
   vertical-align: middle;
+}
+
+.header_titulo a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .header_acciones_notificacion {
@@ -212,6 +216,10 @@ body.con-scroll .header_secundario {
   display: none;
 }
 
+.header_acciones .modal_cerrar_sesion {
+  display: none;
+}
+
 nav {
   position: fixed;
   top: 62px;
@@ -276,7 +284,8 @@ nav ul li.nav_menu--seleccionado span {
 }
 
 .tarjetas {
-  padding: 0 10px;
+  padding: 15px;
+  background-color: #d4daee;
 }
 
 .tarjetas .tarjeta2 {
@@ -286,6 +295,7 @@ nav ul li.nav_menu--seleccionado span {
   margin-right: 10px;
   margin-bottom: 10px;
   cursor: pointer;
+  background-color: #ffffff;
 }
 
 .tarjetas .tarjeta2:hover {
@@ -396,16 +406,57 @@ table td img {
 }
 
 footer {
-  background-color: #F6F6F6;
-  padding: 20px;
   border-top: 1px solid #e8e8e8;
 }
 
+.footer_access {
+  width: 100%;
+  font-size: 18px;
+  border-bottom: 1px solid #ffffff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer_access .footer_menu_secundario {
+  width: calc(25% - 5px);
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+  cursor: pointer;
+  padding-bottom: 4px;
+  font-size: 16px;
+}
+
+.footer_access .footer_menu_secundario span {
+  float : right;
+  color : #8a8df6;
+}
+
+.footer_access .footer_menu_secundario i {
+  font-size: 60px;
+  color: #8a8df6;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer_access .footer_menu_secundario b {
+  display: inline-block;
+  color: #8b8b8b;
+  vertical-align: middle;
+}
+
+.footer_access .footer_menu_secundario:hover {
+  background-color: #F6F6F6;
+}
+
 .footer_contacto {
-  width: calc(50% - 5px);
+  background-color: #F6F6F6;
+  width: calc(50% - 45px);
   display: inline-block;
   vertical-align: top;
   border-right: 1px solid #D1D1D1;
+  padding: 20px;
+  height: 85px;
 }
 
 .footer_contacto h3 {
@@ -413,10 +464,12 @@ footer {
 }
 
 .footer_siganos {
-  width: calc(50% - 20px);
+  background-color: #F6F6F6;
+  width: calc(50% - 40px);
   display: inline-block;
   vertical-align: top;
-  padding-left: 20px;
+  padding: 20px;
+  height: 85px;
 }
 
 .footer_siganos h3 {
@@ -486,6 +539,11 @@ footer {
   width: calc(100% - 30px);
   padding: 10px 15px;
   border-top: 1px solid #ececec;
+  text-align: center;
+}
+
+.modal.modal_confirmacion .modal_footer button {
+  width: 45%;
 }
 
 .modal .modal-sm {
@@ -541,4 +599,16 @@ footer {
   background-color: #80A3EA;
   color: #ffffff;
 }
+/**********************************/
 
+/**** ESTILOS PARA ALINEACION *****/
+.texto-centrado {
+  text-align: center;
+}
+.texto-izquierda {
+  text-align: left;
+}
+.texto-derecha {
+  text-align: right;
+}
+/**********************************/

@@ -15,12 +15,198 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  background-color: #8848cd;
+  background-color: #a7ae3e;
   z-index: 2;
 }
 
 main {
-  margin-top: 138px;
+  margin-top: 135px;
+}
+
+main .carousel {
+  position: relative;
+  border-bottom: 1px solid #cccccc;
+}
+
+main .carousel .carousel_banners {
+  
+}
+
+main .carousel .carousel_banners .carousel_banner {
+  display: none;
+}
+
+main .carousel .carousel_banners .carousel_banner:first-child {
+  display: block;
+}
+
+main .carousel .carousel_banners .carousel_banner img {
+  
+}
+
+main .carousel .carousel_accion-izquierda {
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  font-size: 35px;
+}
+
+main .carousel .carousel_accion-izquierda i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+main .carousel .carousel_accion-izquierda i:hover {
+  background-color: #ececec;
+  border-radius: 4px;
+}
+
+main .carousel .carousel_accion-derecha {
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  font-size: 35px;
+}
+
+main .carousel .carousel_accion-derecha i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+main .carousel .carousel_accion-derecha i:hover {
+  background-color: #ececec;
+  border-radius: 4px;
+}
+
+main .tarjetas-acceso {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;  
+  background-color: #e3ecff;
+}
+
+main .tarjeta-acceso {
+  width: 320px;
+  box-shadow: 0 4px 20px rgb(0 0 0 / 16%);
+  height: 220px;
+  border: 1px solid #e7e7e7;
+  padding: 0 20px;
+  margin-right: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+main .tarjeta-acceso button {
+  width: 50%;
+  vertical-align: middle;
+}
+
+main .tarjeta-acceso img {
+  width: 100px;
+  vertical-align: middle;
+  position: relative;
+  right: -60px;
+  height: 70px;
+}
+
+main .tarjetas-oferta {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  background-color: #f8f8f8;
+}
+
+main .tarjetas-oferta .tarteja-oferta {
+  width: 360px;
+  margin-right: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0px 4px 1px 4px rgb(172 172 172 / 15%);
+  height: 169px;
+  font-size: 18px;
+  background-color: #ffffff;
+}
+
+main .tarjetas-oferta .tarteja-oferta .tarjeta-oferta_descuento {
+  width: 80px;
+  display: inline-block;
+  height: calc(100% - 60px);
+  background-color: #E3ECFF;
+  padding: 30px 25px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+main .tarjetas-oferta .tarteja-oferta .tarjeta-oferta_descuento .tarjeta-oferta_descuento_hoy {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+main .tarjetas-oferta .tarteja-oferta .tarjeta-oferta_descuento .tarjeta-oferta_descuento_valor {
+  color: #80A3EA;
+  font-weight: bold;
+  margin-top: 12px;
+  display: block;
+}
+
+main .tarjetas-oferta .tarteja-oferta .tarjeta-oferta_producto {
+  display: inline-block;
+  height: 100%;
+  width: calc(100% - 135px);
+  vertical-align: middle;
+}
+
+main .tarjetas-oferta .tarteja-oferta .tarjeta-oferta_producto .tarjeta-oferta_producto_imagen {
+  width: 90px;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  position: relative;
+}
+
+main .tarjetas-oferta .tarteja-oferta .tarjeta-oferta_producto .tarjeta-oferta_producto_imagen img {
+  width: 100%;
+  vertical-align: middle;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+main .tarjetas-oferta .tarteja-oferta .tarjeta-oferta_producto .tarjeta-oferta_producto_detalle {
+  width: calc(100% - 106px);
+  display: inline-block;
+  height: calc(100% - 20px);
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 20px;
+}
+
+main .tarjetas-oferta .tarteja-oferta .tarjeta-oferta_producto .tarjeta-oferta_producto_detalle .tarjeta-oferta_producto_nombre {
+  margin-top: 10px;
+  display: block;
+  font-weight: bold;
+}
+
+main .tarjetas-oferta .tarteja-oferta .tarjeta-oferta_producto .tarjeta-oferta_producto_detalle .tarjeta-oferta_producto_precio {
+  background-color: #FFF1F1;
+  border-radius: 15px;
+  margin-top: 10px;
+  display: block;
+  font-size: 25px;
+  padding: 10px;
+  color: #FF0000;
+  font-weight: bold;
 }
 
 body.con-scroll main {
@@ -283,128 +469,6 @@ nav ul li.nav_menu--seleccionado span {
   display: initial;
 }
 
-.tarjetas {
-  padding: 15px;
-  background-color: #ecdaf7;
-}
-
-.tarjetas .tarjeta2 {
-  width: 320px;
-  border: 1px solid #dddcdc;
-  display: inline-block;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  background-color: #ffffff;
-}
-
-.tarjetas .tarjeta2:hover {
-  box-shadow: 1px 1px 5px #cccccc;
-}
-
-.tarjetas .tarjeta2 .tarjeta2_header {
-   padding: 15px 30px;
-}
-
-.tarjetas .tarjeta2 .tarjeta2_header img {
-  width: 100%;
-  height: 180px;
-}
-
-.tarjetas .tarjeta2 .tarjeta2_body {
-  padding: 0 15px;
-}
-
-.tarjetas .tarjeta2 .tarjeta2_body p {
-  margin-left: 15px;
-}
-
-.tarjetas .tarjeta2 .tarjeta2_body .tarjeta2_body_precio {
-  color: #FF0000;
-  font-weight: bold;
-  font-size: 24px;
-}
-
-.tarjetas .tarjeta2 .tarjeta2_footer {
-  padding: 15px;
-}
-
-.tarjetas .tarjeta2 .tarjeta2_footer button {
-  background-color: #ffffff;
-  border: 1px solid #80A3EA;
-  width: 100%;
-  height: 35px;
-  color: #80A3EA;
-  font-weight: bold;
-}
-
-.tarjetas .tarjeta2:hover .tarjeta2_footer button {
-  background-color: #80A3EA;
-  color: #ffffff;
-}
-  
-
-.tarjeta {
-  border: 1px solid #ccc;
-  box-shadow: 3px 4px #ccc;  
-  background-color: #9098b514;
-  border-radius: 20px;
-  padding: 10px;
-  margin: 10px;
-}
-
-.tarjeta h1 {
-  color: #e32d8b;
-}
-
-.tarjeta h3 {
-  color: blue;
-  font-size: 20px;
-}
-
-.tarjeta h3 span:hover {
-  background-color: red;
-}
-
-.tarjeta h1 span {
-  position: relative;
-}
-
-.tarjeta .tarjeta_producto {
-  color: green;
-}
-
-.tarjeta:first-child .tarjeta_producto {
-  font-size: 20px;
-}
-
-.tarjeta:nth-child(2) .tarjeta_producto {
-  font-style: oblique;
-}
-
-.tarjeta_burbuja {
-  position: absolute;
-  top: -9px;
-  right: -19px;
-  font-size: 17px;
-}
-
-input:disabled {
-  border: 1px solid red;
-}
-
-table {
-  width: 100%;
-}
-
-table td {
-  width: 50%;
-}
-
-table td img {
-  width: 100%;
-}
-
 footer {
   border-top: 1px solid #e8e8e8;
 }
@@ -595,7 +659,12 @@ footer {
   cursor: pointer;
 }
 
-.btn.btn-primary {  
+.btn a {
+  text-decoration: none;
+}
+
+.btn.btn-primary, 
+.btn.btn-primary a {  
   background-color: #80A3EA;
   color: #ffffff;
 }

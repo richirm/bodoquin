@@ -10,7 +10,7 @@
       <div class="header_principal">
         <i class="bi bi-list header_menu" onclick="colapsarExpandirMenu();"></i>
         <h1 class="header_titulo">
-          Tecnologia
+          <a href="../inicio/inicio.html">Tecnologia</a>
         </h1>
         <span class="header_busqueda">
           <input type="text" placeholder="HOLA ,¿QUE ESTAS BUSCANDO?">
@@ -106,38 +106,33 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      
-       <div class="modal modal_inicio_sesion">
-            <div class="modal_backdrop" onclick="mostrarOcultarModalInicioSesion()"></div>
+          
+          <div class="modal modal_confirmacion modal_cerrar_sesion">
+            <div class="modal_backdrop" onclick="mostrarOcultarModalCerrarSesion()"></div>
             <div class="modal_contenedor modal-sm">
               <div class="modal_header">
-                <h1>Cerrar Sesion</h1>
-                <i class="bi bi-x" onclick="mostrarOcultarModalInicioSesion()"></i>
+                <h1>Cerrar Sesión</h1>
+                <i class="bi bi-x" onclick="mostrarOcultarModalCerrarSesion()"></i>
               </div>
               <div class="modal_body">
-                <form>
-                  <div class="form-group">
-                    <label class="form-label">Correo electrónico:</label>
-                    <input type="text" class="form-control" />
-                  </div>
-    
-                  <div class="form-group">
-                    <label class="form-label">Contraseña:</label>
-                    <input type="text" class="form-control" />
-                  </div>      
-                </form>
+                <p class="texto-centrado">
+                  ¿Está seguro que desea<br>
+                  cerrar sesión?
+                </p>
               </div>
               <div class="modal_footer">
-                <button class="btn btn-primary">cancelar/ aceptar</button>
+                <button class="btn btn-primary">Aceptar</button>
+                <button class="btn btn-secundario">Cancelar</button>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      
       
       <div class="header_secundario">
         <div class="header_menu_secundario"> 
-          <a href="../Jugueteria/juguetes.html">
+          <a href="../jugueteria/jugueteria.html">
             <i class="bi bi-truck-flatbed"></i> 
             <div>Juguetería</div>
           </a>
@@ -170,7 +165,7 @@
         <h2>Menú opciones</h2>
         <ul>
           <li>
-            <a href="../Jugueteria/juguetes.html">
+            <a href="../jugueteria/jugueteria.html">
               <i class="bi bi-truck-flatbed"></i> Juguetería
               <span>&gt;</span>
             </a>
@@ -298,144 +293,167 @@
         </div>
       </div>
      
-      <div class="tarjeta">
-        <h1>
-          <span>
-           PEDIDO<div class="burbuja burbuja_principal">1</div>
-          </span>
-        </h1>
+      <!-- <div class="tarjeta"> -->
+        <!-- <h1> -->
+          <!-- <span> -->
+           <!-- PEDIDO<div class="burbuja burbuja_principal">1</div> -->
+          <!-- </span> -->
+        <!-- </h1> -->
         
-        <form>
-          <label>Equipo movil:* </label>
-            <input name="equipo_movil" type="text" required placeholder="ingrese equipo movil..."  />
+        <!-- <form> -->
+          <!-- <label>Equipo movil:* </label> -->
+            <!-- <input name="equipo_movil" type="text" required placeholder="ingrese equipo movil..."  /> -->
 
-          <br/>
-          <label>Cantidad:* </label>
-            <input name="cantidad" type="number" required required placeholder="ingrese cantidad.."/>
+          <!-- <br/> -->
+          <!-- <label>Cantidad:* </label> -->
+            <!-- <input name="cantidad" type="number" required required placeholder="ingrese cantidad.."/> -->
 
-          <br/>
-          <label>Email:* </label>
-            <input name="email" type="email" required required placeholder="ingrese email..." />
+          <!-- <br/> -->
+          <!-- <label>Email:* </label> -->
+            <!-- <input name="email" type="email" required required placeholder="ingrese email..." /> -->
 
-          <br/>
+          <!-- <br/> -->
 
-          <label>Departamento: </label>
-            <select name="departamento">
-              <option>LIMA</option>
-              <option>AREQUIPA</option>
-              <option>PIURA</option>
-              <option>TACNA</option>
-              <option>LAMBAYEQUE</option>
-              <option>TRUJILLO</option>
-              <option>IQUITOS</option>
-              <option>ANCASH</option>
-              <option>AYACUCHO</option>
-              <option>JUNIN</option>
-            </select>
+          <!-- <label>Departamento: </label> -->
+            <!-- <select name="departamento"> -->
+              <!-- <option>LIMA</option> -->
+              <!-- <option>AREQUIPA</option> -->
+              <!-- <option>PIURA</option> -->
+              <!-- <option>TACNA</option> -->
+              <!-- <option>LAMBAYEQUE</option> -->
+              <!-- <option>TRUJILLO</option> -->
+              <!-- <option>IQUITOS</option> -->
+              <!-- <option>ANCASH</option> -->
+              <!-- <option>AYACUCHO</option> -->
+              <!-- <option>JUNIN</option> -->
+            <!-- </select> -->
 
-          <br/>
+          <!-- <br/> -->
 
-          <label>Provincia: </label>
-            <select name="provincia">
-              <option>LIMA</option>
-              <option>HUARAL</option>
-              <option>MALA</option>
-              <option>PUNTA HERMOSA</option>
-              <option>PISCO</option>
-              <option>CHINCHA</option>
-              <option>CHNCAY</option>
-              <option>CALLAO</option>
-            </select>
+          <!-- <label>Provincia: </label> -->
+            <!-- <select name="provincia"> -->
+              <!-- <option>LIMA</option> -->
+              <!-- <option>HUARAL</option> -->
+              <!-- <option>MALA</option> -->
+              <!-- <option>PUNTA HERMOSA</option> -->
+              <!-- <option>PISCO</option> -->
+              <!-- <option>CHINCHA</option> -->
+              <!-- <option>CHNCAY</option> -->
+              <!-- <option>CALLAO</option> -->
+            <!-- </select> -->
 
-          <br/>
+          <!-- <br/> -->
 
-          <label>Distrito: </label>
-            <select name="distrito">
-              <option>VILLA MARIA DEL TRIUNFO</option>
-              <option>SAN JUAN DE MIRAFLORES</option>
-              <option>INDEPENDENCIA</option>
-              <option>SAN MIGUEL</option>
-              <option>JESUS MARIA</option>
-              <option>MIRAFLORES</option>
-              <option>SAN ISIDRO</option>
-              <option>CHORRILLOS</option>
-              <option>BREÑA</option>
-              <option>PUEBLO LIBRE</option>
-              <option>SURQUILLO</option>
-              <option>COMAS</option>
-              <option>LA MOLINA</option>
-              <option>VILLA EL SALVADOR</option>
-              <option>EL AGUSTINO</option>
-              <option>ATE</option>
-              <option>SAMTA ANITA</option>
-            </select>
+          <!-- <label>Distrito: </label> -->
+            <!-- <select name="distrito"> -->
+              <!-- <option>VILLA MARIA DEL TRIUNFO</option> -->
+              <!-- <option>SAN JUAN DE MIRAFLORES</option> -->
+              <!-- <option>INDEPENDENCIA</option> -->
+              <!-- <option>SAN MIGUEL</option> -->
+              <!-- <option>JESUS MARIA</option> -->
+              <!-- <option>MIRAFLORES</option> -->
+              <!-- <option>SAN ISIDRO</option> -->
+              <!-- <option>CHORRILLOS</option> -->
+              <!-- <option>BREÑA</option> -->
+              <!-- <option>PUEBLO LIBRE</option> -->
+              <!-- <option>SURQUILLO</option> -->
+              <!-- <option>COMAS</option> -->
+              <!-- <option>LA MOLINA</option> -->
+              <!-- <option>VILLA EL SALVADOR</option> -->
+              <!-- <option>EL AGUSTINO</option> -->
+              <!-- <option>ATE</option> -->
+              <!-- <option>SAMTA ANITA</option> -->
+            <!-- </select> -->
 
-          <br/>
+          <!-- <br/> -->
 
-          <label>Comentarios: </label>
-            <textarea name="comentarios"></textarea> 
+          <!-- <label>Comentarios: </label> -->
+            <!-- <textarea name="comentarios"></textarea>  -->
 
-          <br/><br/>
-          <button type="reset">borrar</button>
-          <button type="button" onClick="realizarPedido();">Realizar pedido</button>
-        </form>
-      </div>
+          <!-- <br/><br/> -->
+          <!-- <button type="reset">borrar</button> -->
+          <!-- <button type="button" onClick="realizarPedido();">Realizar pedido</button> -->
+        <!-- </form> -->
+      <!-- </div> -->
       
       
-      <div class="tarjeta">
-        <h1>
-          <span>
-          REGISTRO USUARIO<div class="burbuja burbuja_principal">1</div>
+      <!-- <div class="tarjeta"> -->
+        <!-- <h1> -->
+          <!-- <span> -->
+          <!-- REGISTRO USUARIO<div class="burbuja burbuja_principal">1</div> -->
           
-          </span>
-        </h1>
-          <form>
-            <label>Usuario</LABEL>
-            <input type="text" required placeholder="Ingrese usuario.."/>
+          <!-- </span> -->
+        <!-- </h1> -->
+          <!-- <form> -->
+            <!-- <label>Usuario</LABEL> -->
+            <!-- <input type="text" required placeholder="Ingrese usuario.."/> -->
             
-            <br/>
+            <!-- <br/> -->
             
-            <label>Email</label>
-            <input type="email" required placeholder="example@gmail.com"/>
+            <!-- <label>Email</label> -->
+            <!-- <input type="email" required placeholder="example@gmail.com"/> -->
             
-            <br/>
+            <!-- <br/> -->
             
-            <label>Contraseña</label>
-            <input type="password" required required placeholder="***********"/>
+            <!-- <label>Contraseña</label> -->
+            <!-- <input type="password" required required placeholder="***********"/> -->
             
-            <br/>
+            <!-- <br/> -->
            
-            <button type="reset">borrar</button>
-            <button type="button" onClick="realizarPedido();">Realizar pedido</button>
-          </form>
+            <!-- <button type="reset">borrar</button> -->
+            <!-- <button type="button" onClick="realizarPedido();">Realizar pedido</button> -->
+          <!-- </form> -->
           
-      </div>
+      <!-- </div> -->
           
 
     </main>
-      <footer>
-        <div class="footer_contacto">
-          <h3>Comunícate con nosotros:</h3>
-          <span>Lima: <b>(01) 625-8000</b></span>
-          <br>
-          <span>Provincia: <b> (+51)0800-00020</b></span>
-        </div>
       
-        <div class="footer_siganos">
-          <h3>Siguenos en:</h3>
-          <a href="https://web.facebook.com/" target="_blank" title="Facebook">
-            <i class="bi bi-facebook"></i>
-          </a>
-          <a href="https://www.youtube.com/" target="_blank" title="Youtube">
-            <i class="bi bi-youtube"></i>
-          </a>
-          <a href="https://twitter.com/" target="_blank" title="Twitter">
-            <i class="bi bi-twitter"></i>
-          </a>
-          <a href="https://www.instagram.com/" target="_blank" title="Instagram">
-            <i class="bi bi-instagram"></i>
-          </a>
+    <footer>
+      <div class="footer_access">
+        <div class="footer_menu_secundario">           
+          <i class="bi bi-house"></i> 
+          <b>Recojo en<br>tienda<span>&nbsp;&gt;</span></b>    
         </div>
+        
+        <div class="footer_menu_secundario">          
+          <i class="bi bi-truck"></i> 
+          <b>Delivery<br>Programado<span>&nbsp;&gt;</span></b>    
+        </div>
+        
+        <div class="footer_menu_secundario">      
+          <i class="bi bi-bicycle"></i> 
+          <b>Delivery<br>Express<span>&nbsp;&gt;</span></b>
+        </div>
+        
+        <div class="footer_menu_secundario">      
+          <i class="bi bi-cash-coin"></i> 
+          <b>Método de<br>pago<span>&nbsp;&gt;</span></b>          
+        </div>
+      </div>
+      
+      <div class="footer_contacto">
+        <h3>Comunícate con nosotros:</h3>
+        <span>Lima: <b>(01) 625-8000</b></span>
+        <br>
+        <span>Provincia: <b> (+51)0800-00020</b></span>
+      </div>
+    
+      <div class="footer_siganos">
+        <h3>Siguenos en:</h3>
+        <a href="https://web.facebook.com/" target="_blank" title="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" title="Youtube">
+          <i class="bi bi-youtube"></i>
+        </a>
+        <a href="https://twitter.com/" target="_blank" title="Twitter">
+          <i class="bi bi-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+      </div>
     </footer>
     
     <script src="./tecnologia.js"></script>   

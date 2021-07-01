@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./reposteria.css"/>
+    <link rel="stylesheet" href="./inicio.css"/>
     <link rel="stylesheet" href="../../../assets/icons/bootstrap/bootstrap-icons.css">
   </head>
   <body onscroll="detectarScroll()">
@@ -10,7 +10,7 @@
       <div class="header_principal">
         <i class="bi bi-list header_menu" onclick="colapsarExpandirMenu();"></i>
         <h1 class="header_titulo">
-          <a href="../inicio/inicio.html">Repostería</a>
+          <a href="./inicio.html">Inicio</a>
         </h1>
         <span class="header_busqueda">
           <input type="text" placeholder="HOLA ,¿QUE ESTAS BUSCANDO?">
@@ -151,7 +151,7 @@
           </a>
         </div>
         
-        <div class="header_menu_secundario header_menu_secundario--seleccionado">
+        <div class="header_menu_secundario">
           <a href="../reposteria/reposteria.html">
             <i class="bi bi-life-preserver"></i>
             <div>Reposteria</div>
@@ -182,7 +182,7 @@
               <span>&gt;</span>
             </a>
           </li>
-          <li class="nav_menu--seleccionado">
+          <li>
             <a href="./reposteria.html">
               <i class="bi bi-life-preserver"></i> Repostería 
               <span>&gt;</span>
@@ -192,200 +192,141 @@
       </div>
     </nav>
     
-    <main> 
-      <div class="tarjetas">
-        <div class="tarjeta2">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/torta_chocolate_fresa.jpg">
+    <main>
+      <div class="carousel">
+        <div class="carousel_banners">
+          <div class="carousel_banner">
+            <img src="../../../assets/img/banner_reposteria.jpg">
           </div>
-          <div class="tarjeta2_body">      
-            <span>Torta húmeda</span><br>
-            <span><b>Torta de leche de Óreo</b></span>
-            <p>Torta rica en su sabor,  ha 
-              ganado el premio internacional, 
-              hecha con agua manantial</p>
-            <span class="tarjeta2_body_precio">S/. 60.25</span>
+          <div class="carousel_banner">
+            <img src="../../../assets/img/baner_jugueteria.png">
           </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
+          <div class="carousel_banner">
+            <img src="../../../assets/img/banner_moda.png">
+          </div>
+          <div class="carousel_banner">
+            <img src="../../../assets/img/banner_tecnologia.png">
           </div>
         </div>
-        
-        <div class="tarjeta2">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/torta_selva_negra.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Torta húmeda</span><br>
-            <span><b>Selva negra de cerezas</b></span>
-            <p>Compuesta por capas de bizcochuelo de chocolate embebido en kirsch e intercaladas con nata y cerezas.</p>
-            <span class="tarjeta2_body_precio">S/. 55.50</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
+        <div class="carousel_accion-izquierda">
+          <i class="bi bi-chevron-left" onClick="mostrarAnteriorBanner()"></i>
+        </div>
+        <div class="carousel_accion-derecha">
+          <i class="bi bi-chevron-right" onClick="mostrarSiguienteBanner()"></i>
+        </div>
+      </div>
+      
+      <div class="tarjetas-acceso">
+        <div class="tarjeta-acceso">
+          <h2>Repostería</h2>
+          <p>En esta aplicación de repostería encontrarás todas las variedades de tortas que prefieres para tu familia y amigos</p>
+          <button type="button" class="btn btn-primary">
+            <a href="../reposteria/reposteria.html">!Has tu pedido!</a>
+          </button>
+          <img src="../../../assets/img/torta_chocolate_fresa.jpg">
         </div>
         
-        <div class="tarjeta2">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/keke_pina.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Kekes</span><br>
-            <span><b>Keke de piña</b></span>
-            <p>Muy rico, sabroso y esponjoso, con piñas azucaradas y dulces como a todos nos gusta</p>
-            <span class="tarjeta2_body_precio">S/. 24.00</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
+        <div class="tarjeta-acceso">
+          <h2>Juguetería</h2>
+          <p>En esta aplicación encontrarás mutiples juguetes para bebés y para niños con los últimos modelos</p>
+          <button type="button" class="btn btn-primary">
+            <a href="../jugueteria/jugueteria.html">!Has tu pedido!</a>
+          </button>
+          <img src="../../../assets/img/tortuga.jpg">
         </div>
         
-        <div class="tarjeta2">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/keke_zanahoria.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Kekes</span><br>
-            <span><b>keke de zanahoria</b></span>
-            <p>Keke de Zanahoria con Manjar Blanco y Castañas, a precio de promición, sólo por hoy.</p>
-            <span class="tarjeta2_body_precio">S/. 42.00</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
+        <div class="tarjeta-acceso">
+          <h2>Tecnologia</h2>
+          <p>En esta aplicacion encontrara dieferentes dispositivos moviles y laptops con las caracteristicas que usted necesita.</p>
+          <button type="button" class="btn btn-primary">
+            <a href="../tecnologia/tecnologia.html">!Has tu pedido!</a>
+          </button>
+          <img src="../../../assets/img/motog9.jpg">
+        </div>
+        
+        <div class="tarjeta-acceso">
+          <h2>Moda</h2>
+          <p>En esta aplicacion encontrara dieferentes productos de belleza,ropa y accesorios la variedad que usted necesita.</p>
+          <button type="button" class="btn btn-primary">
+            <a href="../moda/moda.html">!Has tu pedido!</a>
+          </button>
+          <img src="../../../assets/img/nars.jpg">
         </div>
       </div>
     
-      <!-- <span class="oferta"></span> -->
-      
-      <!-- <div>         -->
-        <!-- <div class="tarjeta"> -->
-          <!-- <h1> -->
-            <!-- <span> -->
-              <!-- Pedido -->
-              <!-- <div class="burbuja tarjeta_burbuja">1</div> -->
-            <!-- </span> -->
-          <!-- </h1>  -->
-      
-          <!-- <form> -->
-            <!-- <label>Nombre postre*: </label> -->
-            <!-- <input  -->
-              <!-- name="nombre_postre" -->
-              <!-- type="text"  -->
-              <!-- required  -->
-              <!-- placeholder="Ingrese el nombre..." /> -->
-            
-            <!-- <br/> -->
-            
-            <!-- <label>Cantidad*: </label> -->
-            <!-- <input  -->
-              <!-- name="cantidad" -->
-              <!-- type="number"  -->
-              <!-- onkeyup="construirOferta('selva negras', 'porciones de gelatinas')" -->
-              <!-- required /> -->
-            
-            <!-- <br/> -->
-            
-            <!-- <label>Correo*: </label> -->
-            <!-- <input  -->
-              <!-- name="correo" -->
-              <!-- type="email"  -->
-              <!-- required /> -->
-                  
-            <!-- <br/> -->
-            
-            <!-- <label>Departamento: </label> -->
-            <!-- <select name="departamento"> -->
-              <!-- <option>Lima</option> -->
-              <!-- <option>Arequipa</option> -->
-              <!-- <option>Cuzco</option> -->
-            <!-- </select> -->
-                  
-            <!-- <br/> -->
-            
-            <!-- <label>Provincia: </label> -->
-            <!-- <select name="provincia"> -->
-              <!-- <option>Lima</option> -->
-              <!-- <option>Callao</option> -->
-            <!-- </select> -->
-                  
-            <!-- <br/> -->
-            
-            <!-- <label>Distrito: </label> -->
-            <!-- <select name="distrito"> -->
-              <!-- <option>Villa Maria</option> -->
-              <!-- <option>San Juan M.</option> -->
-              <!-- <option>Independencia</option> -->
-            <!-- </select> -->
-                  
-            <!-- <br/> -->
-            
-            <!-- <label>Comentario: </label> -->
-            <!-- <textarea name="comentario"></textarea> -->
-            
-            <!-- <br/><br/> -->
-            <!-- <button type="button" onClick="realizarPedido();">Realizar pedido</button> -->
-            <!-- <button type="button" onClick="agregarPedido();">Agregar al carrito</button> -->
-          <!-- </form> -->
-
-          <!-- <br/><br/> -->
-        <!-- </div> -->
+      <div class="tarjetas-oferta">
+        <div class="tarteja-oferta">
+          <div class="tarjeta-oferta_descuento">
+            <span>Sólo</span>
+            <span class="tarjeta-oferta_descuento_hoy">HOY</span>
+            <span class="tarjeta-oferta_descuento_valor">!20%<br>descuento!</span>
+          </div>
+          <div class="tarjeta-oferta_producto">
+            <div class="tarjeta-oferta_producto_imagen">
+              <img src="../../../assets/img/torta_selva_negra.jpg" />
+            </div>
+            <div class="tarjeta-oferta_producto_detalle">
+              <span>Torta húmeda</span>
+              <span class="tarjeta-oferta_producto_nombre">Torta de leche<br>de Óreo</span>
+              <span class="tarjeta-oferta_producto_precio">S/. 60.25</span>
+            </div>
+          </div>
+        </div>  
         
-        <!-- <div class="tarjeta"> -->
-          <!-- <h1> -->
-            <!-- <span> -->
-              <!-- Socios bodoquin -->
-              <!-- <div class="burbuja tarjeta_burbuja">4</div> -->
-            <!-- </span> -->
-          <!-- </h1> -->
-      
-          <!-- <table> -->
-            <!-- <thead> -->
-              <!-- <tr> -->
-                <!-- <th>N°</th> -->
-                <!-- <th>Primer Apellido</th> -->
-                <!-- <th>Segundo Apellido</th> -->
-                <!-- <th>Nombres</th> -->
-              <!-- </tr> -->
-            <!-- </thead> -->
-            <!-- <tbody> -->
-              <!-- <tr> -->
-                <!-- <td>1</td> -->
-                <!-- <td>Rosales</td> -->
-                <!-- <td>Maldonado</td> -->
-                <!-- <td>Ricardo Alfredo</td> -->
-              <!-- </tr> -->
-              <!-- <tr> -->
-                <!-- <td>2</td> -->
-                <!-- <td>Rosales</td> -->
-                <!-- <td>Maldonado</td> -->
-                <!-- <td>David Daniel</td> -->
-              <!-- </tr> -->
-              <!-- <tr> -->
-                <!-- <td>3</td> -->
-                <!-- <td>Ayala</td> -->
-                <!-- <td>Rivera</td> -->
-                <!-- <td>Yoisi</td> -->
-              <!-- </tr> -->
-              <!-- <tr> -->
-                <!-- <td>4</td> -->
-                <!-- <td>Chipana</td> -->
-                <!-- <td>Isidro</td> -->
-                <!-- <td>Vanessa</td> -->
-              <!-- </tr> -->
-            <!-- </tbody> -->
-          <!-- </table> -->
-          
-          <!-- <p> -->
-            <!-- Esta aplicación se ha realizado gracias a la colaboración de nuestro desarrolladores expertos -->
-          <!-- </p> -->
-        <!-- </div> -->
-      <!-- </div> -->
+        <div class="tarteja-oferta">
+          <div class="tarjeta-oferta_descuento">
+            <span>Sólo</span>
+            <span class="tarjeta-oferta_descuento_hoy">HOY</span>
+            <span class="tarjeta-oferta_descuento_valor">!20%<br>descuento!</span>
+          </div>
+          <div class="tarjeta-oferta_producto">
+            <div class="tarjeta-oferta_producto_imagen">
+              <img src="../../../assets/img/motog9.jpg" />
+            </div>
+            <div class="tarjeta-oferta_producto_detalle">
+              <span>Motorola</span>
+              <span class="tarjeta-oferta_producto_nombre">Motorola<br>G9 plus</span>
+              <span class="tarjeta-oferta_producto_precio">S/. 999</span>
+            </div>
+          </div>
+        </div>  
+        
+        <div class="tarteja-oferta">
+          <div class="tarjeta-oferta_descuento">
+            <span>Sólo</span>
+            <span class="tarjeta-oferta_descuento_hoy">HOY</span>
+            <span class="tarjeta-oferta_descuento_valor">!20%<br>descuento!</span>
+          </div>
+          <div class="tarjeta-oferta_producto">
+            <div class="tarjeta-oferta_producto_imagen">
+              <img src="../../../assets/img/nars.jpg" />
+            </div>
+            <div class="tarjeta-oferta_producto_detalle">
+              <span>Base</span>
+              <span class="tarjeta-oferta_producto_nombre">Base de<br>larga duracion</span>
+              <span class="tarjeta-oferta_producto_precio">S/. 100</span>
+            </div>
+          </div>
+        </div>  
+        
+        <div class="tarteja-oferta">
+          <div class="tarjeta-oferta_descuento">
+            <span>Sólo</span>
+            <span class="tarjeta-oferta_descuento_hoy">HOY</span>
+            <span class="tarjeta-oferta_descuento_valor">!20%<br>descuento!</span>
+          </div>
+          <div class="tarjeta-oferta_producto">
+            <div class="tarjeta-oferta_producto_imagen">
+              <img src="../../../assets/img/coche.jpg" />
+            </div>
+            <div class="tarjeta-oferta_producto_detalle">
+              <span>Coche</span>
+              <span class="tarjeta-oferta_producto_nombre">Coche para<br>niñas a color</span>
+              <span class="tarjeta-oferta_producto_precio">S/. 150</span>
+            </div>
+          </div>
+        </div>         
+      </div>      
     </main>
     
     <footer>
@@ -435,6 +376,6 @@
       </div>
     </footer>
     
-    <script src="./reposteria.js"></script>
+    <script src="./inicio.js"></script>
   </body>
 </html>

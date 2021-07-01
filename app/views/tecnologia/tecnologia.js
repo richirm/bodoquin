@@ -131,12 +131,12 @@ function mostrarOcultarModalRegistrarse() {
 }
 
 function mostrarOcultarModalCerrarSesion() {
-  if(modalRegistrarseVisible === true) {
-    document.querySelector('.modal_registrarse').style.display = "none";
-    modalRegistrarseVisible = false;
+  if(modalCerrarSesionVisible === true) {
+    document.querySelector('.modal_cerrar_sesion').style.display = "none";
+    modalCerrarSesionVisible = false;
   } else {
-    document.querySelector('.modal_registrarse').style.display = "block";
-    modalRegistrarseVisible = true;
+    document.querySelector('.modal_cerrar_sesion').style.display = "block";
+    modalCerrarSesionVisible = true;
   }
 }
 

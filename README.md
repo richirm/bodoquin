@@ -86,6 +86,7 @@ Aplicación bodoquin
         - Implementar opciones de ayuda
         - Pantalla de cambios y devoluciones
         - Pantalla de nuestras tiendas
+        - cerrar el menu al dar click afuera de este 
         
       
       - Requerimientos no funcionales:       

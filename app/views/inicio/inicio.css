@@ -29,11 +29,12 @@ main .carousel {
 }
 
 main .carousel .carousel_banners {
-  
+  cursor: pointer;
 }
 
 main .carousel .carousel_banners .carousel_banner {
   display: none;
+  transition: transform 0.5s;
 }
 
 main .carousel .carousel_banners .carousel_banner:first-child {

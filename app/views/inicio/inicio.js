@@ -4,6 +4,8 @@ var modalInicioSesionVisible = false;
 var modalRegistrarseVisible = false;
 var modalCerrarSesionVisible = false;
 var posicionBannerActual = 1;
+var intervaloBanner;
+var elementoBanner = document.querySelector('.carousel_banner:first-child');
 
 function colapsarExpandirMenu() {  
   if(menuColapsado === true) {
@@ -89,6 +91,45 @@ function mostrarAnteriorBanner() {
   }
 }
 
+function contruirJobBanner() {
+  intervaloBanner = setInterval(mostrarSiguienteBanner, 3 * 1000);
+}
 
+function clicBannerInicia() {
+  clearInterval(intervaloBanner);
+}
+
+function clicBannerTermina() {
+  contruirJobBanner();
+}
+
+contruirJobBanner();
+
+function onMouseDownBanner(evento) {
+  var posicionInicial = evento.clientX - elementoBanner.getBoundingClientRect().left;
+  
+  elementoBanner.addEventListener('mousemove', onMouseMove);
+  
+  function onMouseMove(evento) {
+    var posicionFinal = evento.clientX;
+    var desplazamientoX = (posicionFinal - posicionInicial) + 'px';
+    elementoBanner.style.transform = `translate(${desplazamientoX})`;
+  }
+
+  function onMouseUpBanner() {
+    elementoBanner.style.transform = `translate(0)`;
+    
+    elementoBanner.removeEventListener('mousemove', onMouseMove);
+    elementoBanner.removeEventListener('mouseup', onMouseUpBanner);
+  }
+  
+  elementoBanner.addEventListener('mouseup', onMouseUpBanner);
+}
+
+elementoBanner.ondragstart = function() {
+  return false;
+};
+
+elementoBanner.addEventListener('mousedown', onMouseDownBanner);
 
 

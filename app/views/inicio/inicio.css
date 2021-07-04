@@ -26,19 +26,24 @@ main {
 main .carousel {
   position: relative;
   border-bottom: 1px solid #cccccc;
+  overflow: hidden;
 }
 
 main .carousel .carousel_banners {
   cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+  left: 0%;
+}
+
+main .carousel .carousel_banners.carousel_banners--transicion {
+  transition: all 500ms ease 0s;
 }
 
 main .carousel .carousel_banners .carousel_banner {
-  display: none;
   transition: transform 0.5s;
-}
-
-main .carousel .carousel_banners .carousel_banner:first-child {
-  display: block;
+  display: inline-block;
+  width: 100%;
 }
 
 main .carousel .carousel_banners .carousel_banner img {

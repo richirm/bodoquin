@@ -5,7 +5,7 @@ var modalRegistrarseVisible = false;
 var modalCerrarSesionVisible = false;
 var posicionBannerActual = 1;
 var intervaloBanner;
-var elementoBanner = document.querySelector('.carousel_banner:first-child');
+var elementoCarousel = document.querySelector('.carousel_banners');
 
 function colapsarExpandirMenu() {  
   if(menuColapsado === true) {
@@ -70,9 +70,17 @@ function mostrarOcultarModalCerrarSesion() {
 }
 
 function mostrarBanner(posicionBannerSeleccionado) {
-  document.querySelector(`.carousel_banner:nth-child(${posicionBannerActual})`).style.display = 'none';
-  document.querySelector(`.carousel_banner:nth-child(${posicionBannerSeleccionado})`).style.display = 'block';
+  clearInterval(intervaloBanner);
+  elementoCarousel.classList.add('carousel_banners--transicion');
+  
+  var desplazamientoCarousel = (posicionBannerSeleccionado - 1) * -100;
+  elementoCarousel.style.left = `${desplazamientoCarousel}%`;
   posicionBannerActual = posicionBannerSeleccionado;
+  
+  setTimeout(function() {
+    elementoCarousel.classList.remove('carousel_banners--transicion');
+    contruirJobBanner();
+  }, 0.5 * 1000);
 }
 
 function mostrarSiguienteBanner() {
@@ -95,41 +103,46 @@ function contruirJobBanner() {
   intervaloBanner = setInterval(mostrarSiguienteBanner, 3 * 1000);
 }
 
-function clicBannerInicia() {
+function iniciarDesplazamientoCarousel(evento) {
   clearInterval(intervaloBanner);
+  
+  var posicionInicial = evento.clientX;
+  
+  function moverCarousel(evento) {
+    var posicionFinal = evento.clientX;
+    var desplazamientoCursor = posicionFinal - posicionInicial;
+    var desplazamientoCarousel = (posicionBannerActual - 1) * -100;
+    elementoCarousel.style.left = `calc(${desplazamientoCarousel}% + ${desplazamientoCursor}px)`;
+  }
+  
+  function finalizarDesplazamientoCarousel(evento) {
+    var posicionFinal = evento.clientX;
+    var desplazamientoCursor = posicionFinal - posicionInicial;
+    
+    if(desplazamientoCursor > 300) {
+      mostrarAnteriorBanner();
+    } else if(desplazamientoCursor < -300) {
+      mostrarSiguienteBanner();
+    } else {
+      mostrarBanner(posicionBannerActual);
+    }
+    
+    elementoCarousel.removeEventListener('mousemove', moverCarousel);
+    elementoCarousel.removeEventListener('mouseup', finalizarDesplazamientoCarousel);
+    elementoCarousel.removeEventListener('mouseleave', finalizarDesplazamientoCarousel);
+  }
+  
+  elementoCarousel.addEventListener('mousemove', moverCarousel);
+  elementoCarousel.addEventListener('mouseup', finalizarDesplazamientoCarousel);
+  elementoCarousel.addEventListener('mouseleave', finalizarDesplazamientoCarousel);
 }
 
-function clicBannerTermina() {
-  contruirJobBanner();
-}
+elementoCarousel.addEventListener('dragstart', function(evento) {
+  evento.preventDefault();
+});
+
+elementoCarousel.addEventListener('mousedown', iniciarDesplazamientoCarousel);
 
 contruirJobBanner();
-
-function onMouseDownBanner(evento) {
-  var posicionInicial = evento.clientX - elementoBanner.getBoundingClientRect().left;
-  
-  elementoBanner.addEventListener('mousemove', onMouseMove);
-  
-  function onMouseMove(evento) {
-    var posicionFinal = evento.clientX;
-    var desplazamientoX = (posicionFinal - posicionInicial) + 'px';
-    elementoBanner.style.transform = `translate(${desplazamientoX})`;
-  }
-
-  function onMouseUpBanner() {
-    elementoBanner.style.transform = `translate(0)`;
-    
-    elementoBanner.removeEventListener('mousemove', onMouseMove);
-    elementoBanner.removeEventListener('mouseup', onMouseUpBanner);
-  }
-  
-  elementoBanner.addEventListener('mouseup', onMouseUpBanner);
-}
-
-elementoBanner.ondragstart = function() {
-  return false;
-};
-
-elementoBanner.addEventListener('mousedown', onMouseDownBanner);
 
 

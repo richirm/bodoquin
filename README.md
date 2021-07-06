@@ -86,8 +86,8 @@ Aplicación bodoquin
         - Implementar opciones de ayuda
         - Pantalla de cambios y devoluciones
         - Pantalla de nuestras tiendas
-        
-      
+        - cerrar el menu al dar click afuera de este 
+              
       - Requerimientos no funcionales:       
       
 5. Plataformas:
@@ -95,6 +95,11 @@ Aplicación bodoquin
   - mural: https://app.mural.co/t/bodoquin3213/m/bodoquin3213/1623554095180/58abc96e720510263625d3e7e4bb43151d7faa2f
   - trello: https://trello.com/b/0RXHhEKT/bodoquin
   - github: https://github.com/richirm/bodoquin
+  
+6. Editores: IDE
+  - NotePad++
+  - Visual Studio Code (VSC)
+  - Webstorm
     
     
 

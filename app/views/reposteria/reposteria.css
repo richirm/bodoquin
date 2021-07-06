@@ -734,7 +734,7 @@ footer {
 }
 
 @media (min-width: 1200px) {
-  /*TABLET HORIZONTAL*/  
+  /*PANTALLA ESCRITORIO o LAPTOP*/  
   .col-xl-1 {
     width: calc(100% / calc(12/1) - 16px);
   }

@@ -92,6 +92,21 @@ main .carousel .carousel_accion-derecha i:hover {
   border-radius: 4px;
 }
 
+main .pasos {
+  position: relative ;
+  text-align: center ;
+}
+
+main .pasos_acceso {
+  width: 10px;
+  height: 10px;
+  background-color: #585454;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 10px;
+  cursor : pointer ;
+}
+
 main .tarjetas-acceso {
   padding-left: 20px;
   padding-right: 20px;

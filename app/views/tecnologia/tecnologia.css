@@ -612,9 +612,20 @@ footer {
 /**********************************/
 
 /***** CLASES RESPONSIVES *******/
+@media (max-width: 1200px) {
+  .ajuste {
+    padding-top : 35px
+  }
+}
+@media (max-width: 496px) {
+  .ajuste {
+    padding-top : 70px
+  }
+}
 
 @media (max-width: 768px) {
   /*CELULAR*/
+
   .col-sm-1 {
     width: calc(100% / calc(12/1) - 16px);
   }

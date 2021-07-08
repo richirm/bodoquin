@@ -34,6 +34,7 @@ main .carousel .carousel_banners {
   position: relative;
   left: 0%;
   border-bottom: 1px solid #cccccc;
+  font-size: 0px;
 }
 
 main .carousel .carousel_banners.carousel_banners--transicion {

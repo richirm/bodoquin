@@ -76,7 +76,7 @@ function mostrarBanner(posicionBannerSeleccionado) {
   document.querySelector(`.carousel_pasos_acceso:nth-child(${posicionBannerActual})`).classList.remove('seleccionado');
   
   var desplazamientoCarousel = (posicionBannerSeleccionado - 1) * -100;
-  elementoCarousel.style.left = `calc(${desplazamientoCarousel}% - 12px)`;
+  elementoCarousel.style.left = `${desplazamientoCarousel}%`;
   posicionBannerActual = posicionBannerSeleccionado;
   
   document.querySelector(`.carousel_pasos_acceso:nth-child(${posicionBannerSeleccionado})`).classList.add('seleccionado');
@@ -116,7 +116,7 @@ function iniciarDesplazamientoCarousel(evento) {
     var posicionFinal = evento.clientX;
     var desplazamientoCursor = posicionFinal - posicionInicial;
     var desplazamientoCarousel = (posicionBannerActual - 1) * -100;
-    elementoCarousel.style.left = `calc(${desplazamientoCarousel}% -12px + ${desplazamientoCursor}px)`;
+    elementoCarousel.style.left = `calc(${desplazamientoCarousel}% + ${desplazamientoCursor}px)`;
   }
   
   function finalizarDesplazamientoCarousel(evento) {

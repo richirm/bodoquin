@@ -91,6 +91,42 @@ function mostrarSiguienteBanner() {
   }
 }
 
+
+function mostrarPrimerBanner() {
+  if(posicionBannerActual === 4,3,2) {
+    mostrarBanner(1);
+  } else {
+    mostrarBanner(posicionBannerActual + 1);
+  }
+}
+
+
+function mostrarSegundoBanner() {
+  if(posicionBannerActual === 4,3,1) {
+    mostrarBanner(2);
+  } else {
+    mostrarBanner(posicionBannerActual + 1);
+  }
+}
+
+
+function mostrarTercerBanner() {
+  if(posicionBannerActual === 4,2,1) {
+    mostrarBanner(3);
+  } else {
+    mostrarBanner(posicionBannerActual + 1);
+  }
+}
+
+
+function mostrarCuartoBanner() {
+  if(posicionBannerActual === 1,2,3) {
+    mostrarBanner(4);
+  } else {
+    mostrarBanner(posicionBannerActual + 1);
+  }
+}
+
 function mostrarAnteriorBanner() {
   if(posicionBannerActual === 1) {
     mostrarBanner(4);

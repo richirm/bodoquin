@@ -95,6 +95,7 @@ main .carousel .carousel_accion-derecha i:hover {
 main .pasos {
   position: relative ;
   text-align: center ;
+  background-color: #e3ecff;
 }
 
 main .pasos_acceso {
@@ -105,6 +106,11 @@ main .pasos_acceso {
   display: inline-block;
   margin: 10px;
   cursor : pointer ;
+}
+
+.pasos_acceso :hover {
+  background-color: #fc1212;
+  font-size: 20px;
 }
 
 main .tarjetas-acceso {

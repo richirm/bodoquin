@@ -97,6 +97,7 @@ main .carousel .carousel_pasos {
   position: relative ;
   text-align: center ;
   background-color: #e3ecff;
+  user-select: none;
 }
 
 main .carousel .carousel_pasos .carousel_pasos_acceso {

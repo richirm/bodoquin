@@ -73,9 +73,13 @@ function mostrarBanner(posicionBannerSeleccionado) {
   clearInterval(intervaloBanner);
   elementoCarousel.classList.add('carousel_banners--transicion');
   
+  document.querySelector(`.carousel_pasos_acceso:nth-child(${posicionBannerActual})`).classList.remove('seleccionado');
+  
   var desplazamientoCarousel = (posicionBannerSeleccionado - 1) * -100;
   elementoCarousel.style.left = `${desplazamientoCarousel}%`;
   posicionBannerActual = posicionBannerSeleccionado;
+  
+  document.querySelector(`.carousel_pasos_acceso:nth-child(${posicionBannerSeleccionado})`).classList.add('seleccionado');
   
   setTimeout(function() {
     elementoCarousel.classList.remove('carousel_banners--transicion');
@@ -86,42 +90,6 @@ function mostrarBanner(posicionBannerSeleccionado) {
 function mostrarSiguienteBanner() {
   if(posicionBannerActual === 4) {
     mostrarBanner(1);
-  } else {
-    mostrarBanner(posicionBannerActual + 1);
-  }
-}
-
-
-function mostrarPrimerBanner() {
-  if(posicionBannerActual === 4,3,2) {
-    mostrarBanner(1);
-  } else {
-    mostrarBanner(posicionBannerActual + 1);
-  }
-}
-
-
-function mostrarSegundoBanner() {
-  if(posicionBannerActual === 4,3,1) {
-    mostrarBanner(2);
-  } else {
-    mostrarBanner(posicionBannerActual + 1);
-  }
-}
-
-
-function mostrarTercerBanner() {
-  if(posicionBannerActual === 4,2,1) {
-    mostrarBanner(3);
-  } else {
-    mostrarBanner(posicionBannerActual + 1);
-  }
-}
-
-
-function mostrarCuartoBanner() {
-  if(posicionBannerActual === 1,2,3) {
-    mostrarBanner(4);
   } else {
     mostrarBanner(posicionBannerActual + 1);
   }

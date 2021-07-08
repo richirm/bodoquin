@@ -25,7 +25,6 @@ main {
 
 main .carousel {
   position: relative;
-  border-bottom: 1px solid #cccccc;
   overflow: hidden;
 }
 
@@ -34,6 +33,7 @@ main .carousel .carousel_banners {
   white-space: nowrap;
   position: relative;
   left: 0%;
+  border-bottom: 1px solid #cccccc;
 }
 
 main .carousel .carousel_banners.carousel_banners--transicion {
@@ -92,13 +92,13 @@ main .carousel .carousel_accion-derecha i:hover {
   border-radius: 4px;
 }
 
-main .pasos {
+main .carousel .carousel_pasos {
   position: relative ;
   text-align: center ;
   background-color: #e3ecff;
 }
 
-main .pasos_acceso {
+main .carousel .carousel_pasos .carousel_pasos_acceso {
   width: 10px;
   height: 10px;
   background-color: #585454;
@@ -108,9 +108,12 @@ main .pasos_acceso {
   cursor : pointer ;
 }
 
-.pasos_acceso :hover {
-  background-color: #fc1212;
-  font-size: 20px;
+main .carousel .carousel_pasos .carousel_pasos_acceso.seleccionado {
+  background-color: #e73c35;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: 2px;
 }
 
 main .tarjetas-acceso {

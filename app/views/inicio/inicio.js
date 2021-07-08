@@ -5,6 +5,7 @@ var modalRegistrarseVisible = false;
 var modalCerrarSesionVisible = false;
 var posicionBannerActual = 1;
 var intervaloBanner;
+var timeoutBanner;
 var elementoCarousel = document.querySelector('.carousel_banners');
 
 function colapsarExpandirMenu() {  
@@ -81,7 +82,9 @@ function mostrarBanner(posicionBannerSeleccionado) {
   
   document.querySelector(`.carousel_pasos_acceso:nth-child(${posicionBannerSeleccionado})`).classList.add('seleccionado');
   
-  setTimeout(function() {
+  clearTimeout(timeoutBanner);
+  
+  timeoutBanner = setTimeout(function() {
     elementoCarousel.classList.remove('carousel_banners--transicion');
     contruirJobBanner();
   }, 0.5 * 1000);

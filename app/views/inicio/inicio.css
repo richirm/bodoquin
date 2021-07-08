@@ -34,6 +34,7 @@ main .carousel .carousel_banners {
   position: relative;
   left: 0%;
   border-bottom: 1px solid #cccccc;
+  font-size: 0px;
 }
 
 main .carousel .carousel_banners.carousel_banners--transicion {
@@ -47,7 +48,7 @@ main .carousel .carousel_banners .carousel_banner {
 }
 
 main .carousel .carousel_banners .carousel_banner img {
-  
+  width: 100%; 
 }
 
 main .carousel .carousel_accion-izquierda {
@@ -96,6 +97,7 @@ main .carousel .carousel_pasos {
   position: relative ;
   text-align: center ;
   background-color: #e3ecff;
+  user-select: none;
 }
 
 main .carousel .carousel_pasos .carousel_pasos_acceso {

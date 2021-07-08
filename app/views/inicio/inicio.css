@@ -135,6 +135,12 @@ main .tarjeta-acceso {
   background-color: #ffffff;
 }
 
+main .tarjeta-acceso:hover {
+  background-color: #f6f6f6;
+  transform: scale3d(1.05, 1.05, 1.05);
+  border: 1px solid #a7ae3e;
+}
+
 main .tarjeta-acceso button {
   width: 50%;
   vertical-align: middle;

@@ -73,9 +73,13 @@ function mostrarBanner(posicionBannerSeleccionado) {
   clearInterval(intervaloBanner);
   elementoCarousel.classList.add('carousel_banners--transicion');
   
+  document.querySelector(`.carousel_pasos_acceso:nth-child(${posicionBannerActual})`).classList.remove('seleccionado');
+  
   var desplazamientoCarousel = (posicionBannerSeleccionado - 1) * -100;
   elementoCarousel.style.left = `${desplazamientoCarousel}%`;
   posicionBannerActual = posicionBannerSeleccionado;
+  
+  document.querySelector(`.carousel_pasos_acceso:nth-child(${posicionBannerSeleccionado})`).classList.add('seleccionado');
   
   setTimeout(function() {
     elementoCarousel.classList.remove('carousel_banners--transicion');

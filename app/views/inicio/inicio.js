@@ -7,6 +7,7 @@ var posicionBannerActual = 1;
 var intervaloBanner;
 var timeoutBanner;
 var elementoCarousel = document.querySelector('.carousel_banners');
+var chatPopupVisible = false;
 
 function colapsarExpandirMenu() {  
   if(menuColapsado === true) {
@@ -70,6 +71,7 @@ function mostrarOcultarModalCerrarSesion() {
   }
 }
 
+/*********** CAROUSEL *****************/
 function mostrarBanner(posicionBannerSeleccionado) {
   clearInterval(intervaloBanner);
   elementoCarousel.classList.add('carousel_banners--transicion');
@@ -151,5 +153,21 @@ elementoCarousel.addEventListener('dragstart', function(evento) {
 elementoCarousel.addEventListener('mousedown', iniciarDesplazamientoCarousel);
 
 contruirJobBanner();
+/*****************************************/
+
+/**************** CHAT *******************/
+function mostrarOcultarChat() {
+  if(chatPopupVisible === true) {
+    document.querySelector('.chat_backdrop').style.display = "none";
+    document.querySelector('.chat_popup').style.display = "none";
+    chatPopupVisible = false;
+  } else {
+    document.querySelector('.chat_backdrop').style.display = "block";
+    document.querySelector('.chat_popup').style.display = "block";
+    chatPopupVisible = true;
+  }
+}
+
+/*****************************************/
 
 

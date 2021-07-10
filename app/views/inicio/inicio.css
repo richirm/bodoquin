@@ -584,6 +584,23 @@ footer {
   margin-right: 10px;
 }
 
+.body_chat {
+  float: right;
+  width: 120px;
+  padding-top: 5px;
+}
+
+.body_chat_acciones {
+  position: relative ;
+}
+
+.body_chat i {
+  font-size: 43px;
+  color: #8a8df6;
+  margin-left: 75px;
+  cursor: pointer;
+}
+
 /***** ESTILOS PARA MODAL *****/
 .modal {
   position: fixed;

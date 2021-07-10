@@ -7,6 +7,7 @@ var posicionBannerActual = 1;
 var intervaloBanner;
 var timeoutBanner;
 var elementoCarousel = document.querySelector('.carousel_banners');
+var mostrarOcultarChat = false ;
 
 function colapsarExpandirMenu() {  
   if(menuColapsado === true) {

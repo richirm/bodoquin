@@ -265,6 +265,8 @@ body.con-scroll main {
   z-index: 2;
   border: 1px solid #cccccc;
   display: none;
+  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 15%);
+  border-radius: 8px;
 }
 
 .chat .chat_backdrop {
@@ -280,6 +282,7 @@ body.con-scroll main {
   width: calc(100% - 20px);
   border-bottom: 1px solid #cccccc;
   padding: 10px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
 }
 
 .chat .chat_popup .chat_popup_header h1 {
@@ -299,11 +302,13 @@ body.con-scroll main {
   position: absolute;
   right: 5px;
   font-size: 25px;
+  cursor: pointer;
 }
 
 .chat .chat_popup .chat_popup_header .chat_logo {
   font-size: 35px;
   vertical-align: middle;
+  color: #696ce6;
 }
 
 .chat .chat_popup .chat_popup_body {
@@ -323,11 +328,13 @@ body.con-scroll main {
   border: 1px solid #cccccc;
   padding-left: 10px;
   vertical-align: middle;
+  border-radius: 15px;
 }
 
 .chat .chat_popup .chat_popup_footer i {
   font-size: 25px;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .chat .chat_fap {

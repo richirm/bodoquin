@@ -258,7 +258,6 @@ body.con-scroll main {
 
 .chat .chat_popup {
   width: 250px;
-  height: 400px;
   position: fixed;
   bottom: 70px;
   right: 20px;
@@ -313,9 +312,22 @@ body.con-scroll main {
 }
 
 .chat .chat_popup .chat_popup_footer {
-  width: 100%;
-  height: 50px;
+  padding: 10px;
+  width: calc(100% - 20px);
   border-top: 1px solid #cccccc;
+}
+
+.chat .chat_popup .chat_popup_footer input {
+  height: 30px;
+  width: 187px;
+  border: 1px solid #cccccc;
+  padding-left: 10px;
+  vertical-align: middle;
+}
+
+.chat .chat_popup .chat_popup_footer i {
+  font-size: 25px;
+  vertical-align: middle;
 }
 
 .chat .chat_fap {

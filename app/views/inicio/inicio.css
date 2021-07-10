@@ -278,9 +278,33 @@ body.con-scroll main {
 }
 
 .chat .chat_popup .chat_popup_header {
-  width: 100%;
-  height: 50px;
+  width: calc(100% - 20px);
   border-bottom: 1px solid #cccccc;
+  padding: 10px;
+}
+
+.chat .chat_popup .chat_popup_header h1 {
+  margin: 0;
+  font-size: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 15px;
+}
+
+.chat .chat_popup .chat_popup_header h1 small {
+  color: #969595;
+  font-size: 14px;
+}
+
+.chat .chat_popup .chat_popup_header .chat_cerrar {
+  position: absolute;
+  right: 5px;
+  font-size: 25px;
+}
+
+.chat .chat_popup .chat_popup_header .chat_logo {
+  font-size: 35px;
+  vertical-align: middle;
 }
 
 .chat .chat_popup .chat_popup_body {

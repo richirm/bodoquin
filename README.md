@@ -60,6 +60,8 @@ Aplicación bodoquin
       - el carousel con pasos 5
       - en la vista de inicio: tarjetas de acceso tengan un efecto hover 2
       - implementar maqueta del chat con boton FAB 2
+      - integrar el chat en las pantallas de productos 1
+      - agregar efecto de transición al chat poppup y al boton fab 2
       
     - backlog => conjunto de tareas o mejoras a realizar (features futuros)      
       - Requerimientos funcionales:

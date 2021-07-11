@@ -1,82 +1,13 @@
-var pedidos = [];
 var menuColapsado = true;
 var usuarioPopupVisible = false;
 var modalInicioSesionVisible = false;
 var modalRegistrarseVisible = false;
 var modalCerrarSesionVisible = false;
-
-function sumarYAlertarValores(campo1, campo2) {
-  var sumaDeValores = campo1 + campo2;
-  alert(sumaDeValores);
-  return sumaDeValores;
-}
-
-function multiplicarYAlertarValores(campo1, campo2) {
-  var productoValores = campo1 * campo2;
-  confirm(productoValores);
-  return productoValores;
-}
-                                       
-function sumarYMultiplicarYAlertarValores(campo1, campo2, campo3) {
-  var sumaDeValores = sumarYAlertarValores(campo1, campo2);
-  var productoValores = multiplicarYAlertarValores(sumaDeValores, campo3);
-  return productoValores;
-}
-
-function realizarPedido() {
-  var nombrePostre = document.querySelector('[name="nombre_postre"]').value;
-  var cantidad = document.querySelector('[name="cantidad"]').value;
-  var correo = document.querySelector('[name="correo"]').value;
-  var departamento = document.querySelector('[name="departamento"]').value;
-  var provincia = document.querySelector('[name="provincia"]').value;
-  var distrito = document.querySelector('[name="distrito"]').value;
-  var comentario = document.querySelector('[name="comentario"]').value;
-  
-  var pedido = {
-    nombrePostre: nombrePostre,
-    cantidad: cantidad,
-    correo: correo,
-    departamento: departamento,
-    provincia: provincia,
-    distrito: distrito,
-    comentario: comentario,
-  };
-  
-  console.log(pedido);
-}
-
-function agregarPedido() {
-  var nombrePostre = document.querySelector('[name="nombre_postre"]').value;
-  var cantidad = document.querySelector('[name="cantidad"]').value;
-  var correo = document.querySelector('[name="correo"]').value;
-  var departamento = document.querySelector('[name="departamento"]').value;
-  var provincia = document.querySelector('[name="provincia"]').value;
-  var distrito = document.querySelector('[name="distrito"]').value;
-  var comentario = document.querySelector('[name="comentario"]').value;
-  
-  var pedido = {
-    nombrePostre: nombrePostre,
-    cantidad: cantidad,
-    correo: correo,
-    departamento: departamento,
-    provincia: provincia,
-    distrito: distrito,
-    comentario: comentario,
-  };
-  
-  pedidos.push(pedido);
-  
-  console.log(pedidos);
-}
-
-function construirOferta(desProducto, desRegalo) {
-  var cantProductos = document.querySelector('[name="cantidad"]').value;
-  var cantRegalos = cantProductos / 2;
-  
-  var desOferta = `Compra ${cantProductos} ${desProducto} y te ganas ${cantRegalos} ${desRegalo}`;
-  
-  document.querySelector('.oferta').innerHTML = desOferta;
-}
+var posicionBannerActual = 1;
+var intervaloBanner;
+var timeoutBanner;
+var elementoCarousel = document.querySelector('.carousel_banners');
+var chatPopupVisible = false;
 
 function colapsarExpandirMenu() {  
   if(menuColapsado === true) {
@@ -139,4 +70,108 @@ function mostrarOcultarModalCerrarSesion() {
     modalCerrarSesionVisible = true;
   }
 }
+
+/*********** CAROUSEL *****************/
+function mostrarBanner(posicionBannerSeleccionado) {
+  clearInterval(intervaloBanner);
+  elementoCarousel.classList.add('carousel_banners--transicion');
+  
+  document.querySelector(`.carousel_pasos_acceso:nth-child(${posicionBannerActual})`).classList.remove('seleccionado');
+  
+  var desplazamientoCarousel = (posicionBannerSeleccionado - 1) * -100;
+  elementoCarousel.style.left = `${desplazamientoCarousel}%`;
+  posicionBannerActual = posicionBannerSeleccionado;
+  
+  document.querySelector(`.carousel_pasos_acceso:nth-child(${posicionBannerSeleccionado})`).classList.add('seleccionado');
+  
+  clearTimeout(timeoutBanner);
+  
+  timeoutBanner = setTimeout(function() {
+    elementoCarousel.classList.remove('carousel_banners--transicion');
+    contruirJobBanner();
+  }, 0.5 * 1000);
+}
+
+function mostrarSiguienteBanner() {
+  if(posicionBannerActual === 4) {
+    mostrarBanner(1);
+  } else {
+    mostrarBanner(posicionBannerActual + 1);
+  }
+}
+
+function mostrarAnteriorBanner() {
+  if(posicionBannerActual === 1) {
+    mostrarBanner(4);
+  } else {
+    mostrarBanner(posicionBannerActual - 1);
+  }
+}
+
+function contruirJobBanner() {
+  intervaloBanner = setInterval(mostrarSiguienteBanner, 3 * 1000);
+}
+
+function iniciarDesplazamientoCarousel(evento) {
+  clearInterval(intervaloBanner);
+  
+  var posicionInicial = evento.clientX;
+  
+  function moverCarousel(evento) {
+    var posicionFinal = evento.clientX;
+    var desplazamientoCursor = posicionFinal - posicionInicial;
+    var desplazamientoCarousel = (posicionBannerActual - 1) * -100;
+    elementoCarousel.style.left = `calc(${desplazamientoCarousel}% + ${desplazamientoCursor}px)`;
+  }
+  
+  function finalizarDesplazamientoCarousel(evento) {
+    var posicionFinal = evento.clientX;
+    var desplazamientoCursor = posicionFinal - posicionInicial;
+    
+    if(desplazamientoCursor > 300) {
+      mostrarAnteriorBanner();
+    } else if(desplazamientoCursor < -300) {
+      mostrarSiguienteBanner();
+    } else {
+      mostrarBanner(posicionBannerActual);
+    }
+    
+    elementoCarousel.removeEventListener('mousemove', moverCarousel);
+    elementoCarousel.removeEventListener('mouseup', finalizarDesplazamientoCarousel);
+    elementoCarousel.removeEventListener('mouseleave', finalizarDesplazamientoCarousel);
+  }
+  
+  elementoCarousel.addEventListener('mousemove', moverCarousel);
+  elementoCarousel.addEventListener('mouseup', finalizarDesplazamientoCarousel);
+  elementoCarousel.addEventListener('mouseleave', finalizarDesplazamientoCarousel);
+}
+
+elementoCarousel.addEventListener('dragstart', function(evento) {
+  evento.preventDefault();
+});
+
+elementoCarousel.addEventListener('mousedown', iniciarDesplazamientoCarousel);
+
+contruirJobBanner();
+/*****************************************/
+
+/**************** CHAT *******************/
+function mostrarOcultarChat() {
+  if(chatPopupVisible === true) {
+    document.querySelector('.chat_backdrop').style.display = "none";
+    document.querySelector('.chat_popup').classList.remove('chat_popup_in');    
+    document.querySelector('.chat_popup').classList.add('chat_popup_out');    
+    document.querySelector('.chat_fab').classList.remove('chat_fab_in');
+    chatPopupVisible = false;
+  } else {
+    document.querySelector('.chat_backdrop').style.display = "block";
+    document.querySelector('.chat_popup').classList.add('chat_popup_in');    
+    document.querySelector('.chat_popup').classList.remove('chat_popup_out');  
+    document.querySelector('.chat_fab').classList.add('chat_fab_in');
+    chatPopupVisible = true;
+  }
+}
+
+/*****************************************/
+
 

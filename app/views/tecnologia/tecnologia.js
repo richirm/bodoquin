@@ -4,6 +4,7 @@ var usuarioPopupVisible = false;
 var modalInicioSesionVisible = false;
 var modalRegistrarseVisible = false;
 var modalCerrarSesionVisible = false;
+var chatPopupVisible = false;
 
 function sumarYAlertarValores(campo1, campo2) {
   var sumaDeValores = campo1 + campo2;
@@ -139,4 +140,18 @@ function mostrarOcultarModalCerrarSesion() {
     modalCerrarSesionVisible = true;
   }
 }
+/**************** CHAT *******************/
+function mostrarOcultarChat() {
+  if(chatPopupVisible === true) {
+    document.querySelector('.chat_backdrop').style.display = "none";
+    document.querySelector('.chat_popup').style.display = "none";
+    chatPopupVisible = false;
+  } else {
+    document.querySelector('.chat_backdrop').style.display = "block";
+    document.querySelector('.chat_popup').style.display = "block";
+    chatPopupVisible = true;
+  }
+}
+
+/*****************************************/
 

@@ -5,7 +5,9 @@ var modalRegistrarseVisible = false;
 var modalCerrarSesionVisible = false;
 var posicionBannerActual = 1;
 var intervaloBanner;
+var timeoutBanner;
 var elementoCarousel = document.querySelector('.carousel_banners');
+var chatPopupVisible = false;
 
 function colapsarExpandirMenu() {  
   if(menuColapsado === true) {
@@ -69,6 +71,7 @@ function mostrarOcultarModalCerrarSesion() {
   }
 }
 
+/*********** CAROUSEL *****************/
 function mostrarBanner(posicionBannerSeleccionado) {
   clearInterval(intervaloBanner);
   elementoCarousel.classList.add('carousel_banners--transicion');
@@ -81,7 +84,9 @@ function mostrarBanner(posicionBannerSeleccionado) {
   
   document.querySelector(`.carousel_pasos_acceso:nth-child(${posicionBannerSeleccionado})`).classList.add('seleccionado');
   
-  setTimeout(function() {
+  clearTimeout(timeoutBanner);
+  
+  timeoutBanner = setTimeout(function() {
     elementoCarousel.classList.remove('carousel_banners--transicion');
     contruirJobBanner();
   }, 0.5 * 1000);
@@ -148,5 +153,21 @@ elementoCarousel.addEventListener('dragstart', function(evento) {
 elementoCarousel.addEventListener('mousedown', iniciarDesplazamientoCarousel);
 
 contruirJobBanner();
+/*****************************************/
+
+/**************** CHAT *******************/
+function mostrarOcultarChat() {
+  if(chatPopupVisible === true) {
+    document.querySelector('.chat_backdrop').style.display = "none";
+    document.querySelector('.chat_popup').style.display = "none";
+    chatPopupVisible = false;
+  } else {
+    document.querySelector('.chat_backdrop').style.display = "block";
+    document.querySelector('.chat_popup').style.display = "block";
+    chatPopupVisible = true;
+  }
+}
+
+/*****************************************/
 
 

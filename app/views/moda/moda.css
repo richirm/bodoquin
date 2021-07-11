@@ -27,6 +27,117 @@ body.con-scroll main {
   padding-top: 0px;
 }
 
+/************** CHAT *****************/
+.chat {
+  
+}
+
+.chat .chat_popup {
+  width: 250px;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background-color: #ffffff;
+  z-index: 2;
+  border: 1px solid #cccccc;
+  display: none;
+  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 15%);
+  border-radius: 8px;
+}
+
+.chat .chat_backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.chat .chat_popup .chat_popup_header {
+  width: calc(100% - 20px);
+  border-bottom: 1px solid #cccccc;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
+
+.chat .chat_popup .chat_popup_header h1 {
+  margin: 0;
+  font-size: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 15px;
+}
+
+.chat .chat_popup .chat_popup_header h1 small {
+  color: #969595;
+  font-size: 14px;
+}
+
+.chat .chat_popup .chat_popup_header .chat_cerrar {
+  position: absolute;
+  right: 5px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.chat .chat_popup .chat_popup_header .chat_logo {
+  font-size: 35px;
+  vertical-align: middle;
+  color: #696ce6;
+}
+
+.chat .chat_popup .chat_popup_body {
+  height: 300px;
+  width: 100%;
+}
+
+.chat .chat_popup .chat_popup_footer {
+  padding: 10px;
+  width: calc(100% - 20px);
+  border-top: 1px solid #cccccc;
+}
+
+.chat .chat_popup .chat_popup_footer input {
+  height: 30px;
+  width: 187px;
+  border: 1px solid #cccccc;
+  padding-left: 10px;
+  vertical-align: middle;
+  border-radius: 15px;
+}
+
+.chat .chat_popup .chat_popup_footer i {
+  font-size: 25px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.chat .chat_fap {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 12px 28px rgb(0 0 0 / 20%);
+}
+
+.chat .chat_fap i {
+  font-size: 43px;
+  color: #8a8df6;
+  cursor: pointer;
+  position: relative;
+  top: -3px;
+}
+
+.chat .chat_fap i:hover {
+  color: #696ce6;
+}
+/*************************************/
+
 .header_principal {
   padding: 10px;
 }

@@ -53,16 +53,15 @@ Aplicación bodoquin
   - SCRUM: es una metodología agil para dividirnos el desarrollo
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13
-    - Features: (Lista de tareas - tablero KANBAN) 
-      - aumentar hasta 9 productos por cada vista 1
-      - responsive parte II en las vistas de productos 3
-      - identificar (resolver) los bugs del carousel 2
-      - el carousel con pasos 5
-      - en la vista de inicio: tarjetas de acceso tengan un efecto hover 2
-      - implementar maqueta del chat con boton FAB 2
-      - integrar el chat en las pantallas de productos 1
-      - agregar efecto de transición al chat poppup y al boton fab 2
-      
+    - Features: (Lista de tareas - tablero KANBAN) 19
+      - Tarjeta de oferta fija que aparezca al abrir el home 2
+      - implementar sección de productos en remate en cada pantalla 3
+      - integrarnos con bootstrap parte 1 - responsive 3
+      - modal de carrito de compra - 5
+      - en cada vista de cada linea de productos, al seleccionar un producto, se tiene que mostrar la 
+        funcionalidad para seguir agregando o  disminuyendo productos, o eliminar el producto 3
+      - implementar el componente de toast (notificaciones) 2 
+      - cerrar el menu al dar click afuera de este 1
     - backlog => conjunto de tareas o mejoras a realizar (features futuros)      
       - Requerimientos funcionales:
         - poner un logo
@@ -71,18 +70,13 @@ Aplicación bodoquin
         - implementar vista de resumen de la compra
         - en la vista de inicio: implementar mini banners por cada linea de producto con efecto en el hover
         - implementar sección de anuncios y/o publicidad
-        - modal de confirmacion de recojo (hubicación)
-        - modal de carrito de compra
-        - integrarnos con bootstrap
-        - en cada vista de producto, al seleccionar un producto, se tiene que mostrar la 
-          funcionalidad para seguir agregando o  disminuyendo productos, o eliminar
-        - Tarjeta de oferta fija que aparezca al abrir el home 
-        - implementar sección de productos en remate en cada pantalla  
+        - modal de confirmacion de recojo (ubicación)
         - Implementar opciones de ayuda
         - Pantalla de cambios y devoluciones
         - Pantalla de nuestras tiendas
-        - cerrar el menu al dar click afuera de este 
-              
+        - correciones del chat parte II (chat fantasma)
+        - integrar el responsive en la pantalla de inicio
+        - menu responsive
       - Requerimientos no funcionales:       
       
 5. Plataformas:

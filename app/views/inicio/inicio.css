@@ -251,6 +251,59 @@ body.con-scroll main {
   padding-top: 0px;
 }
 
+/***************OFERTA HOY ************/
+
+.oferta-hoy {
+  width: 465px;
+  height: 292px;
+  position: fixed;
+  right: 0;
+  background-color: #ff1111;
+  top: 50%;
+  transform: translateY(-50%);
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;  
+  font-size: 0px;
+}
+
+.oferta-hoy .oferta-hoy_titulo {
+  width: 44px;
+  height: 100%;
+  background-color: #464646;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  display: inline-block;
+  font-size: 15px; 
+}
+
+.oferta-hoy .oferta-hoy_titulo span {
+  left: 13px;
+  color: #ffffff;
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+  position: absolute;
+  bottom: 15px;
+  font-weight: bold;    
+}
+
+.oferta-hoy .oferta-hoy_titulo i {
+  font-size: 25px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  position: absolute;
+  left: 11px;
+  top: 7px;     
+}
+
+.oferta-hoy .oferta-hoy_img {
+  display: inline-block;
+  width: 417px; 
+}
+
+/**************************************/
+
+
 /************** CHAT *****************/
 .chat {
   

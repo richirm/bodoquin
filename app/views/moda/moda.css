@@ -53,9 +53,47 @@ body.con-scroll main {
   background-color: #ffffff;
   z-index: 2;
   border: 1px solid #cccccc;
-  display: none;
   box-shadow: 0 4px 12px 0 rgb(0 0 0 / 15%);
   border-radius: 8px;
+  opacity: 0;
+  transform-origin: bottom right;
+}
+
+.chat .chat_popup.chat_popup_in {
+  animation-name: chat_popup_animacion_in;
+  opacity: 1;
+  animation-duration: 300ms;
+}
+
+.chat .chat_popup.chat_popup_out {
+  animation-name: chat_popup_animacion_out;
+  opacity: 0;
+  animation-duration: 300ms;
+}
+
+@keyframes chat_popup_animacion_in {
+  0% { 
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes chat_popup_animacion_out {
+  0% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% { 
+    opacity: 0;
+    transform: scale(0);
+  }
 }
 
 .chat .chat_backdrop {
@@ -126,7 +164,7 @@ body.con-scroll main {
   cursor: pointer;
 }
 
-.chat .chat_fap {
+.chat .chat_fab {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -138,7 +176,7 @@ body.con-scroll main {
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 12px 28px rgb(0 0 0 / 20%);
 }
 
-.chat .chat_fap i {
+.chat .chat_fab i {
   font-size: 43px;
   color: #8a8df6;
   cursor: pointer;
@@ -146,7 +184,7 @@ body.con-scroll main {
   top: -3px;
 }
 
-.chat .chat_fap i:hover {
+.chat .chat_fab i:hover {
   color: #696ce6;
 }
 /*************************************/

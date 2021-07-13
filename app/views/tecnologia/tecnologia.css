@@ -39,6 +39,155 @@ body.con-scroll main {
   padding-top: 0px;
 }
 
+/************** CHAT *****************/
+.chat {
+  
+}
+
+.chat .chat_popup {
+  width: 250px;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background-color: #ffffff;
+  z-index: 2;
+  border: 1px solid #cccccc;
+  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 15%);
+  border-radius: 8px;
+  opacity: 0;
+  transform-origin: bottom right;
+}
+
+.chat .chat_popup.chat_popup_in {
+  animation-name: chat_popup_animacion_in;
+  opacity: 1;
+  animation-duration: 300ms;
+}
+
+.chat .chat_popup.chat_popup_out {
+  animation-name: chat_popup_animacion_out;
+  opacity: 0;
+  animation-duration: 300ms;
+}
+
+@keyframes chat_popup_animacion_in {
+  0% { 
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes chat_popup_animacion_out {
+  0% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% { 
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.chat .chat_backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.chat .chat_popup .chat_popup_header {
+  width: calc(100% - 20px);
+  border-bottom: 1px solid #cccccc;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
+
+.chat .chat_popup .chat_popup_header h1 {
+  margin: 0;
+  font-size: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 15px;
+}
+
+.chat .chat_popup .chat_popup_header h1 small {
+  color: #969595;
+  font-size: 14px;
+}
+
+.chat .chat_popup .chat_popup_header .chat_cerrar {
+  position: absolute;
+  right: 5px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.chat .chat_popup .chat_popup_header .chat_logo {
+  font-size: 35px;
+  vertical-align: middle;
+  color: #696ce6;
+}
+
+.chat .chat_popup .chat_popup_body {
+  height: 300px;
+  width: 100%;
+}
+
+.chat .chat_popup .chat_popup_footer {
+  padding: 10px;
+  width: calc(100% - 20px);
+  border-top: 1px solid #cccccc;
+}
+
+.chat .chat_popup .chat_popup_footer input {
+  height: 30px;
+  width: 187px;
+  border: 1px solid #cccccc;
+  padding-left: 10px;
+  vertical-align: middle;
+  border-radius: 15px;
+}
+
+.chat .chat_popup .chat_popup_footer i {
+  font-size: 25px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.chat .chat_fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 12px 28px rgb(0 0 0 / 20%);
+}
+
+.chat .chat_fab i {
+  font-size: 43px;
+  color: #8a8df6;
+  cursor: pointer;
+  position: relative;
+  top: -3px;
+}
+
+.chat .chat_fab i:hover {
+  color: #696ce6;
+}
+/*************************************/
+
 .header_principal {
   padding: 10px;
 }
@@ -230,9 +379,25 @@ body.con-scroll .header_secundario {
   display: none;
 }
 
+/*******MENU NAVEGACION******/
+
 nav {
+}
+
+nav .nav_backdrop {
   position: fixed;
-  top: 62px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #00000026;
+  z-index: 2;
+  display: none; 
+}
+
+nav .nav_menu {
+  position: fixed;
+  top: 0px;
   width: 270px;
   height: 100%;
   background-color: #F0F5FF;
@@ -240,12 +405,13 @@ nav {
   box-shadow: 3px 1px 6px 0px #cccccc;
   transition: transform 0.5s;
 }
+  
 
-nav.colapsado {
+nav .nav_menu.colapsado {
   transform: translateX(-275px);
 }
-
-nav h2 {
+  
+nav .nav_menu h2 {
   font-size: 18px;
   background-color: #FFF1F1;
   margin: 0;
@@ -253,45 +419,47 @@ nav h2 {
   border-bottom: 1px solid #FF0000;
 }
 
-nav ul {
+nav .nav_menu ul {
   padding: 0;
   margin: 0;
 }
 
-nav ul li {
+nav .nav_menu ul li {
   list-style-type: none;
   padding: 20px 35px;
   border-bottom: 1px solid #80A3EA;
   cursor: pointer;
 }
 
-nav ul li a {
+nav .nav_menu ul li a {
   text-decoration: none;
   color: #000000;
 }
 
-nav ul li i {
+nav .nav_menu ul li i {
   font-size: 20px;
 }
 
-nav ul li.nav_menu--seleccionado {  
+nav .nav_menu ul li.nav_menu--seleccionado {  
   background-color: #dee6f5;
 }
 
-nav ul li.nav_menu--seleccionado a {
+nav .nav_menu ul li.nav_menu--seleccionado a {
   font-weight: bold;
   color: #264fa0;
 }
 
-nav ul li span {
+nav .nav_menu ul li span {
   float: right;
   margin-top: 4px;
   display: none;
 }
 
-nav ul li.nav_menu--seleccionado span {
+nav .nav_menu ul li.nav_menu--seleccionado span {
   display: initial;
 }
+
+/*******************************************/
 
 .tarjetas {
   padding: 15px;

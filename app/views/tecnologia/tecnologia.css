@@ -379,9 +379,25 @@ body.con-scroll .header_secundario {
   display: none;
 }
 
+/*******MENU NAVEGACION******/
+
 nav {
+}
+
+nav .nav_backdrop {
   position: fixed;
-  top: 62px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #00000026;
+  z-index: 2;
+  display: none; 
+}
+
+nav .nav_menu {
+  position: fixed;
+  top: 0px;
   width: 270px;
   height: 100%;
   background-color: #F0F5FF;
@@ -389,12 +405,13 @@ nav {
   box-shadow: 3px 1px 6px 0px #cccccc;
   transition: transform 0.5s;
 }
+  
 
-nav.colapsado {
+nav .nav_menu.colapsado {
   transform: translateX(-275px);
 }
-
-nav h2 {
+  
+nav .nav_menu h2 {
   font-size: 18px;
   background-color: #FFF1F1;
   margin: 0;
@@ -402,45 +419,47 @@ nav h2 {
   border-bottom: 1px solid #FF0000;
 }
 
-nav ul {
+nav .nav_menu ul {
   padding: 0;
   margin: 0;
 }
 
-nav ul li {
+nav .nav_menu ul li {
   list-style-type: none;
   padding: 20px 35px;
   border-bottom: 1px solid #80A3EA;
   cursor: pointer;
 }
 
-nav ul li a {
+nav .nav_menu ul li a {
   text-decoration: none;
   color: #000000;
 }
 
-nav ul li i {
+nav .nav_menu ul li i {
   font-size: 20px;
 }
 
-nav ul li.nav_menu--seleccionado {  
+nav .nav_menu ul li.nav_menu--seleccionado {  
   background-color: #dee6f5;
 }
 
-nav ul li.nav_menu--seleccionado a {
+nav .nav_menu ul li.nav_menu--seleccionado a {
   font-weight: bold;
   color: #264fa0;
 }
 
-nav ul li span {
+nav .nav_menu ul li span {
   float: right;
   margin-top: 4px;
   display: none;
 }
 
-nav ul li.nav_menu--seleccionado span {
+nav .nav_menu ul li.nav_menu--seleccionado span {
   display: initial;
 }
+
+/*******************************************/
 
 .tarjetas {
   padding: 15px;

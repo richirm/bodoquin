@@ -8,7 +8,7 @@ var intervaloBanner;
 var timeoutBanner;
 var elementoCarousel = document.querySelector('.carousel_banners');
 var chatPopupVisible = false;
-var ofertaHoy = true; 
+var ofertaHoyVisible = true; 
 
 function ocultarOfertaHoy() {
   if(ofertaHoy === true) {

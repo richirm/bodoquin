@@ -8,6 +8,13 @@ var intervaloBanner;
 var timeoutBanner;
 var elementoCarousel = document.querySelector('.carousel_banners');
 var chatPopupVisible = false;
+var ofertaHoy = true; 
+
+function ocultarOfertaHoy() {
+  if(ofertaHoy === true) {
+    document.querySelector('.oferta-hoy').style.display = "none";
+  }
+}
 
 function colapsarExpandirMenu() {  
   if(menuColapsado === true) {

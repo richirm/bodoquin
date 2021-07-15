@@ -11,7 +11,7 @@ var chatPopupVisible = false;
 var ofertaHoyVisible = true; 
 
 function ocultarOfertaHoy() {
-  if(ofertaHoy === true) {
+  if(ofertaHoyVisible === true) {
     document.querySelector('.oferta-hoy').style.display = "none";
   }
 }

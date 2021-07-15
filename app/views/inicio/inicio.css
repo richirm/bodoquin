@@ -23,6 +23,44 @@ main {
   margin-top: 135px;
 }
 
+/*********** TOAST *******************/
+.toast {
+  background-color: #ececec;
+  position: fixed;
+  right: 25px;
+  top: 67px;
+  z-index: 10;
+  width: 290px;
+  padding: 15px;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+
+.toast h1 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.toast p {
+  margin-bottom: 0;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.toast i {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 24px;
+}
+
+.toast.toast-success {
+  background-color: #D1E7DD;
+  color: #0F5132;
+}
+/*************************************/
+
+/*********** CAROUSEL ****************/
 main .carousel {
   position: relative;
   overflow: hidden;
@@ -117,6 +155,7 @@ main .carousel .carousel_pasos .carousel_pasos_acceso.seleccionado {
   position: relative;
   top: 2px;
 }
+/*********************************/
 
 main .tarjetas-acceso {
   padding-left: 20px;

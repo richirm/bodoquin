@@ -10,6 +10,7 @@ var elementoCarousel = document.querySelector('.carousel_banners');
 var chatPopupVisible = false;
 var ofertaHoyVisible = true; 
 var toastDuracion = 8 * 1000; 
+var timeoutToasts = [];
 
 function ocultarOfertaHoy() {
   if(ofertaHoyVisible === true) {
@@ -187,13 +188,18 @@ function mostrarOcultarChat() {
 /**************** TOAST *******************/
 function mostrarToast(numeroToast) {
   document.querySelector(`.toast:nth-child(${numeroToast})`).style.display = 'block'; 
-  setTimeout(function() {
+  
+  var timeoutToast = setTimeout(function() {
     cerrarToast(numeroToast);
   }, toastDuracion);
+  
+  timeoutToasts[numeroToast - 1] = timeoutToast;
 }
 
 function cerrarToast(numeroToast) {
   document.querySelector(`.toast:nth-child(${numeroToast})`).style.display = 'none';
+  
+  clearTimeout(timeoutToasts[numeroToast - 1]);
 }
 
 /*****************************************/

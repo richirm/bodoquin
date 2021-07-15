@@ -9,6 +9,7 @@ var timeoutBanner;
 var elementoCarousel = document.querySelector('.carousel_banners');
 var chatPopupVisible = false;
 var ofertaHoyVisible = true; 
+var toastDuracion = 8 * 1000; 
 
 function ocultarOfertaHoy() {
   if(ofertaHoyVisible === true) {
@@ -179,6 +180,20 @@ function mostrarOcultarChat() {
     document.querySelector('.chat_fab').classList.add('chat_fab_in');
     chatPopupVisible = true;
   }
+}
+
+/*****************************************/
+
+/**************** TOAST *******************/
+function mostrarToast(numeroToast) {
+  document.querySelector(`.toast:nth-child(${numeroToast})`).style.display = 'block'; 
+  setTimeout(function() {
+    cerrarToast(numeroToast);
+  }, toastDuracion);
+}
+
+function cerrarToast(numeroToast) {
+  document.querySelector(`.toast:nth-child(${numeroToast})`).style.display = 'none';
 }
 
 /*****************************************/

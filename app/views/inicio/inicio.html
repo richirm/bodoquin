@@ -198,25 +198,25 @@
         <div class="toast toast-success">
           <h1>Operación exitosa</h1>
           <p>Se ha realizado la compra del producto</p>
-          <i class="bi bi-x icono-accion"></i>
+          <i class="bi bi-x icono-accion" onClick="cerrarToast(1)"></i>
         </div>
       
         <div class="toast toast-danger">
           <h1>Operación fallida</h1>
           <p>Ha ocurrido un error en la operación, por favor intente de nuevo</p>
-          <i class="bi bi-x icono-accion"></i>
+          <i class="bi bi-x icono-accion" onClick="cerrarToast(2)"></i>
         </div>
       
         <div class="toast toast-warning">
           <h1>Advertencia</h1>
           <p>Quedan 10 minutos para que termine la promoción</p>
-          <i class="bi bi-x icono-accion"></i>
+          <i class="bi bi-x icono-accion" onClick="cerrarToast(3)"></i>
         </div>
       
         <div class="toast toast-info">
           <h1>Informativo</h1>
           <p>La próxima semana empezarán nuevas promociones</p>
-          <i class="bi bi-x icono-accion"></i>
+          <i class="bi bi-x icono-accion" onClick="cerrarToast(4)"></i>
         </div>
       </div>
     
@@ -250,7 +250,7 @@
       </div>
       
       <div class="tarjetas-acceso">
-        <div class="tarjeta-acceso">
+        <div class="tarjeta-acceso" onclick="mostrarToast(1)">
           <h2>Repostería</h2>
           <p>En esta aplicación de repostería encontrarás todas las variedades de tortas que prefieres para tu familia y amigos</p>
           <button type="button" class="btn btn-primary">
@@ -259,7 +259,7 @@
           <img src="../../../assets/img/torta_chocolate_fresa.jpg">
         </div>
         
-        <div class="tarjeta-acceso">
+        <div class="tarjeta-acceso" onclick="mostrarToast(2)">
           <h2>Juguetería</h2>
           <p>En esta aplicación encontrarás mutiples juguetes para bebés y para niños con los últimos modelos</p>
           <button type="button" class="btn btn-primary">
@@ -268,7 +268,7 @@
           <img src="../../../assets/img/tortuga.jpg">
         </div>
         
-        <div class="tarjeta-acceso">
+        <div class="tarjeta-acceso" onclick="mostrarToast(3)">
           <h2>Tecnologia</h2>
           <p>En esta aplicacion encontrara dieferentes dispositivos moviles y laptops con las caracteristicas que usted necesita.</p>
           <button type="button" class="btn btn-primary">
@@ -277,7 +277,7 @@
           <img src="../../../assets/img/motog9.jpg">
         </div>
         
-        <div class="tarjeta-acceso">
+        <div class="tarjeta-acceso" onclick="mostrarToast(4)">
           <h2>Moda</h2>
           <p>En esta aplicacion encontrara dieferentes productos de belleza,ropa y accesorios la variedad que usted necesita.</p>
           <button type="button" class="btn btn-primary">

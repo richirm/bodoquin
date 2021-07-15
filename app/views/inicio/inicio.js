@@ -189,6 +189,8 @@ function mostrarOcultarChat() {
 function mostrarToast(numeroToast) {
   document.querySelector(`.toast:nth-child(${numeroToast})`).style.display = 'block'; 
   
+  clearTimeout(timeoutToasts[numeroToast - 1]);
+  
   var timeoutToast = setTimeout(function() {
     cerrarToast(numeroToast);
   }, toastDuracion);

@@ -341,6 +341,7 @@ body.con-scroll .header_secundario {
   box-shadow: 1px 1px 5px #cccccc;
   top: 35px;
   display: none;
+  text-align: initial;
 }
 
 .header_acciones .header_acciones_usuario .header_acciones_usuario_popup ul {
@@ -669,6 +670,7 @@ footer {
   top: 0;
   bottom: 0;
   right: 0;
+  text-align: initial;
 }
 
 .modal .modal_backdrop {

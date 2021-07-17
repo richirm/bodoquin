@@ -505,6 +505,54 @@
           <!-- </form> -->
           
       <!-- </div> -->
+      
+      <div class="categorias">    
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="categorias_menu ">
+            <img src="../../../assets/img/galaxynote20.jpg">
+            <h1>Moviles</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('galaxynote20.jpg')">Ver foto</h2>       
+          </div>
+        </div>
+        
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="categorias_menu">
+            <img src="../../../assets/img/laptophpgaming.jpg">
+            <h1>Laptops</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('laptophpgaming.jpg')">Ver foto</h2>        
+          </div>
+        </div>
+        
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="categorias_menu">
+            <img src="../../../assets/img/samsungtv70.jpg">
+            <h1>Televisores</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('samsungtv70.jpg')">Ver foto</h2>        
+          </div>
+        </div>
+        
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="categorias_menu">
+            <img src="../../../assets/img/galaxynote20.jpg">
+            <h1>Tablets</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('galaxynote20.jpg')">Ver foto</h2>        
+          </div>
+        </div>  
+          
+        <div class="modal modal_categorias">
+          <div class="modal_backdrop" onclick="mostrarOcultarModalCategoria()"></div>
+          <div class="modal_contenedor modal-md">
+            <div class="modal_header">
+              <h1>Categoría</h1>
+              <i class="bi bi-x" onclick="mostrarOcultarModalCategoria()"></i>
+            </div>
+            <div class="modal_body texto-centrado">
+              <img src="../../../assets/img/galaxynote20.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div class="chat">
         <div class="chat_backdrop" onclick="mostrarOcultarChat();"></div>
         <div class="chat_popup">
@@ -525,47 +573,7 @@
         </div>
       </div>
       
-      <div class="categorias">
-        <div class="categorias_backdrop" onclick="OcultarModalCategoria();"></div>
-        <div class="modal_categorias">
-          <img src="../../../assets/img/galaxynote20.jpg">  
-          <i class="bi bi-x chat_cerrar" onClick="mostrarOcultarModalCategoria()"></i>
-        </div> 
-        <!-- <div class="modal_categorias"> -->
-          <!-- <img src="../../../assets/img/galaxynote20.jpg">     -->
-        <!-- </div>  -->
-        <!-- <div class="modal_categorias"> -->
-          <!-- <img src="../../../assets/img/galaxynote20.jpg">     -->
-        <!-- </div>  -->
-        <!-- <div class="modal_categorias"> -->
-          <!-- <img src="../../../assets/img/galaxynote20.jpg">     -->
-        <!-- </div> -->
-        
-        <div class="categorias_menu">
-          <img src="../../../assets/img/galaxynote20.jpg">
-          <h1>Moviles</h1>
-          <h2 onclick="mostrarOcultarModalCategoria()">Ver foto</h2>       
-        </div>
-        <div class="categorias_menu">
-          <img src="../../../assets/img/laptophpgaming.jpg">
-          <h1>Laptops</h1>
-          <h2 onclick="">Ver foto</h2>
-        
-        </div>
-        <div class="categorias_menu">
-          <img src="../../../assets/img/samsungtv70.jpg">
-          <h1>Televisores</h1>
-          <h2 onclick="">Ver foto</h2>
-        
-        </div>
-        <div class="categorias_menu">
-          <img src="../../../assets/img/galaxynote20.jpg">
-          <h1>Tablets</h1>
-          <h2 onclick="">Ver foto</h2>
-        
-        </div>
-      </div>
- </main>
+    </main>
       
     <footer>
       <div class="footer_access">

@@ -11,6 +11,7 @@ var chatPopupVisible = false;
 var ofertaHoyVisible = true; 
 var toastDuracion = 8 * 1000; 
 var timeoutToasts = [];
+var timeoutChat;
 
 function ocultarOfertaHoy() {
   if(ofertaHoyVisible === true) {
@@ -168,13 +169,20 @@ contruirJobBanner();
 
 /**************** CHAT *******************/
 function mostrarOcultarChat() {
-  if(chatPopupVisible === true) {
+  clearTimeout(timeoutChat);
+  
+  if(chatPopupVisible === true) { 
     document.querySelector('.chat_backdrop').style.display = "none";
     document.querySelector('.chat_popup').classList.remove('chat_popup_in');    
-    document.querySelector('.chat_popup').classList.add('chat_popup_out');    
+    document.querySelector('.chat_popup').classList.add('chat_popup_out');     
     document.querySelector('.chat_fab').classList.remove('chat_fab_in');
     chatPopupVisible = false;
-  } else {
+    
+    timeoutChat = setTimeout(() => {
+      document.querySelector('.chat_popup').style.height = 0; 
+    }, 0.3 * 1000);
+  } else {   
+    document.querySelector('.chat_popup').style.height = 'auto'; 
     document.querySelector('.chat_backdrop').style.display = "block";
     document.querySelector('.chat_popup').classList.add('chat_popup_in');    
     document.querySelector('.chat_popup').classList.remove('chat_popup_out');  

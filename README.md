@@ -48,6 +48,9 @@ Aplicación bodoquin
         pull request => para enviar una solicitud de unión de mi rama hacia develop
   - GITHUB: servidor o repositorio web para proyectos git
   - tortoise git: herramienta de interfaz grafica para ejecutar operaciones con GIT de manera simple
+  - commits:
+      feat(componente): descripcion
+      fix(componente): descripcion
   
 4. Metodología del proyecto:
   - SCRUM: es una metodología agil para dividirnos el desarrollo
@@ -55,6 +58,7 @@ Aplicación bodoquin
     - pesos: 0.5 1, 2, 3, 5, 8, 13
     - Features: (Lista de tareas - tablero KANBAN) 19
       - Tarjeta de oferta fija que aparezca al abrir el home 2
+      - chat: corrección de bugs parte I 1
       - implementar sección de productos en remate en cada pantalla 3
       - integrarnos con bootstrap parte 1 - responsive 3
       - modal de carrito de compra - 5

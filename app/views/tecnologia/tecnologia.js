@@ -5,6 +5,7 @@ var modalInicioSesionVisible = false;
 var modalRegistrarseVisible = false;
 var modalCerrarSesionVisible = false;
 var chatPopupVisible = false;
+var modalCategoriaVisible = false;
 
 function sumarYAlertarValores(campo1, campo2) {
   var sumaDeValores = campo1 + campo2;
@@ -160,4 +161,17 @@ function mostrarOcultarChat() {
 }
 
 /*****************************************/
+
+/*********************CATEGORIAS**************/
+function mostrarOcultarModalCategoria(nombreImagen) {
+  if(modalCategoriaVisible === false){
+    document.querySelector('.modal_categorias img').setAttribute('src', '../../../assets/img/' + nombreImagen);
+    document.querySelector('.modal_categorias').style.display = "block";
+    modalCategoriaVisible = true;
+  } else {
+    document.querySelector('.modal_categorias').style.display = "none";
+    modalCategoriaVisible = false;
+  }
+}
+/********************************************/
 

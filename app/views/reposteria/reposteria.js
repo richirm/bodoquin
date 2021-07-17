@@ -6,6 +6,7 @@ var modalRegistrarseVisible = false;
 var modalCerrarSesionVisible = false;
 var chatPopupVisible = false;
 var modalCategoriaVisible = false;
+var timeoutChat;
 
 function sumarYAlertarValores(campo1, campo2) {
   var sumaDeValores = campo1 + campo2;
@@ -146,13 +147,20 @@ function mostrarOcultarModalCerrarSesion() {
 
 /**************** CHAT *******************/
 function mostrarOcultarChat() {
-  if(chatPopupVisible === true) {
+  clearTimeout(timeoutChat);
+  
+  if(chatPopupVisible === true) { 
     document.querySelector('.chat_backdrop').style.display = "none";
     document.querySelector('.chat_popup').classList.remove('chat_popup_in');    
-    document.querySelector('.chat_popup').classList.add('chat_popup_out');    
+    document.querySelector('.chat_popup').classList.add('chat_popup_out');     
     document.querySelector('.chat_fab').classList.remove('chat_fab_in');
     chatPopupVisible = false;
-  } else {
+    
+    timeoutChat = setTimeout(() => {
+      document.querySelector('.chat_popup').style.height = 0; 
+    }, 0.3 * 1000);
+  } else {   
+    document.querySelector('.chat_popup').style.height = 'auto'; 
     document.querySelector('.chat_backdrop').style.display = "block";
     document.querySelector('.chat_popup').classList.add('chat_popup_in');    
     document.querySelector('.chat_popup').classList.remove('chat_popup_out');  

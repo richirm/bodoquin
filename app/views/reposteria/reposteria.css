@@ -770,6 +770,8 @@ footer {
   position: absolute;
   top: 0;
   right: 0;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 .modal .modal_contenedor .modal_header i:hover {

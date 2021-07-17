@@ -896,6 +896,8 @@ footer {
   bottom: 0;
   right: 0;
   text-align: initial;
+  z-index: 2;
+  display: none;
 }
 
 .modal .modal_backdrop {
@@ -934,6 +936,12 @@ footer {
   position: absolute;
   top: 0;
   right: 0;
+  font-size: 28px;
+  cursor: pointer;
+}
+.modal .modal_contenedor .modal_header i:hover {
+  transform: scale3d(1.3, 1.3, 1.3);
+}
 }
 
 .modal .modal_contenedor .modal_body {

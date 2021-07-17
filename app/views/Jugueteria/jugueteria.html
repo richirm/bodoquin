@@ -474,10 +474,54 @@
           <!-- </table> -->
         <!-- </div> -->
         
-      <div>
+      <div class="categorias">    
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="categorias_menu ">
+            <img src="../../../assets/img/piano.jpg">
+            <h1>Bebés</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('piano.jpg')">Ver foto</h2>       
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="categorias_menu">
+            <img src="../../../assets/img/figuras.jpg">
+            <h1>Niños</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('figuras.jpg')">Ver foto</h2>        
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="categorias_menu">
+            <img src="../../../assets/img/muñeco.jpg">
+            <h1>Niñas</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('muñeco.jpg')">Ver foto</h2>        
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="categorias_menu">
+            <img src="../../../assets/img/lonchera.jpg">
+            <h1>Didácticos</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('lonchera.jpg')">Ver foto</h2>        
+          </div>
+        </div>  
+
+        <div class="modal modal_categorias">
+          <div class="modal_backdrop" onclick="mostrarOcultarModalCategoria()"></div>
+          <div class="modal_contenedor modal-md">
+            <div class="modal_header">
+              <h1>Categoría</h1>
+              <i class="bi bi-x" onclick="mostrarOcultarModalCategoria()"></i>
+            </div>
+            <div class="modal_body texto-centrado">
+              <img src="../../../assets/img/galaxynote20.jpg">
+            </div>
+          </div>
+        </div>
       </div>
-     
-     <div class="chat">
+             
+      <div class="chat">
         <div class="chat_backdrop" onclick="mostrarOcultarChat();"></div>
         <div class="chat_popup">
           <div class="chat_popup_header">

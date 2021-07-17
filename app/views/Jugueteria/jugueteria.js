@@ -4,10 +4,8 @@ var modalInicioSesionVisible = false;
 var modalRegistrarseVisible = false;
 var modalCerrarSesionVisible = false;
 var posicionBannerActual = 1;
-var intervaloBanner;
-var timeoutBanner;
-var elementoCarousel = document.querySelector('.carousel_banners');
 var chatPopupVisible = false;
+var modalCategoriaVisible = false;
 
 function colapsarExpandirMenu() {  
   if(menuColapsado === true) {
@@ -73,90 +71,6 @@ function mostrarOcultarModalCerrarSesion() {
   }
 }
 
-/*********** CAROUSEL *****************/
-function mostrarBanner(posicionBannerSeleccionado) {
-  clearInterval(intervaloBanner);
-  elementoCarousel.classList.add('carousel_banners--transicion');
-  
-  document.querySelector(`.carousel_pasos_acceso:nth-child(${posicionBannerActual})`).classList.remove('seleccionado');
-  
-  var desplazamientoCarousel = (posicionBannerSeleccionado - 1) * -100;
-  elementoCarousel.style.left = `${desplazamientoCarousel}%`;
-  posicionBannerActual = posicionBannerSeleccionado;
-  
-  document.querySelector(`.carousel_pasos_acceso:nth-child(${posicionBannerSeleccionado})`).classList.add('seleccionado');
-  
-  clearTimeout(timeoutBanner);
-  
-  timeoutBanner = setTimeout(function() {
-    elementoCarousel.classList.remove('carousel_banners--transicion');
-    contruirJobBanner();
-  }, 0.5 * 1000);
-}
-
-function mostrarSiguienteBanner() {
-  if(posicionBannerActual === 4) {
-    mostrarBanner(1);
-  } else {
-    mostrarBanner(posicionBannerActual + 1);
-  }
-}
-
-function mostrarAnteriorBanner() {
-  if(posicionBannerActual === 1) {
-    mostrarBanner(4);
-  } else {
-    mostrarBanner(posicionBannerActual - 1);
-  }
-}
-
-function contruirJobBanner() {
-  intervaloBanner = setInterval(mostrarSiguienteBanner, 3 * 1000);
-}
-
-function iniciarDesplazamientoCarousel(evento) {
-  clearInterval(intervaloBanner);
-  
-  var posicionInicial = evento.clientX;
-  
-  function moverCarousel(evento) {
-    var posicionFinal = evento.clientX;
-    var desplazamientoCursor = posicionFinal - posicionInicial;
-    var desplazamientoCarousel = (posicionBannerActual - 1) * -100;
-    elementoCarousel.style.left = `calc(${desplazamientoCarousel}% + ${desplazamientoCursor}px)`;
-  }
-  
-  function finalizarDesplazamientoCarousel(evento) {
-    var posicionFinal = evento.clientX;
-    var desplazamientoCursor = posicionFinal - posicionInicial;
-    
-    if(desplazamientoCursor > 300) {
-      mostrarAnteriorBanner();
-    } else if(desplazamientoCursor < -300) {
-      mostrarSiguienteBanner();
-    } else {
-      mostrarBanner(posicionBannerActual);
-    }
-    
-    elementoCarousel.removeEventListener('mousemove', moverCarousel);
-    elementoCarousel.removeEventListener('mouseup', finalizarDesplazamientoCarousel);
-    elementoCarousel.removeEventListener('mouseleave', finalizarDesplazamientoCarousel);
-  }
-  
-  elementoCarousel.addEventListener('mousemove', moverCarousel);
-  elementoCarousel.addEventListener('mouseup', finalizarDesplazamientoCarousel);
-  elementoCarousel.addEventListener('mouseleave', finalizarDesplazamientoCarousel);
-}
-
-elementoCarousel.addEventListener('dragstart', function(evento) {
-  evento.preventDefault();
-});
-
-elementoCarousel.addEventListener('mousedown', iniciarDesplazamientoCarousel);
-
-contruirJobBanner();
-/*****************************************/
-
 /**************** CHAT *******************/
 function mostrarOcultarChat() {
   if(chatPopupVisible === true) {
@@ -176,4 +90,16 @@ function mostrarOcultarChat() {
 
 /*****************************************/
 
+/*********************CATEGORIAS**************/
+function mostrarOcultarModalCategoria(nombreImagen) {
+  if(modalCategoriaVisible === false){
+    document.querySelector('.modal_categorias img').setAttribute('src', '../../../assets/img/' + nombreImagen);
+    document.querySelector('.modal_categorias').style.display = "block";
+    modalCategoriaVisible = true;
+  } else {
+    document.querySelector('.modal_categorias').style.display = "none";
+    modalCategoriaVisible = false;
+  }
+}
+/********************************************/
 

@@ -214,4 +214,14 @@ function cerrarToast(numeroToast) {
 
 /*****************************************/
 
-
+/************* POPUP *********************/
+function mostrarOcultarPopup(selectorPopup) {
+  var popupDisplay = document.querySelector(selectorPopup).style.display;
+  
+  if(popupDisplay === 'inline-block') {
+    document.querySelector(`${selectorPopup}`).style.display = 'none';
+  } else {
+    document.querySelector(`${selectorPopup}`).style.display = 'inline-block';
+  }
+}
+/*****************************************/

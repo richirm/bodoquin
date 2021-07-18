@@ -16,11 +16,28 @@
           <input type="text" placeholder="HOLA ,¿QUE ESTAS BUSCANDO?">
           <i class="bi bi-search"></i>
         </span>
-        <div class="header_acciones">
-          <span class="header_acciones_notificacion">
-            <i class="bi bi-cart-check"></i>
+        <div class="header_acciones">          
+          <span class="header_acciones_carrito">
+            <i class="bi bi-cart-check" onclick="mostrarOcultarPopup('.popup_carrito');"></i>
             <div class="header_notificacion header_notificacion-principal">3</div>   
+            
+            <div class="popup popup_carrito">
+              <div class="popup_backdrop" onclick="mostrarOcultarPopup('.popup_carrito');"></div>
+              <div class="popup_flecha"></div>
+              <div class="popup_contenedor">
+                <div class="popup_header">
+                  titulo
+                </div>
+                <div class="popup_body">
+                  
+                </div>
+                <div class="popup_footer">
+                  <button class="btn btn-primary">Continuar</button>
+                </div>
+              </div>
+            </div>
           </span>
+          
           <span class="header_acciones_usuario">              
             <i class="bi bi-person-fill" onclick="mostrarOcultarUsuarioPopup();"></i>
             <div class="header_acciones_usuario_backdrop" onclick="mostrarOcultarUsuarioPopup();"></div>            

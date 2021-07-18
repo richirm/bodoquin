@@ -62,6 +62,7 @@ Aplicación bodoquin
       - implementar sección de productos en remate en cada pantalla 3
       - integrarnos con bootstrap parte 1 - responsive 3
       - modal de carrito de compra - 5
+      - crear componente generico para popups - 3
       - en cada vista de cada linea de productos, al seleccionar un producto, se tiene que mostrar la 
         funcionalidad para seguir agregando o  disminuyendo productos, o eliminar el producto 3
       - implementar el componente de toast (notificaciones) 2 

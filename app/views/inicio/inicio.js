@@ -21,11 +21,11 @@ function ocultarOfertaHoy() {
 
 function colapsarExpandirMenu() {  
   if(menuColapsado === true) {
-    document.querySelector('nav').classList.remove('colapsado');
+    document.querySelector('.nav_menu').classList.remove('colapsado');
     document.querySelector('.nav_backdrop').style.display = 'block';
     menuColapsado = false;
   } else {
-    document.querySelector('nav').classList.add('colapsado');
+    document.querySelector('.nav_menu').classList.add('colapsado');
     document.querySelector('.nav_backdrop').style.display = 'none';
     menuColapsado = true;
   }

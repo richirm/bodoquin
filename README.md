@@ -56,7 +56,7 @@ Aplicación bodoquin
   - SCRUM: es una metodología agil para dividirnos el desarrollo
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13
-    - Features: (Lista de tareas - tablero KANBAN) 19
+    - Features: (Lista de tareas - tablero KANBAN) 20
       - Tarjeta de oferta fija que aparezca al abrir el home 2
       - chat: corrección de bugs parte I 1
       - implementar sección de productos en remate en cada pantalla 3

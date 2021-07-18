@@ -10,7 +10,7 @@
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
           <i class="bi bi-list header_menu" onclick="colapsarExpandirMenu();"></i>
           <h1 class="header_titulo">
-            <a href="../inicio/inicio.html">Moda</a>
+            <a href="../inicio/inicio.html">Inicio</a>
           </h1>
           <span class="header_busqueda">
             <input type="text" placeholder="HOLA ,¿QUE ESTAS BUSCANDO?">
@@ -18,10 +18,27 @@
           </span>
         </div>
         <div class="header_acciones col-xl-6 col-lg-6 col-md-6 col-sm-12">
-          <span class="header_acciones_notificacion">
-            <i class="bi bi-bell-fill"></i>
+          <span class="header_acciones_carrito">
+            <i class="bi bi-cart-check" onclick="mostrarOcultarPopup('.popup_carrito');"></i>
             <div class="header_notificacion header_notificacion-principal">3</div>   
+            
+            <div class="popup popup_carrito">
+              <div class="popup_backdrop" onclick="mostrarOcultarPopup('.popup_carrito');"></div>
+              <div class="popup_flecha"></div>
+              <div class="popup_contenedor">
+                <div class="popup_header">
+                  titulo
+                </div>
+                <div class="popup_body">
+                  
+                </div>
+                <div class="popup_footer">
+                  <button class="btn btn-primary">Continuar</button>
+                </div>
+              </div>
+            </div>
           </span>
+          
           <span class="header_acciones_usuario">              
             <i class="bi bi-person-fill" onclick="mostrarOcultarUsuarioPopup();"></i>
             <div class="header_acciones_usuario_backdrop" onclick="mostrarOcultarUsuarioPopup();"></div>            
@@ -162,8 +179,9 @@
       </div>
     </header>
     
-    <nav class="colapsado">
-      <div>
+    <nav>
+      <div class="nav_backdrop" onclick="colapsarExpandirMenu();"></div>
+      <div class="nav_menu colapsado"> 
         <h2>Menú opciones</h2>
         <ul>
           <li>
@@ -290,6 +308,169 @@
           <div class="tarjeta2_footer">
             <button type="button">AGREGAR</button>
           </div>
+        </div>
+        
+        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/reloj.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>Reloj</span><br>
+            <span><b>Reloj de mujer</b></span>
+            <p>Fino reloj dolcce & gabanna</p>
+            <span class="tarjeta2_body_precio">S/. 999</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/sandalias.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>Sandalias</span><br>
+            <span><b>Sandalias de verano</b></span>
+            <p>Lindas sandalias color camello</p>
+            <span class="tarjeta2_body_precio">S/. 399</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/arete.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>Aretes</span><br>
+            <span><b>Aretes de plata</b></span>
+            <p>Aretes con acabados en plata de diferentes modelos</p>
+            <span class="tarjeta2_body_precio">S/. 89</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/bota.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>Botas</span><br>
+            <span><b>Botas de cuero</b></span>
+            <p>Botas de cuero de piel de lagarto con finos acabados</p>
+            <span class="tarjeta2_body_precio">S/. 999</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/sombrero.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>Sombrero</span><br>
+            <span><b>Sombrero moderno de playa</b></span>
+            <p>Lindo sombrero con excelentes acabados</p>
+            <span class="tarjeta2_body_precio">S/. 150</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/labial.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>Labial</span><br>
+            <span><b>Labial mate  </b></span>
+            <p>Sabor fresa y extra duracion</p>
+            <span class="tarjeta2_body_precio">S/. 50</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="categorias">    
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="categorias_menu ">
+            <img src="../../../assets/img/carnivalxl.jpg">
+            <h1>Maquillaje</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('carnivalxl.jpg')">Ver foto</h2>       
+          </div>
+        </div>
+        
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="categorias_menu">
+            <img src="../../../assets/img/casaca.jpg">
+            <h1>Ropa</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('casaca.jpg')">Ver foto</h2>        
+          </div>
+        </div>
+        
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="categorias_menu">
+            <img src="../../../assets/img/sunglassesaesthetic.jpg">
+            <h1>Accesorios</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('sunglassesaesthetic.jpg')">Ver foto</h2>        
+          </div>
+        </div>
+        
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="categorias_menu">
+            <img src="../../../assets/img/bota.jpg">
+            <h1>Botas</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('bota.jpg')">Ver foto</h2>        
+          </div>
+        </div>  
+          
+        <div class="modal modal_categorias">
+          <div class="modal_backdrop" onclick="mostrarOcultarModalCategoria()"></div>
+          <div class="modal_contenedor modal-md">
+            <div class="modal_header">
+              <h1>Categoría</h1>
+              <i class="bi bi-x" onclick="mostrarOcultarModalCategoria()"></i>
+            </div>
+            <div class="modal_body texto-centrado">
+              <img src="../../../assets/img/galaxynote20.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="chat">
+        <div class="chat_backdrop" onclick="mostrarOcultarChat();"></div>
+        <div class="chat_popup">
+          <div class="chat_popup_header">
+            <i class="bi bi-messenger chat_logo" ></i>
+            <h1 >Bodoquin</br><small>Siempre contigo</small></h1>
+            <i class="bi bi-x chat_cerrar" onClick="mostrarOcultarChat()"></i>
+          </div>
+          <div class="chat_popup_body">
+          </div>
+          <div class="chat_popup_footer">
+            <input type="text" required placeholder="¿En que te ayudamos?..."  />
+            <i class="bi bi-arrow-right-circle"></i>
+          </div>
+        </div>
+        <div class="chat_fab">
+          <i class="bi bi-messenger" onclick="mostrarOcultarChat();"></i>
         </div>
       </div>
     </main>

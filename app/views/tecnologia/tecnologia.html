@@ -11,7 +11,7 @@
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
           <i class="bi bi-list header_menu" onclick="colapsarExpandirMenu();"></i>
           <h1 class="header_titulo">
-            <a href="../inicio/inicio.html">Tecnologia</a>
+            <a href="../inicio/inicio.html">Inicio</a>
           </h1>
           <span class="header_busqueda">
             <input type="text" placeholder="HOLA ,¿QUE ESTAS BUSCANDO?">
@@ -19,10 +19,27 @@
           </span>
         </div>
         <div class="header_acciones col-xl-6 col-lg-6 col-md-6 col-sm-12">
-          <span class="header_acciones_notificacion">
-            <i class="bi bi-bell-fill"></i>
+          <span class="header_acciones_carrito">
+            <i class="bi bi-cart-check" onclick="mostrarOcultarPopup('.popup_carrito');"></i>
             <div class="header_notificacion header_notificacion-principal">3</div>   
+            
+            <div class="popup popup_carrito">
+              <div class="popup_backdrop" onclick="mostrarOcultarPopup('.popup_carrito');"></div>
+              <div class="popup_flecha"></div>
+              <div class="popup_contenedor">
+                <div class="popup_header">
+                  titulo
+                </div>
+                <div class="popup_body">
+                  
+                </div>
+                <div class="popup_footer">
+                  <button class="btn btn-primary">Continuar</button>
+                </div>
+              </div>
+            </div>
           </span>
+          
           <span class="header_acciones_usuario">              
             <i class="bi bi-person-fill" onclick="mostrarOcultarUsuarioPopup();"></i>
             <div class="header_acciones_usuario_backdrop" onclick="mostrarOcultarUsuarioPopup();"></div>            
@@ -162,8 +179,10 @@
         </div>
       </div>
     </header>
-         <nav class="colapsado">
-      <div>
+    
+    <nav>
+      <div class="nav_backdrop" onclick="colapsarExpandirMenu();"></div>
+      <div class="nav_menu colapsado">
         <h2>Menú opciones</h2>
         <ul>
           <li>
@@ -194,7 +213,7 @@
       </div>
     </nav>
     
-    <main>
+    <main class="ajuste">
       <div class="tarjetas">
         <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
           <div class="tarjeta2_header">         
@@ -264,13 +283,13 @@
         
         <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
           <div class="tarjeta2_header">         
-            <img src="../../../assets/img/iphone11pro.jpg">
+            <img src="../../../assets/img/samsungtv50.jpg">
           </div>
           <div class="tarjeta2_body">      
-            <span>Ipohne</span><br>
-            <span><b>Iphone 11 pro</b></span>
-            <p>4 GB RAM + 564 gb almacenamiento + 3500mah + face id</p>
-            <span class="tarjeta2_body_precio">S/. 3999</span>
+            <span>Samsung tv</span><br>
+            <span><b>Samsung tv 50"</b></span>
+            <p>Full hd + puerto hdmi + magic control</p>
+            <span class="tarjeta2_body_precio">S/. 1899</span>
           </div>
           
           <div class="tarjeta2_footer">
@@ -280,13 +299,109 @@
         
         <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
           <div class="tarjeta2_header">         
-            <img src="../../../assets/img/iphone12pro.jpg">
+            <img src="../../../assets/img/samsungtv65.jpg">
           </div>
           <div class="tarjeta2_body">      
-            <span>Iphone</span><br>
-            <span><b>Iphone 12 pro</b></span>
-            <p>6 GB RAM + 128 gb almacenamiento + 4500 mah + face id</p>
-            <span class="tarjeta2_body_precio">S/. 4499</span>
+            <span>SamsungTv</span><br>
+            <span><b>Samsung tv 65"</b></span>
+            <p>Ultra hd 4k + pantalla cristal + magic control</p>
+            <span class="tarjeta2_body_precio">S/. 2899</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/samsungtv70.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>SamsungTv</span><br>
+            <span><b>Samsung tv 70"</b></span>
+            <p>Ultra hd + 2 puertos hdmi + conxion bluetooh</p>
+            <span class="tarjeta2_body_precio">S/. 2659</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/daeewotv.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>DaeewooTv</span><br>
+            <span><b>Daeewoo tv 49"</b></span>
+            <p>Pantalla full hd + wifi + samart tv </p>
+            <span class="tarjeta2_body_precio">S/. 899</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/laptophpgaming.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>Asus</span><br>
+            <span><b>Laptop gaming asus</b></span>
+            <p>16gb ram + 1tb ssd + full hd </p>
+            <span class="tarjeta2_body_precio">S/. 7999</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/macbookair.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>Apple</span><br>
+            <span><b>Macbook air </b></span>
+            <p>8 gb ram + 500 ssd + bluetooh</p>
+            <span class="tarjeta2_body_precio">S/. 1899</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/laptophp15.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>HP</span><br>
+            <span><b>Laptop hp 15"</b></span>
+            <p>8gb ram + 1 tb ssd + full hd</p>
+            <span class="tarjeta2_body_precio">S/. 2600</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/laptoplg.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>LG</span><br>
+            <span><b>Laptop lg </b></span>
+            <p>12 GB RAM + 528 gb almacenamiento + uhd 4k</p>
+            <span class="tarjeta2_body_precio">S/. 2589</span>
           </div>
           
           <div class="tarjeta2_footer">
@@ -407,8 +522,74 @@
           <!-- </form> -->
           
       <!-- </div> -->
+      
+      <div class="categorias">    
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="categorias_menu ">
+            <img src="../../../assets/img/galaxynote20.jpg">
+            <h1>Moviles</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('galaxynote20.jpg')">Ver foto</h2>       
+          </div>
+        </div>
+        
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="categorias_menu">
+            <img src="../../../assets/img/laptophpgaming.jpg">
+            <h1>Laptops</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('laptophpgaming.jpg')">Ver foto</h2>        
+          </div>
+        </div>
+        
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="categorias_menu">
+            <img src="../../../assets/img/samsungtv70.jpg">
+            <h1>Televisores</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('samsungtv70.jpg')">Ver foto</h2>        
+          </div>
+        </div>
+        
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="categorias_menu">
+            <img src="../../../assets/img/galaxynote20.jpg">
+            <h1>Tablets</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('galaxynote20.jpg')">Ver foto</h2>        
+          </div>
+        </div>  
           
-
+        <div class="modal modal_categorias">
+          <div class="modal_backdrop" onclick="mostrarOcultarModalCategoria()"></div>
+          <div class="modal_contenedor modal-md">
+            <div class="modal_header">
+              <h1>Categoría</h1>
+              <i class="bi bi-x" onclick="mostrarOcultarModalCategoria()"></i>
+            </div>
+            <div class="modal_body texto-centrado">
+              <img src="../../../assets/img/galaxynote20.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="chat">
+        <div class="chat_backdrop" onclick="mostrarOcultarChat();"></div>
+        <div class="chat_popup">
+          <div class="chat_popup_header">
+            <i class="bi bi-messenger chat_logo" ></i>
+            <h1 >Bodoquin</br><small>Siempre contigo</small></h1>
+            <i class="bi bi-x chat_cerrar" onClick="mostrarOcultarChat()"></i>
+          </div>
+          <div class="chat_popup_body">
+          </div>
+          <div class="chat_popup_footer">
+            <input type="text" required placeholder="¿En que te ayudamos?..."  />
+            <i class="bi bi-arrow-right-circle"></i>
+          </div>
+        </div>
+        <div class="chat_fab">
+          <i class="bi bi-messenger" onclick="mostrarOcultarChat();"></i>
+        </div>
+      </div>
+      
     </main>
       
     <footer>

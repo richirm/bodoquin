@@ -5,14 +5,28 @@ var modalRegistrarseVisible = false;
 var modalCerrarSesionVisible = false;
 var posicionBannerActual = 1;
 var intervaloBanner;
+var timeoutBanner;
 var elementoCarousel = document.querySelector('.carousel_banners');
+var chatPopupVisible = false;
+var ofertaHoyVisible = true; 
+var toastDuracion = 8 * 1000; 
+var timeoutToasts = [];
+var timeoutChat;
+
+function ocultarOfertaHoy() {
+  if(ofertaHoyVisible === true) {
+    document.querySelector('.oferta-hoy').style.display = "none";
+  }
+}
 
 function colapsarExpandirMenu() {  
   if(menuColapsado === true) {
-    document.querySelector('nav').classList.remove('colapsado');
+    document.querySelector('.nav_menu').classList.remove('colapsado');
+    document.querySelector('.nav_backdrop').style.display = 'block';
     menuColapsado = false;
   } else {
-    document.querySelector('nav').classList.add('colapsado');
+    document.querySelector('.nav_menu').classList.add('colapsado');
+    document.querySelector('.nav_backdrop').style.display = 'none';
     menuColapsado = true;
   }
 }
@@ -69,15 +83,22 @@ function mostrarOcultarModalCerrarSesion() {
   }
 }
 
+/*********** CAROUSEL *****************/
 function mostrarBanner(posicionBannerSeleccionado) {
   clearInterval(intervaloBanner);
   elementoCarousel.classList.add('carousel_banners--transicion');
+  
+  document.querySelector(`.carousel_pasos_acceso:nth-child(${posicionBannerActual})`).classList.remove('seleccionado');
   
   var desplazamientoCarousel = (posicionBannerSeleccionado - 1) * -100;
   elementoCarousel.style.left = `${desplazamientoCarousel}%`;
   posicionBannerActual = posicionBannerSeleccionado;
   
-  setTimeout(function() {
+  document.querySelector(`.carousel_pasos_acceso:nth-child(${posicionBannerSeleccionado})`).classList.add('seleccionado');
+  
+  clearTimeout(timeoutBanner);
+  
+  timeoutBanner = setTimeout(function() {
     elementoCarousel.classList.remove('carousel_banners--transicion');
     contruirJobBanner();
   }, 0.5 * 1000);
@@ -144,5 +165,63 @@ elementoCarousel.addEventListener('dragstart', function(evento) {
 elementoCarousel.addEventListener('mousedown', iniciarDesplazamientoCarousel);
 
 contruirJobBanner();
+/*****************************************/
 
+/**************** CHAT *******************/
+function mostrarOcultarChat() {
+  clearTimeout(timeoutChat);
+  
+  if(chatPopupVisible === true) { 
+    document.querySelector('.chat_backdrop').style.display = "none";
+    document.querySelector('.chat_popup').classList.remove('chat_popup_in');    
+    document.querySelector('.chat_popup').classList.add('chat_popup_out');     
+    document.querySelector('.chat_fab').classList.remove('chat_fab_in');
+    chatPopupVisible = false;
+    
+    timeoutChat = setTimeout(() => {
+      document.querySelector('.chat_popup').style.height = 0; 
+    }, 0.3 * 1000);
+  } else {   
+    document.querySelector('.chat_popup').style.height = 'auto'; 
+    document.querySelector('.chat_backdrop').style.display = "block";
+    document.querySelector('.chat_popup').classList.add('chat_popup_in');    
+    document.querySelector('.chat_popup').classList.remove('chat_popup_out');  
+    document.querySelector('.chat_fab').classList.add('chat_fab_in');
+    chatPopupVisible = true;
+  }
+}
 
+/*****************************************/
+
+/**************** TOAST *******************/
+function mostrarToast(numeroToast) {
+  document.querySelector(`.toast:nth-child(${numeroToast})`).style.display = 'block'; 
+  
+  clearTimeout(timeoutToasts[numeroToast - 1]);
+  
+  var timeoutToast = setTimeout(function() {
+    cerrarToast(numeroToast);
+  }, toastDuracion);
+  
+  timeoutToasts[numeroToast - 1] = timeoutToast;
+}
+
+function cerrarToast(numeroToast) {
+  document.querySelector(`.toast:nth-child(${numeroToast})`).style.display = 'none';
+  
+  clearTimeout(timeoutToasts[numeroToast - 1]);
+}
+
+/*****************************************/
+
+/************* POPUP *********************/
+function mostrarOcultarPopup(selectorPopup) {
+  var popupDisplay = document.querySelector(selectorPopup).style.display;
+  
+  if(popupDisplay === 'inline-block') {
+    document.querySelector(`${selectorPopup}`).style.display = 'none';
+  } else {
+    document.querySelector(`${selectorPopup}`).style.display = 'inline-block';
+  }
+}
+/*****************************************/

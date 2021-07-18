@@ -11,7 +11,7 @@
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
           <i class="bi bi-list header_menu" onclick="colapsarExpandirMenu();"></i>
           <h1 class="header_titulo">
-            <a href="../inicio/inicio.html">Repostería</a>
+            <a href="../inicio/inicio.html">INICIO</a>
           </h1>
           <span class="header_busqueda">
             <input type="text" placeholder="HOLA ,¿QUE ESTAS BUSCANDO?">
@@ -19,10 +19,27 @@
           </span>
         </div>
         <div class="header_acciones header_acciones col-xl-6 col-lg-6 col-md-6 col-sm-12">
-          <span class="header_acciones_notificacion">
-            <i class="bi bi-bell-fill"></i>
+          <span class="header_acciones_carrito">
+            <i class="bi bi-cart-check" onclick="mostrarOcultarPopup('.popup_carrito');"></i>
             <div class="header_notificacion header_notificacion-principal">3</div>   
+
+            <div class="popup popup_carrito">
+              <div class="popup_backdrop" onclick="mostrarOcultarPopup('.popup_carrito');"></div>
+              <div class="popup_flecha"></div>
+              <div class="popup_contenedor">
+                <div class="popup_header">
+                  titulo
+                </div>
+                <div class="popup_body">
+
+                </div>
+                <div class="popup_footer">
+                  <button class="btn btn-primary">Continuar</button>
+                </div>
+              </div>
+            </div>
           </span>
+          
           <span class="header_acciones_usuario">              
             <i class="bi bi-person-fill" onclick="mostrarOcultarUsuarioPopup();"></i>
             <div class="header_acciones_usuario_backdrop" onclick="mostrarOcultarUsuarioPopup();"></div>            
@@ -162,8 +179,9 @@
       </div>
     </header>
     
-    <nav class="colapsado">
-      <div>
+    <nav>
+      <div class="nav_backdrop" onclick="colapsarExpandirMenu();"></div>
+      <div class="nav_menu colapsado" >
         <h2>Menú opciones</h2>
         <ul>
           <li>
@@ -232,6 +250,54 @@
         
         <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
           <div class="tarjeta2_header">         
+            <img src="../../../assets/img/torta_chocolate.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>Torta húmeda</span><br>
+            <span><b>Torta Chocolate</b></span>
+            <p>12 porciones, kekes, Manjar, Fudge de una rica Torta Chocolate.</p>
+            <span class="tarjeta2_body_precio">S/. 48.00</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/torta_dely_oreo.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>Torta húmeda</span><br>
+            <span><b>Deli Oreo</b></span>
+            <p>12 porciones con galletas de oreo vainilla, polvo de chocolate de una rica Deli Oreo.</p>
+            <span class="tarjeta2_body_precio">S/. 72.00</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/torta_barra_3_leches.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>Torta húmeda</span><br>
+            <span><b>Barra tres leches</b></span>
+            <p>12 porciones aproximadamente, con cerezas, fosh, manjar y listo para comer en tu almuerzo.</p>
+            <span class="tarjeta2_body_precio">S/. 49.00</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+          <div class="tarjeta2_header">         
             <img src="../../../assets/img/keke_pina.jpg">
           </div>
           <div class="tarjeta2_body">      
@@ -255,6 +321,86 @@
             <span><b>keke de zanahoria</b></span>
             <p>Keke de Zanahoria con Manjar Blanco y Castañas, a precio de promición, sólo por hoy.</p>
             <span class="tarjeta2_body_precio">S/. 42.00</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/keke_marmoleado.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>Kekes</span><br>
+            <span><b>Keke Marmoleado</b></span>
+            <p>12-14 porciones de keke sabor a chocolate, con frutos secos que descubrirás mientras vayas comiendo.</p>
+            <span class="tarjeta2_body_precio">S/. 22.00</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/keke_platano_nueces.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>Kekes</span><br>
+            <span><b>Keke de Plátano con Nueces</b></span>
+            <p>12-14 porciones de un rico keke de plátano con incrustaciones de nueces.</p>
+            <span class="tarjeta2_body_precio">S/. 22.00</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/torta_barra_torta_chocolate.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>Torta húmeda</span><br>
+            <span><b>Barra torta de chocolate</b></span>
+            <p>12 porciones aproximadamente, con cerezas, fosh, manjar y listo para comer en tu almuerzo.</p>
+            <span class="tarjeta2_body_precio">S/. 49.50</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/torta_cumple_fiesta.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>Torta húmeda</span><br>
+            <span><b>Feliz Cumple Fiesta</b></span>
+            <p>12 porciones, compuesta por capas de bizcochuelo de caramelo y con el diseño que más de guste.</p>
+            <span class="tarjeta2_body_precio">S/. 69.00</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+            <button type="button">AGREGAR</button>
+          </div>
+        </div>
+        
+        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/torta_delicia_fresa.jpg">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>Torta húmeda</span><br>
+            <span><b>Torta Delicia de Fresa</b></span>
+            <p>24 porciones, compuesta por fresas y fosh, listo para tus cumpleaños y días que más te gusten disfrutar.</p>
+            <span class="tarjeta2_body_precio">S/. 84.00</span>
           </div>
           
           <div class="tarjeta2_footer">
@@ -388,6 +534,73 @@
           <!-- </p> -->
         <!-- </div> -->
       <!-- </div> -->
+      
+      <div class="categorias">    
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="categorias_menu ">
+            <img src="../../../assets/img/torta_chocolate_fresa.jpg">
+            <h1>Tortas húmedas</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('torta_chocolate_fresa.jpg')">Ver foto</h2>       
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="categorias_menu">
+            <img src="../../../assets/img/keke_pina.jpg">
+            <h1>Kekes</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('keke_pina.jpg')">Ver foto</h2>        
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="categorias_menu">
+            <img src="../../../assets/img/torta_cumple_fiesta.jpg">
+            <h1>Tortas fiesteras</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('torta_cumple_fiesta.jpg')">Ver foto</h2>        
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+          <div class="categorias_menu">
+            <img src="../../../assets/img/torta_delicia_fresa.jpg">
+            <h1>Dulceras</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('../../../assets/img/torta_delicia_fresa.jpg')">Ver foto</h2>        
+          </div>
+        </div>  
+
+        <div class="modal modal_categorias">
+          <div class="modal_backdrop" onclick="mostrarOcultarModalCategoria()"></div>
+          <div class="modal_contenedor modal-md">
+            <div class="modal_header">
+              <h1>Categoría</h1>
+              <i class="bi bi-x" onclick="mostrarOcultarModalCategoria()"></i>
+            </div>
+            <div class="modal_body texto-centrado">
+              <img src="../../../assets/img/galaxynote20.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="chat">
+        <div class="chat_backdrop" onclick="mostrarOcultarChat();"></div>
+        <div class="chat_popup">
+          <div class="chat_popup_header">
+            <i class="bi bi-messenger chat_logo" ></i>
+            <h1 >Bodoquin</br><small>Siempre contigo</small></h1>
+            <i class="bi bi-x chat_cerrar" onClick="mostrarOcultarChat()"></i>
+          </div>
+          <div class="chat_popup_body">
+          </div>
+          <div class="chat_popup_footer">
+            <input type="text" required placeholder="¿En que te ayudamos?..."  />
+            <i class="bi bi-arrow-right-circle"></i>
+          </div>
+        </div>
+        <div class="chat_fab">
+          <i class="bi bi-messenger" onclick="mostrarOcultarChat();"></i>
+        </div>
+      </div>
     </main>
     
     <footer>

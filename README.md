@@ -48,46 +48,40 @@ Aplicación bodoquin
         pull request => para enviar una solicitud de unión de mi rama hacia develop
   - GITHUB: servidor o repositorio web para proyectos git
   - tortoise git: herramienta de interfaz grafica para ejecutar operaciones con GIT de manera simple
+  - commits:
+      feat(componente): descripcion
+      fix(componente): descripcion
   
 4. Metodología del proyecto:
   - SCRUM: es una metodología agil para dividirnos el desarrollo
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13
     - Features: (Lista de tareas - tablero KANBAN) 
-      - revisar otras webs para tomar ideas (plaza vea, saga, lacuracao, etc) 2
-      - lluvia de ideas 1
-      - combinar el blanco con otros colores en la pantalla de inicio 1
-      - aplicación responsive 3
-      - titulos centrados 1
-      - iconos con color 1
-      - el carousel con movimiento automático 2
-      - el carousel con botones de colores de la aplicación 0.5
-      - aumentar hasta 9 productos por cada vista 1
-      
+      - cerrar el menu al dar click afuera de este 1
+      - Tarjeta de oferta fija que aparezca al abrir el home 2
+      - chat: corrección de bugs parte I 1
+      - implementar el componente de toast (notificaciones) 5 
+      - implementar sección de productos en remate en cada pantalla 5
+      - crear componente generico para popups - 5
+      - popup de carrito de compra - 5
+      - en cada vista de cada linea de productos, al seleccionar un producto, se tiene que mostrar la 
+        funcionalidad para seguir agregando o  disminuyendo productos, o eliminar el producto 3
+      - integrarnos con bootstrap parte 1 - responsive 3
     - backlog => conjunto de tareas o mejoras a realizar (features futuros)      
       - Requerimientos funcionales:
         - poner un logo
-        - el carousel con transición de desplazamiento
-        - el carousel con pasos
-        - implementar un chat con boton FAB
         - implementar vistas de detalle de producto
           - productos relacionados
         - implementar vista de resumen de la compra
-        - en la vista de inicio: tarjetas de acceso tengan un efecto en el hover
         - en la vista de inicio: implementar mini banners por cada linea de producto con efecto en el hover
         - implementar sección de anuncios y/o publicidad
-        - modal de confirmacion de recojo (hubicación)
-        - modal de carrito de compra
-        - integrarnos con bootstrap
-        - en cada vista de producto, al seleccionar un producto, se tiene que mostrar la 
-          funcionalidad para seguir agregando o  disminuyendo productos, o eliminar
-        - Tarjeta de oferta fija que aparezca al abrir el home 
-        - implementar sección de productos en remate en cada pantalla  
+        - modal de confirmacion de recojo (ubicación)
         - Implementar opciones de ayuda
         - Pantalla de cambios y devoluciones
         - Pantalla de nuestras tiendas
-        - cerrar el menu al dar click afuera de este 
-              
+        - correciones del chat parte II (chat fantasma)
+        - integrar el responsive en la pantalla de inicio
+        - menu responsive
       - Requerimientos no funcionales:       
       
 5. Plataformas:

@@ -56,17 +56,17 @@ Aplicación bodoquin
   - SCRUM: es una metodología agil para dividirnos el desarrollo
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13
-    - Features: (Lista de tareas - tablero KANBAN) 20
+    - Features: (Lista de tareas - tablero KANBAN) 
+      - cerrar el menu al dar click afuera de este 1
       - Tarjeta de oferta fija que aparezca al abrir el home 2
       - chat: corrección de bugs parte I 1
-      - implementar sección de productos en remate en cada pantalla 3
-      - integrarnos con bootstrap parte 1 - responsive 3
-      - modal de carrito de compra - 5
-      - crear componente generico para popups - 3
+      - implementar el componente de toast (notificaciones) 5 
+      - implementar sección de productos en remate en cada pantalla 5
+      - crear componente generico para popups - 5
+      - popup de carrito de compra - 5
       - en cada vista de cada linea de productos, al seleccionar un producto, se tiene que mostrar la 
         funcionalidad para seguir agregando o  disminuyendo productos, o eliminar el producto 3
-      - implementar el componente de toast (notificaciones) 2 
-      - cerrar el menu al dar click afuera de este 1
+      - integrarnos con bootstrap parte 1 - responsive 3
     - backlog => conjunto de tareas o mejoras a realizar (features futuros)      
       - Requerimientos funcionales:
         - poner un logo

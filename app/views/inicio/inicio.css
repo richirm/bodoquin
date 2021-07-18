@@ -654,6 +654,7 @@ body.con-scroll .header_secundario {
   float: right;
   width: 153px;
   padding-top: 5px;
+  text-align: right;
 }
 
 .header_acciones i {

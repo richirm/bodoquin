@@ -1,11 +1,85 @@
+var pedidos = [];
 var menuColapsado = true;
 var usuarioPopupVisible = false;
 var modalInicioSesionVisible = false;
 var modalRegistrarseVisible = false;
 var modalCerrarSesionVisible = false;
-var posicionBannerActual = 1;
 var chatPopupVisible = false;
 var modalCategoriaVisible = false;
+var timeoutChat;
+
+function sumarYAlertarValores(campo1, campo2) {
+  var sumaDeValores = campo1 + campo2;
+  alert(sumaDeValores);
+  return sumaDeValores;
+}
+
+function multiplicarYAlertarValores(campo1, campo2) {
+  var productoValores = campo1 * campo2;
+  confirm(productoValores);
+  return productoValores;
+}
+                                       
+function sumarYMultiplicarYAlertarValores(campo1, campo2, campo3) {
+  var sumaDeValores = sumarYAlertarValores(campo1, campo2);
+  var productoValores = multiplicarYAlertarValores(sumaDeValores, campo3);
+  return productoValores;
+}
+
+function realizarPedido() {
+  var nombrePostre = document.querySelector('[name="nombre_postre"]').value;
+  var cantidad = document.querySelector('[name="cantidad"]').value;
+  var correo = document.querySelector('[name="correo"]').value;
+  var departamento = document.querySelector('[name="departamento"]').value;
+  var provincia = document.querySelector('[name="provincia"]').value;
+  var distrito = document.querySelector('[name="distrito"]').value;
+  var comentario = document.querySelector('[name="comentario"]').value;
+  
+  var pedido = {
+    nombrePostre: nombrePostre,
+    cantidad: cantidad,
+    correo: correo,
+    departamento: departamento,
+    provincia: provincia,
+    distrito: distrito,
+    comentario: comentario,
+  };
+  
+  console.log(pedido);
+}
+
+function agregarPedido() {
+  var nombrePostre = document.querySelector('[name="nombre_postre"]').value;
+  var cantidad = document.querySelector('[name="cantidad"]').value;
+  var correo = document.querySelector('[name="correo"]').value;
+  var departamento = document.querySelector('[name="departamento"]').value;
+  var provincia = document.querySelector('[name="provincia"]').value;
+  var distrito = document.querySelector('[name="distrito"]').value;
+  var comentario = document.querySelector('[name="comentario"]').value;
+  
+  var pedido = {
+    nombrePostre: nombrePostre,
+    cantidad: cantidad,
+    correo: correo,
+    departamento: departamento,
+    provincia: provincia,
+    distrito: distrito,
+    comentario: comentario,
+  };
+  
+  pedidos.push(pedido);
+  
+  console.log(pedidos);
+}
+
+function construirOferta(desProducto, desRegalo) {
+  var cantProductos = document.querySelector('[name="cantidad"]').value;
+  var cantRegalos = cantProductos / 2;
+  
+  var desOferta = `Compra ${cantProductos} ${desProducto} y te ganas ${cantRegalos} ${desRegalo}`;
+  
+  document.querySelector('.oferta').innerHTML = desOferta;
+}
 
 function colapsarExpandirMenu() {  
   if(menuColapsado === true) {
@@ -73,13 +147,20 @@ function mostrarOcultarModalCerrarSesion() {
 
 /**************** CHAT *******************/
 function mostrarOcultarChat() {
-  if(chatPopupVisible === true) {
+  clearTimeout(timeoutChat);
+  
+  if(chatPopupVisible === true) { 
     document.querySelector('.chat_backdrop').style.display = "none";
     document.querySelector('.chat_popup').classList.remove('chat_popup_in');    
-    document.querySelector('.chat_popup').classList.add('chat_popup_out');    
+    document.querySelector('.chat_popup').classList.add('chat_popup_out');     
     document.querySelector('.chat_fab').classList.remove('chat_fab_in');
     chatPopupVisible = false;
-  } else {
+    
+    timeoutChat = setTimeout(() => {
+      document.querySelector('.chat_popup').style.height = 0; 
+    }, 0.3 * 1000);
+  } else {   
+    document.querySelector('.chat_popup').style.height = 'auto'; 
     document.querySelector('.chat_backdrop').style.display = "block";
     document.querySelector('.chat_popup').classList.add('chat_popup_in');    
     document.querySelector('.chat_popup').classList.remove('chat_popup_out');  
@@ -103,3 +184,14 @@ function mostrarOcultarModalCategoria(nombreImagen) {
 }
 /********************************************/
 
+/************* POPUP *********************/
+function mostrarOcultarPopup(selectorPopup) {
+  var popupDisplay = document.querySelector(selectorPopup).style.display;
+
+  if(popupDisplay === 'inline-block') {
+    document.querySelector(`${selectorPopup}`).style.display = 'none';
+  } else {
+    document.querySelector(`${selectorPopup}`).style.display = 'inline-block';
+  }
+}
+/*****************************************/

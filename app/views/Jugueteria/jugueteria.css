@@ -48,6 +48,7 @@ body.con-scroll main {
   border-radius: 8px;
   opacity: 0;
   transform-origin: bottom right;
+  height: 0;
 }
 
 .chat .chat_popup.chat_popup_in {
@@ -301,9 +302,24 @@ body.con-scroll .header_secundario {
   color: #ffffff;
 }
 
+
+
 .header_acciones_notificacion {
   position: relative;
 }
+
+/************ CARRITO ***********/
+.header_acciones_carrito {
+  position: relative;
+  font-size: 0;
+}
+
+.popup_carrito .popup_body {
+  height: 350px;
+  width: 300px;
+}
+
+/********************************/
 
 .header_notificacion {
   width: 20px;
@@ -313,12 +329,13 @@ body.con-scroll .header_secundario {
   text-align: center;
   padding-top: 0px;
   border-radius: 50%;
+  font-size: 16px;
 }
 
 .header_notificacion-principal {
   position: absolute;
-  top: -15px;
-  right: -3px;
+  top: -32px;
+  right: -7px;
 }
 
 .header_busqueda {
@@ -342,6 +359,7 @@ body.con-scroll .header_secundario {
 
 .header_acciones {
   text-align: right;
+  width: 153px;
   padding-top: 5px;
 }
 
@@ -1020,3 +1038,59 @@ footer {
 }
 
 /*****************************************/
+/********** POPUP ******************/
+.popup {
+  display: none;
+  font-size: 16px;
+}
+
+.popup .popup_backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0000003b;
+}
+
+.popup .popup_flecha {
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  transform: rotate(46deg);
+  position: absolute;
+  right: 6px;
+  top: 17px;
+  z-index: 1;
+}
+
+.popup .popup_contenedor {
+  min-height: 50px;
+  background-color: #ffffff;
+  position: absolute;
+  right: -15px;
+  border-radius: 6px;
+  border: 1px solid #cccccc;
+  box-shadow: 1px 1px 5px #cccccc;
+  top: 23px;
+  text-align: initial;
+}
+
+.popup .popup_contenedor .popup_header {
+  width: calc(100% - 24px);
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ECECEC;
+  box-shadow: 0px 4px 4px rgb(204 204 204 / 25%);
+}
+
+.popup .popup_contenedor .popup_body {
+  min-height: 100px;
+  min-width: 260px;
+}
+
+.popup .popup_contenedor .popup_footer {
+  padding: 10px;
+  border-top: 1px solid #ececec;
+}
+/***********************************/

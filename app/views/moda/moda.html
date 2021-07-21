@@ -17,7 +17,7 @@
             <i class="bi bi-search"></i>
           </span>
         </div>
-        <div class="header_acciones col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <div class="header_acciones header_acciones col-xl-6 col-lg-6 col-md-6 col-sm-12">
           <span class="header_acciones_carrito">
             <i class="bi bi-cart-check" onclick="mostrarOcultarPopup('.popup_carrito');"></i>
             <div class="header_notificacion header_notificacion-principal">3</div>   
@@ -27,10 +27,75 @@
               <div class="popup_flecha"></div>
               <div class="popup_contenedor">
                 <div class="popup_header">
-                  titulo
+                  Tienes agregados <b>3</b> productos
                 </div>
                 <div class="popup_body">
-                  
+                  <div class="carrito_productos">
+                    <div class="carrito_producto">
+                      <div class="carrito_producto_img">
+                        <img src="../../../assets/img/nars.jpg">
+                      </div>
+                      <div class="carrito_producto_detalle">
+                        <h2>Base</h2>
+                        <h1>Base nars</h1>
+                        <span class="carrito_producto_total">S/. 100</span>
+                        
+                        <div class="carrito_producto_contador">
+                          <div class="carrito_producto_contador_agrega">
+                            <span><i class="bi bi-dash-lg"></i></span>
+                            <span><i class="bi bi-plus-lg"></i></span>
+                          </div>
+                          <div class="carrito_producto_contador_cantidad">3</div>
+                        </div>
+                      </div>
+                      <i class="bi bi-x icono-accion"></i>
+                    </div> 
+                    
+                    <div class="carrito_producto">
+                      <div class="carrito_producto_img">
+                        <img src="../../../assets/img/reloj.jpg">
+                      </div>
+                      <div class="carrito_producto_detalle">
+                        <h2>Reloj</h2>
+                        <h1>Reloj de mujer</h1>
+                        <span class="carrito_producto_total">S/. 970</span>
+                        
+                        <div class="carrito_producto_contador">
+                          <div class="carrito_producto_contador_agrega">
+                            <span><i class="bi bi-dash-lg"></i></span>
+                            <span><i class="bi bi-plus-lg"></i></span>
+                          </div>
+                          <div class="carrito_producto_contador_cantidad">3</div>
+                        </div>
+                      </div>
+                      <i class="bi bi-x icono-accion"></i>
+                    </div> 
+                    
+                    <div class="carrito_producto">
+                      <div class="carrito_producto_img">
+                        <img src="../../../assets/img/sandalias.jpg">
+                      </div>
+                      <div class="carrito_producto_detalle">
+                        <h2>Sandalias</h2>
+                        <h1>Sandalias de verano</h1>
+                        <span class="carrito_producto_total">S/. 399</span>
+                        
+                        <div class="carrito_producto_contador">
+                          <div class="carrito_producto_contador_agrega">
+                            <span><i class="bi bi-dash-lg"></i></span>
+                            <span><i class="bi bi-plus-lg"></i></span>
+                          </div>
+                          <div class="carrito_producto_contador_cantidad">3</div>
+                        </div>
+                      </div>
+                      <i class="bi bi-x icono-accion"></i>
+                    </div>                
+                  </div>
+                    
+                  <div class="carrito_total">
+                    <span>Sub Total:</span>
+                    <span class="carrito_total_monto">S/. 1369</span>
+                  </div>  
                 </div>
                 <div class="popup_footer">
                   <button class="btn btn-primary">Continuar</button>
@@ -410,17 +475,17 @@
       <div class="categorias">    
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
           <div class="categorias_menu ">
-            <img src="../../../assets/img/carnivalxl.jpg">
+            <img src="../../../assets/img/nars.jpg">
             <h1>Maquillaje</h1>
-            <h2 onclick="mostrarOcultarModalCategoria('carnivalxl.jpg')">Ver foto</h2>       
+            <h2 onclick="mostrarOcultarModalCategoria('nars.jpg')">Ver foto</h2>       
           </div>
         </div>
         
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
           <div class="categorias_menu">
-            <img src="../../../assets/img/casaca.jpg">
-            <h1>Ropa</h1>
-            <h2 onclick="mostrarOcultarModalCategoria('casaca.jpg')">Ver foto</h2>        
+            <img src="../../../assets/img/sandalias.jpg">
+            <h1>Sandalias</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('sandalias.jpg')">Ver foto</h2>        
           </div>
         </div>
         

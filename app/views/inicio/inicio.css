@@ -621,7 +621,6 @@ body.con-scroll .header_secundario {
 .popup_carrito .carrito_productos .carrito_producto {
   width: 100%;
   border: 1px solid #CCCCCC;
-  height: 150px;
   margin-bottom: 10px;
   position: relative;
 }
@@ -675,6 +674,7 @@ body.con-scroll .header_secundario {
   text-align: center;
   display: inline-block;
   vertical-align: middle;
+  user-select: none;
 }
 
 .popup_carrito .carrito_productos .carrito_producto .carrito_producto_contador .carrito_producto_contador_agrega span:nth-child(1) {
@@ -694,6 +694,7 @@ body.con-scroll .header_secundario {
   font-size: 20px;
   color: #000000;
   margin: 0;
+  user-select: none;
 }
 
 .popup_carrito .carrito_productos .carrito_producto .carrito_producto_contador .carrito_producto_contador_cantidad {

@@ -197,30 +197,30 @@ function mostrarOcultarPopup(selectorPopup) {
 /*********** POPUP - CARRITO COMPRA *******/
 var maximoPorProducto = 5;
 var productos = [
-  {
-    idProducto: 1001,
-    nombreImg: 'reloj.jpg', 
-    nombreCategoria: 'Reloj',
-    nombreProducto: 'Reloj de mujer',
-    precioProducto: 970,
-    cantidadProducto: 3,
-  }, 
-  {
-    idProducto: 1002,
-    nombreImg: 'sandalias.jpg',
-    nombreCategoria: 'Sandalias',
-    nombreProducto: 'Sandalias de verano',
-    precioProducto: 399,
-    cantidadProducto: 4,
-  }, 
-  {
-    idProducto: 1003,
-    nombreImg: 'nars.jpg',
-    nombreCategoria: 'Base',
-    nombreProducto: 'Base nars',
-    precioProducto: 100,
-    cantidadProducto: 2,
-  }
+  // {
+    // idProducto: 1001,
+    // nombreImg: 'reloj.jpg', 
+    // nombreCategoria: 'Reloj',
+    // nombreProducto: 'Reloj de mujer',
+    // precioProducto: 970,
+    // cantidadProducto: 3,
+  // }, 
+  // {
+    // idProducto: 1002,
+    // nombreImg: 'sandalias.jpg',
+    // nombreCategoria: 'Sandalias',
+    // nombreProducto: 'Sandalias de verano',
+    // precioProducto: 399,
+    // cantidadProducto: 4,
+  // }, 
+  // {
+    // idProducto: 1003,
+    // nombreImg: 'nars.jpg',
+    // nombreCategoria: 'Base',
+    // nombreProducto: 'Base nars',
+    // precioProducto: 100,
+    // cantidadProducto: 2,
+  // }
 ];
 
 function construirProductosEnCarrito() {
@@ -294,3 +294,134 @@ function deleteProduct(idProducto) {
 
 construirProductosEnCarrito();
 /*****************************************/
+
+/***** TARJETAS PRODUCTOS **********/
+var productosTarjeta = [
+  {
+    idProducto: 1001,
+    nombreImg: 'carnivalxl.jpg', 
+    nombreCategoria: 'Sombras',
+    nombreProducto: 'Carnival xl',
+    descripcionProducto: 'Paleta de sombras 40 tonos de diversos colores',
+    precioProducto: 350,
+  },
+  {
+    idProducto: 1002,
+    nombreImg: 'nars.jpg', 
+    nombreCategoria: 'Base',
+    nombreProducto: 'Nars',
+    descripcionProducto: 'Base de maquillaje de larga duracion con alta cobertura',
+    precioProducto: 100,
+  },
+  {
+    idProducto: 1003,
+    nombreImg: 'casaca.jpg', 
+    nombreCategoria: 'Casacas',
+    nombreProducto: 'Casaca de cuero mujer',
+    descripcionProducto: 'Casaca de cuero color negro , doble cara .',
+    precioProducto: 400,
+  },
+  {
+    idProducto: 1005,
+    nombreImg: 'barclayjeans.jpg', 
+    nombreCategoria: 'Jean',
+    nombreProducto: 'Jean mujer cullote',
+    descripcionProducto: 'Jean clasico con material 100% algodon',
+    precioProducto: 129,
+  },
+  {
+    idProducto: 1007,
+    nombreImg: 'setdeanillos.jpg', 
+    nombreCategoria: 'Anillos',
+    nombreProducto: 'Twint set',
+    descripcionProducto: 'Anillo rose de 3 mm en plata de 925 + juego de aretes',
+    precioProducto: 199,
+  },
+  {
+    idProducto: 1009,
+    nombreImg: 'sunglassesaesthetic.jpg', 
+    nombreCategoria: 'Lentes',
+    nombreProducto: 'Lentes de sol',
+    descripcionProducto: 'lentes con proteccion uv + estuche + audifonos',
+    precioProducto: 399,
+  },
+  {
+    idProducto: 1011,
+    nombreImg: 'reloj.jpg', 
+    nombreCategoria: 'Reloj',
+    nombreProducto: 'Reloj de mujer',
+    descripcionProducto: 'Fino reloj dolcce & gabanna',
+    precioProducto: 999,
+  },
+  {
+    idProducto: 1012,
+    nombreImg: 'sandalias.jpg', 
+    nombreCategoria: 'Sandalias',
+    nombreProducto: 'Sandalias de verano',
+    descripcionProducto: 'Lindas sandalias color camello',
+    precioProducto: 399,
+  },
+  {
+    idProducto: 1004,
+    nombreImg: 'arete.jpg', 
+    nombreCategoria: 'Aretes',
+    nombreProducto: 'Aretes de plata',
+    descripcionProducto: 'Aretes con acabados en plata de diferentes modelos',
+    precioProducto: 89,
+  },
+  {
+    idProducto: 1006,
+    nombreImg: 'bota.jpg', 
+    nombreCategoria: 'Botas',
+    nombreProducto: 'Botas de cuero',
+    descripcionProducto: 'Botas de cuero de piel de lagarto con finos acabados',
+    precioProducto: 999,
+  },
+  {
+    idProducto: 1008,
+    nombreImg: 'sombrero.jpg', 
+    nombreCategoria: 'Sombrero',
+    nombreProducto: 'Sombrero moderno de playa',
+    descripcionProducto: 'Lindo sombrero con excelentes acabados',
+    precioProducto: 150,
+  },
+  {
+    idProducto: 1010,
+    nombreImg: 'labial.jpg', 
+    nombreCategoria: 'Labial',
+    nombreProducto: 'Labial mate',
+    descripcionProducto: 'Sabor fresa y extra duracion',
+    precioProducto: 50,
+  },
+];
+
+function construirProductosEnTarjetas() {
+  var htmlTarjetas = '';
+  
+  productosTarjeta.forEach(function(producto) {
+    var htmlTarjeta = `
+      <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+        <div class="tarjeta2_header">         
+          <img src="../../../assets/img/${producto.nombreImg}">
+        </div>
+        <div class="tarjeta2_body">      
+          <span>${producto.nombreCategoria}</span><br>
+          <span><b>${producto.nombreProducto}</b></span>
+          <p>${producto.descripcionProducto}</p>
+          <span class="tarjeta2_body_precio">S/. ${producto.precioProducto}</span>
+        </div>
+        
+        <div class="tarjeta2_footer">
+          <button type="button">AGREGAR</button>
+        </div>
+      </div>
+    `;
+    
+    htmlTarjetas = htmlTarjetas + htmlTarjeta;
+  });
+  
+  document.querySelector('.tarjetas').innerHTML = htmlTarjetas;
+}
+
+construirProductosEnTarjetas();
+/***********************************/

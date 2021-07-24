@@ -195,3 +195,104 @@ function mostrarOcultarPopup(selectorPopup) {
   }
 }
 /*****************************************/
+/*********** POPUP - CARRITO COMPRA *******/
+var maximoPorProducto = 5;
+var productos = [
+  {
+    idProducto: 1001,
+    nombreImg: 'torta_selva_negra.jpg', 
+    nombreCategoria: 'Torta húmeda',
+    nombreProducto: 'Torta de leche de Óreo1',
+    precioProducto: 60.25,
+    cantidadProducto: 3,
+  }, 
+  {
+    idProducto: 1002,
+    nombreImg: 'torta_selva_negra.jpg',
+    nombreCategoria: 'Torta húmeda2',
+    nombreProducto: 'Torta de leche de Óreo2',
+    precioProducto: 70.50,
+    cantidadProducto: 4,
+  }, 
+  {
+    idProducto: 1003,
+    nombreImg: 'torta_selva_negra.jpg',
+    nombreCategoria: 'Torta húmeda3',
+    nombreProducto: 'Torta de leche de Óreo3',
+    precioProducto: 45.50,
+    cantidadProducto: 2,
+  }
+];
+
+function construirProductosEnCarrito() {
+  var htmlProductos = '';
+  var totalPrecio = 0;
+  var cantidadProductos = 0;
+  
+  productos.forEach(function(producto) {
+    totalPrecio = totalPrecio + (producto.precioProducto * producto.cantidadProducto);
+    cantidadProductos = cantidadProductos + producto.cantidadProducto;
+    
+    var htmlProducto = `
+      <div class="carrito_producto">
+        <div class="carrito_producto_img">
+          <img src="../../../assets/img/${producto.nombreImg}">
+        </div>
+        <div class="carrito_producto_detalle">
+          <h2>${producto.nombreCategoria}</h2>
+          <h1>${producto.nombreProducto}</h1>
+          <span class="carrito_producto_total">S/. ${producto.precioProducto}</span>
+          
+          <div class="carrito_producto_contador">
+            <div class="carrito_producto_contador_agrega">
+              <span><i class="bi bi-dash-lg" onclick="removeItemInProduct(${producto.idProducto})"></i></span>
+              <span><i class="bi bi-plus-lg" onclick="addItemInProduct(${producto.idProducto})"></i></span>
+            </div>
+            <div class="carrito_producto_contador_cantidad">${producto.cantidadProducto}</div>
+          </div>
+        </div>
+        <i class="bi bi-x icono-accion" onclick="deleteProduct(${producto.idProducto})"></i>
+      </div> 
+    `;
+    
+    htmlProductos = htmlProductos + htmlProducto;
+  });
+  
+  document.querySelector('.carrito_productos').innerHTML = htmlProductos;
+  document.querySelector('.carrito_total_monto').innerHTML = `S/. ${totalPrecio}`;
+  document.querySelector('.header_notificacion').innerHTML = cantidadProductos;
+  document.querySelector('.popup_carrito .popup_header b').innerHTML = cantidadProductos;
+}
+
+function removeItemInProduct(idProducto) {
+  productos.forEach(function(producto) {
+    if(producto.idProducto === idProducto && producto.cantidadProducto >= 2) {
+      producto.cantidadProducto = producto.cantidadProducto - 1;
+    }
+  });
+  
+  construirProductosEnCarrito();
+}
+
+function addItemInProduct(idProducto) {
+  productos.forEach(function(producto) {
+    if(producto.idProducto === idProducto && producto.cantidadProducto < maximoPorProducto) {
+      producto.cantidadProducto = producto.cantidadProducto + 1;
+    }
+  });
+  
+  construirProductosEnCarrito();
+}
+
+function deleteProduct(idProducto) { 
+  var index = productos.findIndex(function(producto) {
+    return producto.idProducto === idProducto;
+  });
+  
+  productos.splice(index, 1);
+  construirProductosEnCarrito();
+}
+
+construirProductosEnCarrito();
+/*****************************************/
+

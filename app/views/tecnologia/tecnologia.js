@@ -197,30 +197,30 @@ function mostrarOcultarPopup(selectorPopup) {
 /*********** POPUP - CARRITO COMPRA *******/
 var maximoPorProducto = 5;
 var productos = [
-  {
-    idProducto: 1001,
-    nombreImg: 'laptophp15.jpg', 
-    nombreCategoria: 'HP',
-    nombreProducto: 'Laptop hp 15"',
-    precioProducto: 2600,
-    cantidadProducto: 3,
-  }, 
-  {
-    idProducto: 1002,
-    nombreImg: 'samsungtv70.jpg',
-    nombreCategoria: 'Samsung',
-    nombreProducto: 'Samsung tv 70"',
-    precioProducto: 2699,
-    cantidadProducto: 4,
-  }, 
-  {
-    idProducto: 1003,
-    nombreImg: 'galaxys10.jpg',
-    nombreCategoria: 'Samsung',
-    nombreProducto: 'Samsung galaxy S10',
-    precioProducto: 1599,
-    cantidadProducto: 2,
-  }
+  // {
+    // idProducto: 1001,
+    // nombreImg: 'laptophp15.jpg', 
+    // nombreCategoria: 'HP',
+    // nombreProducto: 'Laptop hp 15"',
+    // precioProducto: 2600,
+    // cantidadProducto: 3,
+  // }, 
+  // {
+    // idProducto: 1002,
+    // nombreImg: 'samsungtv70.jpg',
+    // nombreCategoria: 'Samsung',
+    // nombreProducto: 'Samsung tv 70"',
+    // precioProducto: 2699,
+    // cantidadProducto: 4,
+  // }, 
+  // {
+    // idProducto: 1003,
+    // nombreImg: 'galaxys10.jpg',
+    // nombreCategoria: 'Samsung',
+    // nombreProducto: 'Samsung galaxy S10',
+    // precioProducto: 1599,
+    // cantidadProducto: 2,
+  // }
 ];
 
 function construirProductosEnCarrito() {
@@ -294,4 +294,135 @@ function deleteProduct(idProducto) {
 
 construirProductosEnCarrito();
 /*****************************************/
+
+/***** TARJETAS PRODUCTOS **********/
+var productosTarjeta = [
+  {
+    idProducto: 1001,
+    nombreImg: 'galaxys10.jpg', 
+    nombreCategoria: 'Samsung',
+    nombreProducto: 'Samsung galaxy s10',
+    descripcionProducto: '6 GB RAM + 128 gb almacenamiento + 5000 mah + full hd',
+    precioProducto: 1599,
+  }, 
+  {
+    idProducto: 1002,
+    nombreImg: 'galaxynote20.jpg', 
+    nombreCategoria: 'Samsung',
+    nombreProducto: 'Samsung galaxy note20',
+    descripcionProducto: '8 GB RAM + 256 gb almacenamiento + 6000 mah + full hd',
+    precioProducto: 2499,
+  }, 
+  {
+    idProducto: 1003,
+    nombreImg: 'motog9.jpg', 
+    nombreCategoria: 'Motorola',
+    nombreProducto: 'Motorola g9 plus',
+    descripcionProducto: '3 GB RAM + 64 gb almacenamiento + 3500 mah + full hd',
+    precioProducto: 999,
+  }, 
+  {
+    idProducto: 1004,
+    nombreImg: 'motog7power.jpg', 
+    nombreCategoria: 'Motorola',
+    nombreProducto: 'Motorola g7 power',
+    descripcionProducto: '3 GB RAM + 64 gb almacenamiento + 4500 mah + hd',
+    precioProducto: 899,
+  }, 
+  {
+    idProducto: 1005,
+    nombreImg: 'samsungtv50.jpg', 
+    nombreCategoria: 'Samsung tv',
+    nombreProducto: 'Samsung tv 50"',
+    descripcionProducto: 'Full hd + puerto hdmi + magic control',
+    precioProducto: 1899,
+  }, 
+  {
+    idProducto: 1006,
+    nombreImg: 'samsungtv65.jpg', 
+    nombreCategoria: 'SamsungTv',
+    nombreProducto: 'Samsung tv 65"',
+    descripcionProducto: 'Ultra hd 4k + pantalla cristal + magic control',
+    precioProducto: 2899,
+  }, 
+  {
+    idProducto: 1007,
+    nombreImg: 'samsungtv70.jpg', 
+    nombreCategoria: 'SamsungTv',
+    nombreProducto: 'Samsung tv 70"',
+    descripcionProducto: 'Ultra hd + 2 puertos hdmi + conxion bluetooh',
+    precioProducto: 2659,
+  }, 
+  {
+    idProducto: 1008,
+    nombreImg: 'daeewotv.jpg', 
+    nombreCategoria: 'DaeewooTv',
+    nombreProducto: 'Daeewoo tv 49"',
+    descripcionProducto: 'Pantalla full hd + wifi + samart tv',
+    precioProducto: 899,
+  }, 
+  {
+    idProducto: 1009,
+    nombreImg: 'laptophpgaming.jpg', 
+    nombreCategoria: 'Asus',
+    nombreProducto: 'Laptop gaming asus',
+    descripcionProducto: '16gb ram + 1tb ssd + full hd',
+    precioProducto: 7999,
+  }, 
+  {
+    idProducto: 1010,
+    nombreImg: 'macbookair.jpg', 
+    nombreCategoria: 'Apple',
+    nombreProducto: 'Macbook air ',
+    descripcionProducto: '8 gb ram + 500 ssd + bluetooh',
+    precioProducto: 1899,
+  }, 
+  {
+    idProducto: 1011,
+    nombreImg: 'laptophp15.jpg"', 
+    nombreCategoria: 'HP',
+    nombreProducto: 'Laptop hp 15"',
+    descripcionProducto: '8gb ram + 1 tb ssd + full hd',
+    precioProducto: 2600,
+  }, 
+  {
+    idProducto: 1012,
+    nombreImg: 'laptoplg.jpg', 
+    nombreCategoria: 'LG',
+    nombreProducto: 'Laptop lg',
+    descripcionProducto: '12 GB RAM + 528 gb almacenamiento + uhd 4k',
+    precioProducto: 2589,
+  }, 
+];
+
+function construirProductosEnTarjetas() {
+  var htmlTarjetas = '';
+  
+  productosTarjeta.forEach(function(producto) {
+    var htmlTarjeta = `
+      <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+        <div class="tarjeta2_header">         
+          <img src="../../../assets/img/${producto.nombreImg}">
+        </div>
+        <div class="tarjeta2_body">      
+          <span>${producto.nombreCategoria}</span><br>
+          <span><b>${producto.nombreProducto}</b></span>
+          <p>${producto.descripcionProducto}</p>
+          <span class="tarjeta2_body_precio">S/. ${producto.precioProducto}</span>
+        </div>
+        
+        <div class="tarjeta2_footer">
+          <button type="button">AGREGAR</button>
+        </div>
+      </div>
+    `;
+    
+    htmlTarjetas = htmlTarjetas + htmlTarjeta;
+  });
+  
+  document.querySelector('.tarjetas').innerHTML = htmlTarjetas;
+}
+
+construirProductosEnTarjetas();
+/***********************************/
 

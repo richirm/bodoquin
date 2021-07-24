@@ -57,7 +57,8 @@ Aplicación bodoquin
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13
     - Features: (Lista de tareas - tablero KANBAN)
-      - popup de carrito de compra - 5
+      - popup de carrito de compra - 8
+      - en cada pantalla de productos construir de forma dinámica las tarjetas - 3
       - en cada vista de cada linea de productos, al seleccionar un producto, se tiene que mostrar la 
         funcionalidad para seguir agregando o  disminuyendo productos, o eliminar el producto 3
       - integrarnos con bootstrap parte 1 - responsive 5

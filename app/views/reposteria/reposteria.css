@@ -271,6 +271,121 @@ body.con-scroll .header_secundario {
   width: 300px;
 }
 
+.popup_carrito .carrito_productos {
+  padding: 10px;
+  height: calc(350px - 20px - 41px);
+  overflow-y: auto;
+}
+
+.popup_carrito .carrito_productos .carrito_producto {
+  width: 100%;
+  border: 1px solid #CCCCCC;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.popup_carrito .carrito_productos .carrito_producto .carrito_producto_img {
+  width: 60px;
+  display: inline-block;
+  padding: 14px 8px;
+  height: calc(100% - 28px);
+  vertical-align: top;
+}
+
+.popup_carrito .carrito_productos .carrito_producto .carrito_producto_img img {
+  width: 100%;
+}
+
+.popup_carrito .carrito_productos .carrito_producto .carrito_producto_detalle {
+  width: calc(100% - 80px);
+  display: inline-block;
+  padding-top: 14px;
+  vertical-align: top;
+  padding-bottom: 14px;
+}
+
+.popup_carrito .carrito_productos .carrito_producto .carrito_producto_detalle h2 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.popup_carrito .carrito_productos .carrito_producto .carrito_producto_detalle h1 {
+  margin-top: 0px;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.popup_carrito .carrito_productos .carrito_producto .carrito_producto_total {
+  font-size: 20px;
+}
+
+.popup_carrito .carrito_productos .carrito_producto .carrito_producto_contador {
+  text-align: right;
+  padding-right: 12px;
+  margin-top: 16px;
+}
+
+.popup_carrito .carrito_productos .carrito_producto .carrito_producto_contador .carrito_producto_contador_agrega {
+  background: #ECECEC;
+  border-radius: 10px;
+  width: 100px;
+  padding: 6px 3px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  user-select: none;
+}
+
+.popup_carrito .carrito_productos .carrito_producto .carrito_producto_contador .carrito_producto_contador_agrega span:nth-child(1) {
+  border-right: 1px solid #cccccc;
+  width: calc(50% - 5px);
+  display: inline-block;
+  text-align: center;
+}
+
+.popup_carrito .carrito_productos .carrito_producto .carrito_producto_contador .carrito_producto_contador_agrega span:nth-child(2) {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+}
+
+.popup_carrito .carrito_productos .carrito_producto .carrito_producto_contador .carrito_producto_contador_agrega i {
+  font-size: 20px;
+  color: #000000;
+  margin: 0;
+  user-select: none;
+}
+
+.popup_carrito .carrito_productos .carrito_producto .carrito_producto_contador .carrito_producto_contador_cantidad {
+  padding: 4px 11px;
+  display: inline-block;
+  vertical-align: middle;
+  background: #80A3EA;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.popup_carrito .carrito_productos .carrito_producto .bi-x {
+  position: absolute;
+  top: 0;
+  right: 1px;
+  margin: 0;
+  color: #000000;
+}
+
+.popup_carrito .carrito_total {
+  padding: 8px 17px;
+  border-top: 1px solid #ECECEC;
+  text-align: right;
+}
+
+.popup_carrito .carrito_total .carrito_total_monto {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 /********************************/
 
 .header_notificacion {

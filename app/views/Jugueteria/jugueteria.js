@@ -198,30 +198,30 @@ function mostrarOcultarPopup(selectorPopup) {
 /*********** POPUP - CARRITO COMPRA *******/
 var maximoPorProducto = 5;
 var productos = [
-  {
-    idProducto: 1001,
-    nombreImg: 'torta_selva_negra.jpg', 
-    nombreCategoria: 'Torta húmeda',
-    nombreProducto: 'Torta de leche de Óreo1',
-    precioProducto: 60.25,
-    cantidadProducto: 3,
-  }, 
-  {
-    idProducto: 1002,
-    nombreImg: 'torta_selva_negra.jpg',
-    nombreCategoria: 'Torta húmeda2',
-    nombreProducto: 'Torta de leche de Óreo2',
-    precioProducto: 70.50,
-    cantidadProducto: 4,
-  }, 
-  {
-    idProducto: 1003,
-    nombreImg: 'torta_selva_negra.jpg',
-    nombreCategoria: 'Torta húmeda3',
-    nombreProducto: 'Torta de leche de Óreo3',
-    precioProducto: 45.50,
-    cantidadProducto: 2,
-  }
+  // {
+    // idProducto: 1001,
+    // nombreImg: 'torta_selva_negra.jpg', 
+    // nombreCategoria: 'Torta húmeda',
+    // nombreProducto: 'Torta de leche de Óreo1',
+    // precioProducto: 60.25,
+    // cantidadProducto: 3,
+  // }, 
+  // {
+    // idProducto: 1002,
+    // nombreImg: 'torta_selva_negra.jpg',
+    // nombreCategoria: 'Torta húmeda2',
+    // nombreProducto: 'Torta de leche de Óreo2',
+    // precioProducto: 70.50,
+    // cantidadProducto: 4,
+  // }, 
+  // {
+    // idProducto: 1003,
+    // nombreImg: 'torta_selva_negra.jpg',
+    // nombreCategoria: 'Torta húmeda3',
+    // nombreProducto: 'Torta de leche de Óreo3',
+    // precioProducto: 45.50,
+    // cantidadProducto: 2,
+  // }
 ];
 
 function construirProductosEnCarrito() {
@@ -296,3 +296,134 @@ function deleteProduct(idProducto) {
 construirProductosEnCarrito();
 /*****************************************/
 
+/***** TARJETAS PRODUCTOS **********/
+var productosTarjeta = [
+  {
+    idProducto: 1001,
+    nombreImg: 'piano.jpg', 
+    nombreCategoria: '0-2',
+    nombreProducto: 'Juguetes',
+    descripcionProducto: 'Piano para bebes de deferentes colores para un mejor aprendizaje',
+    precioProducto: 50.00,
+  },
+  {
+    idProducto: 1002,
+    nombreImg: 'tortuga.jpg', 
+    nombreCategoria: '0-2',
+    nombreProducto: 'Juguetes',
+    descripcionProducto: 'Totuga musical con canciones en ingles y español',
+    precioProducto: 40.25,
+  },
+  {
+    idProducto: 1003,
+    nombreImg: 'coche.jpg', 
+    nombreCategoria: '2-4',
+    nombreProducto: 'Coche',
+    descripcionProducto: 'coche para niñas con diferentes diseños',
+    precioProducto: 80.25,
+  },
+  {
+    idProducto: 1005,
+    nombreImg: 'muñeco.jpg', 
+    nombreCategoria: '2-4',
+    nombreProducto: 'Juguetes',
+    descripcionProducto: 'muñeca con chupon que llora y habla y remeda',
+    precioProducto:  45.75,
+  },
+  {
+    idProducto: 1007,
+    nombreImg: 'caballo.jpg', 
+    nombreCategoria: '2-4',
+    nombreProducto: 'Caballito',
+    descripcionProducto: 'Caballo para montar y también es musical',
+    precioProducto: 90.75,
+  },
+  {
+    idProducto: 1009,
+    nombreImg: 'carro.jpg', 
+    nombreCategoria: '2-4',
+    nombreProducto: 'Carrito',
+    descripcionProducto: 'Aprenderás a dar tus primeros pasitos jugando',
+    precioProducto: 65.45,
+  },
+  {
+    idProducto: 1011,
+    nombreImg: 'dinosaurios.jpg', 
+    nombreCategoria: '2-4',
+    nombreProducto: 'Dino',
+    descripcionProducto: 'Jalaras a un carrito de dino divertido',
+    precioProducto: 80.75,
+  },
+  {
+    idProducto: 1012,
+    nombreImg: 'figuras.jpg', 
+    nombreCategoria: '2-4',
+    nombreProducto: 'figuras',
+    descripcionProducto: 'juago dinamicos pra niños y niñas',
+    precioProducto: 25.80,
+  },
+  {
+    idProducto: 1004,
+    nombreImg: 'payaso.jpg', 
+    nombreCategoria: '2-4',
+    nombreProducto: 'payasitos',
+    descripcionProducto: 'payasitos de madera para armar y elegir',
+    precioProducto: 30.40,
+  },
+  {
+    idProducto: 1006,
+    nombreImg: 'pelotas.jpg', 
+    nombreCategoria: '2-4',
+    nombreProducto: 'pelotas',
+    descripcionProducto: 'pelotas de juguete muy modernas y coloridas',
+    precioProducto: 15.75,
+  },
+  {
+    idProducto: 1008,
+    nombreImg: 'cuadro.jpg', 
+    nombreCategoria: '2-4',
+    nombreProducto: 'cuadritos',
+    descripcionProducto: 'cuadritos de madera de colores para armar',
+    precioProducto: 55.75
+,
+  },
+  {
+    idProducto: 1010,
+    nombreImg: 'lonchera.jpg', 
+    nombreCategoria: '2-4',
+    nombreProducto: 'lonchera',
+    descripcionProducto: 'lonchera de madera para llevar tus juguetes',
+    precioProducto: 65.75,
+  },
+];
+
+function construirProductosEnTarjetas() {
+  var htmlTarjetas = '';
+
+  productosTarjeta.forEach(function(producto) {
+    var htmlTarjeta = `
+      <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+        <div class="tarjeta2_header">         
+          <img src="../../../assets/img/${producto.nombreImg}">
+        </div>
+        <div class="tarjeta2_body">      
+          <span>${producto.nombreCategoria}</span><br>
+          <span><b>${producto.nombreProducto}</b></span>
+          <p>${producto.descripcionProducto}</p>
+          <span class="tarjeta2_body_precio">S/. ${producto.precioProducto}</span>
+        </div>
+        
+        <div class="tarjeta2_footer">
+          <button type="button">AGREGAR</button>
+        </div>
+      </div>
+    `;
+
+    htmlTarjetas = htmlTarjetas + htmlTarjeta;
+  });
+
+  document.querySelector('.tarjetas').innerHTML = htmlTarjetas;
+}
+
+construirProductosEnTarjetas();
+/***********************************/

@@ -198,7 +198,7 @@ function mostrarOcultarPopup(selectorPopup) {
 
 /*********** POPUP - CARRITO COMPRA *******/
 var maximoPorProducto = 5;
-var productos = [
+var productosCarrito = [
   // {
     // idProducto: 1001,
     // nombreImg: 'torta_selva_negra.jpg', 
@@ -214,7 +214,7 @@ function construirProductosEnCarrito() {
   var totalPrecio = 0;
   var cantidadProductos = 0;
   
-  productos.forEach(function(producto) {
+  productosCarrito.forEach(function(producto) {
     totalPrecio = totalPrecio + (producto.precioProducto * producto.cantidadProducto);
     cantidadProductos = cantidadProductos + producto.cantidadProducto;
     
@@ -250,7 +250,7 @@ function construirProductosEnCarrito() {
 }
 
 function removeItemInProduct(idProducto) {
-  productos.forEach(function(producto) {
+  productosCarrito.forEach(function(producto) {
     if(producto.idProducto === idProducto && producto.cantidadProducto >= 2) {
       producto.cantidadProducto = producto.cantidadProducto - 1;
     }
@@ -260,7 +260,7 @@ function removeItemInProduct(idProducto) {
 }
 
 function addItemInProduct(idProducto) {
-  productos.forEach(function(producto) {
+  productosCarrito.forEach(function(producto) {
     if(producto.idProducto === idProducto && producto.cantidadProducto < maximoPorProducto) {
       producto.cantidadProducto = producto.cantidadProducto + 1;
     }
@@ -270,11 +270,11 @@ function addItemInProduct(idProducto) {
 }
 
 function deleteProduct(idProducto) { 
-  var index = productos.findIndex(function(producto) {
+  var index = productosCarrito.findIndex(function(producto) {
     return producto.idProducto === idProducto;
   });
   
-  productos.splice(index, 1);
+  productosCarrito.splice(index, 1);
   construirProductosEnCarrito();
 }
 
@@ -290,6 +290,7 @@ var productosTarjeta = [
     nombreProducto: 'Torta de leche de Óreo',
     descripcionProducto: 'Torta rica en su sabor, ha ganado el premio internacional, hecha con agua manantial',
     precioProducto: 60.25,
+    cantidadProducto: 1,
   },
   {
     idProducto: 1002,
@@ -298,6 +299,7 @@ var productosTarjeta = [
     nombreProducto: 'Selva negra de cerezas',
     descripcionProducto: 'Compuesta por capas de bizcochuelo de chocolate embebido en kirsch e intercaladas con nata y cerezas.',
     precioProducto: 55.50,
+    cantidadProducto: 1,
   },
   {
     idProducto: 1003,
@@ -306,78 +308,88 @@ var productosTarjeta = [
     nombreProducto: 'Torta Chocolate',
     descripcionProducto: '12 porciones, kekes, Manjar, Fudge de una rica Torta Chocolate.',
     precioProducto: 48.00,
+    cantidadProducto: 1,
   },
   {
-    idProducto: 1005,
+    idProducto: 1004,
     nombreImg: 'torta_dely_oreo.jpg', 
     nombreCategoria: 'Torta húmeda',
     nombreProducto: 'Deli Oreo',
     descripcionProducto: '12 porciones con galletas de oreo vainilla, polvo de chocolate de una rica Deli Oreo.',
     precioProducto: 72.00,
+    cantidadProducto: 1,
   },
   {
-    idProducto: 1007,
+    idProducto: 1005,
     nombreImg: 'torta_barra_3_leches.jpg', 
     nombreCategoria: 'Torta húmeda',
     nombreProducto: 'Barra tres leches',
     descripcionProducto: '12 porciones aproximadamente, con cerezas, fosh, manjar y listo para comer en tu almuerzo.',
     precioProducto: 49.00,
+    cantidadProducto: 1,
   },
   {
-    idProducto: 1009,
+    idProducto: 1006,
     nombreImg: 'keke_pina.jpg', 
     nombreCategoria: 'Kekes',
     nombreProducto: 'Keke de piña',
     descripcionProducto: 'Muy rico, sabroso y esponjoso, con piñas azucaradas y dulces como a todos nos gusta',
     precioProducto: 24.00,
+    cantidadProducto: 1,
   },
   {
-    idProducto: 1011,
+    idProducto: 1007,
     nombreImg: 'keke_zanahoria.jpg', 
     nombreCategoria: 'Kekes',
     nombreProducto: 'keke de zanahoria',
     descripcionProducto: 'Keke de Zanahoria con Manjar Blanco y Castañas, a precio de promición, sólo por hoy.',
     precioProducto: 42.00,
+    cantidadProducto: 1,
   },
   {
-    idProducto: 1012,
+    idProducto: 1008,
     nombreImg: 'keke_marmoleado.jpg', 
     nombreCategoria: 'Kekes',
     nombreProducto: 'Keke Marmoleado',
     descripcionProducto: '12-14 porciones de keke sabor a chocolate, con frutos secos que descubrirás mientras vayas comiendo.',
     precioProducto: 22.00,
+    cantidadProducto: 1,
   },
   {
-    idProducto: 1004,
+    idProducto: 1009,
     nombreImg: 'keke_platano_nueces.jpg', 
     nombreCategoria: 'Kekes',
     nombreProducto: 'Keke de Plátano con Nueces',
     descripcionProducto: '12-14 porciones de keke sabor a chocolate, con frutos secos que descubrirás mientras vayas comiendo.',
     precioProducto: 22.00,
+    cantidadProducto: 1,
   },
   {
-    idProducto: 1006,
+    idProducto: 1010,
     nombreImg: 'torta_barra_torta_chocolate.jpg', 
     nombreCategoria: 'Torta húmeda',
     nombreProducto: 'Barra torta de chocolate',
     descripcionProducto: '12 porciones aproximadamente, con cerezas, fosh, manjar y listo para comer en tu almuerzo.',
     precioProducto: 49.50,
+    cantidadProducto: 1,
   },
   {
-    idProducto: 1008,
+    idProducto: 1011,
     nombreImg: 'torta_cumple_fiesta.jpg', 
     nombreCategoria: 'Torta húmeda',
     nombreProducto: 'Feliz Cumple Fiesta',
     descripcionProducto: '12 porciones, compuesta por capas de bizcochuelo de caramelo y con el diseño que más de guste.',
     precioProducto: 69.00,
+    cantidadProducto: 1,
   },
   {
-    idProducto: 1010,
+    idProducto: 1012,
     nombreImg: 'torta_delicia_fresa.jpg', 
     nombreCategoria: 'Torta húmeda',
     nombreProducto: 'Torta Delicia de Fresa',
     descripcionProducto: '24 porciones, compuesta por fresas y fosh, listo para tus cumpleaños y días que más te gusten disfrutar.',
     precioProducto: 84.00,
+    cantidadProducto: 1,
   },
 ];
 
@@ -398,7 +410,7 @@ function construirProductosEnTarjetas() {
         </div>
         
         <div class="tarjeta2_footer">
-          <button type="button">AGREGAR</button>
+          <button type="button" onclick="insertProductoToCar(${producto.idProducto})">AGREGAR</button>
         </div>
       </div>
     `;
@@ -407,6 +419,15 @@ function construirProductosEnTarjetas() {
   });
   
   document.querySelector('.tarjetas').innerHTML = htmlTarjetas;
+}
+
+function insertProductoToCar(idProducto) {
+  productosTarjeta.forEach(function(producto) {
+    if(producto.idProducto === idProducto) {
+      productosCarrito.push(producto);
+      construirProductosEnCarrito();
+    }
+  });
 }
 
 construirProductosEnTarjetas();

@@ -60,7 +60,7 @@ Aplicación bodoquin
       - popup de carrito de compra - 8
       - en cada pantalla de productos construir de forma dinámica las tarjetas - 3
       - en cada vista de cada linea de productos, al seleccionar un producto, se tiene que mostrar la 
-        funcionalidad para seguir agregando o  disminuyendo productos, o eliminar el producto 3
+        funcionalidad para seguir agregando o  disminuyendo productos, o eliminar el producto 8
       - integrarnos con bootstrap parte 1 - responsive 5
       - implementar vista de resumen de la compra 8
       - corrección de modales de usuario 1

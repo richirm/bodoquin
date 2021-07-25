@@ -198,7 +198,7 @@ function mostrarOcultarPopup(selectorPopup) {
 
 /*********** POPUP - CARRITO COMPRA *******/
 var maximoPorProducto = 5;
-var productosCarrito = [];
+var productosCarrito = [
   // {
     // idProducto: 1001,
     // nombreImg: 'torta_selva_negra.jpg', 

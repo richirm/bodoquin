@@ -194,3 +194,293 @@ function mostrarOcultarPopup(selectorPopup) {
 }
 /*****************************************/
 
+/*****************************************/
+
+/*********** POPUP - CARRITO COMPRA *******/
+var maximoPorProducto = 5;
+var productosCarrito = [
+  // {
+    // idProducto: 1001,
+    // nombreImg: 'torta_selva_negra.jpg', 
+    // nombreCategoria: 'Torta húmeda',
+    // nombreProducto: 'Torta de leche de Óreo1',
+    // precioProducto: 60.25,
+    // cantidadProducto: 3,
+  // }
+];
+
+function construirProductosEnCarrito() {
+  var htmlProductos = '';
+  var totalPrecio = 0;
+  var cantidadProductos = 0;
+  
+  productosCarrito.forEach(function(producto) {
+    totalPrecio = totalPrecio + (producto.precioProducto * producto.cantidadProducto);
+    cantidadProductos = cantidadProductos + producto.cantidadProducto;
+    
+    var htmlProducto = `
+      <div class="carrito_producto">
+        <div class="carrito_producto_img">
+          <img src="../../../assets/img/${producto.nombreImg}">
+        </div>
+        <div class="carrito_producto_detalle">
+          <h2>${producto.nombreCategoria}</h2>
+          <h1>${producto.nombreProducto}</h1>
+          <span class="carrito_producto_total">S/. ${producto.precioProducto}</span>
+          
+          <div class="carrito_producto_contador">
+            <div class="carrito_producto_contador_agrega">
+              <span><i class="bi bi-dash-lg" onclick="removeItemInProduct(${producto.idProducto})"></i></span>
+              <span><i class="bi bi-plus-lg" onclick="addItemInProduct(${producto.idProducto})"></i></span>
+            </div>
+            <div class="carrito_producto_contador_cantidad">${producto.cantidadProducto}</div>
+          </div>
+        </div>
+        <i class="bi bi-x icono-accion" onclick="deleteProduct(${producto.idProducto})"></i>
+      </div> 
+    `;
+    
+    htmlProductos = htmlProductos + htmlProducto;
+  });
+  
+  document.querySelector('.carrito_productos').innerHTML = htmlProductos;
+  document.querySelector('.carrito_total_monto').innerHTML = `S/. ${totalPrecio}`;
+  document.querySelector('.header_notificacion').innerHTML = cantidadProductos;
+  document.querySelector('.popup_carrito .popup_header b').innerHTML = cantidadProductos;
+}
+
+function removeItemInProduct(idProducto) {
+  productosCarrito.forEach(function(producto) {
+    if(producto.idProducto === idProducto && producto.cantidadProducto >= 2) {
+      producto.cantidadProducto = producto.cantidadProducto - 1;
+    }
+  });
+  
+  construirProductosEnCarrito();
+  construirProductosEnTarjetas();
+}
+
+function addItemInProduct(idProducto) {
+  productosCarrito.forEach(function(producto) {
+    if(producto.idProducto === idProducto && producto.cantidadProducto < maximoPorProducto) {
+      producto.cantidadProducto = producto.cantidadProducto + 1;
+    }
+  });
+  
+  construirProductosEnCarrito();
+  construirProductosEnTarjetas();
+}
+
+function deleteProduct(idProducto) { 
+  var index = productosCarrito.findIndex(function(producto) {
+    return producto.idProducto === idProducto;
+  });
+  
+  productosCarrito[index].cantidadProducto = 0;
+  productosCarrito.splice(index, 1);
+  
+  construirProductosEnCarrito();
+  construirProductosEnTarjetas();
+}
+
+construirProductosEnCarrito();
+/*****************************************/
+
+/***** TARJETAS PRODUCTOS **********/
+var productosTarjeta = [
+  {
+    idProducto: 1001,
+    nombreImg: 'galaxys10.jpg', 
+    nombreCategoria: 'Samsung',
+    nombreProducto: 'Samsung galaxy s10',
+    descripcionProducto: '6 GB RAM + 128 gb almacenamiento + 5000 mah + full hd',
+    precioProducto: 1599,
+    cantidadProducto: 0,
+  }, 
+  {
+    idProducto: 1002,
+    nombreImg: 'galaxynote20.jpg', 
+    nombreCategoria: 'Samsung',
+    nombreProducto: 'Samsung galaxy note20',
+    descripcionProducto: '8 GB RAM + 256 gb almacenamiento + 6000 mah + full hd',
+    precioProducto: 2499,
+    cantidadProducto: 0,
+  }, 
+  {
+    idProducto: 1003,
+    nombreImg: 'motog9.jpg', 
+    nombreCategoria: 'Motorola',
+    nombreProducto: 'Motorola g9 plus',
+    descripcionProducto: '3 GB RAM + 64 gb almacenamiento + 3500 mah + full hd',
+    precioProducto: 999,
+    cantidadProducto: 0,
+  }, 
+  {
+    idProducto: 1004,
+    nombreImg: 'motog7power.jpg', 
+    nombreCategoria: 'Motorola',
+    nombreProducto: 'Motorola g7 power',
+    descripcionProducto: '3 GB RAM + 64 gb almacenamiento + 4500 mah + hd',
+    precioProducto: 899,
+    cantidadProducto: 0,
+  }, 
+  {
+    idProducto: 1005,
+    nombreImg: 'samsungtv50.jpg', 
+    nombreCategoria: 'Samsung tv',
+    nombreProducto: 'Samsung tv 50"',
+    descripcionProducto: 'Full hd + puerto hdmi + magic control',
+    precioProducto: 1899,
+    cantidadProducto: 0,
+  }, 
+  {
+    idProducto: 1006,
+    nombreImg: 'samsungtv65.jpg', 
+    nombreCategoria: 'SamsungTv',
+    nombreProducto: 'Samsung tv 65"',
+    descripcionProducto: 'Ultra hd 4k + pantalla cristal + magic control',
+    precioProducto: 2899,
+    cantidadProducto: 0,
+  }, 
+  {
+    idProducto: 1007,
+    nombreImg: 'samsungtv70.jpg', 
+    nombreCategoria: 'SamsungTv',
+    nombreProducto: 'Samsung tv 70"',
+    descripcionProducto: 'Ultra hd + 2 puertos hdmi + conxion bluetooh',
+    precioProducto: 2659,
+    cantidadProducto: 0,
+  }, 
+  {
+    idProducto: 1008,
+    nombreImg: 'daeewotv.jpg', 
+    nombreCategoria: 'DaeewooTv',
+    nombreProducto: 'Daeewoo tv 49"',
+    descripcionProducto: 'Pantalla full hd + wifi + samart tv',
+    precioProducto: 899,
+    cantidadProducto: 0,
+  }, 
+  {
+    idProducto: 1009,
+    nombreImg: 'laptophpgaming.jpg', 
+    nombreCategoria: 'Asus',
+    nombreProducto: 'Laptop gaming asus',
+    descripcionProducto: '16gb ram + 1tb ssd + full hd',
+    precioProducto: 7999,
+    cantidadProducto: 0,
+  }, 
+  {
+    idProducto: 1010,
+    nombreImg: 'macbookair.jpg', 
+    nombreCategoria: 'Apple',
+    nombreProducto: 'Macbook air ',
+    descripcionProducto: '8 gb ram + 500 ssd + bluetooh',
+    precioProducto: 1899,
+    cantidadProducto: 0,
+  }, 
+  {
+    idProducto: 1011,
+    nombreImg: 'laptophp15.jpg"', 
+    nombreCategoria: 'HP',
+    nombreProducto: 'Laptop hp 15"',
+    descripcionProducto: '8gb ram + 1 tb ssd + full hd',
+    precioProducto: 2600,
+    cantidadProducto: 0,
+  }, 
+  {
+    idProducto: 1012,
+    nombreImg: 'laptoplg.jpg', 
+    nombreCategoria: 'LG',
+    nombreProducto: 'Laptop lg',
+    descripcionProducto: '12 GB RAM + 528 gb almacenamiento + uhd 4k',
+    precioProducto: 2589,
+    cantidadProducto: 0,
+  }, 
+];
+
+function construirProductosEnTarjetas() {
+  var htmlTarjetas = '';
+  
+  productosTarjeta.forEach(function(producto) {
+    var htmlTarjetaBoton = `
+      <button type="button" onclick="insertProductoToCar(${producto.idProducto})">AGREGAR</button>
+    `;
+    
+    var htmlTarjetaRestar = `
+      <div class="tarjeta2_contador_agregar" onclick="removeItemInProduct(${producto.idProducto})">
+        <i class="bi bi-dash-lg"></i>
+      </div>
+    `
+    
+    var htmlTarjetaEliminar = `
+      <div class="tarjeta2_contador_agregar" onclick="deleteProduct(${producto.idProducto})">
+        <i class="bi bi-trash"></i>
+      </div>
+    `
+    
+    var htmlTarjetaContador = `
+      <div class="tarjeta2_contador">
+        ${producto.cantidadProducto === 1 ? htmlTarjetaEliminar : htmlTarjetaRestar}
+        <div class="tarjeta2_contador_unidades">
+          <span><b>${producto.cantidadProducto}</b> un</span>
+        </div>
+        <div class="tarjeta2_contador_agregar" onclick="addItemInProduct(${producto.idProducto})">
+          <i class="bi bi-plus-lg"></i>
+        </div>
+      </div>
+    `;
+    
+    var htmlTarjeta = `
+      <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
+        <div class="tarjeta2_header">         
+          <img src="../../../assets/img/${producto.nombreImg}">
+        </div>
+        <div class="tarjeta2_body">      
+          <span>${producto.nombreCategoria}</span><br>
+          <span><b>${producto.nombreProducto}</b></span>
+          <p>${producto.descripcionProducto}</p>
+          <span class="tarjeta2_body_precio">S/. ${producto.precioProducto}</span>
+        </div>
+        
+        <div class="tarjeta2_footer">
+           ${producto.cantidadProducto === 0 ? htmlTarjetaBoton : htmlTarjetaContador}
+        </div>
+      </div>
+    `;
+    
+    htmlTarjetas = htmlTarjetas + htmlTarjeta;
+  });
+  
+  document.querySelector('.tarjetas').innerHTML = htmlTarjetas;
+}
+
+function insertProductoToCar(idProductoSeleccionado) {
+  // Ubica el producto que hemos dado click en los productos de las tarjetas
+  var productoSeleccionado;
+  productosTarjeta.forEach(function(producto) {
+    if(producto.idProducto === idProductoSeleccionado) {
+      productoSeleccionado = producto;
+    }
+  });
+  
+  // Averiguar si el producto seleccionado está dentro o no en el carrito de compras
+  var estaProductoEnCarrito = false;
+  productosCarrito.forEach(function(producto) {
+    if(producto.idProducto === idProductoSeleccionado) {
+      producto.cantidadProducto = producto.cantidadProducto + 1;
+      estaProductoEnCarrito = true;
+    }
+  });
+  
+  // Si el producto seleccionado no está dentro del carrito, entonces lo insertamos
+  if(estaProductoEnCarrito === false) {
+    productoSeleccionado.cantidadProducto = 1;
+    productosCarrito.push(productoSeleccionado);
+  }
+  
+  construirProductosEnCarrito();
+  construirProductosEnTarjetas();
+}
+
+construirProductosEnTarjetas();
+/***********************************/

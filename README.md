@@ -56,30 +56,25 @@ Aplicación bodoquin
   - SCRUM: es una metodología agil para dividirnos el desarrollo
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13
-    - Features: (Lista de tareas - tablero KANBAN) 
-      - cerrar el menu al dar click afuera de este 1
-      - Tarjeta de oferta fija que aparezca al abrir el home 2
-      - chat: corrección de bugs parte I 1
-      - implementar el componente de toast (notificaciones) 5 
-      - implementar sección de productos en remate en cada pantalla 5
-      - crear componente generico para popups - 5
-      - popup de carrito de compra - 5
+    - Features: (Lista de tareas - tablero KANBAN)
+      - popup de carrito de compra - 8
+      - en cada pantalla de productos construir de forma dinámica las tarjetas - 3
       - en cada vista de cada linea de productos, al seleccionar un producto, se tiene que mostrar la 
-        funcionalidad para seguir agregando o  disminuyendo productos, o eliminar el producto 3
-      - integrarnos con bootstrap parte 1 - responsive 3
+        funcionalidad para seguir agregando o  disminuyendo productos, o eliminar el producto 8
+      - integrarnos con bootstrap parte 1 - responsive 5
+      - implementar vista de resumen de la compra 8
+      - corrección de modales de usuario 1
     - backlog => conjunto de tareas o mejoras a realizar (features futuros)      
       - Requerimientos funcionales:
         - poner un logo
         - implementar vistas de detalle de producto
           - productos relacionados
-        - implementar vista de resumen de la compra
         - en la vista de inicio: implementar mini banners por cada linea de producto con efecto en el hover
         - implementar sección de anuncios y/o publicidad
-        - modal de confirmacion de recojo (ubicación)
-        - Implementar opciones de ayuda
+        - modal de tiendas de recojo (ubicación)
+        - Implementar popup de ayuda
         - Pantalla de cambios y devoluciones
         - Pantalla de nuestras tiendas
-        - correciones del chat parte II (chat fantasma)
         - integrar el responsive en la pantalla de inicio
         - menu responsive
       - Requerimientos no funcionales:       

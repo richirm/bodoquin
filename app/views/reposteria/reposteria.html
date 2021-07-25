@@ -19,19 +19,27 @@
           </span>
         </div>
         <div class="header_acciones header_acciones col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <!-- CARRITO -->
           <span class="header_acciones_carrito">
             <i class="bi bi-cart-check" onclick="mostrarOcultarPopup('.popup_carrito');"></i>
-            <div class="header_notificacion header_notificacion-principal">3</div>   
-
+            <div class="header_notificacion header_notificacion-principal">0</div>   
+            
             <div class="popup popup_carrito">
               <div class="popup_backdrop" onclick="mostrarOcultarPopup('.popup_carrito');"></div>
               <div class="popup_flecha"></div>
               <div class="popup_contenedor">
                 <div class="popup_header">
-                  titulo
+                  Tienes agregados <b>0</b> productos
                 </div>
                 <div class="popup_body">
-
+                  <div class="carrito_productos">  
+                  
+                  </div>
+                    
+                  <div class="carrito_total">
+                    <span>Sub Total:</span>
+                    <span class="carrito_total_monto">S/. 0</span>
+                  </div>  
                 </div>
                 <div class="popup_footer">
                   <button class="btn btn-primary">Continuar</button>
@@ -39,6 +47,7 @@
               </div>
             </div>
           </span>
+          <!-- FIN CARRITO -->
           
           <span class="header_acciones_usuario">              
             <i class="bi bi-person-fill" onclick="mostrarOcultarUsuarioPopup();"></i>
@@ -214,199 +223,7 @@
     
     <main> 
       <div class="tarjetas">
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/torta_chocolate_fresa.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Torta húmeda</span><br>
-            <span><b>Torta de leche de Óreo</b></span>
-            <p>Torta rica en su sabor,  ha 
-              ganado el premio internacional, 
-              hecha con agua manantial</p>
-            <span class="tarjeta2_body_precio">S/. 60.25</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
         
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/torta_selva_negra.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Torta húmeda</span><br>
-            <span><b>Selva negra de cerezas</b></span>
-            <p>Compuesta por capas de bizcochuelo de chocolate embebido en kirsch e intercaladas con nata y cerezas.</p>
-            <span class="tarjeta2_body_precio">S/. 55.50</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/torta_chocolate.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Torta húmeda</span><br>
-            <span><b>Torta Chocolate</b></span>
-            <p>12 porciones, kekes, Manjar, Fudge de una rica Torta Chocolate.</p>
-            <span class="tarjeta2_body_precio">S/. 48.00</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/torta_dely_oreo.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Torta húmeda</span><br>
-            <span><b>Deli Oreo</b></span>
-            <p>12 porciones con galletas de oreo vainilla, polvo de chocolate de una rica Deli Oreo.</p>
-            <span class="tarjeta2_body_precio">S/. 72.00</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/torta_barra_3_leches.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Torta húmeda</span><br>
-            <span><b>Barra tres leches</b></span>
-            <p>12 porciones aproximadamente, con cerezas, fosh, manjar y listo para comer en tu almuerzo.</p>
-            <span class="tarjeta2_body_precio">S/. 49.00</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/keke_pina.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Kekes</span><br>
-            <span><b>Keke de piña</b></span>
-            <p>Muy rico, sabroso y esponjoso, con piñas azucaradas y dulces como a todos nos gusta</p>
-            <span class="tarjeta2_body_precio">S/. 24.00</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/keke_zanahoria.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Kekes</span><br>
-            <span><b>keke de zanahoria</b></span>
-            <p>Keke de Zanahoria con Manjar Blanco y Castañas, a precio de promición, sólo por hoy.</p>
-            <span class="tarjeta2_body_precio">S/. 42.00</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/keke_marmoleado.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Kekes</span><br>
-            <span><b>Keke Marmoleado</b></span>
-            <p>12-14 porciones de keke sabor a chocolate, con frutos secos que descubrirás mientras vayas comiendo.</p>
-            <span class="tarjeta2_body_precio">S/. 22.00</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/keke_platano_nueces.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Kekes</span><br>
-            <span><b>Keke de Plátano con Nueces</b></span>
-            <p>12-14 porciones de un rico keke de plátano con incrustaciones de nueces.</p>
-            <span class="tarjeta2_body_precio">S/. 22.00</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/torta_barra_torta_chocolate.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Torta húmeda</span><br>
-            <span><b>Barra torta de chocolate</b></span>
-            <p>12 porciones aproximadamente, con cerezas, fosh, manjar y listo para comer en tu almuerzo.</p>
-            <span class="tarjeta2_body_precio">S/. 49.50</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/torta_cumple_fiesta.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Torta húmeda</span><br>
-            <span><b>Feliz Cumple Fiesta</b></span>
-            <p>12 porciones, compuesta por capas de bizcochuelo de caramelo y con el diseño que más de guste.</p>
-            <span class="tarjeta2_body_precio">S/. 69.00</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/torta_delicia_fresa.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Torta húmeda</span><br>
-            <span><b>Torta Delicia de Fresa</b></span>
-            <p>24 porciones, compuesta por fresas y fosh, listo para tus cumpleaños y días que más te gusten disfrutar.</p>
-            <span class="tarjeta2_body_precio">S/. 84.00</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
       </div>
     
       <!-- <span class="oferta"></span> -->

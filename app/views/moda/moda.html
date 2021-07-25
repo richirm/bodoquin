@@ -17,7 +17,7 @@
             <i class="bi bi-search"></i>
           </span>
         </div>
-        <div class="header_acciones col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <div class="header_acciones header_acciones col-xl-6 col-lg-6 col-md-6 col-sm-12">
           <span class="header_acciones_carrito">
             <i class="bi bi-cart-check" onclick="mostrarOcultarPopup('.popup_carrito');"></i>
             <div class="header_notificacion header_notificacion-principal">3</div>   
@@ -27,10 +27,17 @@
               <div class="popup_flecha"></div>
               <div class="popup_contenedor">
                 <div class="popup_header">
-                  titulo
+                  Tienes agregados <b>0</b> productos
                 </div>
                 <div class="popup_body">
+                  <div class="carrito_productos">  
                   
+                  </div>
+                    
+                  <div class="carrito_total">
+                    <span>Sub Total:</span>
+                    <span class="carrito_total_monto">S/. 0</span>
+                  </div>  
                 </div>
                 <div class="popup_footer">
                   <button class="btn btn-primary">Continuar</button>
@@ -214,213 +221,23 @@
     
     <main>
       <div class="tarjetas">
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/carnivalxl.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Sombras</span><br>
-            <span><b>Carnival xl</b></span>
-            <p>Paleta de sombras 40 tonos de diversos colores </p>
-            <span class="tarjeta2_body_precio">S/. 350</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/nars.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Base</span><br>
-            <span><b>Nars </b></span>
-            <p>Base de maquillaje de larga duracion con alta cobertura</p>
-            <span class="tarjeta2_body_precio">S/. 100</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/casaca.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Casacas</span><br>
-            <span><b>Casaca de cuero mujer</b></span>
-            <p>Casaca de cuero color negro , doble cara . </p>
-            <span class="tarjeta2_body_precio">S/. 400</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>    
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/barclayjeans.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Jean</span><br>
-            <span><b>Jean mujer cullote</b></span>
-            <p>Jean clasico con material 100% algodon</p>
-            <span class="tarjeta2_body_precio">S/. 129</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/setdeanillos.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Anillos</span><br>
-            <span><b>Twint set </b></span>
-            <p>Anillo rose de 3 mm en plata de 925 + juego de aretes</p>
-            <span class="tarjeta2_body_precio">S/. 199</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/sunglassesaesthetic.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Lentes</span><br>
-            <span><b>Lentes de sol  </b></span>
-            <p>lentes con proteccion uv + estuche + audifonos</p>
-            <span class="tarjeta2_body_precio">S/. 399</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/reloj.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Reloj</span><br>
-            <span><b>Reloj de mujer</b></span>
-            <p>Fino reloj dolcce & gabanna</p>
-            <span class="tarjeta2_body_precio">S/. 999</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/sandalias.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Sandalias</span><br>
-            <span><b>Sandalias de verano</b></span>
-            <p>Lindas sandalias color camello</p>
-            <span class="tarjeta2_body_precio">S/. 399</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/arete.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Aretes</span><br>
-            <span><b>Aretes de plata</b></span>
-            <p>Aretes con acabados en plata de diferentes modelos</p>
-            <span class="tarjeta2_body_precio">S/. 89</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/bota.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Botas</span><br>
-            <span><b>Botas de cuero</b></span>
-            <p>Botas de cuero de piel de lagarto con finos acabados</p>
-            <span class="tarjeta2_body_precio">S/. 999</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/sombrero.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Sombrero</span><br>
-            <span><b>Sombrero moderno de playa</b></span>
-            <p>Lindo sombrero con excelentes acabados</p>
-            <span class="tarjeta2_body_precio">S/. 150</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/labial.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Labial</span><br>
-            <span><b>Labial mate  </b></span>
-            <p>Sabor fresa y extra duracion</p>
-            <span class="tarjeta2_body_precio">S/. 50</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
+
       </div>
       
       <div class="categorias">    
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
           <div class="categorias_menu ">
-            <img src="../../../assets/img/carnivalxl.jpg">
+            <img src="../../../assets/img/nars.jpg">
             <h1>Maquillaje</h1>
-            <h2 onclick="mostrarOcultarModalCategoria('carnivalxl.jpg')">Ver foto</h2>       
+            <h2 onclick="mostrarOcultarModalCategoria('nars.jpg')">Ver foto</h2>       
           </div>
         </div>
         
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
           <div class="categorias_menu">
-            <img src="../../../assets/img/casaca.jpg">
-            <h1>Ropa</h1>
-            <h2 onclick="mostrarOcultarModalCategoria('casaca.jpg')">Ver foto</h2>        
+            <img src="../../../assets/img/sandalias.jpg">
+            <h1>Sandalias</h1>
+            <h2 onclick="mostrarOcultarModalCategoria('sandalias.jpg')">Ver foto</h2>        
           </div>
         </div>
         

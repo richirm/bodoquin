@@ -198,30 +198,14 @@ function mostrarOcultarPopup(selectorPopup) {
 /*********** POPUP - CARRITO COMPRA *******/
 var maximoPorProducto = 5;
 var productos = [
-  // {
-    // idProducto: 1001,
-    // nombreImg: 'torta_selva_negra.jpg', 
-    // nombreCategoria: 'Torta húmeda',
-    // nombreProducto: 'Torta de leche de Óreo1',
-    // precioProducto: 60.25,
-    // cantidadProducto: 3,
-  // }, 
-  // {
-    // idProducto: 1002,
-    // nombreImg: 'torta_selva_negra.jpg',
-    // nombreCategoria: 'Torta húmeda2',
-    // nombreProducto: 'Torta de leche de Óreo2',
-    // precioProducto: 70.50,
-    // cantidadProducto: 4,
-  // }, 
-  // {
-    // idProducto: 1003,
-    // nombreImg: 'torta_selva_negra.jpg',
-    // nombreCategoria: 'Torta húmeda3',
-    // nombreProducto: 'Torta de leche de Óreo3',
-    // precioProducto: 45.50,
-    // cantidadProducto: 2,
-  // }
+  {
+    idProducto: 1001,
+    nombreImg: 'torta_selva_negra.jpg', 
+    nombreCategoria: 'Torta húmeda',
+    nombreProducto: 'Torta de leche de Óreo1',
+    precioProducto: 60.25,
+    cantidadProducto: 3,
+  }
 ];
 
 function construirProductosEnCarrito() {
@@ -272,6 +256,7 @@ function removeItemInProduct(idProducto) {
   });
   
   construirProductosEnCarrito();
+  construirProductosEnTarjetas();
 }
 
 function addItemInProduct(idProducto) {
@@ -289,11 +274,12 @@ function deleteProduct(idProducto) {
     return producto.idProducto === idProducto;
   });
   
-  productos.splice(index, 1);
-  construirProductosEnCarrito();
-}
+  productosCarrito[index].cantidadProducto = 0;
+  productosCarrito.splice(index, 1);
 
-construirProductosEnCarrito();
+  construirProductosEnCarrito();
+  construirProductosEnTarjetas();
+}
 /*****************************************/
 
 /***** TARJETAS PRODUCTOS **********/
@@ -305,6 +291,7 @@ var productosTarjeta = [
     nombreProducto: 'Juguetes',
     descripcionProducto: 'Piano para bebes de deferentes colores para un mejor aprendizaje',
     precioProducto: 50.00,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1002,
@@ -313,6 +300,7 @@ var productosTarjeta = [
     nombreProducto: 'Juguetes',
     descripcionProducto: 'Totuga musical con canciones en ingles y español',
     precioProducto: 40.25,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1003,
@@ -321,6 +309,8 @@ var productosTarjeta = [
     nombreProducto: 'Coche',
     descripcionProducto: 'coche para niñas con diferentes diseños',
     precioProducto: 80.25,
+    cantidadProducto: 0,
+  },
   },
   {
     idProducto: 1005,
@@ -329,6 +319,8 @@ var productosTarjeta = [
     nombreProducto: 'Juguetes',
     descripcionProducto: 'muñeca con chupon que llora y habla y remeda',
     precioProducto:  45.75,
+    cantidadProducto: 0,
+  },
   },
   {
     idProducto: 1007,
@@ -337,6 +329,8 @@ var productosTarjeta = [
     nombreProducto: 'Caballito',
     descripcionProducto: 'Caballo para montar y también es musical',
     precioProducto: 90.75,
+    cantidadProducto: 0,
+  },
   },
   {
     idProducto: 1009,
@@ -345,6 +339,8 @@ var productosTarjeta = [
     nombreProducto: 'Carrito',
     descripcionProducto: 'Aprenderás a dar tus primeros pasitos jugando',
     precioProducto: 65.45,
+    cantidadProducto: 0,
+  },
   },
   {
     idProducto: 1011,
@@ -353,6 +349,8 @@ var productosTarjeta = [
     nombreProducto: 'Dino',
     descripcionProducto: 'Jalaras a un carrito de dino divertido',
     precioProducto: 80.75,
+    cantidadProducto: 0,
+  },
   },
   {
     idProducto: 1012,
@@ -361,6 +359,8 @@ var productosTarjeta = [
     nombreProducto: 'figuras',
     descripcionProducto: 'juago dinamicos pra niños y niñas',
     precioProducto: 25.80,
+    cantidadProducto: 0,
+  },
   },
   {
     idProducto: 1004,
@@ -369,6 +369,8 @@ var productosTarjeta = [
     nombreProducto: 'payasitos',
     descripcionProducto: 'payasitos de madera para armar y elegir',
     precioProducto: 30.40,
+    cantidadProducto: 0,
+  },
   },
   {
     idProducto: 1006,
@@ -377,6 +379,8 @@ var productosTarjeta = [
     nombreProducto: 'pelotas',
     descripcionProducto: 'pelotas de juguete muy modernas y coloridas',
     precioProducto: 15.75,
+    cantidadProducto: 0,
+  },
   },
   {
     idProducto: 1008,
@@ -385,6 +389,8 @@ var productosTarjeta = [
     nombreProducto: 'cuadritos',
     descripcionProducto: 'cuadritos de madera de colores para armar',
     precioProducto: 55.75
+    cantidadProducto: 0,
+  },
 ,
   },
   {
@@ -394,13 +400,43 @@ var productosTarjeta = [
     nombreProducto: 'lonchera',
     descripcionProducto: 'lonchera de madera para llevar tus juguetes',
     precioProducto: 65.75,
+    cantidadProducto: 0,
+  },
   },
 ];
 
 function construirProductosEnTarjetas() {
   var htmlTarjetas = '';
-
+  
   productosTarjeta.forEach(function(producto) {
+    var htmlTarjetaBoton = `
+      <button type="button" onclick="insertProductoToCar(${producto.idProducto})">AGREGAR</button>
+    `;
+    
+    var htmlTarjetaRestar = `
+      <div class="tarjeta2_contador_agregar" onclick="removeItemInProduct(${producto.idProducto})">
+        <i class="bi bi-dash-lg"></i>
+      </div>
+    `
+    
+    var htmlTarjetaEliminar = `
+      <div class="tarjeta2_contador_agregar" onclick="deleteProduct(${producto.idProducto})">
+        <i class="bi bi-trash"></i>
+      </div>
+    `
+    
+    var htmlTarjetaContador = `
+      <div class="tarjeta2_contador">
+        ${producto.cantidadProducto === 1 ? htmlTarjetaEliminar : htmlTarjetaRestar}
+        <div class="tarjeta2_contador_unidades">
+          <span><b>${producto.cantidadProducto}</b> un</span>
+        </div>
+        <div class="tarjeta2_contador_agregar" onclick="addItemInProduct(${producto.idProducto})">
+          <i class="bi bi-plus-lg"></i>
+        </div>
+      </div>
+    `;
+    
     var htmlTarjeta = `
       <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
         <div class="tarjeta2_header">         
@@ -414,15 +450,43 @@ function construirProductosEnTarjetas() {
         </div>
         
         <div class="tarjeta2_footer">
-          <button type="button">AGREGAR</button>
+           ${producto.cantidadProducto === 0 ? htmlTarjetaBoton : htmlTarjetaContador}
         </div>
       </div>
     `;
-
+    
     htmlTarjetas = htmlTarjetas + htmlTarjeta;
   });
-
+  
   document.querySelector('.tarjetas').innerHTML = htmlTarjetas;
+}
+
+function insertProductoToCar(idProductoSeleccionado) {
+  // Ubica el producto que hemos dado click en los productos de las tarjetas
+  var productoSeleccionado;
+  productosTarjeta.forEach(function(producto) {
+    if(producto.idProducto === idProductoSeleccionado) {
+      productoSeleccionado = producto;
+    }
+  });
+  
+  // Averiguar si el producto seleccionado está dentro o no en el carrito de compras
+  var estaProductoEnCarrito = false;
+  productosCarrito.forEach(function(producto) {
+    if(producto.idProducto === idProductoSeleccionado) {
+      producto.cantidadProducto = producto.cantidadProducto + 1;
+      estaProductoEnCarrito = true;
+    }
+  });
+  
+  // Si el producto seleccionado no está dentro del carrito, entonces lo insertamos
+  if(estaProductoEnCarrito === false) {
+    productoSeleccionado.cantidadProducto = 1;
+    productosCarrito.push(productoSeleccionado);
+  }
+  
+  construirProductosEnCarrito();
+  construirProductosEnTarjetas();
 }
 
 construirProductosEnTarjetas();

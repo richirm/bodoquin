@@ -703,12 +703,54 @@ nav .nav_menu ul li.nav_menu--seleccionado span {
   height: 35px;
   color: #80A3EA;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .tarjetas .tarjeta2:hover .tarjeta2_footer button {
   background-color: #80A3EA;
   color: #ffffff;
 }
+
+.tarjetas .tarjeta2_footer .tarjeta2_contador {
+  border: 1px solid #cccccc;
+  border-radius: 23px;
+  user-select: none;
+}
+
+.tarjetas .tarjeta2_footer .tarjeta2_contador .tarjeta2_contador_agregar {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #80A3EA;
+  text-align: center;
+  color: #80A3EA;
+  user-select: none;
+}
+
+.tarjetas .tarjeta2_footer .tarjeta2_contador .tarjeta2_contador_agregar:hover {
+  background-color: #80A3EA;
+  color: #ffffff;
+}
+
+.tarjetas .tarjeta2_footer .tarjeta2_contador .tarjeta2_contador_agregar i {
+  position: relative;
+  top: 8px;
+}
+
+.tarjetas .tarjeta2_footer .tarjeta2_contador .tarjeta2_contador_unidades {
+  display: inline-block;
+  width: calc(100% - 86px);
+  text-align: center;
+  user-select: none;
+}
+
+.tarjetas .tarjeta2_footer .tarjeta2_contador .tarjeta2_contador_unidades span {
+  position: relative;
+  top: 8px;
+}
+  
+
   
 
 .tarjeta {

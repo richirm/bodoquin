@@ -194,32 +194,18 @@ function mostrarOcultarPopup(selectorPopup) {
 }
 /*****************************************/
 
+/*****************************************/
+
 /*********** POPUP - CARRITO COMPRA *******/
 var maximoPorProducto = 5;
-var productos = [
+var productosCarrito = [
   // {
     // idProducto: 1001,
-    // nombreImg: 'reloj.jpg', 
-    // nombreCategoria: 'Reloj',
-    // nombreProducto: 'Reloj de mujer',
-    // precioProducto: 970,
+    // nombreImg: 'torta_selva_negra.jpg', 
+    // nombreCategoria: 'Torta húmeda',
+    // nombreProducto: 'Torta de leche de Óreo1',
+    // precioProducto: 60.25,
     // cantidadProducto: 3,
-  // }, 
-  // {
-    // idProducto: 1002,
-    // nombreImg: 'sandalias.jpg',
-    // nombreCategoria: 'Sandalias',
-    // nombreProducto: 'Sandalias de verano',
-    // precioProducto: 399,
-    // cantidadProducto: 4,
-  // }, 
-  // {
-    // idProducto: 1003,
-    // nombreImg: 'nars.jpg',
-    // nombreCategoria: 'Base',
-    // nombreProducto: 'Base nars',
-    // precioProducto: 100,
-    // cantidadProducto: 2,
   // }
 ];
 
@@ -228,7 +214,7 @@ function construirProductosEnCarrito() {
   var totalPrecio = 0;
   var cantidadProductos = 0;
   
-  productos.forEach(function(producto) {
+  productosCarrito.forEach(function(producto) {
     totalPrecio = totalPrecio + (producto.precioProducto * producto.cantidadProducto);
     cantidadProductos = cantidadProductos + producto.cantidadProducto;
     
@@ -264,32 +250,37 @@ function construirProductosEnCarrito() {
 }
 
 function removeItemInProduct(idProducto) {
-  productos.forEach(function(producto) {
+  productosCarrito.forEach(function(producto) {
     if(producto.idProducto === idProducto && producto.cantidadProducto >= 2) {
       producto.cantidadProducto = producto.cantidadProducto - 1;
     }
   });
   
   construirProductosEnCarrito();
+  construirProductosEnTarjetas();
 }
 
 function addItemInProduct(idProducto) {
-  productos.forEach(function(producto) {
+  productosCarrito.forEach(function(producto) {
     if(producto.idProducto === idProducto && producto.cantidadProducto < maximoPorProducto) {
       producto.cantidadProducto = producto.cantidadProducto + 1;
     }
   });
   
   construirProductosEnCarrito();
+  construirProductosEnTarjetas();
 }
 
 function deleteProduct(idProducto) { 
-  var index = productos.findIndex(function(producto) {
+  var index = productosCarrito.findIndex(function(producto) {
     return producto.idProducto === idProducto;
   });
   
-  productos.splice(index, 1);
+  productosCarrito[index].cantidadProducto = 0;
+  productosCarrito.splice(index, 1);
+  
   construirProductosEnCarrito();
+  construirProductosEnTarjetas();
 }
 
 construirProductosEnCarrito();
@@ -304,6 +295,7 @@ var productosTarjeta = [
     nombreProducto: 'Carnival xl',
     descripcionProducto: 'Paleta de sombras 40 tonos de diversos colores',
     precioProducto: 350,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1002,
@@ -312,6 +304,7 @@ var productosTarjeta = [
     nombreProducto: 'Nars',
     descripcionProducto: 'Base de maquillaje de larga duracion con alta cobertura',
     precioProducto: 100,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1003,
@@ -320,6 +313,7 @@ var productosTarjeta = [
     nombreProducto: 'Casaca de cuero mujer',
     descripcionProducto: 'Casaca de cuero color negro , doble cara .',
     precioProducto: 400,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1005,
@@ -328,6 +322,7 @@ var productosTarjeta = [
     nombreProducto: 'Jean mujer cullote',
     descripcionProducto: 'Jean clasico con material 100% algodon',
     precioProducto: 129,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1007,
@@ -336,6 +331,7 @@ var productosTarjeta = [
     nombreProducto: 'Twint set',
     descripcionProducto: 'Anillo rose de 3 mm en plata de 925 + juego de aretes',
     precioProducto: 199,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1009,
@@ -344,6 +340,7 @@ var productosTarjeta = [
     nombreProducto: 'Lentes de sol',
     descripcionProducto: 'lentes con proteccion uv + estuche + audifonos',
     precioProducto: 399,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1011,
@@ -352,6 +349,7 @@ var productosTarjeta = [
     nombreProducto: 'Reloj de mujer',
     descripcionProducto: 'Fino reloj dolcce & gabanna',
     precioProducto: 999,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1012,
@@ -360,6 +358,7 @@ var productosTarjeta = [
     nombreProducto: 'Sandalias de verano',
     descripcionProducto: 'Lindas sandalias color camello',
     precioProducto: 399,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1004,
@@ -368,6 +367,7 @@ var productosTarjeta = [
     nombreProducto: 'Aretes de plata',
     descripcionProducto: 'Aretes con acabados en plata de diferentes modelos',
     precioProducto: 89,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1006,
@@ -376,6 +376,7 @@ var productosTarjeta = [
     nombreProducto: 'Botas de cuero',
     descripcionProducto: 'Botas de cuero de piel de lagarto con finos acabados',
     precioProducto: 999,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1008,
@@ -384,6 +385,7 @@ var productosTarjeta = [
     nombreProducto: 'Sombrero moderno de playa',
     descripcionProducto: 'Lindo sombrero con excelentes acabados',
     precioProducto: 150,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1010,
@@ -392,6 +394,7 @@ var productosTarjeta = [
     nombreProducto: 'Labial mate',
     descripcionProducto: 'Sabor fresa y extra duracion',
     precioProducto: 50,
+    cantidadProducto: 0,
   },
 ];
 
@@ -399,6 +402,34 @@ function construirProductosEnTarjetas() {
   var htmlTarjetas = '';
   
   productosTarjeta.forEach(function(producto) {
+    var htmlTarjetaBoton = `
+      <button type="button" onclick="insertProductoToCar(${producto.idProducto})">AGREGAR</button>
+    `;
+    
+    var htmlTarjetaRestar = `
+      <div class="tarjeta2_contador_agregar" onclick="removeItemInProduct(${producto.idProducto})">
+        <i class="bi bi-dash-lg"></i>
+      </div>
+    `
+    
+    var htmlTarjetaEliminar = `
+      <div class="tarjeta2_contador_agregar" onclick="deleteProduct(${producto.idProducto})">
+        <i class="bi bi-trash"></i>
+      </div>
+    `
+    
+    var htmlTarjetaContador = `
+      <div class="tarjeta2_contador">
+        ${producto.cantidadProducto === 1 ? htmlTarjetaEliminar : htmlTarjetaRestar}
+        <div class="tarjeta2_contador_unidades">
+          <span><b>${producto.cantidadProducto}</b> un</span>
+        </div>
+        <div class="tarjeta2_contador_agregar" onclick="addItemInProduct(${producto.idProducto})">
+          <i class="bi bi-plus-lg"></i>
+        </div>
+      </div>
+    `;
+    
     var htmlTarjeta = `
       <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
         <div class="tarjeta2_header">         
@@ -412,7 +443,7 @@ function construirProductosEnTarjetas() {
         </div>
         
         <div class="tarjeta2_footer">
-          <button type="button">AGREGAR</button>
+           ${producto.cantidadProducto === 0 ? htmlTarjetaBoton : htmlTarjetaContador}
         </div>
       </div>
     `;
@@ -421,6 +452,34 @@ function construirProductosEnTarjetas() {
   });
   
   document.querySelector('.tarjetas').innerHTML = htmlTarjetas;
+}
+
+function insertProductoToCar(idProductoSeleccionado) {
+  // Ubica el producto que hemos dado click en los productos de las tarjetas
+  var productoSeleccionado;
+  productosTarjeta.forEach(function(producto) {
+    if(producto.idProducto === idProductoSeleccionado) {
+      productoSeleccionado = producto;
+    }
+  });
+  
+  // Averiguar si el producto seleccionado está dentro o no en el carrito de compras
+  var estaProductoEnCarrito = false;
+  productosCarrito.forEach(function(producto) {
+    if(producto.idProducto === idProductoSeleccionado) {
+      producto.cantidadProducto = producto.cantidadProducto + 1;
+      estaProductoEnCarrito = true;
+    }
+  });
+  
+  // Si el producto seleccionado no está dentro del carrito, entonces lo insertamos
+  if(estaProductoEnCarrito === false) {
+    productoSeleccionado.cantidadProducto = 1;
+    productosCarrito.push(productoSeleccionado);
+  }
+  
+  construirProductosEnCarrito();
+  construirProductosEnTarjetas();
 }
 
 construirProductosEnTarjetas();

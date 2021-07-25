@@ -198,7 +198,7 @@ function mostrarOcultarPopup(selectorPopup) {
 
 /*********** POPUP - CARRITO COMPRA *******/
 var maximoPorProducto = 5;
-var productosCarrito = [
+var productosCarrito = [];
   // {
     // idProducto: 1001,
     // nombreImg: 'torta_selva_negra.jpg', 
@@ -257,6 +257,7 @@ function removeItemInProduct(idProducto) {
   });
   
   construirProductosEnCarrito();
+  construirProductosEnTarjetas();
 }
 
 function addItemInProduct(idProducto) {
@@ -267,6 +268,7 @@ function addItemInProduct(idProducto) {
   });
   
   construirProductosEnCarrito();
+  construirProductosEnTarjetas();
 }
 
 function deleteProduct(idProducto) { 
@@ -274,8 +276,11 @@ function deleteProduct(idProducto) {
     return producto.idProducto === idProducto;
   });
   
+  productosCarrito[index].cantidadProducto = 0;
   productosCarrito.splice(index, 1);
+  
   construirProductosEnCarrito();
+  construirProductosEnTarjetas();
 }
 
 construirProductosEnCarrito();
@@ -290,7 +295,7 @@ var productosTarjeta = [
     nombreProducto: 'Torta de leche de Óreo',
     descripcionProducto: 'Torta rica en su sabor, ha ganado el premio internacional, hecha con agua manantial',
     precioProducto: 60.25,
-    cantidadProducto: 1,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1002,
@@ -299,7 +304,7 @@ var productosTarjeta = [
     nombreProducto: 'Selva negra de cerezas',
     descripcionProducto: 'Compuesta por capas de bizcochuelo de chocolate embebido en kirsch e intercaladas con nata y cerezas.',
     precioProducto: 55.50,
-    cantidadProducto: 1,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1003,
@@ -308,7 +313,7 @@ var productosTarjeta = [
     nombreProducto: 'Torta Chocolate',
     descripcionProducto: '12 porciones, kekes, Manjar, Fudge de una rica Torta Chocolate.',
     precioProducto: 48.00,
-    cantidadProducto: 1,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1004,
@@ -317,7 +322,7 @@ var productosTarjeta = [
     nombreProducto: 'Deli Oreo',
     descripcionProducto: '12 porciones con galletas de oreo vainilla, polvo de chocolate de una rica Deli Oreo.',
     precioProducto: 72.00,
-    cantidadProducto: 1,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1005,
@@ -326,7 +331,7 @@ var productosTarjeta = [
     nombreProducto: 'Barra tres leches',
     descripcionProducto: '12 porciones aproximadamente, con cerezas, fosh, manjar y listo para comer en tu almuerzo.',
     precioProducto: 49.00,
-    cantidadProducto: 1,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1006,
@@ -335,7 +340,7 @@ var productosTarjeta = [
     nombreProducto: 'Keke de piña',
     descripcionProducto: 'Muy rico, sabroso y esponjoso, con piñas azucaradas y dulces como a todos nos gusta',
     precioProducto: 24.00,
-    cantidadProducto: 1,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1007,
@@ -344,7 +349,7 @@ var productosTarjeta = [
     nombreProducto: 'keke de zanahoria',
     descripcionProducto: 'Keke de Zanahoria con Manjar Blanco y Castañas, a precio de promición, sólo por hoy.',
     precioProducto: 42.00,
-    cantidadProducto: 1,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1008,
@@ -353,7 +358,7 @@ var productosTarjeta = [
     nombreProducto: 'Keke Marmoleado',
     descripcionProducto: '12-14 porciones de keke sabor a chocolate, con frutos secos que descubrirás mientras vayas comiendo.',
     precioProducto: 22.00,
-    cantidadProducto: 1,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1009,
@@ -362,7 +367,7 @@ var productosTarjeta = [
     nombreProducto: 'Keke de Plátano con Nueces',
     descripcionProducto: '12-14 porciones de keke sabor a chocolate, con frutos secos que descubrirás mientras vayas comiendo.',
     precioProducto: 22.00,
-    cantidadProducto: 1,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1010,
@@ -371,7 +376,7 @@ var productosTarjeta = [
     nombreProducto: 'Barra torta de chocolate',
     descripcionProducto: '12 porciones aproximadamente, con cerezas, fosh, manjar y listo para comer en tu almuerzo.',
     precioProducto: 49.50,
-    cantidadProducto: 1,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1011,
@@ -380,7 +385,7 @@ var productosTarjeta = [
     nombreProducto: 'Feliz Cumple Fiesta',
     descripcionProducto: '12 porciones, compuesta por capas de bizcochuelo de caramelo y con el diseño que más de guste.',
     precioProducto: 69.00,
-    cantidadProducto: 1,
+    cantidadProducto: 0,
   },
   {
     idProducto: 1012,
@@ -389,7 +394,7 @@ var productosTarjeta = [
     nombreProducto: 'Torta Delicia de Fresa',
     descripcionProducto: '24 porciones, compuesta por fresas y fosh, listo para tus cumpleaños y días que más te gusten disfrutar.',
     precioProducto: 84.00,
-    cantidadProducto: 1,
+    cantidadProducto: 0,
   },
 ];
 
@@ -397,6 +402,34 @@ function construirProductosEnTarjetas() {
   var htmlTarjetas = '';
   
   productosTarjeta.forEach(function(producto) {
+    var htmlTarjetaBoton = `
+      <button type="button" onclick="insertProductoToCar(${producto.idProducto})">AGREGAR</button>
+    `;
+    
+    var htmlTarjetaRestar = `
+      <div class="tarjeta2_contador_agregar" onclick="removeItemInProduct(${producto.idProducto})">
+        <i class="bi bi-dash-lg"></i>
+      </div>
+    `
+    
+    var htmlTarjetaEliminar = `
+      <div class="tarjeta2_contador_agregar" onclick="deleteProduct(${producto.idProducto})">
+        <i class="bi bi-trash"></i>
+      </div>
+    `
+    
+    var htmlTarjetaContador = `
+      <div class="tarjeta2_contador">
+        ${producto.cantidadProducto === 1 ? htmlTarjetaEliminar : htmlTarjetaRestar}
+        <div class="tarjeta2_contador_unidades">
+          <span><b>${producto.cantidadProducto}</b> un</span>
+        </div>
+        <div class="tarjeta2_contador_agregar" onclick="addItemInProduct(${producto.idProducto})">
+          <i class="bi bi-plus-lg"></i>
+        </div>
+      </div>
+    `;
+    
     var htmlTarjeta = `
       <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
         <div class="tarjeta2_header">         
@@ -410,7 +443,7 @@ function construirProductosEnTarjetas() {
         </div>
         
         <div class="tarjeta2_footer">
-          <button type="button" onclick="insertProductoToCar(${producto.idProducto})">AGREGAR</button>
+           ${producto.cantidadProducto === 0 ? htmlTarjetaBoton : htmlTarjetaContador}
         </div>
       </div>
     `;
@@ -421,13 +454,32 @@ function construirProductosEnTarjetas() {
   document.querySelector('.tarjetas').innerHTML = htmlTarjetas;
 }
 
-function insertProductoToCar(idProducto) {
+function insertProductoToCar(idProductoSeleccionado) {
+  // Ubica el producto que hemos dado click en los productos de las tarjetas
+  var productoSeleccionado;
   productosTarjeta.forEach(function(producto) {
-    if(producto.idProducto === idProducto) {
-      productosCarrito.push(producto);
-      construirProductosEnCarrito();
+    if(producto.idProducto === idProductoSeleccionado) {
+      productoSeleccionado = producto;
     }
   });
+  
+  // Averiguar si el producto seleccionado está dentro o no en el carrito de compras
+  var estaProductoEnCarrito = false;
+  productosCarrito.forEach(function(producto) {
+    if(producto.idProducto === idProductoSeleccionado) {
+      producto.cantidadProducto = producto.cantidadProducto + 1;
+      estaProductoEnCarrito = true;
+    }
+  });
+  
+  // Si el producto seleccionado no está dentro del carrito, entonces lo insertamos
+  if(estaProductoEnCarrito === false) {
+    productoSeleccionado.cantidadProducto = 1;
+    productosCarrito.push(productoSeleccionado);
+  }
+  
+  construirProductosEnCarrito();
+  construirProductosEnTarjetas();
 }
 
 construirProductosEnTarjetas();

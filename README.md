@@ -5,6 +5,7 @@ Aplicación bodoquin
   - assets/ => carpeta donde se van a almacenar recursos que no son de programación
     - img/ => carpeta donde se van a almacenar imagenes
     - fonts/ => carpeta donde se almacena los tipos de fuentes de la aplicación
+    - libs/ => carpeta donde se almace las librerias de terceros
   - app/ => carpeta donde se va a almacenar los recursos creados por el equipo frontend
     - views/ => carpeta que contiene el conjunto de vistas
       - vistaYYY => carpeta que va a contener el .html, .css y.js para una vista
@@ -56,19 +57,16 @@ Aplicación bodoquin
   - SCRUM: es una metodología agil para dividirnos el desarrollo
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13
-    - Features: (Lista de tareas - tablero KANBAN)
-      - popup de carrito de compra - 8
-      - en cada pantalla de productos construir de forma dinámica las tarjetas - 3
-      - en cada vista de cada linea de productos, al seleccionar un producto, se tiene que mostrar la 
-        funcionalidad para seguir agregando o  disminuyendo productos, o eliminar el producto 8
+    - Features: (Lista de tareas - tablero KANBAN) 26
       - integrarnos con bootstrap parte 1 - responsive 5
       - implementar vista de resumen de la compra 8
-      - corrección de modales de usuario 1
+      - implementar vistas de detalle de producto 13
+        - construir la estructura principal de la vista -  (header, footer, nav)
+        - construir el contenido de la vista - 
+        - integrarse con el carrito de compras
     - backlog => conjunto de tareas o mejoras a realizar (features futuros)      
       - Requerimientos funcionales:
         - poner un logo
-        - implementar vistas de detalle de producto
-          - productos relacionados
         - en la vista de inicio: implementar mini banners por cada linea de producto con efecto en el hover
         - implementar sección de anuncios y/o publicidad
         - modal de tiendas de recojo (ubicación)

@@ -21,6 +21,7 @@ header {
 
 main {
   margin-top: 138px;
+  padding: 0 15px;
 }
 
 @media (max-width: 970px) {
@@ -196,11 +197,10 @@ body.con-scroll main {
 /*************************************/
 
 .header_principal {
-  padding: 10px;
+  padding: 9px 10px;
 }
 
 .header_secundario {
-  width: 100%;
   background-color: #ffffff;
   border-bottom: 1px solid #cccccc;
   box-shadow: 0px 2px 5px 0px #cccccc;
@@ -215,15 +215,13 @@ body.con-scroll .header_secundario {
 .header_secundario .header_menu_secundario {
   text-align: center;
   margin: 0 auto;
-  display: inline-block;
   cursor: pointer;
-  padding-bottom: 4px;
+  line-height: 24px;
 }
 
 .header_secundario .header_menu_secundario:hover {
   background-color: #f7f7f7;
   border-radius: 8px;
-  padding-bottom: 4px;
 }
 
 .header_secundario .header_menu_secundario a {
@@ -426,8 +424,6 @@ body.con-scroll .header_secundario {
 
 .header_acciones {
   text-align: right;
-  width: 153px;
-  padding-top: 5px;
 }
 
 .header_acciones i {
@@ -596,14 +592,13 @@ nav .nav_menu ul li.nav_menu--seleccionado span {
 /*******************************************/
 
 .tarjetas {
-  padding: 15px;
+  padding: 15px 0;
   background-color: #eee4ddeb;
 }
 
 .tarjetas .tarjeta2 {
   border: 1px solid #dddcdc;
   display: inline-block;
-  margin-right: 10px;
   margin-bottom: 10px;
   cursor: pointer;
   background-color: #ffffff;
@@ -1028,174 +1023,6 @@ footer {
   text-align: right;
 }
 /**********************************/
-
-/***** CLASES RESPONSIVES *******/
-
-@media (max-width: 768px) {
-  /*CELULAR*/
-  .col-sm-1 {
-    width: calc(100% / calc(12/1) - 16px);
-  }
-  .col-sm-2 {
-    width: calc(100% / calc(12/2) - 16px);
-  }
-  .col-sm-3 {
-    width: calc(100% / calc(12/3) - 16px);
-  }
-  .col-sm-4 {
-    width: calc(100% / calc(12/4) - 16px);
-  }
-  .col-sm-5 {
-    width: calc(100% / calc(12/5) - 16px);
-  }
-  .col-sm-6 {
-    width: calc(100% / calc(12/6) - 16px);
-  }
-  .col-sm-7 {
-    width: calc(100% / calc(12/7) - 16px);
-  }
-  .col-sm-8 {
-    width: calc(100% / calc(12/8) - 16px);
-  }
-  .col-sm-9 {
-    width: calc(100% / calc(12/9) - 16px);
-  }
-  .col-sm-10 {
-    width: calc(100% / calc(12/10) - 16px);
-  }
-  .col-sm-11 {
-    width: calc(100% / calc(12/11) - 16px);
-  }
-  .col-sm-12 {
-    width: calc(100% / calc(12/12) - 16px);
-  }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  /*TABLET VETICAL*/
-  .col-md-1 {
-    width: calc(100% / calc(12/1) - 16px);
-  }
-  .col-md-2 {
-    width: calc(100% / calc(12/2) - 16px);
-  }
-  .col-md-3 {
-    width: calc(100% / calc(12/3) - 16px);
-  }
-  .col-md-4 {
-    width: calc(100% / calc(12/4) - 16px);
-  }
-  .col-md-5 {
-    width: calc(100% / calc(12/5) - 16px);
-  }
-  .col-md-6 {
-    width: calc(100% / calc(12/6) - 16px);
-  }
-  .col-md-7 {
-    width: calc(100% / calc(12/7) - 16px);
-  }
-  .col-md-8 {
-    width: calc(100% / calc(12/8) - 16px);
-  }
-  .col-md-9 {
-    width: calc(100% / calc(12/9) - 16px);
-  }
-  .col-md-10 {
-    width: calc(100% / calc(12/10) - 16px);
-  }
-  .col-md-11 {
-    width: calc(100% / calc(12/11) - 16px);
-  }
-  .col-md-12 {
-    width: calc(100% / calc(12/12) - 16px);
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1200px) {
-  /*TABLET HORIZONTAL*/
-  .col-lg-1 {
-    width: calc(100% / calc(12/1) - 16px);
-  }
-  .col-lg-2 {
-    width: calc(100% / calc(12/2) - 16px);
-  }
-  .col-lg-3 {
-    width: calc(100% / calc(12/3) - 16px);
-  }
-  .col-lg-4 {
-    width: calc(100% / calc(12/4) - 16px);
-  }
-  .col-lg-5 {
-    width: calc(100% / calc(12/5) - 16px);
-  }
-  .col-lg-6 {
-    width: calc(100% / calc(12/6) - 16px);
-  }
-  .col-lg-7 {
-    width: calc(100% / calc(12/7) - 16px);
-  }
-  .col-lg-8 {
-    width: calc(100% / calc(12/8) - 16px);
-  }
-  .col-lg-9 {
-    width: calc(100% / calc(12/9) - 16px);
-  }
-  .col-lg-10 {
-    width: calc(100% / calc(12/10) - 16px);
-  }
-  .col-lg-11 {
-    width: calc(100% / calc(12/11) - 16px);
-  }
-  .col-lg-12 {
-    width: calc(100% / calc(12/12) - 16px);
-  }
-}
-
-@media (min-width: 1200px) {
-  /*PANTALLA ESCRITORIO o LAPTOP*/  
-  .col-xl-1 {
-    width: calc(100% / calc(12/1) - 16px);
-  }
-  .col-xl-2 {
-    width: calc(100% / calc(12/2) - 16px);
-  }
-  .col-xl-3 {
-    width: calc(100% / calc(12/3) - 16px);
-  }
-  .col-xl-4 {
-    width: calc(100% / calc(12/4) - 16px);
-  }
-  .col-xl-5 {
-    width: calc(100% / calc(12/5) - 16px);
-  }
-  .col-xl-6 {
-    width: calc(100% / calc(12/6) - 16px);
-  }
-  .col-xl-7 {
-    width: calc(100% / calc(12/7) - 16px);
-  }
-  .col-xl-8 {
-    width: calc(100% / calc(12/8) - 16px);
-  }
-  .col-xl-9 {
-    width: calc(100% / calc(12/9) - 16px);
-  }
-  .col-xl-10 {
-    width: calc(100% / calc(12/10) - 16px);
-  }
-  .col-xl-11 {
-    width: calc(100% / calc(12/11) - 16px);
-  }
-  .col-xl-12 {
-    width: calc(100% / calc(12/12) - 16px);
-  }
-}
-
-[class*="col-"] {
-  display: inline-block;
-}
-
-/*****************************************/
 
 /********** POPUP ******************/
 .popup {

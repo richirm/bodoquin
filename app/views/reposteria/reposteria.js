@@ -431,19 +431,21 @@ function construirProductosEnTarjetas() {
     `;
     
     var htmlTarjeta = `
-      <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-        <div class="tarjeta2_header">         
-          <img src="../../../assets/img/${producto.nombreImg}">
-        </div>
-        <div class="tarjeta2_body">      
-          <span>${producto.nombreCategoria}</span><br>
-          <span><b>${producto.nombreProducto}</b></span>
-          <p>${producto.descripcionProducto}</p>
-          <span class="tarjeta2_body_precio">S/. ${producto.precioProducto}</span>
-        </div>
-        
-        <div class="tarjeta2_footer">
-           ${producto.cantidadProducto === 0 ? htmlTarjetaBoton : htmlTarjetaContador}
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+        <div class="tarjeta2">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/${producto.nombreImg}">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>${producto.nombreCategoria}</span><br>
+            <span><b>${producto.nombreProducto}</b></span>
+            <p>${producto.descripcionProducto}</p>
+            <span class="tarjeta2_body_precio">S/. ${producto.precioProducto}</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+             ${producto.cantidadProducto === 0 ? htmlTarjetaBoton : htmlTarjetaContador}
+          </div>
         </div>
       </div>
     `;

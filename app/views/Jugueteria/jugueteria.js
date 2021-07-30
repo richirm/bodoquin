@@ -195,17 +195,18 @@ function mostrarOcultarPopup(selectorPopup) {
   }
 }
 /*****************************************/
+
 /*********** POPUP - CARRITO COMPRA *******/
 var maximoPorProducto = 5;
-var productos = [
-  {
-    idProducto: 1001,
-    nombreImg: 'torta_selva_negra.jpg', 
-    nombreCategoria: 'Torta húmeda',
-    nombreProducto: 'Torta de leche de Óreo1',
-    precioProducto: 60.25,
-    cantidadProducto: 3,
-  }
+var productosCarrito = [
+  // {
+    // idProducto: 1001,
+    // nombreImg: 'torta_selva_negra.jpg', 
+    // nombreCategoria: 'Torta húmeda',
+    // nombreProducto: 'Torta de leche de Óreo1',
+    // precioProducto: 60.25,
+    // cantidadProducto: 3,
+  // }
 ];
 
 function construirProductosEnCarrito() {
@@ -213,7 +214,7 @@ function construirProductosEnCarrito() {
   var totalPrecio = 0;
   var cantidadProductos = 0;
   
-  productos.forEach(function(producto) {
+  productosCarrito.forEach(function(producto) {
     totalPrecio = totalPrecio + (producto.precioProducto * producto.cantidadProducto);
     cantidadProductos = cantidadProductos + producto.cantidadProducto;
     
@@ -249,7 +250,7 @@ function construirProductosEnCarrito() {
 }
 
 function removeItemInProduct(idProducto) {
-  productos.forEach(function(producto) {
+  productosCarrito.forEach(function(producto) {
     if(producto.idProducto === idProducto && producto.cantidadProducto >= 2) {
       producto.cantidadProducto = producto.cantidadProducto - 1;
     }
@@ -260,26 +261,29 @@ function removeItemInProduct(idProducto) {
 }
 
 function addItemInProduct(idProducto) {
-  productos.forEach(function(producto) {
+  productosCarrito.forEach(function(producto) {
     if(producto.idProducto === idProducto && producto.cantidadProducto < maximoPorProducto) {
       producto.cantidadProducto = producto.cantidadProducto + 1;
     }
   });
   
   construirProductosEnCarrito();
+  construirProductosEnTarjetas();
 }
 
 function deleteProduct(idProducto) { 
-  var index = productos.findIndex(function(producto) {
+  var index = productosCarrito.findIndex(function(producto) {
     return producto.idProducto === idProducto;
   });
   
   productosCarrito[index].cantidadProducto = 0;
   productosCarrito.splice(index, 1);
-
+  
   construirProductosEnCarrito();
   construirProductosEnTarjetas();
 }
+
+construirProductosEnCarrito();
 /*****************************************/
 
 /***** TARJETAS PRODUCTOS **********/
@@ -311,7 +315,6 @@ var productosTarjeta = [
     precioProducto: 80.25,
     cantidadProducto: 0,
   },
-  },
   {
     idProducto: 1005,
     nombreImg: 'muñeco.jpg', 
@@ -320,7 +323,6 @@ var productosTarjeta = [
     descripcionProducto: 'muñeca con chupon que llora y habla y remeda',
     precioProducto:  45.75,
     cantidadProducto: 0,
-  },
   },
   {
     idProducto: 1007,
@@ -331,7 +333,6 @@ var productosTarjeta = [
     precioProducto: 90.75,
     cantidadProducto: 0,
   },
-  },
   {
     idProducto: 1009,
     nombreImg: 'carro.jpg', 
@@ -340,7 +341,6 @@ var productosTarjeta = [
     descripcionProducto: 'Aprenderás a dar tus primeros pasitos jugando',
     precioProducto: 65.45,
     cantidadProducto: 0,
-  },
   },
   {
     idProducto: 1011,
@@ -351,7 +351,6 @@ var productosTarjeta = [
     precioProducto: 80.75,
     cantidadProducto: 0,
   },
-  },
   {
     idProducto: 1012,
     nombreImg: 'figuras.jpg', 
@@ -360,7 +359,6 @@ var productosTarjeta = [
     descripcionProducto: 'juago dinamicos pra niños y niñas',
     precioProducto: 25.80,
     cantidadProducto: 0,
-  },
   },
   {
     idProducto: 1004,
@@ -371,7 +369,6 @@ var productosTarjeta = [
     precioProducto: 30.40,
     cantidadProducto: 0,
   },
-  },
   {
     idProducto: 1006,
     nombreImg: 'pelotas.jpg', 
@@ -381,17 +378,14 @@ var productosTarjeta = [
     precioProducto: 15.75,
     cantidadProducto: 0,
   },
-  },
   {
     idProducto: 1008,
     nombreImg: 'cuadro.jpg', 
     nombreCategoria: '2-4',
     nombreProducto: 'cuadritos',
     descripcionProducto: 'cuadritos de madera de colores para armar',
-    precioProducto: 55.75
+    precioProducto: 55.75,
     cantidadProducto: 0,
-  },
-,
   },
   {
     idProducto: 1010,
@@ -401,7 +395,6 @@ var productosTarjeta = [
     descripcionProducto: 'lonchera de madera para llevar tus juguetes',
     precioProducto: 65.75,
     cantidadProducto: 0,
-  },
   },
 ];
 
@@ -438,19 +431,21 @@ function construirProductosEnTarjetas() {
     `;
     
     var htmlTarjeta = `
-      <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-        <div class="tarjeta2_header">         
-          <img src="../../../assets/img/${producto.nombreImg}">
-        </div>
-        <div class="tarjeta2_body">      
-          <span>${producto.nombreCategoria}</span><br>
-          <span><b>${producto.nombreProducto}</b></span>
-          <p>${producto.descripcionProducto}</p>
-          <span class="tarjeta2_body_precio">S/. ${producto.precioProducto}</span>
-        </div>
-        
-        <div class="tarjeta2_footer">
-           ${producto.cantidadProducto === 0 ? htmlTarjetaBoton : htmlTarjetaContador}
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="tarjeta2">             
+          <div class="tarjeta2_header">         
+            <img src="../../../assets/img/${producto.nombreImg}">
+          </div>
+          <div class="tarjeta2_body">      
+            <span>${producto.nombreCategoria}</span><br>
+            <span><b>${producto.nombreProducto}</b></span>
+            <p>${producto.descripcionProducto}</p>
+            <span class="tarjeta2_body_precio">S/. ${producto.precioProducto}</span>
+          </div>
+          
+          <div class="tarjeta2_footer">
+             ${producto.cantidadProducto === 0 ? htmlTarjetaBoton : htmlTarjetaContador}
+          </div>
         </div>
       </div>
     `;

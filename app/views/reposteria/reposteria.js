@@ -431,7 +431,7 @@ function construirProductosEnTarjetas() {
     `;
     
     var htmlTarjeta = `
-      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
         <div class="tarjeta2">             
           <div class="tarjeta2_header">         
             <img src="../../../assets/img/${producto.nombreImg}">

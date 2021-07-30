@@ -606,6 +606,7 @@ nav .nav_menu ul li.nav_menu--seleccionado span {
   margin-bottom: 10px;
   cursor: pointer;
   background-color: #ffffff;
+  width: 100%; 
 }
 
 .tarjetas .tarjeta2:hover {

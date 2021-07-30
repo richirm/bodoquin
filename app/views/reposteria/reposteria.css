@@ -21,6 +21,7 @@ header {
 
 main {
   margin-top: 138px;
+  padding: 0 15px;
 }
 
 @media (max-width: 970px) {
@@ -107,7 +108,7 @@ body.con-scroll main {
 }
 
 .chat .chat_popup .chat_popup_header {
-  width: calc(100% - 20px);
+  width: 100%;
   border-bottom: 1px solid #cccccc;
   padding: 10px;
   box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
@@ -146,7 +147,7 @@ body.con-scroll main {
 
 .chat .chat_popup .chat_popup_footer {
   padding: 10px;
-  width: calc(100% - 20px);
+  width: 100%;
   border-top: 1px solid #cccccc;
 }
 
@@ -187,7 +188,7 @@ body.con-scroll main {
   color: #8a8df6;
   cursor: pointer;
   position: relative;
-  top: -3px;
+  top: -9px;
 }
 
 .chat .chat_fab i:hover {
@@ -196,11 +197,10 @@ body.con-scroll main {
 /*************************************/
 
 .header_principal {
-  padding: 10px;
+  padding: 9px 10px;
 }
 
 .header_secundario {
-  width: 100%;
   background-color: #ffffff;
   border-bottom: 1px solid #cccccc;
   box-shadow: 0px 2px 5px 0px #cccccc;
@@ -215,15 +215,13 @@ body.con-scroll .header_secundario {
 .header_secundario .header_menu_secundario {
   text-align: center;
   margin: 0 auto;
-  display: inline-block;
   cursor: pointer;
-  padding-bottom: 4px;
+  line-height: 24px;
 }
 
 .header_secundario .header_menu_secundario:hover {
   background-color: #f7f7f7;
   border-radius: 8px;
-  padding-bottom: 4px;
 }
 
 .header_secundario .header_menu_secundario a {
@@ -253,6 +251,7 @@ body.con-scroll .header_secundario {
   margin: 0;
   margin-right: 10px;
   vertical-align: middle;
+  font-weight: bold;
 }
 
 .header_titulo a {
@@ -273,7 +272,7 @@ body.con-scroll .header_secundario {
 
 .popup_carrito .carrito_productos {
   padding: 10px;
-  height: calc(350px - 20px - 41px);
+  height: calc(350px - 41px);
   overflow-y: auto;
 }
 
@@ -285,7 +284,7 @@ body.con-scroll .header_secundario {
 }
 
 .popup_carrito .carrito_productos .carrito_producto .carrito_producto_img {
-  width: 60px;
+  width: 75px;
   display: inline-block;
   padding: 14px 8px;
   height: calc(100% - 28px);
@@ -307,12 +306,14 @@ body.con-scroll .header_secundario {
 .popup_carrito .carrito_productos .carrito_producto .carrito_producto_detalle h2 {
   margin: 0;
   font-size: 15px;
+  font-weight: bold;
 }
 
 .popup_carrito .carrito_productos .carrito_producto .carrito_producto_detalle h1 {
   margin-top: 0px;
   font-size: 18px;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
+  font-weight: bold;
 }
 
 .popup_carrito .carrito_productos .carrito_producto .carrito_producto_total {
@@ -322,14 +323,14 @@ body.con-scroll .header_secundario {
 .popup_carrito .carrito_productos .carrito_producto .carrito_producto_contador {
   text-align: right;
   padding-right: 12px;
-  margin-top: 16px;
+  margin-top: 10px;
 }
 
 .popup_carrito .carrito_productos .carrito_producto .carrito_producto_contador .carrito_producto_contador_agrega {
   background: #ECECEC;
   border-radius: 10px;
   width: 100px;
-  padding: 6px 3px;
+  padding: 3px;
   text-align: center;
   display: inline-block;
   vertical-align: middle;
@@ -357,7 +358,7 @@ body.con-scroll .header_secundario {
 }
 
 .popup_carrito .carrito_productos .carrito_producto .carrito_producto_contador .carrito_producto_contador_cantidad {
-  padding: 4px 11px;
+  padding: 0px 11px;
   display: inline-block;
   vertical-align: middle;
   background: #80A3EA;
@@ -426,8 +427,6 @@ body.con-scroll .header_secundario {
 
 .header_acciones {
   text-align: right;
-  width: 153px;
-  padding-top: 5px;
 }
 
 .header_acciones i {
@@ -520,7 +519,7 @@ nav {
 
 nav .nav_backdrop {
   position: fixed;
-  top: 67px;
+  top: 60px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -531,7 +530,7 @@ nav .nav_backdrop {
 
 nav .nav_menu {
   position: fixed;
-  top: 67px;
+  top: 60px;
   width: 270px;
   height: 100%;
   background-color: #F0F5FF;
@@ -551,6 +550,7 @@ nav .nav_menu h2 {
   margin: 0;
   padding: 20px;
   border-bottom: 1px solid #FF0000;
+  font-weight: bold;
 }
 
 nav .nav_menu ul {
@@ -596,14 +596,13 @@ nav .nav_menu ul li.nav_menu--seleccionado span {
 /*******************************************/
 
 .tarjetas {
-  padding: 15px;
+  padding: 15px 0;
   background-color: #eee4ddeb;
 }
 
 .tarjetas .tarjeta2 {
   border: 1px solid #dddcdc;
   display: inline-block;
-  margin-right: 10px;
   margin-bottom: 10px;
   cursor: pointer;
   background-color: #ffffff;
@@ -667,8 +666,8 @@ nav .nav_menu ul li.nav_menu--seleccionado span {
 
 .tarjetas .tarjeta2_footer .tarjeta2_contador .tarjeta2_contador_agregar {
   display: inline-block;
-  width: 35px;
-  height: 35px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   border: 2px solid #80A3EA;
   text-align: center;
@@ -683,12 +682,13 @@ nav .nav_menu ul li.nav_menu--seleccionado span {
 
 .tarjetas .tarjeta2_footer .tarjeta2_contador .tarjeta2_contador_agregar i {
   position: relative;
-  top: 8px;
+  top: 5px;
+  font-size: 13px;
 }
 
 .tarjetas .tarjeta2_footer .tarjeta2_contador .tarjeta2_contador_unidades {
   display: inline-block;
-  width: calc(100% - 86px);
+  width: calc(100% - 84px);
   text-align: center;
   user-select: none;
 }
@@ -780,11 +780,15 @@ nav .nav_menu ul li.nav_menu--seleccionado span {
 .categorias .categorias_menu h1 {
   color: #000000;
   margin: 0px;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .categorias .categorias_menu h2 {
   color: #80A3EA;
   cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .categorias .modal_categorias img{
@@ -813,10 +817,10 @@ table td img {
 
 footer {
   border-top: 1px solid #e8e8e8;
+  overflow: hidden;
 }
 
 .footer_access {
-  width: 100%;
   font-size: 18px;
   border-bottom: 1px solid #ffffff;
   padding: 30px 0;
@@ -856,29 +860,27 @@ footer {
 
 .footer_contacto {
   background-color: #F6F6F6;
-  width: calc(50% - 45px);
-  display: inline-block;
-  vertical-align: top;
   border-right: 1px solid #D1D1D1;
   padding: 20px;
-  height: 85px;
+  padding-left: 30px;
 }
 
 .footer_contacto h3 {
   margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .footer_siganos {
   background-color: #F6F6F6;
-  width: calc(50% - 40px);
-  display: inline-block;
-  vertical-align: top;
   padding: 20px;
-  height: 85px;
+  padding-left: 30px;
 }
 
 .footer_siganos h3 {
   margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .footer_siganos i {
@@ -921,7 +923,7 @@ footer {
 }
 
 .modal .modal_contenedor .modal_header {
-  width: calc(100% - 20px);
+  width: 100%;
   padding: 10px;
   border-bottom: 1px solid #ececec;
 }
@@ -930,6 +932,7 @@ footer {
   margin: 0;
   font-size: 22px;
   text-align: center;
+  font-weight: bold;
 }
 
 .modal .modal_contenedor .modal_header i {
@@ -947,12 +950,12 @@ footer {
 
 .modal .modal_contenedor .modal_body {
   min-height: 50px;
-  width: calc(100% - 30px);
+  width: 100%;
   padding: 10px 15px;
 }
 
 .modal .modal_contenedor .modal_footer {
-  width: calc(100% - 30px);
+  width: 100%;
   padding: 10px 15px;
   border-top: 1px solid #ececec;
   text-align: center;
@@ -990,8 +993,8 @@ footer {
 }
 
 .form-group .form-control {
-  width: calc(100% - 14px);
-  height: 34px;
+  width: 100%;
+  height: 40px;
   padding-left: 10px;
   border: 1px solid #cccccc;
   font-size: 18px;
@@ -1028,174 +1031,6 @@ footer {
   text-align: right;
 }
 /**********************************/
-
-/***** CLASES RESPONSIVES *******/
-
-@media (max-width: 768px) {
-  /*CELULAR*/
-  .col-sm-1 {
-    width: calc(100% / calc(12/1) - 16px);
-  }
-  .col-sm-2 {
-    width: calc(100% / calc(12/2) - 16px);
-  }
-  .col-sm-3 {
-    width: calc(100% / calc(12/3) - 16px);
-  }
-  .col-sm-4 {
-    width: calc(100% / calc(12/4) - 16px);
-  }
-  .col-sm-5 {
-    width: calc(100% / calc(12/5) - 16px);
-  }
-  .col-sm-6 {
-    width: calc(100% / calc(12/6) - 16px);
-  }
-  .col-sm-7 {
-    width: calc(100% / calc(12/7) - 16px);
-  }
-  .col-sm-8 {
-    width: calc(100% / calc(12/8) - 16px);
-  }
-  .col-sm-9 {
-    width: calc(100% / calc(12/9) - 16px);
-  }
-  .col-sm-10 {
-    width: calc(100% / calc(12/10) - 16px);
-  }
-  .col-sm-11 {
-    width: calc(100% / calc(12/11) - 16px);
-  }
-  .col-sm-12 {
-    width: calc(100% / calc(12/12) - 16px);
-  }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  /*TABLET VETICAL*/
-  .col-md-1 {
-    width: calc(100% / calc(12/1) - 16px);
-  }
-  .col-md-2 {
-    width: calc(100% / calc(12/2) - 16px);
-  }
-  .col-md-3 {
-    width: calc(100% / calc(12/3) - 16px);
-  }
-  .col-md-4 {
-    width: calc(100% / calc(12/4) - 16px);
-  }
-  .col-md-5 {
-    width: calc(100% / calc(12/5) - 16px);
-  }
-  .col-md-6 {
-    width: calc(100% / calc(12/6) - 16px);
-  }
-  .col-md-7 {
-    width: calc(100% / calc(12/7) - 16px);
-  }
-  .col-md-8 {
-    width: calc(100% / calc(12/8) - 16px);
-  }
-  .col-md-9 {
-    width: calc(100% / calc(12/9) - 16px);
-  }
-  .col-md-10 {
-    width: calc(100% / calc(12/10) - 16px);
-  }
-  .col-md-11 {
-    width: calc(100% / calc(12/11) - 16px);
-  }
-  .col-md-12 {
-    width: calc(100% / calc(12/12) - 16px);
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1200px) {
-  /*TABLET HORIZONTAL*/
-  .col-lg-1 {
-    width: calc(100% / calc(12/1) - 16px);
-  }
-  .col-lg-2 {
-    width: calc(100% / calc(12/2) - 16px);
-  }
-  .col-lg-3 {
-    width: calc(100% / calc(12/3) - 16px);
-  }
-  .col-lg-4 {
-    width: calc(100% / calc(12/4) - 16px);
-  }
-  .col-lg-5 {
-    width: calc(100% / calc(12/5) - 16px);
-  }
-  .col-lg-6 {
-    width: calc(100% / calc(12/6) - 16px);
-  }
-  .col-lg-7 {
-    width: calc(100% / calc(12/7) - 16px);
-  }
-  .col-lg-8 {
-    width: calc(100% / calc(12/8) - 16px);
-  }
-  .col-lg-9 {
-    width: calc(100% / calc(12/9) - 16px);
-  }
-  .col-lg-10 {
-    width: calc(100% / calc(12/10) - 16px);
-  }
-  .col-lg-11 {
-    width: calc(100% / calc(12/11) - 16px);
-  }
-  .col-lg-12 {
-    width: calc(100% / calc(12/12) - 16px);
-  }
-}
-
-@media (min-width: 1200px) {
-  /*PANTALLA ESCRITORIO o LAPTOP*/  
-  .col-xl-1 {
-    width: calc(100% / calc(12/1) - 16px);
-  }
-  .col-xl-2 {
-    width: calc(100% / calc(12/2) - 16px);
-  }
-  .col-xl-3 {
-    width: calc(100% / calc(12/3) - 16px);
-  }
-  .col-xl-4 {
-    width: calc(100% / calc(12/4) - 16px);
-  }
-  .col-xl-5 {
-    width: calc(100% / calc(12/5) - 16px);
-  }
-  .col-xl-6 {
-    width: calc(100% / calc(12/6) - 16px);
-  }
-  .col-xl-7 {
-    width: calc(100% / calc(12/7) - 16px);
-  }
-  .col-xl-8 {
-    width: calc(100% / calc(12/8) - 16px);
-  }
-  .col-xl-9 {
-    width: calc(100% / calc(12/9) - 16px);
-  }
-  .col-xl-10 {
-    width: calc(100% / calc(12/10) - 16px);
-  }
-  .col-xl-11 {
-    width: calc(100% / calc(12/11) - 16px);
-  }
-  .col-xl-12 {
-    width: calc(100% / calc(12/12) - 16px);
-  }
-}
-
-[class*="col-"] {
-  display: inline-block;
-}
-
-/*****************************************/
 
 /********** POPUP ******************/
 .popup {
@@ -1236,7 +1071,7 @@ footer {
 }
 
 .popup .popup_contenedor .popup_header {
-  width: calc(100% - 24px);
+  width: 100%;
   padding: 12px;
   text-align: center;
   border-bottom: 1px solid #ECECEC;

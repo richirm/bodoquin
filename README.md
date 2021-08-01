@@ -58,7 +58,7 @@ Aplicación bodoquin
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13
     - Features: (Lista de tareas - tablero KANBAN) 26
-      - integrarnos con bootstrap parte 1 - responsive 5
+      - integrarnos con bootstrap parte 1 - responsive 8
       - implementar vista de resumen de la compra 8
       - implementar vistas de detalle de producto 13
         - construir la estructura principal de la vista -  (header, footer, nav)
@@ -75,6 +75,11 @@ Aplicación bodoquin
         - Pantalla de nuestras tiendas
         - integrar el responsive en la pantalla de inicio
         - menu responsive
+        - mejorar pantalla de carrito:
+          - cambiar titulo
+          - quitar el buscador
+          - quitar menu seleccionado en el header
+          - sincronizar con carrito de compras
       - Requerimientos no funcionales:       
       
 5. Plataformas:

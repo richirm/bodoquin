@@ -1015,8 +1015,16 @@ footer {
   cursor: pointer;
 }
 
+.btn a {
+  text-decoration: none;
+}
+
 .btn.btn-primary {  
   background-color: #80A3EA;
+  color: #ffffff;
+}
+
+.btn.btn-primary a {
   color: #ffffff;
 }
 /**********************************/

@@ -82,6 +82,7 @@ function mostrarOcultarPopup(selectorPopup) {
 
 /************ DETALLE PRODUCTOS **********/
 var maximoPorProducto = 5;
+var costoEnvio = 15;
 var detalleProductos = [
   {
     idProducto: 1001,
@@ -123,6 +124,7 @@ var detalleProductos = [
 
 function construirCarritoDetalleProductos() {
   var htmlDetalleProductos = '';
+  var montoSubTotal = 0;
   
   detalleProductos.forEach(function(producto) {
     var htmlProducto = `
@@ -144,7 +146,7 @@ function construirCarritoDetalleProductos() {
             </div>
           
             <div class="carrito_detalle_producto_contador_unidades">
-              <span><b>${producto.cantidadProducto}</b> un</span>
+              <span><b>${producto.cantidadProducto}</b></span>
             </div>
             
             <div class="carrito_detalle_producto_contador_agregar" onclick="agregarProductoDetalle(${producto.idProducto})">
@@ -162,9 +164,13 @@ function construirCarritoDetalleProductos() {
     `;
     
     htmlDetalleProductos = htmlDetalleProductos + htmlProducto;
+    montoSubTotal = montoSubTotal + (producto.cantidadProducto * producto.precioProducto);
   });
   
   document.querySelector('.carrito_detalle_productos table tbody').innerHTML = htmlDetalleProductos;
+  document.querySelector('.carrito_detalle_productos_sub-total').innerHTML = `S/ ${montoSubTotal}`;
+  document.querySelector('.carrito_detalle_productos_costo-envio').innerHTML = `S/ ${costoEnvio}`;
+  document.querySelector('.carrito_detalle_productos_total').innerHTML = `S/ ${montoSubTotal + costoEnvio}`;
 }
 
 function agregarProductoDetalle(idProducto){

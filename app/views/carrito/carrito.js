@@ -81,6 +81,7 @@ function mostrarOcultarPopup(selectorPopup) {
 /*****************************************/
 
 /************ DETALLE PRODUCTOS **********/
+var maximoPorProducto = 5;
 var detalleProductos = [
   {
     idProducto: 1001,
@@ -138,7 +139,7 @@ function construirCarritoDetalleProductos() {
         
         <td width="15%" class="texto-centrado">
           <div class="carrito_detalle_producto_contador">        
-            <div class="carrito_detalle_producto_contador_agregar">
+            <div class="carrito_detalle_producto_contador_agregar" onclick="quitarProductoDetalle(${producto.idProducto})">
               <i class="bi bi-dash-lg"></i>
             </div>
           
@@ -146,7 +147,7 @@ function construirCarritoDetalleProductos() {
               <span><b>${producto.cantidadProducto}</b> un</span>
             </div>
             
-            <div class="carrito_detalle_producto_contador_agregar">
+            <div class="carrito_detalle_producto_contador_agregar" onclick="agregarProductoDetalle(${producto.idProducto})">
               <i class="bi bi-plus-lg"></i>
             </div>
           </div>
@@ -155,7 +156,7 @@ function construirCarritoDetalleProductos() {
         <td width="15%" class="texto-derecha">S/. ${producto.cantidadProducto * producto.precioProducto}</td>
         
         <td width="5%" class="texto-centrado">
-          <i class="bi bi-trash"></i>
+          <i class="bi bi-trash" onclick="removerProductoDetalle(${producto.idProducto})"></i>
         </td>
       </tr>
     `;
@@ -164,6 +165,36 @@ function construirCarritoDetalleProductos() {
   });
   
   document.querySelector('.carrito_detalle_productos table tbody').innerHTML = htmlDetalleProductos;
+}
+
+function agregarProductoDetalle(idProducto){
+  detalleProductos.forEach(function(producto){
+    if(idProducto === producto.idProducto && producto.cantidadProducto < maximoPorProducto){
+      producto.cantidadProducto = producto.cantidadProducto + 1;
+    }
+  });
+  
+  construirCarritoDetalleProductos();
+}
+
+function quitarProductoDetalle(idProducto){
+  detalleProductos.forEach(function(producto){
+    if(idProducto === producto.idProducto && producto.cantidadProducto > 1){
+      producto.cantidadProducto = producto.cantidadProducto - 1; 
+    }
+  });
+  
+  construirCarritoDetalleProductos();
+}
+
+function removerProductoDetalle(idProducto){
+  var index = detalleProductos.findIndex(function(producto) {
+    return producto.idProducto === idProducto;
+  });
+  
+  detalleProductos.splice(index, 1);
+  
+  construirCarritoDetalleProductos();
 }
 
 construirCarritoDetalleProductos();

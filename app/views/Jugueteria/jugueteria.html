@@ -2,23 +2,25 @@
 <html>
   <head>
      <meta charset="utf-8">
-     <link rel="stylesheet" href="./jugueteria.css"/>
+     <link href="../../../assets/libs/bootstrap-5.0.2/css/bootstrap.min.css" rel="stylesheet">
      <link rel="stylesheet" href="../../../assets/icons/bootstrap/bootstrap-icons.css">
+     <link rel="stylesheet" href="./jugueteria.css"/>
   </head>
   <body onscroll="detectarScroll()">
     <header>
-      <div class="header_principal">
+      <div class="header_principal row">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
         <i class="bi bi-list header_menu" onclick="colapsarExpandirMenu();"></i>
         <h1 class="header_titulo">
           <a href="../inicio/inicio.html">Juguetería</a>
         </h1>
         <span class="header_busqueda">
-          <input type="text" placeholder="HOLA ,¿QUE ESTAS BUSCANDO?">
+          <input type="text" placeholder="Hola ¿Qué estas buscando?">
           <i class="bi bi-search"></i>
         </span>
         </div>
-        <div class="header_acciones header_acciones col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <div class="header_acciones col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <!-- CARRITO -->
           <span class="header_acciones_carrito">
             <i class="bi bi-cart-check" onclick="mostrarOcultarPopup('.popup_carrito');"></i>
             <div class="header_notificacion header_notificacion-principal">0</div>   
@@ -148,14 +150,14 @@
               </div>
               <div class="modal_footer">
                 <button class="btn btn-primary">Aceptar</button>
-                <button class="btn btn-secundario">Cancelar</button>
+                <button class="btn btn-light">Cancelar</button>
               </div>
             </div>
           </div>
         </div>
       </div>
       
-      <div class="header_secundario">
+      <div class="header_secundario row">
         <div class="header_menu_secundario col-sm-3 col-md-3 col-lg-3 col-xl-3 header_menu_secundario--seleccionado"> 
           <a href="../jugueteria/jugueteria.html">
             <i class="bi bi-truck-flatbed"></i> 
@@ -219,199 +221,8 @@
       </div>
     </nav>
     
-    <main>  
-      <div class="tarjetas">
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12"> 
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/piano.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Juguetes</span><br>
-            <span><b>0-2</b></span>
-            <p>Piano para bebes de deferentes colores para un mejor aprendizaje</p>
-            <span class="tarjeta2_body_precio">S/. 50.00</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/tortuga.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Juguetes</span><br>
-            <span><b>0-2</b></span>
-            <p>Totuga musical con canciones en ingles y español</p>
-            <span class="tarjeta2_body_precio">S/. 40.25</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12"> 
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/coche.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Coche</span><br>
-            <span><b>2-4</b></span>
-            <p>coche para niñas con diferentes diseños</p>
-            <span class="tarjeta2_body_precio">S/. 80.25</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/muñeco.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Juguetes</span><br>
-            <span><b>2-4</b></span>
-            <p>muñeca con chupon que llora y habla y remeda</p>
-            <span class="tarjeta2_body_precio">S/. 45.75</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/caballo.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Caballito</span><br>
-            <span><b>2-4</b></span>
-            <p>Caballo para montar y también es musical</p>
-            <span class="tarjeta2_body_precio">S/. 90.75</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/carro.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Carrito</span><br>
-            <span><b>2-4</b></span>
-            <p>Aprenderás a dar tus primeros pasitos jugando</p>
-            <span class="tarjeta2_body_precio">S/. 65.45</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/dinosaurios.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>Dino</span><br>
-            <span><b>2-4</b></span>
-            <p>Jalaras a un carrito de dino divertido</p>
-            <span class="tarjeta2_body_precio">S/. 80.75</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div> 
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/figuras.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>figuras</span><br>
-            <span><b>2-4</b></span>
-            <p>juago dinamicos pra niños y niñas</p>
-            <span class="tarjeta2_body_precio">S/. 25.80</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div> 
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/payaso.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>payasitos</span><br>
-            <span><b>2-4</b></span>
-            <p>payasitos de madera para armar y elegir</p>
-            <span class="tarjeta2_body_precio">S/. 30.40</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/pelotas.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>pelotas</span><br>
-            <span><b>2-4</b></span>
-            <p>pelotas de juguete muy modernas y coloridas</p>
-            <span class="tarjeta2_body_precio">S/. 15.75</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/cuadro.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>cuadritos</span><br>
-            <span><b>2-4</b></span>
-            <p>cuadritos de madera de colores para armar</p>
-            <span class="tarjeta2_body_precio">S/. 55.75</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
-        
-        <div class="tarjeta2 col-xl-3 col-lg-4 col-md-6 col-sm-12">             
-          <div class="tarjeta2_header">         
-            <img src="../../../assets/img/lonchera.jpg">
-          </div>
-          <div class="tarjeta2_body">      
-            <span>lonchera</span><br>
-            <span><b>2-4</b></span>
-            <p>lonchera de madera para llevar tus juguetes</p>
-            <span class="tarjeta2_body_precio">S/. 65.75</span>
-          </div>
-          
-          <div class="tarjeta2_footer">
-            <button type="button">AGREGAR</button>
-          </div>
-        </div>
+    <main>         
+      <div class="tarjetas row">
       </div>
          
      
@@ -498,7 +309,7 @@
           <!-- </table> -->
         <!-- </div> -->
         
-      <div class="categorias">    
+      <div class="categorias row">    
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
           <div class="categorias_menu ">
             <img src="../../../assets/img/piano.jpg">
@@ -567,7 +378,7 @@
     </main>
     
     <footer>
-      <div class="footer_access">
+      <div class="footer_access row">
         <div class="footer_menu_secundario col-sm-6 col-md-6 col-lg-3 col-xl-3">           
           <i class="bi bi-house"></i> 
           <b>Recojo en<br>tienda<span>&nbsp;&gt;</span></b>    
@@ -589,30 +400,33 @@
         </div>
       </div>
       
-      <div class="footer_contacto">
-        <h3>Comunícate con nosotros:</h3>
-        <span>Lima: <b>(01) 625-8000</b></span>
-        <br>
-        <span>Provincia: <b> (+51)0800-00020</b></span>
-      </div>
-    
-      <div class="footer_siganos">
-        <h3>Siguenos en:</h3>
-        <a href="https://web.facebook.com/" target="_blank" title="Facebook">
-          <i class="bi bi-facebook"></i>
-        </a>
-        <a href="https://www.youtube.com/" target="_blank" title="Youtube">
-          <i class="bi bi-youtube"></i>
-        </a>
-        <a href="https://twitter.com/" target="_blank" title="Twitter">
-          <i class="bi bi-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/" target="_blank" title="Instagram">
-          <i class="bi bi-instagram"></i>
-        </a>
+      <div class="row">
+        <div class="footer_contacto col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <h3>Comunícate con nosotros:</h3>
+          <span>Lima: <b>(01) 625-8000</b></span>
+          <br>
+          <span>Provincia: <b> (+51)0800-00020</b></span>
+        </div>
+
+        <div class="footer_siganos col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <h3>Siguenos en:</h3>
+          <a href="https://web.facebook.com/" target="_blank" title="Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.youtube.com/" target="_blank" title="Youtube">
+            <i class="bi bi-youtube"></i>
+          </a>
+          <a href="https://twitter.com/" target="_blank" title="Twitter">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
       </div>
     </footer>
     
+    <script src="../../../assets/libs/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
     <script src="./jugueteria.js"></script>
-   </body>
+  </body>
 </html>

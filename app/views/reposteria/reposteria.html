@@ -2,23 +2,24 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./reposteria.css"/>
+    <link href="../../../assets/libs/bootstrap-5.0.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../../assets/icons/bootstrap/bootstrap-icons.css">
+    <link rel="stylesheet" href="./reposteria.css"/>
   </head>
   <body onscroll="detectarScroll()">
     <header>
-      <div class="header_principal">
+      <div class="header_principal row">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
           <i class="bi bi-list header_menu" onclick="colapsarExpandirMenu();"></i>
           <h1 class="header_titulo">
-            <a href="../inicio/inicio.html">INICIO</a>
+            <a href="../inicio/inicio.html">Inicio</a>
           </h1>
           <span class="header_busqueda">
-            <input type="text" placeholder="HOLA ,¿QUE ESTAS BUSCANDO?">
+            <input type="text" placeholder="Hola ¿Qué estas buscando?">
             <i class="bi bi-search"></i>
           </span>
         </div>
-        <div class="header_acciones header_acciones col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <div class="header_acciones col-xl-6 col-lg-6 col-md-6 col-sm-12">
           <!-- CARRITO -->
           <span class="header_acciones_carrito">
             <i class="bi bi-cart-check" onclick="mostrarOcultarPopup('.popup_carrito');"></i>
@@ -42,7 +43,7 @@
                   </div>  
                 </div>
                 <div class="popup_footer">
-                  <button class="btn btn-primary">Continuar</button>
+                  <button class="btn btn-primary"><a href="../carrito/carrito.html">Continuar</a></button>
                 </div>
               </div>
             </div>
@@ -150,14 +151,14 @@
               </div>
               <div class="modal_footer">
                 <button class="btn btn-primary">Aceptar</button>
-                <button class="btn btn-secundario">Cancelar</button>
+                <button class="btn btn-light">Cancelar</button>
               </div>
             </div>
           </div>
         </div>
       </div>
       
-      <div class="header_secundario">
+      <div class="header_secundario row">
         <div class="header_menu_secundario col-sm-3 col-md-3 col-lg-3 col-xl-3"> 
           <a href="../jugueteria/jugueteria.html">
             <i class="bi bi-truck-flatbed"></i> 
@@ -221,8 +222,8 @@
       </div>
     </nav>
     
-    <main> 
-      <div class="tarjetas">
+    <main>       
+      <div class="tarjetas row">
         
       </div>
     
@@ -352,7 +353,7 @@
         <!-- </div> -->
       <!-- </div> -->
       
-      <div class="categorias">    
+      <div class="categorias row">    
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
           <div class="categorias_menu ">
             <img src="../../../assets/img/torta_chocolate_fresa.jpg">
@@ -421,7 +422,7 @@
     </main>
     
     <footer>
-      <div class="footer_access">
+      <div class="footer_access row">
         <div class="footer_menu_secundario col-sm-6 col-md-6 col-lg-3 col-xl-3">           
           <i class="bi bi-house"></i> 
           <b>Recojo en<br>tienda<span>&nbsp;&gt;</span></b>    
@@ -443,30 +444,34 @@
         </div>
       </div>
       
-      <div class="footer_contacto">
-        <h3>Comunícate con nosotros:</h3>
-        <span>Lima: <b>(01) 625-8000</b></span>
-        <br>
-        <span>Provincia: <b> (+51)0800-00020</b></span>
-      </div>
-    
-      <div class="footer_siganos">
-        <h3>Siguenos en:</h3>
-        <a href="https://web.facebook.com/" target="_blank" title="Facebook">
-          <i class="bi bi-facebook"></i>
-        </a>
-        <a href="https://www.youtube.com/" target="_blank" title="Youtube">
-          <i class="bi bi-youtube"></i>
-        </a>
-        <a href="https://twitter.com/" target="_blank" title="Twitter">
-          <i class="bi bi-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/" target="_blank" title="Instagram">
-          <i class="bi bi-instagram"></i>
-        </a>
+      <div class="row">
+        <div class="footer_contacto col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <h3>Comunícate con nosotros:</h3>
+          <span>Lima: <b>(01) 625-8000</b></span>
+          <br>
+          <span>Provincia: <b> (+51)0800-00020</b></span>
+        </div>
+      
+        <div class="footer_siganos col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <h3>Siguenos en:</h3>
+          <a href="https://web.facebook.com/" target="_blank" title="Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.youtube.com/" target="_blank" title="Youtube">
+            <i class="bi bi-youtube"></i>
+          </a>
+          <a href="https://twitter.com/" target="_blank" title="Twitter">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
       </div>
     </footer>
     
+    <script src="../../../assets/libs/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
     <script src="./reposteria.js"></script>
+
   </body>
 </html>

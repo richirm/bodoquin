@@ -328,6 +328,31 @@ construirProductosEnCarrito();
 /*****************************************/
 
 
+/*************** TABS ********************/
+var numeroTabSeleccionado = 1;
+
+function mostrarTab(numeroTab) {
+  document.querySelector(`.tabs .tabs_header .tab:nth-child(${numeroTab})`).classList.add('tab--seleccionado');
+  document.querySelector(`.tabs .tabs_header .tab:nth-child(${numeroTabSeleccionado})`).classList.remove('tab--seleccionado');
+  
+  document.querySelector(`.tabs .tabs_body .tab:nth-child(${numeroTab})`).classList.add('tab--seleccionado');
+  document.querySelector(`.tabs .tabs_body .tab:nth-child(${numeroTabSeleccionado})`).classList.remove('tab--seleccionado');
+  
+  numeroTabSeleccionado = numeroTab;
+}
+
+function calcularAnchoTab() {
+  var tabs = document.querySelectorAll('.tabs .tabs_header .tab');
+  var cantidadTabs = tabs.length;
+  var anchoTab = 100/cantidadTabs;
+  
+  tabs.forEach(function(tab) {
+    tab.style.width = `calc(${anchoTab}% - ${cantidadTabs}px)`;
+  });
+}
+
+calcularAnchoTab();
+/****************************************/
 
 
 

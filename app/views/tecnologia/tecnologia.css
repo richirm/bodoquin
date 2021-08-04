@@ -476,6 +476,11 @@ body.con-scroll .header_secundario {
   text-align: initial;
 }
 
+.header_acciones .header_acciones_usuario .header_acciones_usuario_popup a{
+  color: #64676a;
+  text-decoration: none;
+}
+
 .header_acciones .header_acciones_usuario .header_acciones_usuario_popup ul {
   padding-left: 20px;
   padding-right: 20px;

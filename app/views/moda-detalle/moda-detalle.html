@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="../../../assets/libs/bootstrap-5.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../assets/libs/bootstrap-5.0.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../../assets/icons/bootstrap/bootstrap-icons.css">
-    <link rel="stylesheet" href="./moda.css"/>
-  </head>
+    <link rel="stylesheet" href="./moda-detalle.css"/>
+  </head> 
+  
   <body onscroll="detectarScroll()">
     <header>
       <div class="header_principal row">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
           <i class="bi bi-list header_menu" onclick="colapsarExpandirMenu();"></i>
           <h1 class="header_titulo">
-            <a href="../inicio/inicio.html">Inicio</a>
+            <a href="../inicio/inicio.html">Detalle de productos - Moda</a>
           </h1>
-          <span class="header_busqueda">
-            <input type="text" placeholder="HOLA ,¿QUE ESTAS BUSCANDO?">
-            <i class="bi bi-search"></i>
-          </span>
         </div>
+        
         <div class="header_acciones col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <!-- CARRITO -->
           <span class="header_acciones_carrito">
             <i class="bi bi-cart-check" onclick="mostrarOcultarPopup('.popup_carrito');"></i>
-            <div class="header_notificacion header_notificacion-principal">3</div>   
+            <div class="header_notificacion header_notificacion-principal">0</div>   
             
             <div class="popup popup_carrito">
               <div class="popup_backdrop" onclick="mostrarOcultarPopup('.popup_carrito');"></div>
@@ -46,6 +46,7 @@
               </div>
             </div>
           </span>
+          <!-- FIN CARRITO -->
           
           <span class="header_acciones_usuario">              
             <i class="bi bi-person-fill" onclick="mostrarOcultarUsuarioPopup();"></i>
@@ -65,7 +66,6 @@
                 
                 <li>
                   <i class="bi bi-basket"></i>
-                  <a href="../moda-detalle/moda-detalle.html">
                   <span>Mis pedidos</span>
                 </li>
               
@@ -156,7 +156,6 @@
         </div>
       </div>
       
-      
       <div class="header_secundario row">
         <div class="header_menu_secundario col-sm-3 col-md-3 col-lg-3 col-xl-3"> 
           <a href="../jugueteria/jugueteria.html">
@@ -165,7 +164,7 @@
           </a>
         </div>
         
-        <div class="header_menu_secundario col-sm-3 col-md-3 col-lg-3 col-xl-3 header_menu_secundario--seleccionado">
+        <div class="header_menu_secundario col-sm-3 col-md-3 col-lg-3 col-xl-3">
           <a href="../moda/moda.html">
             <i class="bi bi-screwdriver"></i> 
             <div>Moda</div>
@@ -190,7 +189,7 @@
     
     <nav>
       <div class="nav_backdrop" onclick="colapsarExpandirMenu();"></div>
-      <div class="nav_menu colapsado"> 
+      <div class="nav_menu colapsado" >
         <h2>Menú opciones</h2>
         <ul>
           <li>
@@ -199,8 +198,8 @@
               <span>&gt;</span>
             </a>
           </li>
-          <li class="nav_menu--seleccionado">
-            <a href="./moda.html">
+          <li>
+            <a href="../moda/moda.html">
               <i class="bi bi-screwdriver"></i> Moda
               <span>&gt;</span>
             </a>
@@ -222,80 +221,11 @@
     </nav>
     
     <main>
-      <div class="tarjetas row">
 
-      </div>
-      
-      <div class="categorias row">    
-        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-          <div class="categorias_menu ">
-            <img src="../../../assets/img/nars.jpg">
-            <h1>Maquillaje</h1>
-            <h2 onclick="mostrarOcultarModalCategoria('nars.jpg')">Ver foto</h2>       
-          </div>
-        </div>
-        
-        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-          <div class="categorias_menu">
-            <img src="../../../assets/img/sandalias.jpg">
-            <h1>Sandalias</h1>
-            <h2 onclick="mostrarOcultarModalCategoria('sandalias.jpg')">Ver foto</h2>        
-          </div>
-        </div>
-        
-        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-          <div class="categorias_menu">
-            <img src="../../../assets/img/sunglassesaesthetic.jpg">
-            <h1>Accesorios</h1>
-            <h2 onclick="mostrarOcultarModalCategoria('sunglassesaesthetic.jpg')">Ver foto</h2>        
-          </div>
-        </div>
-        
-        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-          <div class="categorias_menu">
-            <img src="../../../assets/img/bota.jpg">
-            <h1>Botas</h1>
-            <h2 onclick="mostrarOcultarModalCategoria('bota.jpg')">Ver foto</h2>        
-          </div>
-        </div>  
-          
-        <div class="modal modal_categorias">
-          <div class="modal_backdrop" onclick="mostrarOcultarModalCategoria()"></div>
-          <div class="modal_contenedor modal-md">
-            <div class="modal_header">
-              <h1>Categoría</h1>
-              <i class="bi bi-x" onclick="mostrarOcultarModalCategoria()"></i>
-            </div>
-            <div class="modal_body texto-centrado">
-              <img src="../../../assets/img/galaxynote20.jpg">
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="chat">
-        <div class="chat_backdrop" onclick="mostrarOcultarChat();"></div>
-        <div class="chat_popup">
-          <div class="chat_popup_header">
-            <i class="bi bi-messenger chat_logo" ></i>
-            <h1 >Bodoquin</br><small>Siempre contigo</small></h1>
-            <i class="bi bi-x chat_cerrar" onClick="mostrarOcultarChat()"></i>
-          </div>
-          <div class="chat_popup_body">
-          </div>
-          <div class="chat_popup_footer">
-            <input type="text" required placeholder="¿En que te ayudamos?..."  />
-            <i class="bi bi-arrow-right-circle"></i>
-          </div>
-        </div>
-        <div class="chat_fab">
-          <i class="bi bi-messenger" onclick="mostrarOcultarChat();"></i>
-        </div>
-      </div>
     </main>
     
     <footer>
-           <div class="footer_access row">
+      <div class="footer_access row">
         <div class="footer_menu_secundario col-sm-6 col-md-6 col-lg-3 col-xl-3">           
           <i class="bi bi-house"></i> 
           <b>Recojo en<br>tienda<span>&nbsp;&gt;</span></b>    
@@ -342,8 +272,8 @@
         </div>
       </div>
     </footer>
+    
     <script src="../../../assets/libs/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
-    <script src="./moda.js"></script>
+    <script src="./moda-detalle.js"></script>
   </body>
 </html>
-        

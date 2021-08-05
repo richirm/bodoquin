@@ -2,27 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <link href="../../../assets/libs/bootstrap-5.0.2/css/bootstrap.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="../../../assets/icons/bootstrap/bootstrap-icons.css">
-      <link rel="stylesheet" href="./tecnologia.css"/>
-  </head>
+    <link rel="stylesheet" href="../../../assets/libs/bootstrap-5.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../assets/icons/bootstrap/bootstrap-icons.css">
+    <link rel="stylesheet" href="./tecnologia-detalle.css"/>
+  </head> 
+  
   <body onscroll="detectarScroll()">
     <header>
       <div class="header_principal row">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
           <i class="bi bi-list header_menu" onclick="colapsarExpandirMenu();"></i>
           <h1 class="header_titulo">
-            <a href="../inicio/inicio.html">Inicio</a>
+            <a href="../inicio/inicio.html">Detalle de productos - Tecnologia</a>
           </h1>
-          <span class="header_busqueda">
-            <input type="text" placeholder="HOLA ,¿QUE ESTAS BUSCANDO?">
-            <i class="bi bi-search"></i>
-          </span>
         </div>
+        
         <div class="header_acciones col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <!-- CARRITO -->
           <span class="header_acciones_carrito">
             <i class="bi bi-cart-check" onclick="mostrarOcultarPopup('.popup_carrito');"></i>
-            <div class="header_notificacion header_notificacion-principal">3</div>   
+            <div class="header_notificacion header_notificacion-principal">0</div>   
             
             <div class="popup popup_carrito">
               <div class="popup_backdrop" onclick="mostrarOcultarPopup('.popup_carrito');"></div>
@@ -47,6 +46,7 @@
               </div>
             </div>
           </span>
+          <!-- FIN CARRITO -->
           
           <span class="header_acciones_usuario">              
             <i class="bi bi-person-fill" onclick="mostrarOcultarUsuarioPopup();"></i>
@@ -66,7 +66,6 @@
                 
                 <li>
                   <i class="bi bi-basket"></i>
-                  <a href="../tecnologia-detalle/tecnologia-detalle.html">
                   <span>Mis pedidos</span>
                 </li>
               
@@ -157,7 +156,6 @@
         </div>
       </div>
       
-      
       <div class="header_secundario row">
         <div class="header_menu_secundario col-sm-3 col-md-3 col-lg-3 col-xl-3"> 
           <a href="../jugueteria/jugueteria.html">
@@ -173,7 +171,7 @@
           </a>
         </div>
         
-        <div class="header_menu_secundario col-sm-3 col-md-3 col-lg-3 col-xl-3 header_menu_secundario--seleccionado">  
+        <div class="header_menu_secundario col-sm-3 col-md-3 col-lg-3 col-xl-3">  
           <a href="../tecnologia/tecnologia.html">
             <i class="bi bi-laptop"></i> 
             <div>Tecnologia</div>
@@ -191,7 +189,7 @@
     
     <nav>
       <div class="nav_backdrop" onclick="colapsarExpandirMenu();"></div>
-      <div class="nav_menu colapsado">
+      <div class="nav_menu colapsado" >
         <h2>Menú opciones</h2>
         <ul>
           <li>
@@ -206,8 +204,8 @@
               <span>&gt;</span>
             </a>
           </li>
-          <li class="nav_menu--seleccionado">
-            <a href="./tecnologia.html">
+          <li>
+            <a href="../tecnologia/tecnologia.html">
               <i class="bi bi-laptop"></i> Tecnología
               <span>&gt;</span>
             </a>
@@ -222,193 +220,10 @@
       </div>
     </nav>
     
-    <main class="ajuste">
-      <div class="tarjetas row">
-        
-      </div>
-     
-      <!-- <div class="tarjeta"> -->
-        <!-- <h1> -->
-          <!-- <span> -->
-           <!-- PEDIDO<div class="burbuja burbuja_principal">1</div> -->
-          <!-- </span> -->
-        <!-- </h1> -->
-        
-        <!-- <form> -->
-          <!-- <label>Equipo movil:* </label> -->
-            <!-- <input name="equipo_movil" type="text" required placeholder="ingrese equipo movil..."  /> -->
+    <main>
 
-          <!-- <br/> -->
-          <!-- <label>Cantidad:* </label> -->
-            <!-- <input name="cantidad" type="number" required required placeholder="ingrese cantidad.."/> -->
-
-          <!-- <br/> -->
-          <!-- <label>Email:* </label> -->
-            <!-- <input name="email" type="email" required required placeholder="ingrese email..." /> -->
-
-          <!-- <br/> -->
-
-          <!-- <label>Departamento: </label> -->
-            <!-- <select name="departamento"> -->
-              <!-- <option>LIMA</option> -->
-              <!-- <option>AREQUIPA</option> -->
-              <!-- <option>PIURA</option> -->
-              <!-- <option>TACNA</option> -->
-              <!-- <option>LAMBAYEQUE</option> -->
-              <!-- <option>TRUJILLO</option> -->
-              <!-- <option>IQUITOS</option> -->
-              <!-- <option>ANCASH</option> -->
-              <!-- <option>AYACUCHO</option> -->
-              <!-- <option>JUNIN</option> -->
-            <!-- </select> -->
-
-          <!-- <br/> -->
-
-          <!-- <label>Provincia: </label> -->
-            <!-- <select name="provincia"> -->
-              <!-- <option>LIMA</option> -->
-              <!-- <option>HUARAL</option> -->
-              <!-- <option>MALA</option> -->
-              <!-- <option>PUNTA HERMOSA</option> -->
-              <!-- <option>PISCO</option> -->
-              <!-- <option>CHINCHA</option> -->
-              <!-- <option>CHNCAY</option> -->
-              <!-- <option>CALLAO</option> -->
-            <!-- </select> -->
-
-          <!-- <br/> -->
-
-          <!-- <label>Distrito: </label> -->
-            <!-- <select name="distrito"> -->
-              <!-- <option>VILLA MARIA DEL TRIUNFO</option> -->
-              <!-- <option>SAN JUAN DE MIRAFLORES</option> -->
-              <!-- <option>INDEPENDENCIA</option> -->
-              <!-- <option>SAN MIGUEL</option> -->
-              <!-- <option>JESUS MARIA</option> -->
-              <!-- <option>MIRAFLORES</option> -->
-              <!-- <option>SAN ISIDRO</option> -->
-              <!-- <option>CHORRILLOS</option> -->
-              <!-- <option>BREÑA</option> -->
-              <!-- <option>PUEBLO LIBRE</option> -->
-              <!-- <option>SURQUILLO</option> -->
-              <!-- <option>COMAS</option> -->
-              <!-- <option>LA MOLINA</option> -->
-              <!-- <option>VILLA EL SALVADOR</option> -->
-              <!-- <option>EL AGUSTINO</option> -->
-              <!-- <option>ATE</option> -->
-              <!-- <option>SAMTA ANITA</option> -->
-            <!-- </select> -->
-
-          <!-- <br/> -->
-
-          <!-- <label>Comentarios: </label> -->
-            <!-- <textarea name="comentarios"></textarea>  -->
-
-          <!-- <br/><br/> -->
-          <!-- <button type="reset">borrar</button> -->
-          <!-- <button type="button" onClick="realizarPedido();">Realizar pedido</button> -->
-        <!-- </form> -->
-      <!-- </div> -->
-      
-      
-      <!-- <div class="tarjeta"> -->
-        <!-- <h1> -->
-          <!-- <span> -->
-          <!-- REGISTRO USUARIO<div class="burbuja burbuja_principal">1</div> -->
-          
-          <!-- </span> -->
-        <!-- </h1> -->
-          <!-- <form> -->
-            <!-- <label>Usuario</LABEL> -->
-            <!-- <input type="text" required placeholder="Ingrese usuario.."/> -->
-            
-            <!-- <br/> -->
-            
-            <!-- <label>Email</label> -->
-            <!-- <input type="email" required placeholder="example@gmail.com"/> -->
-            
-            <!-- <br/> -->
-            
-            <!-- <label>Contraseña</label> -->
-            <!-- <input type="password" required required placeholder="***********"/> -->
-            
-            <!-- <br/> -->
-           
-            <!-- <button type="reset">borrar</button> -->
-            <!-- <button type="button" onClick="realizarPedido();">Realizar pedido</button> -->
-          <!-- </form> -->
-          
-      <!-- </div> -->
-      
-      <div class="categorias row">    
-        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-          <div class="categorias_menu ">
-            <img src="../../../assets/img/galaxynote20.jpg">
-            <h1>Moviles</h1>
-            <h2 onclick="mostrarOcultarModalCategoria('galaxynote20.jpg')">Ver foto</h2>       
-          </div>
-        </div>
-        
-        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-          <div class="categorias_menu">
-            <img src="../../../assets/img/laptophpgaming.jpg">
-            <h1>Laptops</h1>
-            <h2 onclick="mostrarOcultarModalCategoria('laptophpgaming.jpg')">Ver foto</h2>        
-          </div>
-        </div>
-        
-        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-          <div class="categorias_menu">
-            <img src="../../../assets/img/samsungtv70.jpg">
-            <h1>Televisores</h1>
-            <h2 onclick="mostrarOcultarModalCategoria('samsungtv70.jpg')">Ver foto</h2>        
-          </div>
-        </div>
-        
-        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-          <div class="categorias_menu">
-            <img src="../../../assets/img/galaxynote20.jpg">
-            <h1>Tablets</h1>
-            <h2 onclick="mostrarOcultarModalCategoria('galaxynote20.jpg')">Ver foto</h2>        
-          </div>
-        </div>  
-          
-        <div class="modal modal_categorias">
-          <div class="modal_backdrop" onclick="mostrarOcultarModalCategoria()"></div>
-          <div class="modal_contenedor modal-md">
-            <div class="modal_header">
-              <h1>Categoría</h1>
-              <i class="bi bi-x" onclick="mostrarOcultarModalCategoria()"></i>
-            </div>
-            <div class="modal_body texto-centrado">
-              <img src="../../../assets/img/galaxynote20.jpg">
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="chat">
-        <div class="chat_backdrop" onclick="mostrarOcultarChat();"></div>
-        <div class="chat_popup">
-          <div class="chat_popup_header">
-            <i class="bi bi-messenger chat_logo" ></i>
-            <h1 >Bodoquin</br><small>Siempre contigo</small></h1>
-            <i class="bi bi-x chat_cerrar" onClick="mostrarOcultarChat()"></i>
-          </div>
-          <div class="chat_popup_body">
-          </div>
-          <div class="chat_popup_footer">
-            <input type="text" required placeholder="¿En que te ayudamos?..."  />
-            <i class="bi bi-arrow-right-circle"></i>
-          </div>
-        </div>
-        <div class="chat_fab">
-          <i class="bi bi-messenger" onclick="mostrarOcultarChat();"></i>
-        </div>
-      </div>
-      
     </main>
-      
+    
     <footer>
       <div class="footer_access row">
         <div class="footer_menu_secundario col-sm-6 col-md-6 col-lg-3 col-xl-3">           
@@ -459,6 +274,6 @@
     </footer>
     
     <script src="../../../assets/libs/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
-    <script src="./tecnologia.js"></script>
+    <script src="./tecnologia-detalle.js"></script>
   </body>
 </html>

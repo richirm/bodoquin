@@ -79,3 +79,60 @@ function mostrarOcultarPopup(selectorPopup) {
   }
 }
 /*****************************************/
+
+/************** MAIN *********************/
+var idProducto;
+var producto;
+
+function obtenerInformacionProducto() {
+  location.search.substring(1).split('&').forEach(function(parametro) {
+    var atributo = parametro.split('=');
+    var nombreAtributo = atributo[0];
+    var valorAtributo = atributo[1];
+    
+    if(nombreAtributo === 'idProducto') {
+      idProducto = valorAtributo;
+    }
+  });
+  
+  // Aquí se llamaría al backend para obtener la información del producto en base a su idProducto
+  
+  producto = {
+    idProducto: 1008,
+    nombreImg: 'sombrero.jpg', 
+    nombreCategoria: 'Sombrero',
+    nombreProducto: 'Sombrero moderno de playa',
+    descripcionProducto: 'Lindo sombrero con excelentes acabados',
+    precioProducto: 150,
+    cantidadProducto: 0,
+  };
+}
+
+obtenerInformacionProducto();
+/*****************************************/
+
+/*************** TABS ********************/
+var numeroTabSeleccionado = 1;
+
+function mostrarTab(numeroTab) {
+  document.querySelector(`.tabs .tabs_header .tab:nth-child(${numeroTab})`).classList.add('tab--seleccionado');
+  document.querySelector(`.tabs .tabs_header .tab:nth-child(${numeroTabSeleccionado})`).classList.remove('tab--seleccionado');
+  
+  document.querySelector(`.tabs .tabs_body .tab:nth-child(${numeroTab})`).classList.add('tab--seleccionado');
+  document.querySelector(`.tabs .tabs_body .tab:nth-child(${numeroTabSeleccionado})`).classList.remove('tab--seleccionado');
+  
+  numeroTabSeleccionado = numeroTab;
+}
+
+function calcularAnchoTab() {
+  var tabs = document.querySelectorAll('.tabs .tabs_header .tab');
+  var cantidadTabs = tabs.length;
+  var anchoTab = 100/cantidadTabs;
+  
+  tabs.forEach(function(tab) {
+    tab.style.width = `calc(${anchoTab}% - ${cantidadTabs}px)`;
+  });
+}
+
+calcularAnchoTab();
+/****************************************/

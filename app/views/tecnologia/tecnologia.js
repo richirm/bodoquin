@@ -491,3 +491,4 @@ construirProductosEnTarjetas();
 
 function redirigirProductoDetalle(idProducto) {
   location.href = `../tecnologia-detalle/tecnologia-detalle.html?idProducto=${idProducto}`;
+}

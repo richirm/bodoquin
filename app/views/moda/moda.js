@@ -491,3 +491,4 @@ construirProductosEnTarjetas();
 
 function redirigirProductoDetalle(idProducto) {
   location.href = `../moda-detalle/moda-detalle.html?idProducto=${idProducto}`;
+}

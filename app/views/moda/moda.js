@@ -432,7 +432,7 @@ function construirProductosEnTarjetas() {
     
     var htmlTarjeta = `
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-        <div class="tarjeta2">             
+        <div class="tarjeta2" onclick="redirigirProductoDetalle(${producto.idProducto})">         
           <div class="tarjeta2_header">         
             <img src="../../../assets/img/${producto.nombreImg}">
           </div>
@@ -456,7 +456,9 @@ function construirProductosEnTarjetas() {
   document.querySelector('.tarjetas').innerHTML = htmlTarjetas;
 }
 
-function insertProductoToCar(idProductoSeleccionado) {
+function insertProductoToCar(idProductoSeleccionado, evento) {
+  evento.stopPropagation();
+  
   // Ubica el producto que hemos dado click en los productos de las tarjetas
   var productoSeleccionado;
   productosTarjeta.forEach(function(producto) {
@@ -486,3 +488,6 @@ function insertProductoToCar(idProductoSeleccionado) {
 
 construirProductosEnTarjetas();
 /***********************************/
+
+function redirigirProductoDetalle(idProducto) {
+  location.href = `../moda-detalle/moda-detalle.html?idProducto=${idProducto}`;

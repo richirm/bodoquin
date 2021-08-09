@@ -789,7 +789,13 @@ footer {
 }                          
                             
 .producto-detalle-principal .producto-detalle-principal_imagen--principal {
+  overflow: hidden;
+  height: 350px;
+  border: 1px solid red;
+}                         
                             
+.producto-detalle-principal .producto-detalle-principal_imagen--principal:hover img {
+  width: auto;    
 }                      
                             
 .producto-detalle-principal .producto-detalle-principal_imagen--principal img {

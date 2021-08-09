@@ -144,6 +144,7 @@ function mostrarOcultarModalCerrarSesion() {
     modalCerrarSesionVisible = true;
   }
 }
+
 /**************** CHAT *******************/
 function mostrarOcultarChat() {
   clearTimeout(timeoutChat);
@@ -182,6 +183,7 @@ function mostrarOcultarModalCategoria(nombreImagen) {
   }
 }
 /********************************************/
+
 /************* POPUP *********************/
 function mostrarOcultarPopup(selectorPopup) {
   var popupDisplay = document.querySelector(selectorPopup).style.display;
@@ -192,8 +194,6 @@ function mostrarOcultarPopup(selectorPopup) {
     document.querySelector(`${selectorPopup}`).style.display = 'inline-block';
   }
 }
-/*****************************************/
-
 /*****************************************/
 
 /*********** POPUP - CARRITO COMPRA *******/
@@ -230,13 +230,13 @@ function construirProductosEnCarrito() {
           
           <div class="carrito_producto_contador">
             <div class="carrito_producto_contador_agrega">
-              <span><i class="bi bi-dash-lg" onclick="removeItemInProduct(${producto.idProducto})"></i></span>
-              <span><i class="bi bi-plus-lg" onclick="addItemInProduct(${producto.idProducto})"></i></span>
+              <span><i class="bi bi-dash-lg" onclick="removeItemInProduct(${producto.idProducto}, event)"></i></span>
+              <span><i class="bi bi-plus-lg" onclick="addItemInProduct(${producto.idProducto}, event)"></i></span>
             </div>
             <div class="carrito_producto_contador_cantidad">${producto.cantidadProducto}</div>
           </div>
         </div>
-        <i class="bi bi-x icono-accion" onclick="deleteProduct(${producto.idProducto})"></i>
+        <i class="bi bi-x icono-accion" onclick="deleteProduct(${producto.idProducto}, event)"></i>
       </div> 
     `;
     
@@ -249,7 +249,9 @@ function construirProductosEnCarrito() {
   document.querySelector('.popup_carrito .popup_header b').innerHTML = cantidadProductos;
 }
 
-function removeItemInProduct(idProducto) {
+function removeItemInProduct(idProducto, evento) {
+  evento.stopPropagation();
+  
   productosCarrito.forEach(function(producto) {
     if(producto.idProducto === idProducto && producto.cantidadProducto >= 2) {
       producto.cantidadProducto = producto.cantidadProducto - 1;
@@ -260,7 +262,9 @@ function removeItemInProduct(idProducto) {
   construirProductosEnTarjetas();
 }
 
-function addItemInProduct(idProducto) {
+function addItemInProduct(idProducto, evento) {
+  evento.stopPropagation();
+  
   productosCarrito.forEach(function(producto) {
     if(producto.idProducto === idProducto && producto.cantidadProducto < maximoPorProducto) {
       producto.cantidadProducto = producto.cantidadProducto + 1;
@@ -271,7 +275,9 @@ function addItemInProduct(idProducto) {
   construirProductosEnTarjetas();
 }
 
-function deleteProduct(idProducto) { 
+function deleteProduct(idProducto, evento) {
+  evento.stopPropagation();
+  
   var index = productosCarrito.findIndex(function(producto) {
     return producto.idProducto === idProducto;
   });
@@ -395,7 +401,7 @@ var productosTarjeta = [
     descripcionProducto: '12 GB RAM + 528 gb almacenamiento + uhd 4k',
     precioProducto: 2589,
     cantidadProducto: 0,
-  }, 
+  },
 ];
 
 function construirProductosEnTarjetas() {
@@ -403,17 +409,17 @@ function construirProductosEnTarjetas() {
   
   productosTarjeta.forEach(function(producto) {
     var htmlTarjetaBoton = `
-      <button type="button" onclick="insertProductoToCar(${producto.idProducto})">AGREGAR</button>
+      <button type="button" onclick="insertProductoToCar(${producto.idProducto}, event)">AGREGAR</button>
     `;
     
     var htmlTarjetaRestar = `
-      <div class="tarjeta2_contador_agregar" onclick="removeItemInProduct(${producto.idProducto})">
+      <div class="tarjeta2_contador_agregar" onclick="removeItemInProduct(${producto.idProducto}, event)">
         <i class="bi bi-dash-lg"></i>
       </div>
     `
     
     var htmlTarjetaEliminar = `
-      <div class="tarjeta2_contador_agregar" onclick="deleteProduct(${producto.idProducto})">
+      <div class="tarjeta2_contador_agregar" onclick="deleteProduct(${producto.idProducto}, event)">
         <i class="bi bi-trash"></i>
       </div>
     `
@@ -424,7 +430,7 @@ function construirProductosEnTarjetas() {
         <div class="tarjeta2_contador_unidades">
           <span><b>${producto.cantidadProducto}</b> un</span>
         </div>
-        <div class="tarjeta2_contador_agregar" onclick="addItemInProduct(${producto.idProducto})">
+        <div class="tarjeta2_contador_agregar" onclick="addItemInProduct(${producto.idProducto}, event)">
           <i class="bi bi-plus-lg"></i>
         </div>
       </div>
@@ -432,7 +438,7 @@ function construirProductosEnTarjetas() {
     
     var htmlTarjeta = `
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-        <div class="tarjeta2" onclick="redirigirProductoDetalle(${producto.idProducto})">            
+        <div class="tarjeta2" onclick="redirigirProductoDetalle(${producto.idProducto})">             
           <div class="tarjeta2_header">         
             <img src="../../../assets/img/${producto.nombreImg}">
           </div>

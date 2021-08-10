@@ -52,29 +52,45 @@ Aplicación bodoquin
   - commits:
       feat(componente): descripcion
       fix(componente): descripcion
+  - nodejs y npm:
+    - node --version
+    - npm --version
+  - instalar Angular:
+    - npm install -g @angular/cli(@version)
+    - ng version bodoquin-pruebita
+    - npm start
+    - localhost:4200
   
 4. Metodología del proyecto:
   - SCRUM: es una metodología agil para dividirnos el desarrollo
     - feature => una mejora 
-    - pesos: 0.5 1, 2, 3, 5, 8, 13
-    - Features: (Lista de tareas - tablero KANBAN) 26
-      - implementar componente de tabs 5
-      - implementar vistas de detalle de producto 13
-        - construir la estructura principal de la vista -  layout (header, footer, nav, main)
-        - construir el contenido de la vista:
-          - zoom de la imagen
-          - lógica para disminuir o aumentar las unidades del producto
-        - integrarse con el carrito de compras
-        - integrar con el componente de tabs para crear la sección del detalle adicional del producto
-          - especificaciones
-          - descripcion
-      - Introducción a Angular 8
-        - ¿que es framework?
-        - ¿que es Angular?
-        - cómo instalar Angular
+    - pesos: 0.5 1, 2, 3, 5, 8, 13, 21
+    - Features: (Lista de tareas - tablero KANBAN) 28
+      - Introducción a Angular parte II 8
         - como crear componentes
-        - manejo de los datps (data binding)
+        - que es el ¿data binding?
+        - como usar el data binding
         - comunicacion entre componentes
+      - Migrar bodoquin a Angular 20
+        - crear componente header 3
+        - crear componente menu 3
+        - crear componente footer 3
+        - crear componente chat 3
+        - crear componente carrito 3
+        - crear componente usuario 3
+        - crear vista reposteria 5
+        - crear vista reposteria-detalle 3
+        - crear vista jugueteria 5
+        - crear vista jugueteria-detalle 3
+        - crear vista moda 5
+        - crear vista moda-detalle 3
+        - crear vista tecnologia 5
+        - crear vista tecnologia-detalle 3       
+        - crear vista inicio (home) 5    
+        - crear componente carousel 3
+        - crear componente tabs 3
+        - integrar los componentes a las vistas 3
+        - 
     - backlog => conjunto de tareas o mejoras a realizar (features futuros)      
       - Requerimientos funcionales:
         - poner un logo

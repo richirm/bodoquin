@@ -58,33 +58,46 @@ Aplicación bodoquin
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13
     - Features: (Lista de tareas - tablero KANBAN) 26
-      - integrarnos con bootstrap parte 1 - responsive 8
-      - implementar vista de resumen de la compra 8
+      - implementar componente de tabs 5
       - implementar vistas de detalle de producto 13
-        - construir la estructura principal de la vista -  (header, footer, nav)
-        - construir el contenido de la vista - 
+        - construir la estructura principal de la vista -  layout (header, footer, nav, main)
+        - construir el contenido de la vista:
+          - zoom de la imagen
+          - lógica para disminuir o aumentar las unidades del producto
         - integrarse con el carrito de compras
+        - integrar con el componente de tabs para crear la sección del detalle adicional del producto
+          - especificaciones
+          - descripcion
+      - Introducción a Angular 8
+        - ¿que es framework?
+        - ¿que es Angular?
+        - cómo instalar Angular
+        - como crear componentes
+        - manejo de los datps (data binding)
+        - comunicacion entre componentes
     - backlog => conjunto de tareas o mejoras a realizar (features futuros)      
       - Requerimientos funcionales:
         - poner un logo
-        - en la vista de inicio: implementar mini banners por cada linea de producto con efecto en el hover
-        - implementar sección de anuncios y/o publicidad
+        - implementar sección de anuncios y/o publicidad en el top
         - modal de tiendas de recojo (ubicación)
         - Implementar popup de ayuda
         - Pantalla de cambios y devoluciones
         - Pantalla de nuestras tiendas
         - integrar el responsive en la pantalla de inicio
-        - menu responsive
+        - correcciones del menu en responsive
         - mejorar pantalla de carrito:
+          - redirigir a la pantalla de carrito desde las otras vistas
           - cambiar titulo
           - quitar el buscador
           - quitar menu seleccionado en el header
           - sincronizar con carrito de compras
-      - Requerimientos no funcionales:       
+        - integrar las notificaciones o toast en donde corresponda
+      - Requerimientos no funcionales:   
+        - migrar todas las vistas a Angular
       
 5. Plataformas:
   - zoom: https://us05web.zoom.us/j/88522391492?pwd=UExqSW1vVlFuaXVOZzgxamJkQXo0QT09
-  - mural: https://app.mural.co/t/bodoquin3213/m/bodoquin3213/1623554095180/58abc96e720510263625d3e7e4bb43151d7faa2f
+  - mural: https://app.mural.co/invitation/mural/bodoquin6992/1628440329733?sender=u4198c20ad998e923de7a2867&key=6ff731e3-5eb2-4d6d-97f5-3c0f3ac2e12a
   - trello: https://trello.com/b/0RXHhEKT/bodoquin
   - github: https://github.com/richirm/bodoquin
   

@@ -1223,3 +1223,44 @@ footer {
   border-top: 1px solid #ececec;
 }
 /***********************************/
+
+/************* TABS *****************/
+.tabs {
+  width: 100%;
+}
+
+.tabs .tabs_header {
+  width: 100%;
+  background-color: #F1F1F1;
+}
+
+.tabs .tabs_header .tab {
+  display: inline-block;
+  width: calc(50% - 2px);
+  text-align: center;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.tabs .tabs_header .tab.tab--seleccionado {
+  background-color: #ffffff;
+  border-top: 2px solid #80A3EA;
+  font-weight: bold;
+}
+
+.tabs .tabs_body {
+  border: 1px solid #f3f3f3;
+}
+
+.tabs .tabs_body .tab {
+  display: none;
+  width: calc(100% - 20px);
+  min-height: 100px;
+  padding: 10px;
+}
+
+.tabs .tabs_body .tab.tab--seleccionado {
+  display: block;
+}
+
+/************************************/

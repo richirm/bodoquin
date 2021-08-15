@@ -83,7 +83,7 @@ Aplicación bodoquin
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13, 21
     - Features: (Lista de tareas - tablero KANBAN) 28
-      - Introducción a Angular parte II 8
+      - Introducción a Angular parte II 13
         - como crear componentes
         - que es el ¿data binding?
         - como usar el data binding

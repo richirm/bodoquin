@@ -7,7 +7,8 @@ Aplicación bodoquin
     - fonts/ => carpeta donde se almacena los tipos de fuentes de la aplicación
     - libs/ => carpeta donde se almace las librerias de terceros
   - app/ => carpeta donde se va a almacenar los recursos creados por el equipo frontend
-    - views/ => carpeta que contiene el conjunto de vistas
+    - components/ => carpeta que contiene a los componentes normales
+    - views/ => carpeta que contiene el conjunto de vistas (componentes)
       - vistaYYY => carpeta que va a contener el .html, .css y.js para una vista
     
     
@@ -55,12 +56,28 @@ Aplicación bodoquin
   - nodejs y npm:
     - node --version
     - npm --version
-  - instalar Angular:
-    - npm install -g @angular/cli(@version)
-    - ng version bodoquin-pruebita
-    - npm start
-    - localhost:4200
-  
+  - Angular:
+    - Es un framework para creación de proyectos web usando web components
+    - SPA: Single page application (index.html)
+    - Instalacion:
+      - npm install -g @angular/cli(@version)
+      - ng version
+    - Crear un proyecto
+      - ng new bodoquin-pruebita
+      - npm start
+      - http://localhost:4200
+    - Components:
+      - Un componente es una parte o bloque de la pantalla que tiene su propio html, css, y ts
+      - Ciclo de vida de un componente:
+        - inicializa
+        - ...
+        - ...
+        - destruye
+      - Exiten componentes tipo vistas y componentes normales
+    - Routing:
+      - La forma en la que Angular asocia una ruta de la url a un componente (vista)
+    - Databinding:
+      - Interpolacion: la forma en la que Angular reemplaza una variable en el template
 4. Metodología del proyecto:
   - SCRUM: es una metodología agil para dividirnos el desarrollo
     - feature => una mejora 

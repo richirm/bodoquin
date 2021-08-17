@@ -78,17 +78,16 @@ Aplicación bodoquin
       - La forma en la que Angular asocia una ruta de la url a un componente (vista)
     - Databinding:
       - Interpolacion: la forma en la que Angular reemplaza una variable en el template
+    - Typescript: 
+    
+    - Sass:
+    
 4. Metodología del proyecto:
   - SCRUM: es una metodología agil para dividirnos el desarrollo
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13, 21
     - Features: (Lista de tareas - tablero KANBAN) 28
-      - Introducción a Angular parte II 8
-        - como crear componentes
-        - que es el ¿data binding?
-        - como usar el data binding
-        - comunicacion entre componentes
-      - Migrar bodoquin a Angular 20
+      - Migrar bodoquin a Angular 38
         - crear componente header 3
         - crear componente menu 3
         - crear componente footer 3
@@ -140,10 +139,6 @@ Aplicación bodoquin
   - Webstorm
     
     
-
-  
-        
-        
         
    
   

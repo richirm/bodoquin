@@ -1,8 +1,32 @@
 <nav>
-  <ul>
-    <li><a href="#/reposteria">Reposteria</a></li>
-    <li><a href="#/tecnologia">Tecnologia</a></li>
-    <li><a href="#/jugueteria">Jugueteria</a></li>
-    <li><a href="#/moda">Moda</a></li>
-  </ul>
+  <div class="nav_backdrop" onclick="colapsarExpandirMenu();"></div>
+  <div class="nav_menu colapsado" >
+    <h2>Menú opciones</h2>
+    <ul>
+      <li>
+        <a href="#/jugueteria">
+          <i class="bi bi-truck-flatbed"></i> Juguetería
+          <span>&gt;</span>
+        </a>
+      </li>
+      <li>
+        <a href="#/moda">
+          <i class="bi bi-screwdriver"></i> Moda
+          <span>&gt;</span>
+        </a>
+      </li>
+      <li>
+        <a href="#/tecnologia">
+          <i class="bi bi-laptop"></i> Tecnología
+          <span>&gt;</span>
+        </a>
+      </li>
+      <li class="nav_menu--seleccionado">
+        <a href="#/reposteria">
+          <i class="bi bi-life-preserver"></i> Repostería 
+          <span>&gt;</span>
+        </a>
+      </li>
+    </ul>
+  </div>
 </nav>

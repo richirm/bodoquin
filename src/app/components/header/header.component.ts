@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'bodoquin-header',
@@ -6,14 +6,5 @@ import { Component, Input, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  @Input() edad: Number;
-  @Input() titulo: String;
   
-  @Output() onClickTitle: EventEmitter<String> = new EventEmitter();
-  
-  nombre: String = 'Juanito';
-  
-  clicTitulo() {
-    this.onClickTitle.emit('Hizo clic al H3! ' + this.titulo + this.nombre + this.edad);
-  }
 }

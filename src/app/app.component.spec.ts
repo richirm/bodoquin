@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'bodoquin-pruebita'`, () => {
+  it(`should have as title 'bodoquin-frontend'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('bodoquin-pruebita');
+    expect(app.title).toEqual('bodoquin-frontend');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('bodoquin-pruebita app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('bodoquin-frontend app is running!');
   });
 });

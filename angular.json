@@ -3,9 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bodoquin-pruebita": {
+    "bodoquin-frontend": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/bodoquin-pruebita",
+            "outputPath": "dist/bodoquin-frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +70,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "bodoquin-pruebita:build"
+            "browserTarget": "bodoquin-frontend:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "bodoquin-pruebita:build:production"
+              "browserTarget": "bodoquin-frontend:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "bodoquin-pruebita:build"
+            "browserTarget": "bodoquin-frontend:build"
           }
         },
         "test": {
@@ -92,7 +96,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -114,15 +118,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "bodoquin-pruebita:serve"
+            "devServerTarget": "bodoquin-frontend:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "bodoquin-pruebita:serve:production"
+              "devServerTarget": "bodoquin-frontend:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "bodoquin-pruebita"
+  "defaultProject": "bodoquin-frontend"
 }

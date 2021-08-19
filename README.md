@@ -68,19 +68,27 @@ Aplicación bodoquin
       - http://localhost:4200
     - Components:
       - Un componente es una parte o bloque de la pantalla que tiene su propio html, css, y ts
-      - Ciclo de vida de un componente:
-        - inicializa
+      - Ciclo de vida de un componente: es el conjunto de etapas por los que pasa un componente
+        desde que se inicializa en la pantalla hasta que se destruye el componente en la pantalla
+        - ngOnInit (inicializando el componente)
+        - ngOnChanges (inputs están cambiando)
         - ...
         - ...
-        - destruye
+        - ngOnDestroy (destruyendo el componente)
       - Exiten componentes tipo vistas y componentes normales
     - Routing:
       - La forma en la que Angular asocia una ruta de la url a un componente (vista)
     - Databinding:
       - Interpolacion: la forma en la que Angular reemplaza una variable en el template
-    - Typescript: 
-    
-    - Sass:
+    - Compilar:
+      Angular convierte el código de nuestra aplicacion en codigo que puede entender el
+      navegador => html, css y js
+    - Typescript: => js (transpilar)
+      Es un super conjunto de nuevas funcionalidades de javascript de tal forma que 
+      simule que el javascript es un lenguaje orientado a objetos    
+    - Sass: => css
+      Es un super conjunto de nuevas funcionalidades de css de tal forma que simule 
+      ser un lenguaje orientado a objetos
     
 4. Metodología del proyecto:
   - SCRUM: es una metodología agil para dividirnos el desarrollo

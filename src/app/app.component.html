@@ -1,6 +1,10 @@
-<bodoquin-header></bodoquin-header>
+<bodoquin-header 
+  (onClickMenu)="onClickMenu()"
+></bodoquin-header>
 
-<bodoquin-nav></bodoquin-nav>
+<bodoquin-nav
+  [isClickedMenu]="isClickedMenu"
+></bodoquin-nav>
 
 <main>
   <router-outlet></router-outlet>

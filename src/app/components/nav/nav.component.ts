@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { 
+  Component, 
+  Input, 
+  OnChanges 
+} from '@angular/core';
 
 @Component({
   selector: 'bodoquin-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class NavComponent implements OnInit {
+export class NavComponent implements OnChanges {
+  
+  @Input() isClickedMenu: boolean = false;
+  
   menuColapsado: boolean = true;
   
-  ngOnInit() {
-    this.colapsarExpandirMenu();
+  ngOnChanges(changes) {
+    if(changes.isClickedMenu) {
+      if(this.isClickedMenu === true) {
+        this.colapsarExpandirMenu();
+      }
+    }
   }
   
   colapsarExpandirMenu() {

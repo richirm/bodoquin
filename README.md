@@ -76,6 +76,9 @@ Aplicación bodoquin
         - ...
         - ngOnDestroy (destruyendo el componente)
       - Exiten componentes tipo vistas y componentes normales
+      - Comunicacion entre componentes:
+        - Inputs => Son entradas de variables hacia el interior del componente (del padre al hijo)
+        - Outputs => Son eventos que se emiten para avisar al exterior (del hijo al padre) que algo ha ocurrido, algún cambio
     - Routing:
       - La forma en la que Angular asocia una ruta de la url a un componente (vista)
     - Databinding:

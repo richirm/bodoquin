@@ -82,7 +82,10 @@ Aplicación bodoquin
     - Routing:
       - La forma en la que Angular asocia una ruta de la url a un componente (vista)
     - Databinding:
-      - Interpolacion: la forma en la que Angular reemplaza una variable en el template
+      - Interpolacion {{ variable }}: la forma en la que Angular reemplaza una variable en el template
+      - Propiedad o input [variable]: la forma para enviar un dato de una variable de un componente padre a un componente hijo
+      - evento u output (xxx): la forma para detectar eventos que ocurren en el componente hijo hacia el componente padre 
+      - doble bindeo de datos [(xxx)]: la forma para sincronizar una variable que está en el componente hijo con una variable que está en el componente padre
     - Compilar:
       Angular convierte el código de nuestra aplicacion en codigo que puede entender el
       navegador => html, css y js
@@ -92,6 +95,8 @@ Aplicación bodoquin
     - Sass: => css
       Es un super conjunto de nuevas funcionalidades de css de tal forma que simule 
       ser un lenguaje orientado a objetos
+    - Directivas:
+      (click): Directiva tipo evento que me permite saber cuando se ha dado click en un elemento, y me ejecuta un metodo
     
 4. Metodología del proyecto:
   - SCRUM: es una metodología agil para dividirnos el desarrollo

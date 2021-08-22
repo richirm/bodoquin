@@ -1,7 +1,9 @@
 import { 
   Component, 
   Input, 
-  OnChanges 
+  OnChanges,
+  EventEmitter,
+  Output,
 } from '@angular/core';
 
 @Component({
@@ -11,27 +13,27 @@ import {
 })
 export class NavComponent implements OnChanges {
   
-  @Input() isClickedMenu: boolean = false;
-  
-  menuColapsado: boolean = true;
-  
+  @Input() isMenuOpen: boolean = false;
+  @Output() isMenuOpenChange: EventEmitter<boolean> = new EventEmitter();
+      
   ngOnChanges(changes) {
-    if(changes.isClickedMenu) {
-      if(this.isClickedMenu === true) {
-        this.colapsarExpandirMenu();
-      }
+    if(changes.isMenuOpen && changes.isMenuOpen.previousValue !== undefined) {
+      this.colapsarExpandirMenu();
     }
   }
   
   colapsarExpandirMenu() {
-    if(this.menuColapsado === true) {
+    if(this.isMenuOpen === true) {
       (document.querySelector('.nav_menu') as HTMLElement).classList.remove('colapsado');
       (document.querySelector('.nav_backdrop') as HTMLElement).style.display = 'block';
-      this.menuColapsado = false;
     } else {
       (document.querySelector('.nav_menu') as HTMLElement).classList.add('colapsado');
       (document.querySelector('.nav_backdrop') as HTMLElement).style.display = 'none';
-      this.menuColapsado = true;
     }
+  }
+  
+  colapsarMenu() {
+    this.isMenuOpen = false;
+    this.isMenuOpenChange.emit(this.isMenuOpen);
   }
 }

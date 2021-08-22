@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  isClickedMenu: boolean = false;
+  isMenuOpen: boolean = false;
   
   onClickMenu() {
-    this.isClickedMenu = true;
+    this.isMenuOpen = !this.isMenuOpen;
   }
   
 }

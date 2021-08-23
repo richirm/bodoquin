@@ -95,10 +95,11 @@ Aplicación bodoquin
     - Sass: => css
       Es un super conjunto de nuevas funcionalidades de css de tal forma que simule 
       ser un lenguaje orientado a objetos
-    - Directivas:
+    - Directivas (estructurales):
       (click): Directiva tipo evento que me permite saber cuando se ha dado click en un elemento, y me ejecuta un metodo
       [class.xxx]="true" : Directiva que permite colocar una clase xxx al elemento si la condición es true
       *ngIf="true": Directiva que permite mostrar o destruir un elemento del DOM si la condición es true
+      *ngFor="let objeto of arreglo": Directiva para repetir una sección del html de acuerdo a los elementos de un arreglo
     
 4. Metodología del proyecto:
   - SCRUM: es una metodología agil para dividirnos el desarrollo

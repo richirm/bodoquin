@@ -1,6 +1,6 @@
 <nav>
-  <div class="nav_backdrop" (click)="colapsarMenu();"></div>
-  <div class="nav_menu colapsado" >
+  <div class="nav_backdrop" *ngIf="isMenuOpen" (click)="colapsarMenu();"></div>
+  <div class="nav_menu" [class.colapsado]="!isMenuOpen">
     <h2>Menú opciones</h2>
     <ul>
       <li>

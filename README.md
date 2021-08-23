@@ -97,6 +97,8 @@ Aplicación bodoquin
       ser un lenguaje orientado a objetos
     - Directivas:
       (click): Directiva tipo evento que me permite saber cuando se ha dado click en un elemento, y me ejecuta un metodo
+      [class.xxx]="true" : Directiva que permite colocar una clase xxx al elemento si la condición es true
+      *ngIf="true": Directiva que permite mostrar o destruir un elemento del DOM si la condición es true
     
 4. Metodología del proyecto:
   - SCRUM: es una metodología agil para dividirnos el desarrollo

@@ -1,1 +1,38 @@
-<p>Mi vista moda</p>
+<div class="reposteria">
+  <div class="tarjetas row">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <div class="tarjeta2" onclick="redirigirProductoDetalle($producto.idProducto)">             
+        <div class="tarjeta2_header">         
+          <img src="assets/img/{{ producto.nombreImg }}">
+        </div>
+        <div class="tarjeta2_body">      
+          <span>{{ producto.nombreCategoria }}</span><br>
+          <span><b>{{ producto.nombreProducto }}</b></span>
+          <p>{{ producto.descripcionProducto }}</p>
+          <span class="tarjeta2_body_precio">S/. {{ producto.precioProducto }}</span>
+        </div>
+        
+        <div class="tarjeta2_footer">
+          <button *ngIf="producto.cantidadProducto === 0" type="button" onclick="insertProductoToCar(${producto.idProducto}, event)">AGREGAR</button>
+          
+          <div *ngIf="producto.cantidadProducto !== 0" class="tarjeta2_contador">
+            <div *ngIf="producto.cantidadProducto === 1" class="tarjeta2_contador_agregar" onclick="deleteProduct($producto.idProducto, event)">
+              <i class="bi bi-trash"></i>
+            </div>
+            
+            <div *ngIf="producto.cantidadProducto > 1" class="tarjeta2_contador_agregar" onclick="removeItemInProduct($producto.idProducto, event)">
+              <i class="bi bi-dash-lg"></i>
+            </div>
+            
+            <div class="tarjeta2_contador_unidades">
+              <span><b>{{ producto.cantidadProducto }}</b> un</span>
+            </div>
+            <div class="tarjeta2_contador_agregar" onclick="addItemInProduct($producto.idProducto, event)">
+              <i class="bi bi-plus-lg"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -2,9 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 //Components
-import { HeaderModule } from './components/header/header.module';
-import { NavModule } from './components/nav/nav.module';
-import { FooterModule } from './components/footer/footer.module';
+import { HeaderModule } from './components/layout/header/header.module';
+import { NavModule } from './components/layout/nav/nav.module';
+import { FooterModule } from './components/layout/footer/footer.module';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';

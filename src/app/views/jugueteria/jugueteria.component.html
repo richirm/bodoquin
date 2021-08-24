@@ -1,6 +1,6 @@
 <div class="jugueteria">
   <div class="tarjetas row">
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div *ngFor="let producto of productos" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
       <div class="tarjeta2" onclick="redirigirProductoDetalle($producto.idProducto)">             
         <div class="tarjeta2_header">         
           <img src="assets/img/{{ producto.nombreImg }}">

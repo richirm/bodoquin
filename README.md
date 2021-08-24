@@ -79,6 +79,9 @@ Aplicación bodoquin
       - Comunicacion entre componentes:
         - Inputs => Son entradas de variables hacia el interior del componente (del padre al hijo)
         - Outputs => Son eventos que se emiten para avisar al exterior (del hijo al padre) que algo ha ocurrido, algún cambio
+      - Criterios para crear un componente:
+        - Una sección o div de debe utilizar en varias parte de otras o de la misma vista
+        - Una vista u componente es muy extenso y se necesita dividirlo en pequeñas partes para que sea de facil entendimiento y mantenimiento
     - Routing:
       - La forma en la que Angular asocia una ruta de la url a un componente (vista)
     - Databinding:
@@ -106,28 +109,41 @@ Aplicación bodoquin
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13, 21
     - Features: (Lista de tareas - tablero KANBAN) 28
-      - Migrar bodoquin a Angular 38
-        - crear componente header 3
-        - crear componente menu 3
-        - crear componente footer 3
-        - crear componente chat 3
-        - crear componente carrito 3
-        - crear componente usuario 3
-        - crear vista reposteria 5
-        - crear vista reposteria-detalle 3
-        - crear vista jugueteria 5
-        - crear vista jugueteria-detalle 3
-        - crear vista moda 5
-        - crear vista moda-detalle 3
-        - crear vista tecnologia 5
-        - crear vista tecnologia-detalle 3       
-        - crear vista inicio (home) 5    
-        - crear componente carousel 3
-        - crear componente tabs 3
-        - integrar los componentes a las vistas 3
+      - Migrar bodoquin a Angular 20
+        - directivas: 3
+            -(click)
+            -[class.xxx]
+            -*ngIf
+            -*ngFor
+            -*ngSwitch
+            -[style.xxx]
+            -[hidden]="true"
+        - crear vista reposteria 3
+        - crear vista moda 3
+        - crear vista tecnologia 3
+        - crear vista jugueteria 3
+        - componente de tarjetas de producto 5
         - 
     - backlog => conjunto de tareas o mejoras a realizar (features futuros)      
       - Requerimientos funcionales:
+        - Migrar bodoquin a Angular 20
+          - componente popup 5
+          - componente modal 5
+          - componente modal inicio sesion 2
+          - componente modal registrase 2
+          - componente modal cerrar sesion 2
+          - componente buscador 2
+          - crear componente chat 3
+          - crear componente carrito 3
+          - crear componente usuario 3
+          - crear vista reposteria-detalle 3
+          - crear vista jugueteria-detalle 3
+          - crear vista moda-detalle 3
+          - crear vista tecnologia-detalle 3       
+          - crear vista inicio (home) 3   
+          - crear componente carousel 3
+          - crear componente tabs 3
+          - integrar los componentes a las vistas 3
         - poner un logo
         - implementar sección de anuncios y/o publicidad en el top
         - modal de tiendas de recojo (ubicación)

@@ -110,6 +110,7 @@ Aplicación bodoquin
     - pesos: 0.5 1, 2, 3, 5, 8, 13, 21
     - Features: (Lista de tareas - tablero KANBAN) 28
       - Migrar bodoquin a Angular 20
+        - tecnicas para identifcar componentes 2
         - directivas: 3
             -(click)
             -[class.xxx]

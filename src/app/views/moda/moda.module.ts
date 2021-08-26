@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { TarjetaProductoModule } from '../../components/tarjeta-producto/tarjeta-producto.module';
+
 import { ModaComponent } from './moda.component';
 import { ModaRoutingModule } from './moda-routing.module';
 
@@ -8,6 +10,8 @@ import { ModaRoutingModule } from './moda-routing.module';
   imports: [
     CommonModule,
     ModaRoutingModule,
+    
+    TarjetaProductoModule,
   ],
   declarations: [
     ModaComponent,    

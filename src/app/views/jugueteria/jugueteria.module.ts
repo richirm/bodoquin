@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { TarjetaProductoModule } from '../../components/tarjeta-producto/tarjeta-producto.module';
+
 import { JugueteriaComponent } from './jugueteria.component';
 import { JugueteriaRoutingModule } from './jugueteria-routing.module';
 
@@ -8,6 +10,8 @@ import { JugueteriaRoutingModule } from './jugueteria-routing.module';
   imports: [
     CommonModule,
     JugueteriaRoutingModule,
+    
+    TarjetaProductoModule,
   ],
   declarations: [
     JugueteriaComponent,    

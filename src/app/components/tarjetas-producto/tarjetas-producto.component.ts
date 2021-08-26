@@ -9,4 +9,5 @@ import { ProductoInterface } from '../../core/interfaces/producto.interface';
 })
 export class TarjetasProductoComponent {
   @Input() productos: Array<ProductoInterface>;
+  @Input() fondo: string;
 }

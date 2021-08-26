@@ -10,43 +10,6 @@ header {
   padding: 9px 10px;
 }
 
-.header_secundario {
-  background-color: #ffffff;
-  border-bottom: 1px solid #cccccc;
-  box-shadow: 0px 2px 5px 0px #cccccc;
-  padding: 10px 0;
-  text-align: center;
-}
-
-body.con-scroll .header_secundario {
-  display: none;
-}
-
-.header_secundario .header_menu_secundario {
-  text-align: center;
-  margin: 0 auto;
-  cursor: pointer;
-  line-height: 24px;
-}
-
-.header_secundario .header_menu_secundario:hover {
-  background-color: #f7f7f7;
-  border-radius: 8px;
-}
-
-.header_secundario .header_menu_secundario a {
-  text-decoration: none;
-  color: #000000;
-}
-
-.header_secundario .header_menu_secundario i {
-  font-size: 25px;
-}
-
-.header_menu_secundario--seleccionado {
-  border-bottom: 3px solid #80a3ea;
-}
-
 .header_menu {
   color: #ffffff;
   font-size: 28px;

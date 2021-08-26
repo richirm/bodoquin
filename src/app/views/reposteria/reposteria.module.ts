@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { TarjetaProductoModule } from '../../components/tarjeta-producto/tarjeta-producto.module';
+import { TarjetasProductoModule } from '../../components/tarjetas-producto/tarjetas-producto.module';
 
 import { ReposteriaComponent } from './reposteria.component';
 import { ReposteriaRoutingModule } from './reposteria-routing.module';
@@ -11,7 +11,7 @@ import { ReposteriaRoutingModule } from './reposteria-routing.module';
     CommonModule,
     ReposteriaRoutingModule,
     
-    TarjetaProductoModule,
+    TarjetasProductoModule,
   ],
   declarations: [
     ReposteriaComponent,    

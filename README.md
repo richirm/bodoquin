@@ -117,7 +117,7 @@ Aplicación bodoquin
             -*ngIf
             -*ngFor
             -*ngSwitch
-            -[style.xxx]
+            -[ngStyle]="{}"
             -[hidden]="true"
         - crear vista reposteria 3
         - crear vista moda 3

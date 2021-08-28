@@ -98,6 +98,7 @@ Aplicación bodoquin
     - Sass: => css
       Es un super conjunto de nuevas funcionalidades de css de tal forma que simule 
       ser un lenguaje orientado a objetos
+      - anidación de clases css
     - Directivas (estructurales):
       (click): Directiva tipo evento que me permite saber cuando se ha dado click en un elemento, y me ejecuta un metodo
       [class.xxx]="true" : Directiva que permite colocar una clase xxx al elemento si la condición es true

@@ -6,96 +6,96 @@
     cursor: pointer;
     background-color: #ffffff;
     width: 100%; 
-  }
+    
+    &:hover {
+      box-shadow: 1px 1px 5px #cccccc;
+    }
 
-  .tarjeta2:hover {
-    box-shadow: 1px 1px 5px #cccccc;
-  }
+    &_header {
+      padding: 15px 30px;
+      text-align: center;
+      
+      img {
+        width: 100%;
+        height: 180px;
+        max-width: 255px;
+      }
+    }
 
-  .tarjeta2 .tarjeta2_header {
-    padding: 15px 30px;
-    text-align: center;
-  }
+    &_body {
+      padding: 0 15px;
+      
+      p {
+        margin-left: 15px;
+        height: 70px;
+        margin-bottom: 10px;
+      }
+      
+      &_precio {
+        color: #FF0000;
+        font-weight: bold;
+        font-size: 24px;
+      }
+    }
+    
+    &_footer {
+      padding: 15px;
+      
+      button {
+        background-color: #ffffff;
+        border: 1px solid #80A3EA;
+        width: 100%;
+        height: 35px;
+        color: #80A3EA;
+        font-weight: bold;
+        cursor: pointer; 
+      }
+      
+      &_contador {
+        border: 1px solid #cccccc;
+        border-radius: 23px;
+        user-select: none;
+        
+        &_agregar {
+          display: inline-block;
+          width: 38px;
+          height: 38px;
+          border-radius: 50%;
+          border: 2px solid #80A3EA;
+          text-align: center;
+          color: #80A3EA;
+          user-select: none;
+          
+          &:hover {
+            background-color: #80A3EA;
+            color: #ffffff;
+          }
 
-  .tarjeta2 .tarjeta2_header img {
-    width: 100%;
-    height: 180px;
-    max-width: 255px;
-  }
-
-  .tarjeta2 .tarjeta2_body {
-    padding: 0 15px;
-  }
-
-  .tarjeta2 .tarjeta2_body p {
-    margin-left: 15px;
-    height: 70px;
-    margin-bottom: 10px;
-  }
-
-  .tarjeta2 .tarjeta2_body .tarjeta2_body_precio {
-    color: #FF0000;
-    font-weight: bold;
-    font-size: 24px;
-  }
-
-  .tarjeta2 .tarjeta2_footer {
-    padding: 15px;
-  }
-
-  .tarjeta2 .tarjeta2_footer button {
-    background-color: #ffffff;
-    border: 1px solid #80A3EA;
-    width: 100%;
-    height: 35px;
-    color: #80A3EA;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-  .tarjeta2:hover .tarjeta2_footer button {
-    background-color: #80A3EA;
-    color: #ffffff;
-  }
-
-  .tarjeta2_footer .tarjeta2_contador {
-    border: 1px solid #cccccc;
-    border-radius: 23px;
-    user-select: none;
-  }
-
-  .tarjeta2_footer .tarjeta2_contador .tarjeta2_contador_agregar {
-    display: inline-block;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    border: 2px solid #80A3EA;
-    text-align: center;
-    color: #80A3EA;
-    user-select: none;
-  }
-
-  .tarjeta2_footer .tarjeta2_contador .tarjeta2_contador_agregar:hover {
-    background-color: #80A3EA;
-    color: #ffffff;
-  }
-
-  .tarjeta2_footer .tarjeta2_contador .tarjeta2_contador_agregar i {
-    position: relative;
-    top: 5px;
-    font-size: 13px;
-  }
-
-  .tarjeta2_footer .tarjeta2_contador .tarjeta2_contador_unidades {
-    display: inline-block;
-    width: calc(100% - 84px);
-    text-align: center;
-    user-select: none;
-  }
-
-  .tarjeta2_footer .tarjeta2_contador .tarjeta2_contador_unidades span {
-    position: relative;
-    top: 8px;
+          i {
+            position: relative;
+            top: 5px;
+            font-size: 13px;
+          }
+        }
+        
+        &_unidades {
+          display: inline-block;
+          width: calc(100% - 84px);
+          text-align: center;
+          user-select: none;
+          
+          span {
+            position: relative;
+            top: 8px;
+          }
+        }
+      }
+    }
+    
+    &:hover .tarjeta2_footer button {
+      background-color: #80A3EA;
+      color: #ffffff;
+    }
   }
 }
 

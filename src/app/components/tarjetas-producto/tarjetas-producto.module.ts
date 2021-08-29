@@ -6,7 +6,10 @@ import { TarjetaProductoModule } from './tarjeta-producto/tarjeta-producto.modul
 import { TarjetasProductoComponent } from './tarjetas-producto.component';
 
 @NgModule({
-  imports: [CommonModule,TarjetaProductoModule],
+  imports: [
+    CommonModule,
+    TarjetaProductoModule
+  ],
   declarations: [TarjetasProductoComponent],
   exports: [TarjetasProductoComponent]
 })

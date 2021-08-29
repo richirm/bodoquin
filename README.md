@@ -104,6 +104,8 @@ Aplicación bodoquin
       [class.xxx]="true" : Directiva que permite colocar una clase xxx al elemento si la condición es true
       *ngIf="true": Directiva que permite mostrar o destruir un elemento del DOM si la condición es true
       *ngFor="let objeto of arreglo": Directiva para repetir una sección del html de acuerdo a los elementos de un arreglo
+  - Jenkins:
+    - Herramienta de despliegue continuo o automático de nuestro código en un servidor 
     
 4. Metodología del proyecto:
   - SCRUM: es una metodología agil para dividirnos el desarrollo

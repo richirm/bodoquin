@@ -148,6 +148,9 @@ Aplicación bodoquin
           - crear componente carousel 3
           - crear componente tabs 3
           - integrar los componentes a las vistas 3
+        - crear servicios:
+          - servicios para llamar al backend
+          - servicios para comunicar componentes
         - poner un logo
         - implementar sección de anuncios y/o publicidad en el top
         - modal de tiendas de recojo (ubicación)

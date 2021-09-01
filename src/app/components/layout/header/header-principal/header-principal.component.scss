@@ -8,6 +8,17 @@
     cursor: pointer;
   }
 
+  .header_acciones {
+    text-align: right;
+
+    & i {
+      font-size: 28px;
+      color: #ffffff;
+      margin-left: 18px;
+      cursor: pointer;
+    }
+  }
+
   .header_titulo {
     font-size: 24px;
     color: #ffffff;
@@ -37,93 +48,6 @@
       position: absolute;
       top: -32px;
       right: -7px;
-    }
-  }
-
-  .header_acciones {
-    text-align: right;
-
-    & i {
-      font-size: 28px;
-      color: #ffffff;
-      margin-left: 18px;
-      cursor: pointer;
-    }
-
-    &_usuario {
-      position: relative;
-      
-      &_backdrop {
-        position: fixed;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #0000003b;
-        display: none;
-      }
-
-      &_flecha {
-        width: 15px;
-        height: 15px;
-        background-color: #ffffff;
-        transform: rotate(46deg);
-        position: absolute;
-        right: 6px;
-        top: 29px;
-        z-index: 1;
-        display: none;
-      }
-
-      &_popup {
-        width: 260px;
-        min-height: 50px;
-        background-color: #ffffff;
-        position: absolute;
-        right: -15px;
-        border-radius: 6px;
-        border: 1px solid #cccccc;
-        box-shadow: 1px 1px 5px #cccccc;
-        top: 35px;
-        display: none;
-        text-align: initial;
-
-        & ul {
-          padding-left: 20px;
-          padding-right: 20px;
-
-          & li {
-            list-style-type: none;
-            padding-top: 8px;
-            padding-bottom: 8px;
-            border-bottom: 1px dashed #cccccc;
-            cursor: pointer;
-
-            & i {
-              color: #000000;
-              font-size: 20px;
-              vertical-align: middle;
-              margin-right: 8px;
-            }
-
-            & span {
-              vertical-align: middle;
-            }
-          }
-        }
-      }
-    }
-
-    & .modal_inicio_sesion {
-      display: none;
-    }
-
-    & .modal_registrarse {
-      display: none;
-    }
-
-    & .modal_cerrar_sesion {
-      display: none;
     }
   }
 

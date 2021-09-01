@@ -23,16 +23,16 @@ export class HeaderComponent implements OnInit {
         let path = location.hash.substring(2).split('?')[0];
         
         if(path === 'tecnologia') {
-          this.fondo = 'red';
+          this.fondo = '#2a2d97';
         }
         if(path === 'reposteria') {
-          this.fondo = 'blue';
+          this.fondo = '#a55928';
         }
         if(path === 'moda') {
-          this.fondo = 'green';
+          this.fondo = '#76076b';
         }
         if(path === 'jugueteria') {
-          this.fondo = 'yellow';
+          this.fondo = '#ffd51d';
         }
       });   
   }

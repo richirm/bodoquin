@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderUsuarioComponent {
 
+  showPopup: boolean = false;
+  
+  onClickUser() {
+    this.showPopup = true;
+  }
 }

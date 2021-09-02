@@ -1,9 +1,15 @@
-<div class="header-usuario">              
-  <i class="bi bi-person-fill" onclick="mostrarOcultarUsuarioPopup();"></i>
-  <div class="header-usuario_backdrop" onclick="mostrarOcultarUsuarioPopup();"></div>            
-  <div class="header-usuario_flecha"></div>            
-  <div class="header-usuario_popup">
-    <ul>
+<div class="header-usuario">
+  
+  <i #usuarioIcono class="bi bi-person-fill" (click)="onClickUser()"></i>
+
+  <bodoquin-popup
+    [elemento]="usuarioIcono"
+    [(showPopup)]="showPopup"
+    [templateBody]="templateUsuario"
+  ></bodoquin-popup>
+  
+  <ng-template #templateUsuario>
+    <ul class="header-usuario_popup">
       <li onClick="mostrarOcultarModalInicioSesion(); mostrarOcultarUsuarioPopup();">
         <i class="bi bi-arrow-bar-right"></i>
         <span>Iniciar sesion</span>
@@ -24,7 +30,7 @@
         <span>Cerrar sesion</span>
       </li>
     </ul>
-  </div>
+  </ng-template>
   
   <div class="modal modal_inicio_sesion">
     <div class="modal_backdrop" onclick="mostrarOcultarModalInicioSesion()"></div>

@@ -1,0 +1,15 @@
+<div class="popup" [hidden]="showPopup === false">
+  <div class="popup_backdrop" (click)="closePopup();"></div>
+  <div class="popup_flecha"></div>
+  <div class="popup_contenedor">
+    <div class="popup_contenedor_header" *ngIf="!!templateHeader">
+      <ng-template [ngTemplateOutlet]="templateHeader"></ng-template>
+    </div>
+    <div class="popup_contenedor_body">
+      <ng-template [ngTemplateOutlet]="templateBody"></ng-template>
+    </div>
+    <div class="popup_contenedor_footer" *ngIf="!!templateFooter">
+      <ng-template [ngTemplateOutlet]="templateFooter"></ng-template>
+    </div>
+  </div>
+</div>

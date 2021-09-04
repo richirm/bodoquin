@@ -7,7 +7,7 @@ import { Component, Input, TemplateRef, Output, EventEmitter, ElementRef, OnInit
 })
 export class PopupComponent implements OnInit {
   
-  @Input() elemento: ElementRef;
+  @Input() elemento: HTMLElement;
   
   @Input() showPopup: boolean = false;
   @Output() showPopupChange: EventEmitter<boolean> = new EventEmitter();

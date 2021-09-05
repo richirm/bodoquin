@@ -14,7 +14,7 @@
         <span>Iniciar sesion</span>
       </li>
       
-      <li onClick="mostrarOcultarModalRegistrarse(); mostrarOcultarUsuarioPopup();">
+      <li (click)="mostrarModalRegistrarse();">
         <i class="bi bi-person"></i>
         <span>Registrarse</span>
       </li>
@@ -24,7 +24,7 @@
         <span>Mis pedidos</span>
       </li>
     
-      <li onClick="mostrarOcultarModalCerrarSesion(); mostrarOcultarUsuarioPopup();">
+      <li (click)="mostrarModalCerrarSesion();">
         <i class="bi bi-arrow-bar-left"></i>
         <span>Cerrar sesion</span>
       </li>
@@ -53,71 +53,44 @@
     </form>
   </ng-template>
   
-  <div class="modal modal_inicio_sesion">
-    <div class="modal_backdrop" onclick="mostrarOcultarModalInicioSesion()"></div>
-    <div class="modal_contenedor modal-sm">
-      <div class="modal_header">
-        <h1>Iniciar sesión</h1>
-        <i class="bi bi-x" onclick="mostrarOcultarModalInicioSesion()"></i>
+  <bodoquin-modal
+    titulo="Registrarse"
+    [(showModal)]="showModalRegistrarse"
+    textoAceptar="Ingresar"
+    [showCancelar]="false"
+    [templateBody]="templateRegistrarse"
+  ></bodoquin-modal>
+  
+  <ng-template #templateRegistrarse>
+    <form>
+      <div class="form-group">
+        <label class="form-label">Nombre usuario:</label>
+        <input type="text" class="form-control" />
       </div>
-      <div class="modal_body">
+      
+      <div class="form-group">
+        <label class="form-label">Correo electrónico:</label>
+        <input type="text" class="form-control" />
+      </div>
 
-      </div>
-      <div class="modal_footer">
-        <button class="btn btn-primary">Ingresar</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal modal_registrarse">
-    <div class="modal_backdrop" onclick="mostrarOcultarModalRegistrarse()"></div>
-    <div class="modal_contenedor modal-sm">
-      <div class="modal_header">
-        <h1>Registrarse</h1>
-        <i class="bi bi-x" onclick="mostrarOcultarModalRegistrarse()"></i>
-      </div>
-      <div class="modal_body">
-        <form>
-          <div class="form-group">
-            <label class="form-label">Nombre usuario:</label>
-            <input type="text" class="form-control" />
-          </div>
-          
-          <div class="form-group">
-            <label class="form-label">Correo electrónico:</label>
-            <input type="text" class="form-control" />
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Contraseña:</label>
-            <input type="text" class="form-control" />
-          </div> 
-        </form>     
-      </div>
-      <div class="modal_footer">
-        <button class="btn btn-primary">Ingresar</button>                
-      </div>
-    </div>
-  </div>
-
-  <div class="modal modal_confirmacion modal_cerrar_sesion">
-    <div class="modal_backdrop" onclick="mostrarOcultarModalCerrarSesion()"></div>
-    <div class="modal_contenedor modal-sm">
-      <div class="modal_header">
-        <h1>Cerrar Sesión</h1>
-        <i class="bi bi-x" onclick="mostrarOcultarModalCerrarSesion()"></i>
-      </div>
-      <div class="modal_body">
-        <p class="texto-centrado">
-          ¿Está seguro que desea<br>
-          cerrar sesión?
-        </p>
-      </div>
-      <div class="modal_footer">
-        <button class="btn btn-primary">Aceptar</button>
-        <button class="btn btn-light">Cancelar</button>
-      </div>
-    </div>
-  </div>
+      <div class="form-group">
+        <label class="form-label">Contraseña:</label>
+        <input type="text" class="form-control" />
+      </div> 
+    </form>     
+  </ng-template>
+  
+  <bodoquin-modal
+    titulo="Cerrar Sesion"
+    [(showModal)]="showModalCerrarSesion"
+    [templateBody]="templateCerrarSesion"
+  ></bodoquin-modal>
+ 
+  <ng-template #templateCerrarSesion>
+    <p class="texto-centrado">
+      ¿Está seguro que desea<br>
+      cerrar sesión?
+    </p>
+  </ng-template>
 </div>
 

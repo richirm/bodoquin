@@ -17,6 +17,8 @@ export class ModalComponent  {
   @Input() showAceptar: boolean = true; 
   @Input() showCancelar: boolean = true;
   @Input() size: string = 'sm';
+  @Input() textoAceptar: string = 'Aceptar';
+  @Input() textoCancelar: string = 'Cancelar';
   
   @Input() showModal: boolean = false;
   @Output() showModalChange: EventEmitter<boolean> = new EventEmitter();

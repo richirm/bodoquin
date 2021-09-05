@@ -10,8 +10,8 @@
        <ng-template [ngTemplateOutlet]="templateBody"></ng-template>
     </div>
     <div class="modal_footer">
-      <button *ngIf="showAceptar === true" class="btn btn-primary">Aceptar</button>
-      <button *ngIf="showCancelar === true" class="btn btn-secondary">Cancelar</button>
+      <button *ngIf="showAceptar === true" class="btn btn-primary">{{ textoAceptar }}</button>
+      <button *ngIf="showCancelar === true" class="btn btn-light">{{ textoCancelar }}</button>
       <ng-template [ngTemplateOutlet]="templateFooter"></ng-template>
     </div>
   </div>

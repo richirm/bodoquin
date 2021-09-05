@@ -8,8 +8,14 @@ import { Component } from '@angular/core';
 export class HeaderUsuarioComponent {
 
   showPopup: boolean = false;
+  showModalIniciarSesion: boolean = false;
   
   onClickUser() {
-    this.showPopup = true;
+    this.showPopup = true;  
+  }
+  
+  mostrarModalInicioSesion() {
+    this.showModalIniciarSesion = true;
+    this.showPopup = false;
   }
 }

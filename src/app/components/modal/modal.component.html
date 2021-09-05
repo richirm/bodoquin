@@ -1,0 +1,15 @@
+<div class="modal" [hidden]="!showModal">
+  <div class="modal_backdrop" (click)="mostrarOcultarModal()"></div>
+  <div class="modal_contenedor modal-sm">
+    <div class="modal_header">
+      {{ titulo }}
+      <i class="bi bi-x" (click)="mostrarOcultarModal()"></i>
+    </div>
+    <div class="modal_body">
+       <ng-template [ngTemplateOutlet]="templateBody"></ng-template>
+    </div>
+    <div class="modal_footer">
+      <button class="btn btn-primary">Ingresar</button>
+    </div>
+  </div>
+</div>

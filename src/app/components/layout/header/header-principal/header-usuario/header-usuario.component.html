@@ -1,5 +1,9 @@
 <div class="header-usuario">
-  
+  <bodoquin-modal
+    titulo="titulo usuario"
+    [(showModal)]="showModalIniciarSesion"
+    [templateBody]="templateUsuario"
+  ></bodoquin-modal>
   <i #usuarioIcono class="bi bi-person-fill" (click)="onClickUser()"></i>
 
   <bodoquin-popup
@@ -10,7 +14,7 @@
   
   <ng-template #templateUsuario>
     <ul class="header-usuario_popup">
-      <li onClick="mostrarOcultarModalInicioSesion(); mostrarOcultarUsuarioPopup();">
+      <li (click)="mostrarModalInicioSesion();">
         <i class="bi bi-arrow-bar-right"></i>
         <span>Iniciar sesion</span>
       </li>

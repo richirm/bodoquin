@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PopupModule } from '../../../../popup/popup.module';
+import { ModalModule } from '../../../../modal/modal.module';
 
 import { HeaderUsuarioComponent } from './header-usuario.component';
 
@@ -10,6 +11,7 @@ import { HeaderUsuarioComponent } from './header-usuario.component';
     CommonModule,
     
     PopupModule,
+    ModalModule,
   ],
   declarations: [
     HeaderUsuarioComponent,    

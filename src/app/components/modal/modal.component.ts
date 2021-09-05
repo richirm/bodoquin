@@ -14,11 +14,16 @@ import {
 export class ModalComponent  {
   
   @Input() titulo: string; 
+  @Input() showAceptar: boolean = true; 
+  @Input() showCancelar: boolean = true;
+  @Input() size: string = 'sm';
   
   @Input() showModal: boolean = false;
   @Output() showModalChange: EventEmitter<boolean> = new EventEmitter();
   
+  @Input() templateHeader: TemplateRef<any>;
   @Input() templateBody: TemplateRef<any>;
+  @Input() templateFooter: TemplateRef<any>;
   
   mostrarOcultarModal() {
     this.showModal = false;

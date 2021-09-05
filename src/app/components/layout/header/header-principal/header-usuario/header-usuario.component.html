@@ -2,6 +2,7 @@
   <bodoquin-modal
     titulo="titulo usuario"
     [(showModal)]="showModalIniciarSesion"
+    [showAceptar]="false"
     [templateBody]="templateUsuario"
   ></bodoquin-modal>
   <i #usuarioIcono class="bi bi-person-fill" (click)="onClickUser()"></i>

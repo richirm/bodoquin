@@ -1,15 +1,18 @@
 <div class="modal" [hidden]="!showModal">
   <div class="modal_backdrop" (click)="mostrarOcultarModal()"></div>
-  <div class="modal_contenedor modal-sm">
+  <div class="modal_contenedor modal-{{ size }}">
     <div class="modal_header">
-      {{ titulo }}
+      <h1 *ngIf="!!titulo">{{ titulo }}</h1>
+      <ng-template [ngTemplateOutlet]="templateHeader"></ng-template>
       <i class="bi bi-x" (click)="mostrarOcultarModal()"></i>
     </div>
     <div class="modal_body">
        <ng-template [ngTemplateOutlet]="templateBody"></ng-template>
     </div>
     <div class="modal_footer">
-      <button class="btn btn-primary">Ingresar</button>
+      <button *ngIf="showAceptar === true" class="btn btn-primary">Aceptar</button>
+      <button *ngIf="showCancelar === true" class="btn btn-secondary">Cancelar</button>
+      <ng-template [ngTemplateOutlet]="templateFooter"></ng-template>
     </div>
   </div>
 </div>

@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { HeaderModule } from './components/layout/header/header.module';
 import { NavModule } from './components/layout/nav/nav.module';
 import { FooterModule } from './components/layout/footer/footer.module';
+import { ChatModule } from './components/layout/chat/chat.module';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
     HeaderModule,
     NavModule,
     FooterModule,
+    ChatModule,
   ],
   declarations: [
     AppComponent,

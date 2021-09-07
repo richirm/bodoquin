@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class ChatComponent {
   
+  chatVisible: boolean = false;
+  
+  mostrarOcultarChat() {
+    this.chatVisible = !this.chatVisible;
+    
+    
+  }
+  
 }

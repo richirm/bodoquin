@@ -8,6 +8,10 @@ import { Component, Input, TemplateRef, Output, EventEmitter, ElementRef, OnInit
 export class PopupComponent implements OnInit {
   
   @Input() elemento: HTMLElement;
+  @Input() align: string = 'bottom';
+  @Input() showFlecha: boolean = true;
+  @Input() showCerrar: boolean = false;
+  @Input() showBackdrop: boolean = true;
   
   @Input() showPopup: boolean = false;
   @Output() showPopupChange: EventEmitter<boolean> = new EventEmitter();
@@ -28,12 +32,20 @@ export class PopupComponent implements OnInit {
     let top = this.elemento.getBoundingClientRect().top;
     
     let contenedor = this.el.nativeElement.querySelector('.popup_contenedor');
-    contenedor.style.left = `${left}px`;
-    contenedor.style.top = `calc(${top}px + 52px)`;
+    contenedor.style.left = `${left - 25}px`;
     
-    let flecha = this.el.nativeElement.querySelector('.popup_flecha');
-    flecha.style.left = `${left}px`;
-    flecha.style.top = `calc(${top}px + 45px)`;
+    if(this.align === 'bottom') {
+      contenedor.style.top = `calc(${top}px + 52px)`;
+    } else if(this.align === 'top') {
+      contenedor.style.top = `auto`;
+      contenedor.style.bottom = `${window.innerHeight - top + 10}px`;
+    }
+    
+    if(this.showFlecha === true) {
+      let flecha = this.el.nativeElement.querySelector('.popup_flecha');
+      flecha.style.left = `${left - 10}px`;
+      flecha.style.top = `calc(${top}px + 45px)`;
+    }
   }
   
   closePopup() {

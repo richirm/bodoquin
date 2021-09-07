@@ -112,29 +112,27 @@ Aplicación bodoquin
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13, 21
     - Features: (Lista de tareas - tablero KANBAN) 28
-      - Migrar bodoquin a Angular 21
-        - directivas: 2
+      - Migrar bodoquin a Angular 24
+        - directivas: 1
             -*ngSwitch
-            -[hidden]="true"  
-        - crear componente usuario 3        
-        - componente popup 5
-        - componente modal 5
-        - componente modal inicio sesion 2
-        - componente modal registrase 2
-        - componente modal cerrar sesion 2
-        - componente buscador 2
+        - crear componente chat 5
+        - crear componente carrito 8
+          - integracion con popup
+          - maquetacion del popup carrito
+          - lógica del popup de carrito
+        - teoria de servicios: 2
+          - servicios para comunicar componentes
+        - integrar las pantallas de productos con el carrito 5
+        - crear componente tabs 3
     - backlog => conjunto de tareas o mejoras a realizar (features futuros)      
       - Requerimientos funcionales:
         - Migrar bodoquin a Angular 20
-          - crear componente chat 3
-          - crear componente carrito 3
           - crear vista reposteria-detalle 3
           - crear vista jugueteria-detalle 3
           - crear vista moda-detalle 3
           - crear vista tecnologia-detalle 3       
           - crear vista inicio (home) 3   
           - crear componente carousel 3
-          - crear componente tabs 3
           - integrar los componentes a las vistas 3
         - crear servicios:
           - servicios para llamar al backend

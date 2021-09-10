@@ -1,5 +1,5 @@
 <div class="popup" [hidden]="showPopup === false">
-  <div *ngIf="showBackdrop === true" class="popup_backdrop" (click)="closePopup();"></div>
+  <div [class.popup_backdrop--invisible]="showBackdrop===false" class="popup_backdrop" (click)="closePopup();"></div>
   <div class="popup_flecha" [hidden]="showFlecha !== true"></div>
   <div class="popup_contenedor">
     <div class="popup_contenedor_header" *ngIf="!!templateHeader">

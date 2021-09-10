@@ -1,11 +1,11 @@
-import { Component, Input, TemplateRef, Output, EventEmitter, ElementRef, OnInit } from '@angular/core';
+import { Component, Input, TemplateRef, Output, EventEmitter, ElementRef, OnInit, OnChanges, SimpleChanges, HostListener } from '@angular/core';
 
 @Component({
   selector: 'bodoquin-popup',
   templateUrl: './popup.component.html',
   styleUrls: ['./popup.component.scss']
 })
-export class PopupComponent implements OnInit {
+export class PopupComponent implements OnInit, OnChanges {
   
   @Input() elemento: HTMLElement;
   @Input() align: string = 'bottom';
@@ -21,13 +21,24 @@ export class PopupComponent implements OnInit {
   @Input() templateBody: TemplateRef<any>;
   @Input() templateFooter: TemplateRef<any>;
   
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.calcPositionPopup();
+  }
+
   constructor(
     private el: ElementRef) {}
   
   ngOnInit() {
     this.calcPositionPopup();
   }
-  
+
+  ngOnChanges(changes: SimpleChanges ) {
+    if(changes.showPopup){
+      this.calcPositionPopup();
+    }
+  }
+
   calcPositionPopup() {
     let left = this.elemento.getBoundingClientRect().left;
     let top = this.elemento.getBoundingClientRect().top;

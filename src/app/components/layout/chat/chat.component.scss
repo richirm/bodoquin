@@ -101,7 +101,7 @@
   border-top: 1px solid #cccccc;
 }
 
-.chat .chat_popup .chat_popup_footer input {
+.chat .chat_footer input {
   height: 30px;
   width: 187px;
   border: 1px solid #cccccc;
@@ -110,10 +110,11 @@
   border-radius: 15px;
 }
 
-.chat .chat_popup .chat_popup_footer i {
+.chat .chat_footer i {
   font-size: 25px;
   vertical-align: middle;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .chat .chat_fab {

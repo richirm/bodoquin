@@ -23,21 +23,23 @@
   </ng-template>
   
   <ng-template #templateChatFooter>
-    Pie
+    <div class="chat_footer">
+      <input type="text" required placeholder="¿En que te ayudamos?..."  />
+      <i class="bi bi-arrow-right-circle"></i>
+    </div>
   </ng-template>
   
   <div class="chat_backdrop" onclick="mostrarOcultarChat();"></div>
   <div class="chat_popup">
     <div class="chat_popup_header">
-      <i class="bi bi-messenger chat_logo"></i>
+      <i class="bi bi-messenger chat_logo"></i>d
       <h1>Bodoquin<br><small>Siempre contigo</small></h1>
       <i class="bi bi-x chat_cerrar" onClick="mostrarOcultarChat()"></i>
     </div>
     <div class="chat_popup_body">
     </div>
     <div class="chat_popup_footer">
-      <input type="text" required placeholder="¿En que te ayudamos?..."  />
-      <i class="bi bi-arrow-right-circle"></i>
+      
     </div>
   </div>
   <div #chatFab class="chat_fab" [class.chat_fab_in]="chatVisible === true">

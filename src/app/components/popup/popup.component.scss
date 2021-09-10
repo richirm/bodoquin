@@ -38,6 +38,7 @@
     transform: translateX(-80%);
     text-align: initial;
     z-index: 2;
+    transform-origin: bottom right;
 
     &_header {
       width: 100%;
@@ -64,6 +65,43 @@
     &_footer {
       padding: 10px;
       border-top: 1px solid #ececec;
+    }
+  }
+
+  .popup_in {
+    animation-name: popup_animacion_in;
+    opacity: 1;
+    animation-duration: 300ms;
+  }
+  
+  .popup_out {
+    animation-name: popup_animacion_out;
+    opacity: 0;
+    animation-duration: 300ms;
+  }
+  
+  @keyframes popup_animacion_in {
+    0% { 
+      opacity: 0;
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% { 
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes popup_animacion_out {
+    0% { 
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% { 
+      opacity: 0;
+      transform: scale(0);
     }
   }
 }

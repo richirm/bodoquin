@@ -1,7 +1,7 @@
 <div class="popup" [hidden]="showPopup === false">
   <div [class.popup_backdrop--invisible]="showBackdrop===false" class="popup_backdrop" (click)="closePopup();"></div>
   <div class="popup_flecha" [hidden]="showFlecha !== true"></div>
-  <div class="popup_contenedor">
+  <div class="popup_contenedor" [class.popup_in]="showPopup === true" [class.popup_out]="showPopup === false">
     <div class="popup_contenedor_header" *ngIf="!!templateHeader">
       <ng-template [ngTemplateOutlet]="templateHeader"></ng-template>
       <i *ngIf="showCerrar === true" class="bi bi-x popup_contenedor_header_cerrar" (click)="closePopup();"></i>

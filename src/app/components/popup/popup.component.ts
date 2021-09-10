@@ -12,7 +12,8 @@ export class PopupComponent implements OnInit {
   @Input() showFlecha: boolean = true;
   @Input() showCerrar: boolean = false;
   @Input() showBackdrop: boolean = true;
-  
+  @Input() heightBody: string;
+
   @Input() showPopup: boolean = false;
   @Output() showPopupChange: EventEmitter<boolean> = new EventEmitter();
   

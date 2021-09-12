@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderCarritoComponent {
   
+  showPopup: boolean = false;
+  
+  mostrarPopupCarrito() {
+    this.showPopup = true;
+  }
+  
 }

@@ -1,3 +1,22 @@
 <div class="header-carrito">
-  hola
+  <span #carritoIcono (click)="mostrarPopupCarrito()">carrito</span>
+  <bodoquin-popup
+    [elemento]="carritoIcono"
+    [(showPopup)]="showPopup"
+    [templateHeader]="templateCarritoHeader"
+    [templateBody]="templateCarritoBody"
+    [templateFooter]="templateCarritoFooter"
+  ></bodoquin-popup>
+  
+  <ng-template #templateCarritoHeader>
+    titulo
+  </ng-template>
+  
+  <ng-template #templateCarritoBody>
+    productos
+  </ng-template>
+  
+  <ng-template #templateCarritoFooter>
+    boton
+  </ng-template>
 </div>

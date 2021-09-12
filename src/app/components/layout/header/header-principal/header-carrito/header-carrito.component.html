@@ -1,5 +1,7 @@
 <div class="header-carrito">
-  <span #carritoIcono (click)="mostrarPopupCarrito()">carrito</span>
+  <i #carritoIcono class="bi bi-cart-check" (click)="mostrarPopupCarrito()"></i>
+  <div class="header_notificacion header_notificacion-principal">0</div>   
+
   <bodoquin-popup
     [elemento]="carritoIcono"
     [(showPopup)]="showPopup"
@@ -9,14 +11,28 @@
   ></bodoquin-popup>
   
   <ng-template #templateCarritoHeader>
-    titulo
+    <div class="carrito_header">
+      Tienes agregados <b>0</b> productos
+    </div>
   </ng-template>
   
   <ng-template #templateCarritoBody>
-    productos
+    <div class="carrito_body">
+      <div class="carrito_productos">  
+      
+      </div>
+        
+      <div class="carrito_total">
+        <span>Sub Total:</span>
+        <span class="carrito_total_monto">S/. 0</span>
+      </div>  
+    </div>
   </ng-template>
   
   <ng-template #templateCarritoFooter>
-    boton
+    <div class="carrito_footer">
+      <button class="btn btn-primary"><a href="../carrito/carrito.html">Continuar</a></button>
+    </div>
   </ng-template>
+  
 </div>

@@ -22,8 +22,8 @@
     transform: translateX(-50%) rotate(46deg);
     position: fixed;
     top: 0px;
-    left: 0px;
-    z-index: 1;
+    right: 0px;
+    z-index: 3;
   }
 
   &_contenedor {
@@ -34,8 +34,7 @@
     border: 1px solid #cccccc;
     box-shadow: 1px 1px 5px #cccccc;
     top: 0px;
-    left: 0px;
-    transform: translateX(-80%);
+    right: 0px;
     text-align: initial;
     z-index: 2;
     transform-origin: bottom right;

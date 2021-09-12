@@ -165,6 +165,9 @@ Aplicación bodoquin
   - NotePad++
   - Visual Studio Code (VSC)
   - Webstorm
+  
+7. Tutoriales:
+  - Uso de variables y objetos en javascript https://www.youtube.com/watch?v=ivdTnPl1ND0
     
     
         

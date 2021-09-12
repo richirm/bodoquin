@@ -44,7 +44,7 @@ export class PopupComponent implements OnInit, OnChanges {
     let top = this.elemento.getBoundingClientRect().top;
     
     let contenedor = this.el.nativeElement.querySelector('.popup_contenedor');
-    contenedor.style.left = `${left - 25}px`;
+    contenedor.style.right = `calc(${window.innerWidth - left}px - 50px)`;
     
     if(this.align === 'bottom') {
       contenedor.style.top = `calc(${top}px + 52px)`;
@@ -55,7 +55,7 @@ export class PopupComponent implements OnInit, OnChanges {
     
     if(this.showFlecha === true) {
       let flecha = this.el.nativeElement.querySelector('.popup_flecha');
-      flecha.style.left = `${left - 10}px`;
+      flecha.style.right = `${window.innerWidth - left - 45}px`;
       flecha.style.top = `calc(${top}px + 45px)`;
     }
   }

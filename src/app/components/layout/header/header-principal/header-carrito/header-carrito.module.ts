@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PopupModule } from '../../../../popup/popup.module';
+import { ChipModule } from '../../../../chip/chip.module';
 
 import { HeaderCarritoComponent } from './header-carrito.component';
 
@@ -10,6 +11,7 @@ import { HeaderCarritoComponent } from './header-carrito.component';
     CommonModule,
     
     PopupModule,
+    ChipModule,
   ],
   declarations: [
     HeaderCarritoComponent,    

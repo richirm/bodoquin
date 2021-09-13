@@ -19,7 +19,25 @@
   <ng-template #templateCarritoBody>
     <div class="carrito_body">
       <div class="carrito_productos">  
-      
+        <div *ngFor="let producto of productos" class="carrito_producto">
+          <div class="carrito_producto_img">
+            <img src="../../../assets/img/{{ producto.nombreImg }}">
+          </div>
+          <div class="carrito_producto_detalle">
+            <h2>{{ producto.nombreCategoria }}</h2>
+            <h1>{{ producto.nombreProducto }}</h1>
+            <span class="carrito_producto_total">S/. {{ producto.precioProducto }}</span>
+            
+            <div class="carrito_producto_contador">
+              <div class="carrito_producto_contador_agrega">
+                <span><i class="bi bi-dash-lg" (click)="removeItemInProduct(producto.idProducto)"></i></span>
+                <span><i class="bi bi-plus-lg" (click)="addItemInProduct(producto.idProducto)"></i></span>
+              </div>
+              <div class="carrito_producto_contador_cantidad">{{ producto.cantidadProducto }}</div>
+            </div>
+          </div>
+          <i class="bi bi-x icono-accion" (click)="deleteProduct(producto.idProducto)"></i>
+        </div> 
       </div>
         
       <div class="carrito_total">

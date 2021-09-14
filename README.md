@@ -82,6 +82,9 @@ Aplicación bodoquin
       - Criterios para crear un componente:
         - Una sección o div de debe utilizar en varias parte de otras o de la misma vista
         - Una vista u componente es muy extenso y se necesita dividirlo en pequeñas partes para que sea de facil entendimiento y mantenimiento
+      - Proyeccion de contenido: Enviar un contenido HTML de un componente padre hacia un componente hijo
+        - ng-template: Envíar una plantilla del padre al hijo
+        - ng-content: Enviar el contenido del componente en el padre hacia el hijo
     - Routing:
       - La forma en la que Angular asocia una ruta de la url a un componente (vista)
     - Databinding:
@@ -112,13 +115,13 @@ Aplicación bodoquin
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13, 21
     - Features: (Lista de tareas - tablero KANBAN) 28
-      - Migrar bodoquin a Angular 24
+      - Migrar bodoquin a Angular 22
+        - corregir superposicion del chat 3
+        - animacion de la flecha en el popup 2
+        - corrección de la posicion de la flecha cuando hay scroll 3
         - directivas: 1
             -*ngSwitch
-        - crear componente chat 5
-        - crear componente carrito 8
-          - integracion con popup
-          - maquetacion del popup carrito
+        - crear componente carrito 3
           - lógica del popup de carrito
         - teoria de servicios: 2
           - servicios para comunicar componentes

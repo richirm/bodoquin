@@ -24,6 +24,7 @@
     top: 0px;
     right: 0px;
     z-index: 3;
+    transition: opacity 0.2s linear;
   }
 
   &_contenedor {
@@ -37,8 +38,15 @@
     right: 0px;
     text-align: initial;
     z-index: 2;
-    transform-origin: bottom right;
     overflow: hidden;
+    
+    &.animation-top {      
+      transform-origin: top right;
+    }
+    
+    &.animation-bottom {      
+      transform-origin: bottom right;
+    }
 
     &_header {
       width: 100%;

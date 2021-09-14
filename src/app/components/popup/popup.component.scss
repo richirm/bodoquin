@@ -38,6 +38,7 @@
     text-align: initial;
     z-index: 2;
     transform-origin: bottom right;
+    overflow: hidden;
 
     &_header {
       width: 100%;

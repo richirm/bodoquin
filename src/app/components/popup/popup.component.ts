@@ -21,6 +21,8 @@ export class PopupComponent implements OnInit, OnChanges {
   @Input() templateBody: TemplateRef<any>;
   @Input() templateFooter: TemplateRef<any>;
   
+  timeoutCerrar; 
+  
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     this.calcPositionPopup();
@@ -36,6 +38,7 @@ export class PopupComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges ) {
     if(changes.showPopup){
       this.calcPositionPopup();
+      this.calcAlturaPopup();
     }
   }
 
@@ -57,6 +60,20 @@ export class PopupComponent implements OnInit, OnChanges {
       let flecha = this.el.nativeElement.querySelector('.popup_flecha');
       flecha.style.right = `${window.innerWidth - left - 45}px`;
       flecha.style.top = `calc(${top}px + 45px)`;
+    }
+  }
+  
+  calcAlturaPopup() {
+    clearTimeout(this.timeoutCerrar);
+    const contenedor = this.el.nativeElement.querySelector('.popup_contenedor');
+    if(this.showPopup === true) {
+      contenedor.style.height = 'auto';
+      contenedor.style.minHeight = 'auto';
+    } else { 
+      this.timeoutCerrar = setTimeout(() => {
+        contenedor.style.height = 0;
+        contenedor.style.minHeight = 0;
+      }, 0.3 * 1000);     
     }
   }
   

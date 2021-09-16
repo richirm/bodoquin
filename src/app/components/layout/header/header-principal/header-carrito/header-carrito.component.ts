@@ -48,15 +48,27 @@ export class HeaderCarritoComponent {
   }
   
   deleteProduct(idProducto: number) {
-    
+    // logica para eliminar un producto (x)
   }
   
   removeItemInProduct(idProducto: number) {
-    
+    // logica para restar unidades a un producto (-)
   }
   
   addItemInProduct(idProducto: number) {
-    
+    // logica para agregar unidades a un producto (+)
+  }
+  
+  calcUnidadesEnProducto() {
+    // logica para actualizar el numero de unidades por producto
+  }
+  
+  calcMontoTotal() {
+    // logica para actualizar el monto total
+  }
+  
+  calcUnidadesTotales() {
+    // logica para actualizar el numero de unidades totales del carrito (chip)
   }
   
 }

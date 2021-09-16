@@ -160,7 +160,7 @@ Aplicación bodoquin
       
 5. Plataformas:
   - zoom: https://us05web.zoom.us/j/88522391492?pwd=UExqSW1vVlFuaXVOZzgxamJkQXo0QT09
-  - mural: https://app.mural.co/invitation/mural/bodoquin6992/1628440329733?sender=u4198c20ad998e923de7a2867&key=6ff731e3-5eb2-4d6d-97f5-3c0f3ac2e12a
+  - mural: https://app.mural.co/invitation/mural/bodoquin6992/1631762200451?sender=u4198c20ad998e923de7a2867&key=c4b98edb-4b83-439f-9d62-38ad96539c53
   - trello: https://trello.com/b/0RXHhEKT/bodoquin
   - github: https://github.com/richirm/bodoquin
   

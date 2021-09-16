@@ -51,8 +51,10 @@ export class HeaderCarritoComponent {
     // logica para eliminar un producto (x)
   }
   
-  removeItemInProduct(idProducto: number) {
-    // logica para restar unidades a un producto (-)
+  removeItemInProduct(producto: ProductoInterface) {
+    if(producto.cantidadProducto > 0) {
+      producto.cantidadProducto--;
+    }
   }
   
   addItemInProduct(producto: ProductoInterface) {

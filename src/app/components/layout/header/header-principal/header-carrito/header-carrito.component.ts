@@ -55,8 +55,10 @@ export class HeaderCarritoComponent {
     // logica para restar unidades a un producto (-)
   }
   
-  addItemInProduct(idProducto: number) {
-    // logica para agregar unidades a un producto (+)
+  addItemInProduct(producto: ProductoInterface) {
+    if(producto.cantidadProducto < this.maximoPorProducto) {
+      producto.cantidadProducto++; 
+    }
   }
   
   calcUnidadesEnProducto() {

@@ -47,8 +47,8 @@ export class HeaderCarritoComponent {
     this.showPopup = true;   
   }
   
-  deleteProduct(idProducto: number) {
-    // logica para eliminar un producto (x)
+  deleteProduct(indexProducto: number) {
+    this.productos.splice(indexProducto, 1);
   }
   
   removeItemInProduct(producto: ProductoInterface) {

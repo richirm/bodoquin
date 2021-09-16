@@ -19,7 +19,7 @@
   <ng-template #templateCarritoBody>
     <div class="carrito_body">
       <div class="carrito_productos">  
-        <div *ngFor="let producto of productos" class="carrito_producto">
+        <div *ngFor="let producto of productos; let indexProducto = index" class="carrito_producto">
           <div class="carrito_producto_img">
             <img src="../../../assets/img/{{ producto.nombreImg }}">
           </div>
@@ -36,7 +36,7 @@
               <div class="carrito_producto_contador_cantidad">{{ producto.cantidadProducto }}</div>
             </div>
           </div>
-          <i class="bi bi-x icono-accion" (click)="deleteProduct(producto.idProducto)"></i>
+          <i class="bi bi-x icono-accion" (click)="deleteProduct(indexProducto)"></i>
         </div> 
       </div>
         

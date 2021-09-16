@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { ProductoInterface } from '../../../../../core/interfaces/producto.interface';
 
@@ -7,11 +7,12 @@ import { ProductoInterface } from '../../../../../core/interfaces/producto.inter
   templateUrl: './header-carrito.component.html',
   styleUrls: ['./header-carrito.component.scss']
 })
-export class HeaderCarritoComponent {
+export class HeaderCarritoComponent implements OnInit {
   
   showPopup: boolean = false;
    
-  maximoPorProducto: number = 5; 
+  maximoPorProducto: number = 5;
+  montoTotal: number = 0;
   
   productos: Array<ProductoInterface> = [
     {
@@ -43,23 +44,30 @@ export class HeaderCarritoComponent {
     }
   ];
   
+  ngOnInit() {
+    this.calcMontoTotal();
+  }
+  
   mostrarPopupCarrito() {
     this.showPopup = true;   
   }
   
   deleteProduct(indexProducto: number) {
     this.productos.splice(indexProducto, 1);
+    this.calcMontoTotal();
   }
   
   removeItemInProduct(producto: ProductoInterface) {
     if(producto.cantidadProducto > 0) {
       producto.cantidadProducto--;
+      this.calcMontoTotal();
     }
   }
   
   addItemInProduct(producto: ProductoInterface) {
     if(producto.cantidadProducto < this.maximoPorProducto) {
       producto.cantidadProducto++; 
+      this.calcMontoTotal();
     }
   }
   
@@ -68,11 +76,13 @@ export class HeaderCarritoComponent {
   }
   
   calcMontoTotal() {
-    // logica para actualizar el monto total
+    this.montoTotal = 0;
+    this.productos.forEach(producto => {
+      this.montoTotal = this.montoTotal + (producto.precioProducto * producto.cantidadProducto);
+    });  
   }
   
   calcUnidadesTotales() {
     // logica para actualizar el numero de unidades totales del carrito (chip)
-  }
-  
+  } 
 }

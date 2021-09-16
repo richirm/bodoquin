@@ -1,6 +1,6 @@
 <div class="header-carrito">
   <i #carritoIcono class="bi bi-cart-check" (click)="mostrarPopupCarrito()"></i>
-  <bodoquin-chip>0</bodoquin-chip>
+  <bodoquin-chip>{{ cantidadUnidades }}</bodoquin-chip>
 
   <bodoquin-popup
     [elemento]="carritoIcono"

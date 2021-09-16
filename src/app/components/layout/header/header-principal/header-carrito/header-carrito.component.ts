@@ -13,6 +13,7 @@ export class HeaderCarritoComponent implements OnInit {
    
   maximoPorProducto: number = 5;
   montoTotal: number = 0;
+  cantidadUnidades: number = 0;
   
   productos: Array<ProductoInterface> = [
     {
@@ -77,8 +78,10 @@ export class HeaderCarritoComponent implements OnInit {
   
   calcMontoTotal() {
     this.montoTotal = 0;
+    this.cantidadUnidades = 0;
     this.productos.forEach(producto => {
-      this.montoTotal = this.montoTotal + (producto.precioProducto * producto.cantidadProducto);
+      this.montoTotal += (producto.precioProducto * producto.cantidadProducto);
+      this.cantidadUnidades += producto.cantidadProducto;
     });  
   }
   

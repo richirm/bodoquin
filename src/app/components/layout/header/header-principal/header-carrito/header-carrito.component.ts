@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ProductoInterface } from '../../../../../core/interfaces/producto.interface';
+import { CarritoService } from '../../../../../core/services/carrito.service';
 
 @Component({
   selector: 'bodoquin-header-carrito',
@@ -45,8 +46,15 @@ export class HeaderCarritoComponent implements OnInit {
     }
   ];
   
+  constructor(
+    private carritoService: CarritoService) {}
+  
   ngOnInit() {
     this.calcMontoTotal();
+  }
+  
+  agregarProducto() {
+    this.carritoService.agregarProducto('pepito');
   }
   
   mostrarPopupCarrito() {

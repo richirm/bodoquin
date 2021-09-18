@@ -7,6 +7,9 @@ import { NavModule } from './components/layout/nav/nav.module';
 import { FooterModule } from './components/layout/footer/footer.module';
 import { ChatModule } from './components/layout/chat/chat.module';
 
+//Services
+import { CarritoService } from './core/services/carrito.service';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -24,7 +27,9 @@ import { AppRoutingModule } from './app-routing.module';
   declarations: [
     AppComponent,
   ],
-  providers: [],
+  providers: [
+    CarritoService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

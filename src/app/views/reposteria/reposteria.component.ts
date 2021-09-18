@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { ProductoInterface } from '../../core/interfaces/producto.interface';
+import { CarritoService } from '../../core/services/carrito.service';
 
 @Component({
   selector: 'bodoquin-reposteria',
@@ -119,5 +120,12 @@ export class ReposteriaComponent {
       cantidadProducto: 0,
     },
   ];
+  
+  constructor(
+    private carritoService: CarritoService) {}
+    
+  clickOk() {
+    this.carritoService.agregarProducto('juanito');
+  }
   
 }

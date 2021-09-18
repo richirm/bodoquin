@@ -11,7 +11,7 @@
   ></bodoquin-popup>
   
   <ng-template #templateCarritoHeader>
-    <div class="carrito_header">
+    <div class="carrito_header" (click)="agregarProducto()">
       Tienes agregados <b>{{ cantidadUnidades }}</b> productos
     </div>
   </ng-template>

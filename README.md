@@ -85,6 +85,13 @@ Aplicación bodoquin
       - Proyeccion de contenido: Enviar un contenido HTML de un componente padre hacia un componente hijo
         - ng-template: Envíar una plantilla del padre al hijo
         - ng-content: Enviar el contenido del componente en el padre hacia el hijo
+    - Servicios: Nos permite gestionar los datos de la aplicación
+      - Servicio para comunicar componentes: Envío de datos entre componentes
+      - Servicio para proveer de datos a la vista:
+        - Datos provenientes del storage (memoria del navegador) (local storage , session storage)
+        - Datos provenientes del backend
+        - Datos provenientes de otro componente
+      
     - Routing:
       - La forma en la que Angular asocia una ruta de la url a un componente (vista)
     - Databinding:
@@ -123,9 +130,13 @@ Aplicación bodoquin
             -*ngSwitch
         - crear componente carrito 3
           - lógica del popup de carrito
-        - teoria de servicios: 2
+        - teoria de servicios: 8
           - servicios para comunicar componentes
         - integrar las pantallas de productos con el carrito 5
+          - agregar producto 2
+          - sumar un producto 1
+          - restar un producto 1
+          - eliminar un producto 1
         - crear componente tabs 3
     - backlog => conjunto de tareas o mejoras a realizar (features futuros)      
       - Requerimientos funcionales:

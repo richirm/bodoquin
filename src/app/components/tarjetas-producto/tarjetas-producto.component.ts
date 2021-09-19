@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { ProductoInterface } from '../../core/interfaces/producto.interface';
 
@@ -10,4 +10,6 @@ import { ProductoInterface } from '../../core/interfaces/producto.interface';
 export class TarjetasProductoComponent {
   @Input() productos: Array<ProductoInterface>;
   @Input() fondo: string;
+  
+  @Output() onClickAgregar: EventEmitter<ProductoInterface> = new EventEmitter()
 }

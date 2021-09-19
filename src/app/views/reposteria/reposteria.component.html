@@ -1,7 +1,7 @@
 <div class="reposteria">
-  <span (click)="clickNombre()">Mi nombre</span>
   <bodoquin-tarjetas-producto 
     [productos]="productos"
     fondo="#eee4ddeb"
+    (onClickAgregar)="onClickAgregar($event)"
   ></bodoquin-tarjetas-producto>
 </div>

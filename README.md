@@ -132,11 +132,11 @@ Aplicación bodoquin
           - lógica del popup de carrito
         - teoria de servicios: 8
           - servicios para comunicar componentes
-        - integrar las pantallas de productos con el carrito 5
+        - integrar las pantallas de productos con el carrito 8
           - agregar producto 2
-          - sumar un producto 1
-          - restar un producto 1
-          - eliminar un producto 1
+          - sumar un producto 2
+          - restar un producto 2
+          - eliminar un producto 2
         - crear componente tabs 3
     - backlog => conjunto de tareas o mejoras a realizar (features futuros)      
       - Requerimientos funcionales:

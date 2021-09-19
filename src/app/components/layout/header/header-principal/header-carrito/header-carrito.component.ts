@@ -51,6 +51,13 @@ export class HeaderCarritoComponent implements OnInit {
   
   ngOnInit() {
     this.calcMontoTotal();
+    this.recibirNombre();
+  }
+  
+  recibirNombre() {
+    this.carritoService.nombreSeleccionado.subscribe((nombre) => {
+      alert('Mi nuevo nombre es: ' + nombre);
+    });
   }
   
   agregarProducto() {

@@ -124,8 +124,8 @@ export class ReposteriaComponent {
   constructor(
     private carritoService: CarritoService) {}
     
-  clickOk() {
-    this.carritoService.agregarProducto('juanito');
+  clickNombre() {
+    this.carritoService.nombreSeleccionado.emit('Pepito');
   }
   
 }

@@ -122,16 +122,11 @@ Aplicación bodoquin
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13, 21
     - Features: (Lista de tareas - tablero KANBAN) 28
-      - Migrar bodoquin a Angular 22
-        - corregir superposicion del chat 3
-        - animacion de la flecha en el popup 2
+      - Migrar bodoquin a Angular 19
+        - full JS 5
         - corrección de la posicion de la flecha cuando hay scroll 3
         - directivas: 1
             -*ngSwitch
-        - crear componente carrito 3
-          - lógica del popup de carrito
-        - teoria de servicios: 8
-          - servicios para comunicar componentes
         - integrar las pantallas de productos con el carrito 8
           - agregar producto 2
           - sumar un producto 2

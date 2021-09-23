@@ -51,12 +51,20 @@ export class HeaderCarritoComponent implements OnInit {
   
   ngOnInit() {
     this.calcMontoTotal();
-    this.suscribirAgregarProducto();
+    this.suscribirProductoAgregado();
+    this.suscribirProductoSumado();
   }
   
-  suscribirAgregarProducto() {
+  suscribirProductoAgregado() {
     this.carritoService.productoAgregado.subscribe((producto: ProductoInterface) => {
+      producto.cantidadProducto++;
       this.productos.push(producto);
+    });
+  }
+  
+  suscribirProductoSumado() {
+    this.carritoService.productoSumado.subscribe((producto: ProductoInterface) => {
+      this.addItemInProduct(producto);
     });
   }
   

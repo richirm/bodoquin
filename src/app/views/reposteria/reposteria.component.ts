@@ -128,4 +128,8 @@ export class ReposteriaComponent {
     this.carritoService.productoAgregado.emit(producto);
   }
   
+  onClickSumar(producto: ProductoInterface) {
+    this.carritoService.productoSumado.emit(producto);
+  }
+  
 }

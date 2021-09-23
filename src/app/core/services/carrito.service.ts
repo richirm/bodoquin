@@ -6,5 +6,6 @@ import { ProductoInterface } from '../interfaces/producto.interface';
 export class CarritoService {
   
   productoAgregado: EventEmitter<ProductoInterface> = new EventEmitter();  
+  productoSumado: EventEmitter<ProductoInterface> = new EventEmitter();  
   
 }

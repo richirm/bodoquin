@@ -25,7 +25,7 @@
         <div class="tarjeta2_footer_contador_unidades">
           <span><b>{{ producto.cantidadProducto }}</b> un</span>
         </div>
-        <div class="tarjeta2_footer_contador_agregar" onclick="addItemInProduct($producto.idProducto, event)">
+        <div class="tarjeta2_footer_contador_agregar" (click)="onClickSumar.emit(producto)">
           <i class="bi bi-plus-lg"></i>
         </div>
       </div>

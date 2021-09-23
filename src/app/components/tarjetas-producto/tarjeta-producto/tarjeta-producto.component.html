@@ -14,7 +14,7 @@
       <button *ngIf="producto.cantidadProducto === 0" type="button" (click)="onClickAgregar.emit(producto)">AGREGAR</button>
       
       <div *ngIf="producto.cantidadProducto !== 0" class="tarjeta2_footer_contador">
-        <div *ngIf="producto.cantidadProducto === 1" class="tarjeta2_footer_contador_agregar" onclick="deleteProduct($producto.idProducto, event)">
+        <div *ngIf="producto.cantidadProducto === 1" class="tarjeta2_footer_contador_agregar" (click)="onClickEliminar.emit(producto)">
           <i class="bi bi-trash"></i>
         </div>
         

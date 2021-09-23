@@ -8,5 +8,6 @@ export class CarritoService {
   productoAgregado: EventEmitter<ProductoInterface> = new EventEmitter();  
   productoSumado: EventEmitter<ProductoInterface> = new EventEmitter();    
   productoRestado: EventEmitter<ProductoInterface> = new EventEmitter();  
+  productoEliminado: EventEmitter<ProductoInterface> = new EventEmitter();  
   
 }

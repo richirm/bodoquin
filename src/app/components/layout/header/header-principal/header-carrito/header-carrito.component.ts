@@ -54,6 +54,7 @@ export class HeaderCarritoComponent implements OnInit {
     this.suscribirProductoAgregado();
     this.suscribirProductoSumado();
     this.suscribirProductoRestado();
+    this.suscribirProductoEliminado();
   }
   
   suscribirProductoAgregado() {
@@ -72,6 +73,15 @@ export class HeaderCarritoComponent implements OnInit {
   suscribirProductoRestado() {
     this.carritoService.productoRestado.subscribe((producto: ProductoInterface) => {
       this.removeItemInProduct(producto);
+    });
+  }
+  
+  suscribirProductoEliminado() {
+    this.carritoService.productoEliminado.subscribe((producto: ProductoInterface) => {
+      const indexProducto = this.productos.findIndex(productoItem => {
+        return producto.idProducto ==  productoItem.idProducto; 
+      });
+      this.deleteProduct(indexProducto);
     });
   }
   

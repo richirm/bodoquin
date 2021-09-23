@@ -13,5 +13,6 @@ export class TarjetaProductoComponent {
   @Output() onClickAgregar: EventEmitter<ProductoInterface> = new EventEmitter();
   @Output() onClickSumar: EventEmitter<ProductoInterface> = new EventEmitter();
   @Output() onClickRestar: EventEmitter<ProductoInterface> = new EventEmitter();
+  @Output() onClickEliminar: EventEmitter<ProductoInterface> = new EventEmitter();
 
 }

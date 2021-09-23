@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { ProductoInterface } from '../../core/interfaces/producto.interface';
+import { CarritoService } from '../../core/services/carrito.service';
 
 @Component({
   selector: 'bodoquin-tecnologia',
@@ -119,5 +120,12 @@ export class TecnologiaComponent {
       cantidadProducto: 0,
     },
   ];
+  
+  constructor(
+    private carritoService: CarritoService) {}
+  
+  onClickAgregar (producto: ProductoInterface) {
+    this.carritoService.productoAgregado.emit(producto);
+  }
 
 }

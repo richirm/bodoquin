@@ -127,4 +127,13 @@ export class JugueteriaComponent {
   onClickAgregar(producto: ProductoInterface) {
     this.carritoService.productoAgregado.emit(producto);
   }
+  
+  onClickSumar(producto: ProductoInterface) {
+    this.carritoService.productoSumado.emit(producto);
+  }
+  
+  onClickRestar(producto: ProductoInterface) {
+    this.carritoService.productoRestado.emit(producto);
+  }
+  
 }

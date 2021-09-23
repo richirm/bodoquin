@@ -18,7 +18,7 @@
           <i class="bi bi-trash"></i>
         </div>
         
-        <div *ngIf="producto.cantidadProducto > 1" class="tarjeta2_footer_contador_agregar" onclick="removeItemInProduct($producto.idProducto, event)">
+        <div *ngIf="producto.cantidadProducto > 1" class="tarjeta2_footer_contador_agregar" (click)="onClickRestar.emit(producto)">
           <i class="bi bi-dash-lg"></i>
         </div>
         

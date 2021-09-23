@@ -53,6 +53,7 @@ export class HeaderCarritoComponent implements OnInit {
     this.calcMontoTotal();
     this.suscribirProductoAgregado();
     this.suscribirProductoSumado();
+    this.suscribirProductoRestado();
   }
   
   suscribirProductoAgregado() {
@@ -65,6 +66,12 @@ export class HeaderCarritoComponent implements OnInit {
   suscribirProductoSumado() {
     this.carritoService.productoSumado.subscribe((producto: ProductoInterface) => {
       this.addItemInProduct(producto);
+    });
+  }
+  
+  suscribirProductoRestado() {
+    this.carritoService.productoRestado.subscribe((producto: ProductoInterface) => {
+      this.removeItemInProduct(producto);
     });
   }
   

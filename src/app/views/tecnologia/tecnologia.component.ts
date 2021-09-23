@@ -124,8 +124,12 @@ export class TecnologiaComponent {
   constructor(
     private carritoService: CarritoService) {}
   
-  onClickAgregar (producto: ProductoInterface) {
+  onClickAgregar(producto: ProductoInterface) {
     this.carritoService.productoAgregado.emit(producto);
+  }
+  
+  onClickSumar(producto: ProductoInterface) {
+    this.carritoService.productoSumado.emit(producto);
   }
 
 }

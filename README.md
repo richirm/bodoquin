@@ -91,6 +91,10 @@ Aplicación bodoquin
         - Datos provenientes del storage (memoria del navegador) (local storage , session storage)
         - Datos provenientes del backend
         - Datos provenientes de otro componente
+    - Observables: Es un objeto que va a transmitir el cambio de flujo de datos
+      - Evento: Para detectar envio de datos de un componente de otro
+      - Http: Para detectar envio de datos entre backend y frontend
+      - Outputs: Para detectar envio de datos de un componente hijo hacia el padre
       
     - Routing:
       - La forma en la que Angular asocia una ruta de la url a un componente (vista)
@@ -122,8 +126,10 @@ Aplicación bodoquin
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13, 21
     - Features: (Lista de tareas - tablero KANBAN) 28
-      - Migrar bodoquin a Angular 19
+      - Migrar bodoquin a Angular 24
         - full JS 5
+        - Creación de servicios para las vistas de productos 5
+          - Utilicen archivos de constantes para los productos
         - corrección de la posicion de la flecha cuando hay scroll 3
         - directivas: 1
             -*ngSwitch
@@ -178,7 +184,47 @@ Aplicación bodoquin
 7. Tutoriales:
   - Uso de variables y objetos en javascript https://www.youtube.com/watch?v=ivdTnPl1ND0
     
-    
+Javascript
+------------------------   
+   - Están los datos
+      - Que provienen del backend
+      - Que provienen del storage
+      - Que provienen de las constantes del JS
+      
+   - Logicas de negocio
+      - Logicas para manipular los datos
+        - creacion de variables, objetos y metodos
+        - forEach
+        - +, -, *, /
+        - split
+        - find
+        - ...
+      - Logicas para actualizacion de la pantalla
+        - poner los datos en la pantalla
+        - animaciones
+      - Logicas para validaciones de datos
+        - if else => 
+          - 1 condicion if(miVariable > 5) { ... }
+          - >1 condicion
+            - if(miVariable1 < 5 && miVariable2 === 'Torta Chocolate') { 
+                ... 
+              } else if (miVariable2 === 'Deli Oreo' || miVariable2 === 'Keke de piña') {
+                ...
+              } else if () {
+                ...
+              } else {
+                ...
+              }
+      - Logicas para capturar eventos que realiza el usuario desde la pantalla
+        - click
+        - keypress
+        - mousedown
+        - resize
+        - scroll
+      - Logica para enviar datos hacia los services
+        - Enviar hacia el backend
+        - Enviar hacia el storage
+        - Enviar hacia otro componente
         
    
   

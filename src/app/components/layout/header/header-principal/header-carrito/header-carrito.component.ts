@@ -55,7 +55,7 @@ export class HeaderCarritoComponent implements OnInit {
   }
   
   suscribirAgregarProducto() {
-    this.carritoService.productoSeleccionado.subscribe((producto: ProductoInterface) => {
+    this.carritoService.productoAgregado.subscribe((producto: ProductoInterface) => {
       this.productos.push(producto);
     });
   }

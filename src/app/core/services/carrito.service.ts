@@ -5,6 +5,6 @@ import { ProductoInterface } from '../interfaces/producto.interface';
 @Injectable()
 export class CarritoService {
   
-  productoSeleccionado: EventEmitter<ProductoInterface> = new EventEmitter();  
+  productoAgregado: EventEmitter<ProductoInterface> = new EventEmitter();  
   
 }

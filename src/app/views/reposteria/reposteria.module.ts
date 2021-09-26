@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { TarjetasProductoModule } from '../../components/tarjetas-producto/tarjetas-producto.module';
 
 import { ReposteriaComponent } from './reposteria.component';
+import { ReposteriaService } from './reposteria.service';
 import { ReposteriaRoutingModule } from './reposteria-routing.module';
 
 @NgModule({
@@ -18,6 +19,9 @@ import { ReposteriaRoutingModule } from './reposteria-routing.module';
   ],
   exports: [
     ReposteriaComponent,
+  ],
+  providers: [
+    ReposteriaService,
   ]
 })
 export class ReposteriaModule {}

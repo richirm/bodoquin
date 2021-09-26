@@ -93,8 +93,8 @@ Aplicación bodoquin
         - Datos provenientes de otro componente
     - Observables: Es un objeto que va a transmitir el cambio de flujo de datos
       - Evento: Para detectar envio de datos de un componente de otro
-      - Http: Para detectar envio de datos entre backend y frontend
       - Outputs: Para detectar envio de datos de un componente hijo hacia el padre
+      - Http: Para detectar envio de datos entre backend y frontend
       
     - Routing:
       - La forma en la que Angular asocia una ruta de la url a un componente (vista)

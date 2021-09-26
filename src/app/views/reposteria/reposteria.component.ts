@@ -136,4 +136,8 @@ export class ReposteriaComponent {
     this.carritoService.productoRestado.emit(producto);
   }
   
+  onClickEliminar(producto: ProductoInterface) {
+    this.carritoService.productoEliminado.emit(producto);
+  }
+  
 }

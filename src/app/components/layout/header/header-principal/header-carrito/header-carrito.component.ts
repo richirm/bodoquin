@@ -16,35 +16,7 @@ export class HeaderCarritoComponent implements OnInit {
   montoTotal: number = 0;
   cantidadUnidades: number = 0;
   
-  productos: Array<ProductoInterface> = [
-    {
-      idProducto: 1001,
-      nombreImg: 'torta_selva_negra.jpg', 
-      nombreCategoria: 'Torta húmeda',
-      nombreProducto: 'Torta de leche de Óreo1',
-      descripcionProducto: '',
-      precioProducto: 60.25,
-      cantidadProducto: 3,
-    }, 
-    {
-      idProducto: 1002,
-      nombreImg: 'torta_selva_negra.jpg',
-      nombreCategoria: 'Torta húmeda2',
-      nombreProducto: 'Torta de leche de Óreo2',
-      descripcionProducto: '',
-      precioProducto: 70.50,
-      cantidadProducto: 4,
-    }, 
-    {
-      idProducto: 1003,
-      nombreImg: 'torta_selva_negra.jpg',
-      nombreCategoria: 'Torta húmeda3',
-      nombreProducto: 'Torta de leche de Óreo3',
-      descripcionProducto: '',
-      precioProducto: 45.50,
-      cantidadProducto: 2,
-    }
-  ];
+  productos: Array<ProductoInterface> = [];
   
   constructor(
     private carritoService: CarritoService) {}
@@ -61,6 +33,7 @@ export class HeaderCarritoComponent implements OnInit {
     this.carritoService.productoAgregado.subscribe((producto: ProductoInterface) => {
       producto.cantidadProducto++;
       this.productos.push(producto);
+      this.calcMontoTotal();
     });
   }
   
@@ -90,12 +63,13 @@ export class HeaderCarritoComponent implements OnInit {
   }
   
   deleteProduct(indexProducto: number) {
+    this.productos[indexProducto].cantidadProducto = 0;
     this.productos.splice(indexProducto, 1);
     this.calcMontoTotal();
   }
   
   removeItemInProduct(producto: ProductoInterface) {
-    if(producto.cantidadProducto > 0) {
+    if(producto.cantidadProducto >= 2) {
       producto.cantidadProducto--;
       this.calcMontoTotal();
     }

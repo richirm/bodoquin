@@ -58,7 +58,12 @@ export class PopupComponent implements OnInit, OnChanges {
     
     if(this.showFlecha === true) {
       let flecha = this.el.nativeElement.querySelector('.popup_flecha');
-      flecha.style.right = `${window.innerWidth - left - 45}px`;
+      let ajusteFlecha = 
+        (document.querySelector('body').offsetHeight > window.innerHeight) 
+            ? 45 
+            : 28;
+      
+      flecha.style.right = `${window.innerWidth - left - ajusteFlecha}px`;
       flecha.style.top = `calc(${top}px + 45px)`;
     }
   }

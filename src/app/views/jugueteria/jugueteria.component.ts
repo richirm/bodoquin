@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { ProductoInterface } from '../../core/interfaces/producto.interface';
 import { CarritoService } from '../../core/services/carrito.service';

@@ -17,11 +17,11 @@ import { TecnologiaListadoComponent } from './tecnologia-listado/tecnologia-list
   ],
   declarations: [
     TecnologiaComponent,    
-    TecnologiaListadoComponent
+    TecnologiaListadoComponent,
   ],
   exports: [
     TecnologiaComponent,
-    TecnologiaListadoComponent
+    TecnologiaListadoComponent,
   ],
   providers: [
     TecnologiaService,

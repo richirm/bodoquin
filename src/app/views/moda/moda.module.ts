@@ -6,6 +6,8 @@ import { TarjetasProductoModule } from '../../components/tarjetas-producto/tarje
 import { ModaComponent } from './moda.component';
 import { ModaService } from './moda.service';
 import { ModaRoutingModule } from './moda-routing.module';
+import { ModaListadoComponent } from './moda-listado/moda-listado.component';
+
 
 @NgModule({
   imports: [
@@ -15,10 +17,12 @@ import { ModaRoutingModule } from './moda-routing.module';
     TarjetasProductoModule,
   ],
   declarations: [
-    ModaComponent,    
+    ModaComponent,   
+    ModaListadoComponent,
   ],
   exports: [
     ModaComponent,
+    ModaListadoComponent,
   ],
   providers: [
     ModaService,

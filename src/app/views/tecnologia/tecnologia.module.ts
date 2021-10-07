@@ -6,6 +6,7 @@ import { TarjetasProductoModule } from '../../components/tarjetas-producto/tarje
 import { TecnologiaComponent } from './tecnologia.component';
 import { TecnologiaService } from './tecnologia.service';
 import { TecnologiaRoutingModule } from './tecnologia-routing.module';
+import { TecnologiaListadoComponent } from './tecnologia-listado/tecnologia-listado.component';
 
 @NgModule({
   imports: [
@@ -16,9 +17,11 @@ import { TecnologiaRoutingModule } from './tecnologia-routing.module';
   ],
   declarations: [
     TecnologiaComponent,    
+    TecnologiaListadoComponent,
   ],
   exports: [
     TecnologiaComponent,
+    TecnologiaListadoComponent,
   ],
   providers: [
     TecnologiaService,

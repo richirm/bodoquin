@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ReposteriaComponent } from './reposteria.component';
 import { ReposteriaListadoComponent } from './reposteria-listado/reposteria-listado.component';
+import { ReposteriaDetalleComponent } from './reposteria-detalle/reposteria-detalle.component';
 
 const routes: Routes = [
   {
@@ -13,9 +14,10 @@ const routes: Routes = [
         path: '',
         component: ReposteriaListadoComponent
       }, 
-      // {
-        
-      // }
+      {
+        path: 'detalle',
+        component: ReposteriaDetalleComponent
+      }
     ]
   },
 ];

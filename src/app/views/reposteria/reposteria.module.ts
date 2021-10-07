@@ -7,6 +7,7 @@ import { ReposteriaComponent } from './reposteria.component';
 import { ReposteriaService } from './reposteria.service';
 import { ReposteriaRoutingModule } from './reposteria-routing.module';
 import { ReposteriaListadoComponent } from './reposteria-listado/reposteria-listado.component';
+import { ReposteriaDetalleComponent } from './reposteria-detalle/reposteria-detalle.component';
 
 @NgModule({
   imports: [
@@ -17,11 +18,13 @@ import { ReposteriaListadoComponent } from './reposteria-listado/reposteria-list
   ],
   declarations: [
     ReposteriaComponent,
-    ReposteriaListadoComponent
+    ReposteriaListadoComponent,
+    ReposteriaDetalleComponent
   ],
   exports: [
     ReposteriaComponent,
-    ReposteriaListadoComponent
+    ReposteriaListadoComponent,
+    ReposteriaDetalleComponent
   ],
   providers: [
     ReposteriaService,

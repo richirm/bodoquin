@@ -166,6 +166,16 @@ Aplicación bodoquin
   - mural: https://app.mural.co/invitation/mural/bodoquin6992/1631762200451?sender=u4198c20ad998e923de7a2867&key=c4b98edb-4b83-439f-9d62-38ad96539c53
   - trello: https://trello.com/b/0RXHhEKT/bodoquin
   - github: https://github.com/richirm/bodoquin
+  - discord: https://discord.gg/2XMyjnqw
+  - Comunicación:
+    - Formales:
+      - Microsoft team
+      - Slack
+    - Informales:
+      - Whatsapp
+      - Google meet (hungout)
+    - Mas informal:
+      - Discord
   
 6. Editores: IDE
   - NotePad++

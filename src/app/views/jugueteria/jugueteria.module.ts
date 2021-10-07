@@ -24,7 +24,7 @@ import { JugueteriaListadoComponent } from './jugueteria-listado/jugueteria-list
     JugueteriaListadoComponent
   ],
   providers: [
-    ReposteriaService,
+    JugueteriaService,
   ]
 })
 export class JugueteriaModule {}

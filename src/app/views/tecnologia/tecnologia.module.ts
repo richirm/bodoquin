@@ -7,6 +7,7 @@ import { TecnologiaComponent } from './tecnologia.component';
 import { TecnologiaService } from './tecnologia.service';
 import { TecnologiaRoutingModule } from './tecnologia-routing.module';
 import { TecnologiaListadoComponent } from './tecnologia-listado/tecnologia-listado.component';
+import { TecnologiaDetalleComponent } from './tecnologia-detalle/tecnologia-detalle.component';
 
 @NgModule({
   imports: [
@@ -18,10 +19,12 @@ import { TecnologiaListadoComponent } from './tecnologia-listado/tecnologia-list
   declarations: [
     TecnologiaComponent,    
     TecnologiaListadoComponent,
+    TecnologiaDetalleComponent,
   ],
   exports: [
     TecnologiaComponent,
     TecnologiaListadoComponent,
+    TecnologiaDetalleComponent,
   ],
   providers: [
     TecnologiaService,

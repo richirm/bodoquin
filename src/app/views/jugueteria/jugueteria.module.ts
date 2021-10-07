@@ -7,6 +7,7 @@ import { JugueteriaComponent } from './jugueteria.component';
 import { JugueteriaService } from './jugueteria.service';
 import { JugueteriaRoutingModule } from './jugueteria-routing.module';
 import { JugueteriaListadoComponent } from './jugueteria-listado/jugueteria-listado.component';
+import { JugueteriaDetalleComponent } from './jugueteria-detalle/jugueteria-detalle.component';
 
 @NgModule({
   imports: [
@@ -17,11 +18,13 @@ import { JugueteriaListadoComponent } from './jugueteria-listado/jugueteria-list
   ],
   declarations: [
     JugueteriaComponent, 
-    JugueteriaListadoComponent
+    JugueteriaListadoComponent,
+    JugueteriaDetalleComponent
   ],
   exports: [
     JugueteriaComponent,
-    JugueteriaListadoComponent
+    JugueteriaListadoComponent,
+    JugueteriaDetalleComponent
   ],
   providers: [
     JugueteriaService,

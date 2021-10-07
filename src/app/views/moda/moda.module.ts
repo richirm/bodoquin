@@ -7,7 +7,7 @@ import { ModaComponent } from './moda.component';
 import { ModaService } from './moda.service';
 import { ModaRoutingModule } from './moda-routing.module';
 import { ModaListadoComponent } from './moda-listado/moda-listado.component';
-
+import { ModaDetalleComponent } from './moda-detalle/moda-detalle.component';
 
 @NgModule({
   imports: [
@@ -19,10 +19,12 @@ import { ModaListadoComponent } from './moda-listado/moda-listado.component';
   declarations: [
     ModaComponent,   
     ModaListadoComponent,
+    ModaDetalleComponent,
   ],
   exports: [
     ModaComponent,
     ModaListadoComponent,
+    ModaDetalleComponent,
   ],
   providers: [
     ModaService,

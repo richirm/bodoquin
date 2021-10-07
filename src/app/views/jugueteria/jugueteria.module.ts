@@ -4,7 +4,9 @@ import { CommonModule } from '@angular/common';
 import { TarjetasProductoModule } from '../../components/tarjetas-producto/tarjetas-producto.module';
 
 import { JugueteriaComponent } from './jugueteria.component';
+import { JugueteriaService } from './jugueteria.service';
 import { JugueteriaRoutingModule } from './jugueteria-routing.module';
+import { JugueteriaListadoComponent } from './jugueteria-listado/jugueteria-listado.component';
 
 @NgModule({
   imports: [
@@ -14,10 +16,15 @@ import { JugueteriaRoutingModule } from './jugueteria-routing.module';
     TarjetasProductoModule,
   ],
   declarations: [
-    JugueteriaComponent,    
+    JugueteriaComponent, 
+    JugueteriaListadoComponent
   ],
   exports: [
     JugueteriaComponent,
+    JugueteriaListadoComponent
+  ],
+  providers: [
+    ReposteriaService,
   ]
 })
 export class JugueteriaModule {}

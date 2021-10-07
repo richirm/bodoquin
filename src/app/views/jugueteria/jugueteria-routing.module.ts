@@ -2,11 +2,21 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { JugueteriaComponent } from './jugueteria.component';
+import { JugueteriaListadoComponent } from './jugueteria-listado/jugueteria-listado.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: JugueteriaComponent
+    component: JugueteriaComponent,
+    children: [
+      {
+        path: '',
+        component: JugueteriaListadoComponent
+      }, 
+      // {
+
+      // }
+    ]
   },
 ];
 

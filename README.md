@@ -31,7 +31,11 @@ Aplicación bodoquin
         - operaciones entre textos
           - textos simples (concatenación)
           - textos complejos (reemplazar variables en un texto)  
-          - Construir un mensaje del HTML usando javascript        
+          - Construir un mensaje del HTML usando javascript
+
+      Patrones: Los patrones sirven para estandarizar el código
+        - Patron reactivo: Eventos y subscripciones
+        - Patron de injección de dependencias: Instanciar los servicios en el constructor
         
 3. Herramientas:
   - GIT: herramienta para sincronizar trabajo y código fuente y nos sirve para ver el historial de cambios de un archivo  

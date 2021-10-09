@@ -15,7 +15,7 @@ const routes: Routes = [
         component: ReposteriaListadoComponent
       }, 
       {
-        path: 'detalle',
+        path: 'detalle/:idProducto',
         component: ReposteriaDetalleComponent
       }
     ]

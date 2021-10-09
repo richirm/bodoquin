@@ -1,5 +1,5 @@
 <div class="tarjeta-producto">
-  <div class="tarjeta2" onclick="redirigirProductoDetalle($producto.idProducto)">             
+  <div class="tarjeta2" (click)="onClickTarjeta.emit(producto)">             
     <div class="tarjeta2_header">         
       <img src="assets/img/{{ producto.nombreImg }}">
     </div>

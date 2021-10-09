@@ -15,5 +15,6 @@ export class TarjetasProductoComponent {
   @Output() onClickSumar: EventEmitter<ProductoInterface> = new EventEmitter();
   @Output() onClickRestar: EventEmitter<ProductoInterface> = new EventEmitter();
   @Output() onClickEliminar: EventEmitter<ProductoInterface> = new EventEmitter();
+  @Output() onClickTarjeta: EventEmitter<ProductoInterface> = new EventEmitter();
 
 }

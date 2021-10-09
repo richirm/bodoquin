@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { ProductoInterface } from '../../../core/interfaces/producto.interface';
 import { CarritoService } from '../../../core/services/carrito.service';
@@ -15,7 +16,8 @@ export class ReposteriaListadoComponent implements OnInit {
   
   constructor(
     private carritoService: CarritoService,
-    private reposteriaService: ReposteriaService) {}
+    private reposteriaService: ReposteriaService,
+    private router: Router) {}
     
   ngOnInit() {
     this.obtenerProductos();
@@ -26,19 +28,27 @@ export class ReposteriaListadoComponent implements OnInit {
   }
     
   onClickAgregar(producto: ProductoInterface) {
+    event.stopPropagation();
     this.carritoService.productoAgregado.emit(producto);
   }
   
   onClickSumar(producto: ProductoInterface) {
+    event.stopPropagation();
     this.carritoService.productoSumado.emit(producto);
   }
   
   onClickRestar(producto: ProductoInterface) {
+    event.stopPropagation();
     this.carritoService.productoRestado.emit(producto);
   }
   
   onClickEliminar(producto: ProductoInterface) {
+    event.stopPropagation();
     this.carritoService.productoEliminado.emit(producto);
   }
+  
+  onClickTarjeta(producto: ProductoInterface) {
+    this.router.navigate(['/reposteria/detalle', producto.idProducto]);
+  } 
   
 }

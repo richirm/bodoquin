@@ -15,7 +15,7 @@ const routes: Routes = [
         component: TecnologiaListadoComponent
       }, 
       {
-        path: 'detalle',
+        path: 'detalle/:idProducto',
         component: TecnologiaDetalleComponent
       }
     ]

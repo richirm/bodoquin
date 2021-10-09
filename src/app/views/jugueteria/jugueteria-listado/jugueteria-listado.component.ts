@@ -16,7 +16,7 @@ export class JugueteriaListadoComponent implements OnInit {
   
   constructor(
     private carritoService: CarritoService,
-    private jugueteriaService: JugueteriaService),
+    private jugueteriaService: JugueteriaService,
     private router: Router) {}
     
   ngOnInit() {

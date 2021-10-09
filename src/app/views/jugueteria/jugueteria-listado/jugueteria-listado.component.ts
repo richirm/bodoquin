@@ -48,7 +48,7 @@ export class JugueteriaListadoComponent implements OnInit {
   }
   
   onClickTarjeta(producto: ProductoInterface) {
-    this.router.navigate(['/reposteria/detalle', producto.idProducto]);
+    this.router.navigate(['/jugueteria/detalle', producto.idProducto]);
   } 
   
 }

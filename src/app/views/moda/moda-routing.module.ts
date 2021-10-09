@@ -15,7 +15,7 @@ const routes: Routes = [
         component: ModaListadoComponent
       }, 
       {
-        path: 'detalle',
+        path: 'detalle/:idProducto',
         component: ModaDetalleComponent
       }
     ]

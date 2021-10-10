@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { JugueteriaService } from '../jugueteria.service';
+import { ProductoInterface } from '../../../core/interfaces/producto.interface';
 
 @Component({
   selector: 'bodoquin-jugueteria-detalle',
@@ -7,5 +11,34 @@ import { Component } from '@angular/core';
 })
 
 export class JugueteriaDetalleComponent {
+ export class JugueteriaDetalleComponent implements OnInit {
+
+  producto: ProductoInterface;
+
+  constructor(
+    private route: ActivatedRoute,
+    private jugueteriaService: JugueteriaService) {}
+
+  ngOnInit() {
+    this.getInfoProducto();
+  }
+
+  getInfoProducto() {
+    // Capturar el id de la url
+    const idProducto = this.route.snapshot.params.idProducto;
+    console.log(idProducto);
+
+    // Obtener la información del producto de acuerdo a su id
+    this.producto = this.jugueteriaService.obtenerProducto(idProducto);
+    console.log(this.producto);
+
+    // mostrar el producto en el html
+
+    // colocar el diseño de la vista de detalle
+
+    // integrarnos al componente de carrito
+
+    // componente de tabs
+  }
   
 }

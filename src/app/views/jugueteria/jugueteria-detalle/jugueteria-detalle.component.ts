@@ -9,9 +9,7 @@ import { ProductoInterface } from '../../../core/interfaces/producto.interface';
   templateUrl: './jugueteria-detalle.component.html',
   styleUrls: ['./jugueteria-detalle.component.scss']
 })
-
-export class JugueteriaDetalleComponent {
- export class JugueteriaDetalleComponent implements OnInit {
+export class JugueteriaDetalleComponent implements OnInit {
 
   producto: ProductoInterface;
 

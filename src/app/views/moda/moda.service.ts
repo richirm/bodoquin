@@ -8,8 +8,14 @@ export class ModaService {
   
   productos: Array<ProductoInterface> = ModaConstants.PRODUCTOS;
   
-  obtenerProductos() {
+  obtenerProductos(): Array<ProductoInterface> {
     return this.productos;
+  }
+    
+  obtenerProducto(idProducto: number): ProductoInterface {
+    return this.productos.find((producto: ProductoInterface) => {
+      return producto.idProducto === Number(idProducto);
+    });
   }
   
 }

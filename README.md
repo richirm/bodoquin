@@ -122,6 +122,9 @@ Aplicación bodoquin
       [class.xxx]="true" : Directiva que permite colocar una clase xxx al elemento si la condición es true
       *ngIf="true": Directiva que permite mostrar o destruir un elemento del DOM si la condición es true
       *ngFor="let objeto of arreglo": Directiva para repetir una sección del html de acuerdo a los elementos de un arreglo
+    - Pipes:
+        Los pipes ayudan a convertir la información de una variable en un formato especial
+        - JSON: Convierte visualmente un objeto en formato JSON
   - Jenkins:
     - Herramienta de despliegue continuo o automático de nuestro código en un servidor 
     
@@ -130,16 +133,26 @@ Aplicación bodoquin
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13, 21
     - Features: (Lista de tareas - tablero KANBAN) 28
-      - Migrar bodoquin a Angular 22
+      - Migrar bodoquin a Angular 28
         - full JS 5
-        - crear vistas de detalle: 13
-          - crear vista reposteria-detalle
-          - crear vista jugueteria-detalle
-          - crear vista moda-detalle
-          - crear vista tecnologia-detalle   
+        - crear vistas de detalle: 23
+          - colocar el diseño de la vista de detalle reposteria 2
+          - colocar el diseño de la vista de detalle jugueteria 2
+          - colocar el diseño de la vista de detalle moda 2
+          - colocar el diseño de la vista de detalle tecnologia 2
+          - integrarnos al componente de carrito reposteria 2
+          - integrarnos al componente de carrito jugueteria 2
+          - integrarnos al componente de carrito moda 2 
+          - integrarnos al componente de carrito tecnologia 2
+          - integrar el componente de tabs reposteria 1
+          - integrar el componente de tabs jugueteria 1
+          - integrar el componente de tabs moda 1
+          - integrar el componente de tabs tecnologia 1
         - directivas: 1
             -*ngSwitch
         - crear componente tabs 3
+        - Uso de pipes:
+          - json
     - backlog => conjunto de tareas o mejoras a realizar (features futuros)      
       - Requerimientos funcionales:
         - Migrar bodoquin a Angular 20   

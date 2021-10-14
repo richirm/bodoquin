@@ -31,15 +31,17 @@ export class HeaderCarritoComponent implements OnInit {
   
   suscribirProductoAgregado() {
     this.carritoService.productoAgregado.subscribe((producto: ProductoInterface) => {
-      producto.cantidadProducto++;
-      this.productos.push(producto);
-      this.calcMontoTotal();
+      this.insertProduct(producto);
     });
   }
   
   suscribirProductoSumado() {
     this.carritoService.productoSumado.subscribe((producto: ProductoInterface) => {
-      this.addItemInProduct(producto);
+      if(producto.cantidadProducto === 0) {
+        this.insertProduct(producto)
+      } else {
+        this.addItemInProduct(producto);
+      }
     });
   }
   
@@ -60,6 +62,12 @@ export class HeaderCarritoComponent implements OnInit {
   
   mostrarPopupCarrito() {
     this.showPopup = true;   
+  }
+  
+  insertProduct(producto: ProductoInterface) {
+    producto.cantidadProducto++;
+    this.productos.push(producto);
+    this.calcMontoTotal();
   }
   
   deleteProduct(indexProducto: number) {

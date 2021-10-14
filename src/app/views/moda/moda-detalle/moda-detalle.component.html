@@ -19,7 +19,7 @@
         <span class="producto-detalle-principal_informacion_precio">S/. {{ producto.precioProducto }}</span>
         
         <div class="producto-detalle-principal_informacion_contador">        
-          <div class="producto-detalle-principal_informacion_agregar" onclick="quitarProducto()">
+          <div class="producto-detalle-principal_informacion_agregar" (click)="restarProducto()">
             <i class="bi bi-dash-lg"></i>
           </div>
         
@@ -27,7 +27,7 @@
             <span><b>{{ producto.cantidadProducto }}</b></span>
           </div>
           
-          <div class="producto-detalle-principal_informacion_agregar" onclick="agregarProducto()">
+          <div class="producto-detalle-principal_informacion_agregar" (click)="sumarProducto()">
             <i class="bi bi-plus-lg"></i>
           </div>
         </div>

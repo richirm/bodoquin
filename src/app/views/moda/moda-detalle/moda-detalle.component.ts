@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 
 import { ModaService } from '../moda.service';
 import { ProductoInterface } from '../../../core/interfaces/producto.interface';
+import { CarritoService } from '../../../core/services/carrito.service';
+
 
 @Component({
   selector: 'bodoquin-moda-detalle',
@@ -15,7 +17,8 @@ export class ModaDetalleComponent implements OnInit {
   
   constructor(
     private route: ActivatedRoute,
-    private modaService: ModaService) {}
+    private modaService: ModaService,
+    private carritoService: CarritoService) {}
     
   ngOnInit() {
     this.getInfoProducto();

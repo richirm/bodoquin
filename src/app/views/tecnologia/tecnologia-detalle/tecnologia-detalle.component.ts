@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 
 import { TecnologiaService } from '../tecnologia.service';
 import { ProductoInterface } from '../../../core/interfaces/producto.interface';
+import { CarritoService } from '../../../core/services/carrito.service';
+
 
 @Component({
   selector: 'bodoquin-tecnologia-detalle',
@@ -15,7 +17,8 @@ export class TecnologiaDetalleComponent implements OnInit {
   
   constructor(
     private route: ActivatedRoute,
-    private tecnologiaService: TecnologiaService) {}
+    private tecnologiaService: TecnologiaService,
+    private carritoService: CarritoService) {}
     
   ngOnInit() {
     this.getInfoProducto();

@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { JugueteriaService } from '../jugueteria.service';
 import { ProductoInterface } from '../../../core/interfaces/producto.interface';
+import { CarritoService } from '../../../core/services/carrito.service';
 
 @Component({
   selector: 'bodoquin-jugueteria-detalle',
@@ -15,7 +16,8 @@ export class JugueteriaDetalleComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private jugueteriaService: JugueteriaService) {}
+    private jugueteriaService: JugueteriaService,
+    private carritoService: CarritoService) {}
 
   ngOnInit() {
     this.getInfoProducto();
@@ -37,6 +39,14 @@ export class JugueteriaDetalleComponent implements OnInit {
     // integrarnos al componente de carrito
 
     // componente de tabs
+  }
+  
+  sumarProducto() {
+    this.carritoService.productoSumado.emit(this.producto);
+  }
+
+  restarProducto() {
+
   }
   
 }

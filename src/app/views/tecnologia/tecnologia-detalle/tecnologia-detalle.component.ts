@@ -42,4 +42,11 @@ export class TecnologiaDetalleComponent implements OnInit {
     // componente de tabs
   }
   
+  sumarProducto() {
+    this.carritoService.productoSumado.emit(this.producto);
+  }
+  
+  restarProducto() {
+    
+  }
 }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { TarjetasProductoModule } from '../../components/tarjetas-producto/tarjetas-producto.module';
+import { TabsModule } from '../../components/tabs/tabs.module';
 
 import { ReposteriaComponent } from './reposteria.component';
 import { ReposteriaService } from './reposteria.service';
@@ -15,6 +16,7 @@ import { ReposteriaDetalleComponent } from './reposteria-detalle/reposteria-deta
     ReposteriaRoutingModule,
     
     TarjetasProductoModule,
+    TabsModule,
   ],
   declarations: [
     ReposteriaComponent,

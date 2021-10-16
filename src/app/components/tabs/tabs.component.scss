@@ -1,0 +1,37 @@
+.tabs {
+  width: 100%;
+
+  &_header {
+    width: 100%;
+    background-color: #F1F1F1;
+
+    .tab {
+      display: inline-block;
+      width: calc(50% - 2px);
+      text-align: center;
+      padding: 15px 0;
+      cursor: pointer;
+
+      &--seleccionado {
+        background-color: #ffffff;
+        border-top: 2px solid #80A3EA;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &_body {
+    border: 1px solid #f3f3f3;
+
+    .tab {
+      display: none;
+      width: calc(100% - 20px);
+      min-height: 100px;
+      padding: 10px;
+
+      &--seleccionado {
+        display: block;
+      }
+    }
+  }
+}

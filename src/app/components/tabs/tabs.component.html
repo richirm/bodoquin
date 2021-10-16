@@ -1,0 +1,17 @@
+<div class="tabs">
+  <div class="tabs_header">
+    <div class="tab" 
+      *ngFor="let titulo of titulos; let indice = index"
+      [class.tab--seleccionado]="indexSeleccionado === indice" (click)="mostrarTab(indice)">
+      {{ titulo }} {{indice}}
+    </div>
+  </div>
+  
+  <div class="tabs_body">
+    <div class="tab" 
+      *ngFor="let templateTab of templatesTabs; let indice = index"
+      [class.tab--seleccionado]="indexSeleccionado === indice">
+      <ng-template [ngTemplateOutlet]="templateTab"></ng-template>
+    </div>
+  </div>
+</div>

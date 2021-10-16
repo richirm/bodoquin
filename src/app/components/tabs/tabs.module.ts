@@ -8,10 +8,10 @@ import { TabsComponent } from './tabs.component';
     CommonModule,
   ],
   declarations: [
-    PopupComponent,
+    TabsComponent,
   ],
   exports: [
-    PopupComponent,
+    TabsComponent,
   ]
 })
-export class PopupModule {}
+export class TabsModule {}

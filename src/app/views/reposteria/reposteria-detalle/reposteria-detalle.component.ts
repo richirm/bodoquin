@@ -34,12 +34,11 @@ export class ReposteriaDetalleComponent implements OnInit {
     
     // mostrar el producto en el html => Ok    
     
-    // colocar el diseño de la vista de detalle
+    // colocar el diseño de la vista de detalle => Ok    
     
+    // integrarnos al componente de carrito => Ok
     
-    // integrarnos al componente de carrito
-    
-    // componente de tabs
+    // integrarnos al componente de tabs
   }
   
   sumarProducto() {

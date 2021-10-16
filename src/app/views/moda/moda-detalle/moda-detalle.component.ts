@@ -47,6 +47,6 @@ export class ModaDetalleComponent implements OnInit {
   }
   
   restarProducto() {
-    
+    this.carritoService.productoRestado.emit(this.producto);
   }
 }

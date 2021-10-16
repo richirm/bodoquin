@@ -148,6 +148,12 @@ Aplicación bodoquin
           - integrar el componente de tabs jugueteria 1
           - integrar el componente de tabs moda 1
           - integrar el componente de tabs tecnologia 1
+          - funcionalidad para hacer zoom a las imagenes 3
+          - creacion del componente de producto detalle 2
+          - integrar el componente de producto detalle reposteria 1
+          - integrar el componente de producto detalle jugueteria 1
+          - integrar el componente de producto detalle moda 1
+          - integrar el componente de producto detalle tecnologia 1
         - directivas: 1
             -*ngSwitch
         - crear componente tabs 3
@@ -201,6 +207,20 @@ Aplicación bodoquin
   
 7. Tutoriales:
   - Uso de variables y objetos en javascript https://www.youtube.com/watch?v=ivdTnPl1ND0
+    
+8. Buenas practicas:
+  - Principio SOLID:
+    - S: Responsabilidad Unica y Simple
+         - Funciones pequeñas
+      O:
+      L:
+      I:
+      D: Principio de injeccion de dependencias
+  - Patrones:
+    - Injeccion de dependencias:
+        Para usar un servicio, debemos crear una instancia de ese servicio 
+        usando el contructor de la clase donde vamos a utilizar el servicio
+  - Nomenclatura de variables y funciones explicita
     
 Javascript
 ------------------------   

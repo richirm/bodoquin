@@ -47,7 +47,7 @@ export class ReposteriaDetalleComponent implements OnInit {
   }
   
   restarProducto() {
-    
+    this.carritoService.productoRestado.emit(this.producto);
   }
   
 }

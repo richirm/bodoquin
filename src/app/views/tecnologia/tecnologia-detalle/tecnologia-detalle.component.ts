@@ -5,7 +5,6 @@ import { TecnologiaService } from '../tecnologia.service';
 import { ProductoInterface } from '../../../core/interfaces/producto.interface';
 import { CarritoService } from '../../../core/services/carrito.service';
 
-
 @Component({
   selector: 'bodoquin-tecnologia-detalle',
   templateUrl: './tecnologia-detalle.component.html',
@@ -47,6 +46,6 @@ export class TecnologiaDetalleComponent implements OnInit {
   }
   
   restarProducto() {
-    
+    this.carritoService.productoRestado.emit(this.producto);
   }
 }

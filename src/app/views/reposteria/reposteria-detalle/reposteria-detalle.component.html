@@ -39,8 +39,8 @@
       
       <bodoquin-tabs
         [titulos]="[
-          'Especificaciones Pepito', 
-          'Descripción Juanito'
+          'Especificaciones', 
+          'Descripción'
         ]"
         [templatesTabs]="[
           templateEspecificaciones, 
@@ -49,11 +49,13 @@
       </bodoquin-tabs>
 
       <ng-template #templateEspecificaciones>
-        <b>Hola pepito!!!</b>
+        <div *ngFor="let especificacion of producto.especificaciones">
+          - {{ especificacion }}
+        </div>       
       </ng-template>
 
       <ng-template #templateDescripcion>
-        <b>Hola juanito!!!</b>
+        {{ producto.descripcionProducto }}
       </ng-template>
     </div>
   </div>

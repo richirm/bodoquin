@@ -11,6 +11,11 @@ export class ReposteriaConstants {
       descripcionProducto: 'Torta rica en su sabor, ha ganado el premio internacional, hecha con agua manantial',
       precioProducto: 60.25,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 01/11/2021',
+        'Elaborado por: Panadería Bodoquin',
+        'Ingredientes: Galletas óreo, Leche, Huevos, etc.'        
+      ]
     },
     {
       idProducto: 1002,
@@ -20,6 +25,11 @@ export class ReposteriaConstants {
       descripcionProducto: 'Compuesta por capas de bizcochuelo de chocolate embebido en kirsch e intercaladas con nata y cerezas.',
       precioProducto: 55.50,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 01/11/2021',
+        'Elaborado por: Panadería Bodoquin',
+        'Ingredientes: Galletas óreo, Leche, Huevos, etc.'        
+      ]
     },
     {
       idProducto: 1003,
@@ -29,6 +39,11 @@ export class ReposteriaConstants {
       descripcionProducto: '12 porciones, kekes, Manjar, Fudge de una rica Torta Chocolate.',
       precioProducto: 44.00,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 01/11/2021',
+        'Elaborado por: Panadería Bodoquin',
+        'Ingredientes: Galletas óreo, Leche, Huevos, etc.'        
+      ]
     },
     {
       idProducto: 1004,
@@ -38,6 +53,11 @@ export class ReposteriaConstants {
       descripcionProducto: '12 porciones con galletas de oreo vainilla, polvo de chocolate de una rica Deli Oreo.',
       precioProducto: 72.00,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 01/11/2021',
+        'Elaborado por: Panadería Bodoquin',
+        'Ingredientes: Galletas óreo, Leche, Huevos, etc.'        
+      ]
     },
     {
       idProducto: 1005,
@@ -47,6 +67,11 @@ export class ReposteriaConstants {
       descripcionProducto: '12 porciones aproximadamente, con cerezas, fosh, manjar y listo para comer en tu almuerzo.',
       precioProducto: 49.00,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 01/11/2021',
+        'Elaborado por: Panadería Bodoquin',
+        'Ingredientes: Galletas óreo, Leche, Huevos, etc.'        
+      ]
     },
     {
       idProducto: 1006,
@@ -56,6 +81,11 @@ export class ReposteriaConstants {
       descripcionProducto: 'Muy rico, sabroso y esponjoso, con piñas azucaradas y dulces como a todos nos gusta',
       precioProducto: 24.00,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 01/11/2021',
+        'Elaborado por: Panadería Bodoquin',
+        'Ingredientes: Galletas óreo, Leche, Huevos, etc.'        
+      ]
     },
     {
       idProducto: 1007,
@@ -65,6 +95,11 @@ export class ReposteriaConstants {
       descripcionProducto: 'Keke de Zanahoria con Manjar Blanco y Castañas, a precio de promición, sólo por hoy.',
       precioProducto: 42.00,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 01/11/2021',
+        'Elaborado por: Panadería Bodoquin',
+        'Ingredientes: Galletas óreo, Leche, Huevos, etc.'        
+      ]
     },
     {
       idProducto: 1008,
@@ -74,6 +109,11 @@ export class ReposteriaConstants {
       descripcionProducto: '12-14 porciones de keke sabor a chocolate, con frutos secos que descubrirás mientras vayas comiendo.',
       precioProducto: 22.00,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 01/11/2021',
+        'Elaborado por: Panadería Bodoquin',
+        'Ingredientes: Galletas óreo, Leche, Huevos, etc.'        
+      ]
     },
     {
       idProducto: 1009,
@@ -83,6 +123,11 @@ export class ReposteriaConstants {
       descripcionProducto: '12-14 porciones de keke sabor a chocolate, con frutos secos que descubrirás mientras vayas comiendo.',
       precioProducto: 22.00,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 01/11/2021',
+        'Elaborado por: Panadería Bodoquin',
+        'Ingredientes: Galletas óreo, Leche, Huevos, etc.'        
+      ]
     },
     {
       idProducto: 1010,
@@ -92,6 +137,11 @@ export class ReposteriaConstants {
       descripcionProducto: '12 porciones aproximadamente, con cerezas, fosh, manjar y listo para comer en tu almuerzo.',
       precioProducto: 49.50,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 01/11/2021',
+        'Elaborado por: Panadería Bodoquin',
+        'Ingredientes: Galletas óreo, Leche, Huevos, etc.'        
+      ]
     },
     {
       idProducto: 1011,
@@ -101,6 +151,11 @@ export class ReposteriaConstants {
       descripcionProducto: '12 porciones, compuesta por capas de bizcochuelo de caramelo y con el diseño que más de guste.',
       precioProducto: 69.00,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 01/11/2021',
+        'Elaborado por: Panadería Bodoquin',
+        'Ingredientes: Galletas óreo, Leche, Huevos, etc.'        
+      ]
     },
     {
       idProducto: 1012,
@@ -110,6 +165,11 @@ export class ReposteriaConstants {
       descripcionProducto: '24 porciones, compuesta por fresas y fosh, listo para tus cumpleaños y días que más te gusten disfrutar.',
       precioProducto: 84.00,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 01/11/2021',
+        'Elaborado por: Panadería Bodoquin',
+        'Ingredientes: Galletas óreo, Leche, Huevos, etc.'        
+      ]
     },
   ];
 

@@ -3,7 +3,7 @@
     <div class="tab" 
       *ngFor="let titulo of titulos; let indice = index"
       [class.tab--seleccionado]="indexSeleccionado === indice" (click)="mostrarTab(indice)">
-      {{ titulo }} {{indice}}
+      {{ titulo }}
     </div>
   </div>
   

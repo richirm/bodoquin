@@ -11,6 +11,11 @@ export class TecnologiaConstants {
       descripcionProducto: '6 GB RAM + 128 gb almacenamiento + 5000 mah + full hd',
       precioProducto: 1599,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de produccion: 01/11/2021',
+        'Elaborado por: bodoquin tecnologias',
+        'componentes: procesador intel, ram microsfot.'        
+      ]
     }, 
     {
       idProducto: 1002,
@@ -20,6 +25,11 @@ export class TecnologiaConstants {
       descripcionProducto: '8 GB RAM + 256 gb almacenamiento + 6000 mah + full hd',
       precioProducto: 2499,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de produccion: 01/11/2021',
+        'Elaborado por: bodoquin tecnologias',
+        'componentes: procesador intel, ram microsfot.'        
+      ]
     }, 
     {
       idProducto: 1003,
@@ -29,6 +39,11 @@ export class TecnologiaConstants {
       descripcionProducto: '3 GB RAM + 64 gb almacenamiento + 3500 mah + full hd',
       precioProducto: 999,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de produccion: 01/11/2021',
+        'Elaborado por: bodoquin tecnologias',
+        'componentes: procesador intel, ram microsfot.'        
+      ]
     }, 
     {
       idProducto: 1004,
@@ -38,6 +53,11 @@ export class TecnologiaConstants {
       descripcionProducto: '3 GB RAM + 64 gb almacenamiento + 4500 mah + hd',
       precioProducto: 899,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de produccion: 01/11/2021',
+        'Elaborado por: bodoquin tecnologias',
+        'componentes: procesador intel, ram microsfot.'        
+      ]
     }, 
     {
       idProducto: 1005,
@@ -47,6 +67,11 @@ export class TecnologiaConstants {
       descripcionProducto: 'Full hd + puerto hdmi + magic control',
       precioProducto: 1899,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de produccion: 01/11/2021',
+        'Elaborado por: bodoquin tecnologias',
+        'componentes: procesador intel, ram microsfot.'        
+      ]
     }, 
     {
       idProducto: 1006,
@@ -56,6 +81,11 @@ export class TecnologiaConstants {
       descripcionProducto: 'Ultra hd 4k + pantalla cristal + magic control',
       precioProducto: 2899,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de produccion: 01/11/2021',
+        'Elaborado por: bodoquin tecnologias',
+        'componentes: procesador intel, ram microsfot.'        
+      ]
     }, 
     {
       idProducto: 1007,
@@ -65,6 +95,11 @@ export class TecnologiaConstants {
       descripcionProducto: 'Ultra hd + 2 puertos hdmi + conxion bluetooh',
       precioProducto: 2659,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de produccion: 01/11/2021',
+        'Elaborado por: bodoquin tecnologias',
+        'componentes: procesador intel, ram microsfot.'        
+      ]
     }, 
     {
       idProducto: 1008,
@@ -74,6 +109,11 @@ export class TecnologiaConstants {
       descripcionProducto: 'Pantalla full hd + wifi + samart tv',
       precioProducto: 899,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de produccion: 01/11/2021',
+        'Elaborado por: bodoquin tecnologias',
+        'componentes: procesador intel, ram microsfot.'        
+      ]
     }, 
     {
       idProducto: 1009,
@@ -83,6 +123,11 @@ export class TecnologiaConstants {
       descripcionProducto: '16gb ram + 1tb ssd + full hd',
       precioProducto: 7999,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de produccion: 01/11/2021',
+        'Elaborado por: bodoquin tecnologias',
+        'componentes: procesador intel, ram microsfot.'        
+      ]
     }, 
     {
       idProducto: 1010,
@@ -92,6 +137,11 @@ export class TecnologiaConstants {
       descripcionProducto: '8 gb ram + 500 ssd + bluetooh',
       precioProducto: 1899,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de produccion: 01/11/2021',
+        'Elaborado por: bodoquin tecnologias',
+        'componentes: procesador intel, ram microsfot.'        
+      ]
     }, 
     {
       idProducto: 1011,
@@ -101,6 +151,11 @@ export class TecnologiaConstants {
       descripcionProducto: '8gb ram + 1 tb ssd + full hd',
       precioProducto: 2600,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de produccion: 01/11/2021',
+        'Elaborado por: bodoquin tecnologias',
+        'componentes: procesador intel, ram microsfot.'        
+      ]
     }, 
     {
       idProducto: 1012,
@@ -110,6 +165,11 @@ export class TecnologiaConstants {
       descripcionProducto: '12 GB RAM + 528 gb almacenamiento + uhd 4k',
       precioProducto: 2589,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de produccion: 01/11/2021',
+        'Elaborado por: bodoquin tecnologias',
+        'componentes: procesador intel, ram microsfot.'        
+      ]
     },
   ];
   

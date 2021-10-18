@@ -1,4 +1,4 @@
-<div class="tecnología-detalle">  
+<div class="tecnologia-detalle">  
   <div class="container">
     <div class="producto-detalle-principal row">
       <div class="producto-detalle-principal_imagen--secundario col-xl-2 col-lg-2 col-md-2 col-sm-3">
@@ -37,30 +37,26 @@
     <div class="producto-detalle-secundario">
       <h1>Sobre este producto</h1>
       
-      <!-- TABS -->
-      <div class="tabs">
-        <div class="tabs_header">
-          <div class="tab tab--seleccionado" onClick="mostrarTab(1)">
-            Especificaciones
-          </div>
-          
-          <div class="tab" onClick="mostrarTab(2)">
-            Descripción
-          </div>
-        </div>
-        
-        <div class="tabs_body">
-          <div class="tab tab--seleccionado">
-            Bodoquin es una aplicación web en la cual encontrarás productos de máxima calidad 
-            en las categorías de moda, tecnología, juguetería y reposteria.
-          </div>
-          
-          <div class="tab">
-            Con bodoquin obtendrás grandes beneficios y descuentos cada fin de mes, 
-            donde pueden haber ofertas de hasta el 70%;
-          </div>
-        </div>
-      </div>
+      <bodoquin-tabs
+        [titulos]="[
+          'Especificaciones', 
+          'Descripción'
+        ]"
+        [templatesTabs]="[
+          templateEspecificaciones, 
+          templateDescripcion
+        ]">        
+      </bodoquin-tabs>
+
+      <ng-template #templateEspecificaciones>
+        <div *ngFor="let especificacion of producto.especificaciones">
+          - {{ especificacion }}
+        </div>       
+      </ng-template>
+
+      <ng-template #templateDescripcion>
+        {{ producto.descripcionProducto }}
+      </ng-template>
     </div>
   </div>
 </div>

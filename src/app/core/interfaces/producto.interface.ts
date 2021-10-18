@@ -6,4 +6,5 @@ export interface ProductoInterface {
   descripcionProducto: string;
   precioProducto: number;
   cantidadProducto: number;
+  especificaciones?: Array<string>;
 }

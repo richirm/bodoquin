@@ -11,6 +11,12 @@ export class JugueteriaConstants {
       descripcionProducto: 'Piano para bebes de deferentes colores para un mejor aprendizaje',
       precioProducto: 50.00,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 05/12/2023',
+        'Elaborado por: Juguetería mi mundo baby',
+        'Materiales: plastico, madera',
+        'Dimensiones: 50cm x 50cm'
+      ]
     },
     {
       idProducto: 1002,
@@ -20,6 +26,12 @@ export class JugueteriaConstants {
       descripcionProducto: 'Totuga musical con canciones en ingles y español',
       precioProducto: 40.25,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 05/12/2023',
+        'Elaborado por: Juguetería mi mundo baby',
+        'Materiales: plastico, madera',
+        'Dimensiones: 50cm x 50cm'
+      ]
     },
     {
       idProducto: 1003,
@@ -29,6 +41,12 @@ export class JugueteriaConstants {
       descripcionProducto: 'coche para niñas con diferentes diseños',
       precioProducto: 80.25,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 05/12/2023',
+        'Elaborado por: Juguetería mi mundo baby',
+        'Materiales: plastico, madera',
+        'Dimensiones: 50cm x 50cm'
+      ]
     },
     {
       idProducto: 1005,
@@ -38,6 +56,12 @@ export class JugueteriaConstants {
       descripcionProducto: 'muñeca con chupon que llora y habla y remeda',
       precioProducto:  45.75,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 05/12/2023',
+        'Elaborado por: Juguetería mi mundo baby',
+        'Materiales: plastico, madera',
+        'Dimensiones: 50cm x 50cm'
+      ]
     },
     {
       idProducto: 1007,
@@ -47,6 +71,12 @@ export class JugueteriaConstants {
       descripcionProducto: 'Caballo para montar y también es musical',
       precioProducto: 90.75,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 05/12/2023',
+        'Elaborado por: Juguetería mi mundo baby',
+        'Materiales: plastico, madera',
+        'Dimensiones: 50cm x 50cm'
+      ]
     },
     {
       idProducto: 1009,
@@ -56,6 +86,12 @@ export class JugueteriaConstants {
       descripcionProducto: 'Aprenderás a dar tus primeros pasitos jugando',
       precioProducto: 65.45,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 05/12/2023',
+        'Elaborado por: Juguetería mi mundo baby',
+        'Materiales: plastico, madera',
+        'Dimensiones: 50cm x 50cm'
+      ]
     },
     {
       idProducto: 1011,
@@ -65,6 +101,12 @@ export class JugueteriaConstants {
       descripcionProducto: 'Jalaras a un carrito de dino divertido',
       precioProducto: 80.75,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 05/12/2023',
+        'Elaborado por: Juguetería mi mundo baby',
+        'Materiales: plastico, madera',
+        'Dimensiones: 50cm x 50cm'
+      ]
     },
     {
       idProducto: 1012,
@@ -74,6 +116,12 @@ export class JugueteriaConstants {
       descripcionProducto: 'juago dinamicos pra niños y niñas',
       precioProducto: 25.80,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 05/12/2023',
+        'Elaborado por: Juguetería mi mundo baby',
+        'Materiales: plastico, madera',
+        'Dimensiones: 50cm x 50cm'
+      ]
     },
     {
       idProducto: 1004,
@@ -83,6 +131,12 @@ export class JugueteriaConstants {
       descripcionProducto: 'payasitos de madera para armar y elegir',
       precioProducto: 30.40,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 05/12/2023',
+        'Elaborado por: Juguetería mi mundo baby',
+        'Materiales: plastico, madera',
+        'Dimensiones: 50cm x 50cm'
+      ]
     },
     {
       idProducto: 1006,
@@ -92,6 +146,12 @@ export class JugueteriaConstants {
       descripcionProducto: 'pelotas de juguete muy modernas y coloridas',
       precioProducto: 15.75,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 05/12/2023',
+        'Elaborado por: Juguetería mi mundo baby',
+        'Materiales: plastico, madera',
+        'Dimensiones: 50cm x 50cm'
+      ]
     },
     {
       idProducto: 1008,
@@ -101,6 +161,12 @@ export class JugueteriaConstants {
       descripcionProducto: 'cuadritos de madera de colores para armar',
       precioProducto: 55.75,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 05/12/2023',
+        'Elaborado por: Juguetería mi mundo baby',
+        'Materiales: plastico, madera',
+        'Dimensiones: 50cm x 50cm'
+      ]
     },
     {
       idProducto: 1010,
@@ -110,6 +176,12 @@ export class JugueteriaConstants {
       descripcionProducto: 'lonchera de madera para llevar tus juguetes',
       precioProducto: 65.75,
       cantidadProducto: 0,
+      especificaciones: [
+        'Fecha de vencimiento: 05/12/2023',
+        'Elaborado por: Juguetería mi mundo baby',
+        'Materiales: plastico, madera',
+        'Dimensiones: 50cm x 50cm'
+      ]
     },
   ]; 
 

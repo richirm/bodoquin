@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { TarjetasProductoModule } from '../../components/tarjetas-producto/tarjetas-producto.module';
+import { TabsModule } from '../../components/tabs/tabs.module';
 
 import { TecnologiaComponent } from './tecnologia.component';
 import { TecnologiaService } from './tecnologia.service';
@@ -15,6 +16,7 @@ import { TecnologiaDetalleComponent } from './tecnologia-detalle/tecnologia-deta
     TecnologiaRoutingModule,
     
     TarjetasProductoModule,
+    TabsModule,
   ],
   declarations: [
     TecnologiaComponent,    

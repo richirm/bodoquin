@@ -135,35 +135,49 @@ Aplicación bodoquin
     - Features: (Lista de tareas - tablero KANBAN) 28
       - Migrar bodoquin a Angular 28
         - full JS 5
-        - crear vistas de detalle: 23
-          - colocar el diseño de la vista de detalle reposteria 2
-          - colocar el diseño de la vista de detalle jugueteria 2
-          - colocar el diseño de la vista de detalle moda 2
-          - colocar el diseño de la vista de detalle tecnologia 2
-          - integrarnos al componente de carrito reposteria 2
-          - integrarnos al componente de carrito jugueteria 2
-          - integrarnos al componente de carrito moda 2 
-          - integrarnos al componente de carrito tecnologia 2
-          - integrar el componente de tabs reposteria 1
-          - integrar el componente de tabs jugueteria 1
-          - integrar el componente de tabs moda 1
-          - integrar el componente de tabs tecnologia 1
-          - funcionalidad para hacer zoom a las imagenes 3
-          - creacion del componente de producto detalle 2
+        - crear vistas de detalle: 21
+          - funcionalidad para hacer zoom a las imagenes 5
+          - creacion del componente de producto detalle 3
           - integrar el componente de producto detalle reposteria 1
           - integrar el componente de producto detalle jugueteria 1
           - integrar el componente de producto detalle moda 1
           - integrar el componente de producto detalle tecnologia 1
-        - directivas: 1
-            -*ngSwitch
-        - crear componente tabs 3
-        - Uso de pipes:
+        - crear vista inicio (home)
+          - creacion de la vista de inicio (componente vacio) y routing 1
+          - crear componente carousel 8
+          - crear componente de tarjetas de acceso 5
+          - integrar el componente de tarjeta de acceso 1
+          - crear componente de tarjeta de oferta 5
+          - integrar el componente de tarjeta de oferta 1
+        - correcciones generales:
+          - header:
+            - redireccion a la pantalla de inicio 2
+            - correccion de la redireccion usando routerLink 3
+          - menu:
+            - correccion de la redireccion usando routerLink 3
+            - correccion del menu al iniciar la aplicacion 3
+          - popup:
+            - correccion del popup al iniciar la aplicacion 3
+          - optimizacion de la vista de listado 3
+          - optimizacion de la vista de detalle 3
+        - directivas: CommonModule
+            - *ngSwitch
+            - *ngIf
+            - *ngFor
+            - [class.xxx]="condicion"
+            - [ngStyle]
+            - (click)
+            - ng-template
+        - Uso de pipes: CommonModule
           - json
+          - date
+          - currency
+          - uppercase
+          - lowercase
     - backlog => conjunto de tareas o mejoras a realizar (features futuros)      
       - Requerimientos funcionales:
         - Migrar bodoquin a Angular 20   
-          - crear vista inicio (home) 3   
-          - crear componente carousel 3
+          
         - crear servicios:
           - servicios para llamar al backend
         - poner un logo

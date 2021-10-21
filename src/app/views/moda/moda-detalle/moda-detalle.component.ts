@@ -52,6 +52,7 @@ export class ModaDetalleComponent implements OnInit {
   restarProducto() {
     this.carritoService.productoRestado.emit(this.producto);
   }
+  
   onMouseMove(evento) {
     const elementoContenedorZoom = this.elementoContenedorZoom.nativeElement;
     const elementoImagenZoom = this.elementoImagenZoom.nativeElement;

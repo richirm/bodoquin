@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TarjetasProductoModule } from '../../components/tarjetas-producto/tarjetas-producto.module';
 import { TabsModule } from '../../components/tabs/tabs.module';
+import { ProductoDetalleModule } from '../../components/producto-detalle/producto-detalle.module';
 
 import { TecnologiaComponent } from './tecnologia.component';
 import { TecnologiaService } from './tecnologia.service';
@@ -17,6 +18,7 @@ import { TecnologiaDetalleComponent } from './tecnologia-detalle/tecnologia-deta
     
     TarjetasProductoModule,
     TabsModule,
+    ProductoDetalleModule,
   ],
   declarations: [
     TecnologiaComponent,    

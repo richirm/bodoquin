@@ -5,8 +5,14 @@
         <img src="/assets/img/{{ producto.nombreImg }}" />
       </div>
       
-      <div class="producto-detalle-principal_imagen--principal col-xl-5 col-lg-5 col-md-56 col-sm-9">
-        <img src="/assets/img/{{ producto.nombreImg }}" />
+      <div 
+        #elementoContenedorZoom 
+        class="producto-detalle-principal_imagen--principal col-xl-5 col-lg-5 col-md-56 col-sm-9" 
+        (mousemove)="onMouseMove($event)" 
+        (mouseleave)="onMouseLeave($event)">
+        
+        <img #elementoImagenZoom src="/assets/img/{{ producto.nombreImg }}" />
+        
       </div>
       
       <div class="producto-detalle-principal_informacion col-xl-5 col-lg-5 col-md-5 col-sm-12">

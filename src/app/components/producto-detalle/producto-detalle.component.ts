@@ -1,6 +1,7 @@
-import { Component, Input, ViewChild, Output, EventEmitter } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 
 import { ProductoInterface } from '../../core/interfaces/producto.interface';
+import { CarritoService } from '../../core/services/carrito.service';
 
 @Component({
   selector: 'bodoquin-producto-detalle',
@@ -11,11 +12,11 @@ export class ProductoDetalleComponent {
   
   @Input() producto: ProductoInterface;
   
-  @Output() onClickRestar: EventEmitter<any> = new EventEmitter();
-  @Output() onClickSumar: EventEmitter<any> = new EventEmitter();
-  
   @ViewChild('elementoContenedorZoom', {static: false}) elementoContenedorZoom;
   @ViewChild('elementoImagenZoom', {static: false}) elementoImagenZoom;
+  
+  constructor(
+    private carritoService: CarritoService) {}
     
   onMouseMove(evento) {
     const elementoContenedorZoom = this.elementoContenedorZoom.nativeElement;
@@ -36,4 +37,11 @@ export class ProductoDetalleComponent {
     this.elementoImagenZoom.nativeElement.style.transform = 'none';
   }
   
+  sumarProducto() {
+    this.carritoService.productoSumado.emit(this.producto);
+  }
+  
+  restarProducto() {
+    this.carritoService.productoRestado.emit(this.producto);
+  }
 }

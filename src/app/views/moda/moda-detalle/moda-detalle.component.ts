@@ -1,10 +1,9 @@
-import { Component, OnInit, ViewChild  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { ModaService } from '../moda.service';
 import { ProductoInterface } from '../../../core/interfaces/producto.interface';
 import { CarritoService } from '../../../core/services/carrito.service';
-
 
 @Component({
   selector: 'bodoquin-moda-detalle',
@@ -13,9 +12,6 @@ import { CarritoService } from '../../../core/services/carrito.service';
 })
 export class ModaDetalleComponent implements OnInit {
   
-  @ViewChild('elementoContenedorZoom', {static: false}) elementoContenedorZoom;
-  @ViewChild('elementoImagenZoom', {static: false}) elementoImagenZoom;
-   
   producto: ProductoInterface;
   
   constructor(
@@ -28,21 +24,21 @@ export class ModaDetalleComponent implements OnInit {
   }
   
   getInfoProducto() {
-    // Capturar el id de la url
+    // Capturar el id de la url => Ok
     const idProducto = this.route.snapshot.params.idProducto;
     console.log(idProducto);
     
-    // Obtener la información del producto de acuerdo a su id
+    // Obtener la información del producto de acuerdo a su id => Ok
     this.producto = this.modaService.obtenerProducto(idProducto);
     console.log(this.producto);
     
-    // mostrar el producto en el html
+    // mostrar el producto en el html => Ok    
     
-    // colocar el diseño de la vista de detalle
+    // colocar el diseño de la vista de detalle => Ok    
     
-    // integrarnos al componente de carrito
+    // integrarnos al componente de carrito => Ok
     
-    // componente de tabs
+    // integrarnos al componente de tabs
   }
   
   sumarProducto() {
@@ -53,23 +49,4 @@ export class ModaDetalleComponent implements OnInit {
     this.carritoService.productoRestado.emit(this.producto);
   }
   
-  onMouseMove(evento) {
-    const elementoContenedorZoom = this.elementoContenedorZoom.nativeElement;
-    const elementoImagenZoom = this.elementoImagenZoom.nativeElement;
-    
-    let desplazamientoContenedorX = evento.clientX - elementoContenedorZoom.offsetLeft;
-    let porcentajeX = desplazamientoContenedorX/(elementoContenedorZoom.offsetWidth - 2);
-    let desplazamientoImagenX = `${-1*elementoImagenZoom.offsetWidth*porcentajeX}px`;
-    
-    let desplazamientoContenedorY = evento.clientY - elementoContenedorZoom.offsetTop;
-    let porcentajeY = desplazamientoContenedorY/(elementoContenedorZoom.offsetHeight - 2);
-    let desplazamientoImagenY = `${-1*elementoImagenZoom.offsetHeight*porcentajeY}px`;
-    
-    elementoImagenZoom.style.transform = `translate(${desplazamientoImagenX}, ${desplazamientoImagenY})`;
-  }
-  
-  onMouseLeave(evento) {
-    this.elementoImagenZoom.nativeElement.style.transform = 'none';
-  }
-    
 }

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { TarjetasProductoModule } from '../../components/tarjetas-producto/tarjetas-producto.module';
-import { TabsModule } from '../../components/tabs/tabs.module';
+import { ProductoDetalleModule } from '../../components/producto-detalle/producto-detalle.module';
 
 import { JugueteriaComponent } from './jugueteria.component';
 import { JugueteriaService } from './jugueteria.service';
@@ -16,7 +16,7 @@ import { JugueteriaDetalleComponent } from './jugueteria-detalle/jugueteria-deta
     JugueteriaRoutingModule,
     
     TarjetasProductoModule,
-    TabsModule,
+    ProductoDetalleModule,
   ],
   declarations: [
     JugueteriaComponent, 

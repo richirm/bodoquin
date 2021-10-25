@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 
 import { ReposteriaService } from '../reposteria.service';
 import { ProductoInterface } from '../../../core/interfaces/producto.interface';
-import { CarritoService } from '../../../core/services/carrito.service';
 
 @Component({
   selector: 'bodoquin-reposteria-detalle',
@@ -16,8 +15,7 @@ export class ReposteriaDetalleComponent implements OnInit {
   
   constructor(
     private route: ActivatedRoute,
-    private reposteriaService: ReposteriaService,
-    private carritoService: CarritoService) {}
+    private reposteriaService: ReposteriaService) {}
     
   ngOnInit() {
     this.getInfoProducto();
@@ -26,27 +24,9 @@ export class ReposteriaDetalleComponent implements OnInit {
   getInfoProducto() {
     // Capturar el id de la url => Ok
     const idProducto = this.route.snapshot.params.idProducto;
-    console.log(idProducto);
     
     // Obtener la información del producto de acuerdo a su id => Ok
     this.producto = this.reposteriaService.obtenerProducto(idProducto);
-    console.log(this.producto);
-    
-    // mostrar el producto en el html => Ok    
-    
-    // colocar el diseño de la vista de detalle => Ok    
-    
-    // integrarnos al componente de carrito => Ok
-    
-    // integrarnos al componente de tabs
-  }
-  
-  sumarProducto() {
-    this.carritoService.productoSumado.emit(this.producto);
-  }
-  
-  restarProducto() {
-    this.carritoService.productoRestado.emit(this.producto);
   }
   
 }

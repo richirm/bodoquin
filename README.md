@@ -133,22 +133,18 @@ Aplicación bodoquin
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13, 21
     - Features: (Lista de tareas - tablero KANBAN) 28
-      - Migrar bodoquin a Angular 28
+      - Migrar bodoquin a Angular 24
         - full JS 5
-        - crear vistas de detalle: 21
-          - funcionalidad para hacer zoom a las imagenes 5
-          - creacion del componente de producto detalle 3
-          - integrar el componente de producto detalle reposteria 1
-          - integrar el componente de producto detalle jugueteria 1
-          - integrar el componente de producto detalle moda 1
-          - integrar el componente de producto detalle tecnologia 1
         - crear vista inicio (home)
-          - creacion de la vista de inicio (componente vacio) y routing 1
-          - crear componente carousel 8
-          - crear componente de tarjetas de acceso 5
-          - integrar el componente de tarjeta de acceso 1
-          - crear componente de tarjeta de oferta 5
-          - integrar el componente de tarjeta de oferta 1
+          - crear componente carousel 7 (Ricardo)
+            - teoria de las lógicas del carousel 1
+            - integrar logica js 4
+            - ajustes 2
+          - crear componente de tarjetas de acceso 5 (Dani)
+          - integrar el componente de tarjeta de acceso 1 (Dani)
+          - crear componente de tarjeta de oferta 5 (Vanessa)
+          - integrar el componente de tarjeta de oferta 1 (Vanessa)
+          - crear componente de oferta publicidad 5 (Reto especial)
         - correcciones generales:
           - header:
             - redireccion a la pantalla de inicio 2

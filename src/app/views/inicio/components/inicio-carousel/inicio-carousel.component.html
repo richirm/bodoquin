@@ -1,0 +1,35 @@
+<div class="inicio-carousel">
+  <div #elementoCarousel 
+    class="inicio-carousel_banners" 
+    (mousedown)="iniciarDesplazamientoCarousel($event)" 
+    (mousemove)="moverDesplazamientoCarousel($event)"
+    (mouseup)="finalizarDesplazamientoCarousel($event)"
+    (mouseleave)="finalizarDesplazamientoCarousel($event)"
+    (dragstart)="onDragstart($event)"
+    >
+    <div class="inicio-carousel_banner">
+      <img src="assets/img/banner_reposteria.jpg">
+    </div>
+    <div class="inicio-carousel_banner">
+      <img src="assets/img/baner_jugueteria.png">
+    </div>
+    <div class="inicio-carousel_banner">
+      <img src="assets/img/banner_moda.png">
+    </div>
+    <div class="inicio-carousel_banner">
+      <img src="assets/img/banner_tecnologia.png">
+    </div>
+  </div>
+  <div class="inicio-carousel_accion-izquierda">
+    <i class="bi bi-chevron-left" (click)="mostrarAnteriorBanner()"></i>
+  </div>
+  <div class="inicio-carousel_accion-derecha">
+    <i class="bi bi-chevron-right" (click)="mostrarSiguienteBanner()"></i>
+  </div> 
+  <div #elementoPasos class="inicio-carousel_pasos">
+    <div class="inicio-carousel_pasos_acceso seleccionado" (click)="mostrarBanner(1);"></div>
+    <div class="inicio-carousel_pasos_acceso" (click)="mostrarBanner(2);"></div>
+    <div class="inicio-carousel_pasos_acceso" (click)="mostrarBanner(3);"></div>
+    <div class="inicio-carousel_pasos_acceso" (click)="mostrarBanner(4);"></div>
+  </div>
+</div>

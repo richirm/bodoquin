@@ -26,7 +26,7 @@ export class ModaDetalleComponent implements OnInit {
     const idProducto = this.route.snapshot.params.idProducto;
     
     // Obtener la información del producto de acuerdo a su id => Ok
-    this.producto = this.tecnologiaService.obtenerProducto(idProducto);
+    this.producto = this.modaService.obtenerProducto(idProducto);
   }
   
 }

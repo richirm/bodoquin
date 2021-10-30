@@ -94,7 +94,7 @@ export class InicioCarouselComponent implements OnInit {
     }
   }
   
-  onDragstart(evento) {
+  cancelarDesplazamientoDragDrop(evento) {
     evento.preventDefault();
   }
   

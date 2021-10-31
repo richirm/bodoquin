@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 
 import { InicioCarouselModule } from './components/inicio-carousel/inicio-carousel.module';
+import { InicioTarjetasAccesoModule } from './components/inicio-tarjetas-acceso/inicio-tarjetas-acceso.module';
 
 import { InicioComponent } from './inicio.component';
 import { InicioRoutingModule } from './inicio-routing.module';
@@ -9,7 +10,8 @@ import { InicioRoutingModule } from './inicio-routing.module';
   imports: [
     InicioRoutingModule,
     
-    InicioCarouselModule
+    InicioCarouselModule,
+    InicioTarjetasAccesoModule
   ],
   declarations: [
     InicioComponent,    

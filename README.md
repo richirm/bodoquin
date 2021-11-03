@@ -135,27 +135,17 @@ Aplicación bodoquin
     - Features: (Lista de tareas - tablero KANBAN) 28
       - Migrar bodoquin a Angular 24
         - full JS 5
-        - crear vista inicio (home)
-          - crear componente carousel 7 (Ricardo)
-            - teoria de las lógicas del carousel 1
-            - integrar logica js 4
-            - ajustes 2
-          - crear componente de tarjetas de acceso 5 (Dani)
-          - integrar el componente de tarjeta de acceso 1 (Dani)
-          - crear componente de tarjeta de oferta 5 (Vanessa)
-          - integrar el componente de tarjeta de oferta 1 (Vanessa)
-          - crear componente de oferta publicidad 5 (Reto especial)
         - correcciones generales:
           - header:
-            - redireccion a la pantalla de inicio 2
-            - correccion de la redireccion usando routerLink 3
+            - redireccion a la pantalla de inicio 3 (teoria del routerlink)
+            - correccion de la redireccion del menu usando routerLink 2
           - menu:
             - correccion de la redireccion usando routerLink 3
-            - correccion del menu al iniciar la aplicacion 3
+            - correccion del menu al iniciar la aplicacion 5
           - popup:
             - correccion del popup al iniciar la aplicacion 3
-          - optimizacion de la vista de listado 3
-          - optimizacion de la vista de detalle 3
+          - optimizacion de la vista de listado 5
+          - revisar la optimizacion de la vista de detalle 3
         - directivas: CommonModule
             - *ngSwitch
             - *ngIf
@@ -172,8 +162,6 @@ Aplicación bodoquin
           - lowercase
     - backlog => conjunto de tareas o mejoras a realizar (features futuros)      
       - Requerimientos funcionales:
-        - Migrar bodoquin a Angular 20   
-          
         - crear servicios:
           - servicios para llamar al backend
         - poner un logo

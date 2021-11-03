@@ -9,7 +9,7 @@ import { InicioOfertaHoyConstants } from './inicio-oferta-hoy.constants';
   styleUrls: ['./inicio-oferta-hoy.component.scss']
 })
 export class InicioOfertaHoyComponent {
-  ofertaHoy: Array<OfertaHoyInterface> = InicioOfertaHoyConstants.OFERTA;
+  ofertaHoy: OfertaHoyInterface = InicioOfertaHoyConstants.OFERTA;
   
   mostrarOferta: boolean = true;
   

@@ -1,4 +1,6 @@
-<div class="popup">
+<div class="popup" [ngStyle]="{
+    opacity: popupActivo === true ? 1 : 0
+  }">
   <div [hidden]="showPopup === false" [class.popup_backdrop--invisible]="showBackdrop===false" class="popup_backdrop" (click)="closePopup();"></div>
   <div class="popup_flecha" [ngStyle]="{
     opacity: showPopup === false || showFlecha !== true ? 0 : 1 

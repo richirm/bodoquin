@@ -22,6 +22,7 @@ export class PopupComponent implements OnInit, OnChanges {
   @Input() templateFooter: TemplateRef<any>;
   
   timeoutCerrar; 
+  popupActivo: boolean = false;
   
   @HostListener('window:resize', ['$event'])
   onResize(event) {
@@ -33,6 +34,7 @@ export class PopupComponent implements OnInit, OnChanges {
   
   ngOnInit() {
     this.calcPositionPopup();
+    this.verificarPopupActivo();
   }
 
   ngOnChanges(changes: SimpleChanges ) {
@@ -40,6 +42,12 @@ export class PopupComponent implements OnInit, OnChanges {
       this.calcPositionPopup();
       this.calcAlturaPopup();
     }
+  }
+  
+  verificarPopupActivo() {    
+    setTimeout(() => {
+      this.popupActivo = true;
+    }, 1000);
   }
 
   calcPositionPopup() {

@@ -3,26 +3,26 @@
   <div class="nav_menu colapsado" [class.colapsado]="!isMenuOpen">
     <h2>Menú opciones</h2>
     <ul>
-      <li>
-        <a href="#/jugueteria" (click)="colapsarMenu()">
+      <li routerLinkActive="nav_menu--seleccionado" (click)="colapsarMenu()">
+        <a routerLink="/jugueteria">
           <i class="bi bi-truck-flatbed"></i> Juguetería
           <span>&gt;</span>
         </a>
       </li>
-      <li>
-        <a href="#/moda" (click)="colapsarMenu()">
+      <li routerLinkActive="nav_menu--seleccionado" (click)="colapsarMenu()">
+        <a routerLink="/moda">
           <i class="bi bi-screwdriver"></i> Moda
           <span>&gt;</span>
         </a>
       </li>
-      <li>
-        <a href="#/tecnologia" (click)="colapsarMenu()">
+      <li routerLinkActive="nav_menu--seleccionado" (click)="colapsarMenu()">
+        <a routerLink="/tecnologia">
           <i class="bi bi-laptop"></i> Tecnología
           <span>&gt;</span>
         </a>
       </li>
-      <li class="nav_menu--seleccionado" (click)="colapsarMenu()">
-        <a href="#/reposteria">
+      <li routerLinkActive="nav_menu--seleccionado" (click)="colapsarMenu()">
+        <a routerLink="/reposteria">
           <i class="bi bi-life-preserver"></i> Repostería 
           <span>&gt;</span>
         </a>

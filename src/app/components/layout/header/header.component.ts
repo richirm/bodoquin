@@ -20,18 +20,18 @@ export class HeaderComponent implements OnInit {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationStart))
       .subscribe((event: NavigationStart) => {
-        let path = location.hash.substring(2).split('?')[0];
-        
-        if(path === 'tecnologia') {
+        let path = event.url;
+
+        if(path === '/tecnologia') {
           this.fondo = '#2a2d97';
         }
-        if(path === 'reposteria') {
+        if(path === '/reposteria') {
           this.fondo = '#a55928';
         }
-        if(path === 'moda') {
+        if(path === '/moda') {
           this.fondo = '#76076b';
         }
-        if(path === 'jugueteria') {
+        if(path === '/jugueteria') {
           this.fondo = '#ffd51d';
         }
       });   

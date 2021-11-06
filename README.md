@@ -180,8 +180,6 @@ Aplicación bodoquin
           - quitar menu seleccionado en el header
           - sincronizar con carrito de compras
         - integrar las notificaciones o toast en donde corresponda
-      - Requerimientos no funcionales:   
-        - migrar todas las vistas a Angular
       
 5. Plataformas:
   - zoom: https://us05web.zoom.us/j/88522391492?pwd=UExqSW1vVlFuaXVOZzgxamJkQXo0QT09

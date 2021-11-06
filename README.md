@@ -154,6 +154,7 @@ Aplicación bodoquin
             - [ngStyle]
             - (click)
             - ng-template
+            - routerLink, routerLinkActivate
         - Uso de pipes: CommonModule
           - json
           - date

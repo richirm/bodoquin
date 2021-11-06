@@ -12,7 +12,6 @@ export class TarjetasProductoComponent {
   @Input() productos: Array<ProductoInterface>;
   @Input() fondo: string;
  
-  @Output() onClickEliminar: EventEmitter<ProductoInterface> = new EventEmitter();
   @Output() onClickTarjeta: EventEmitter<ProductoInterface> = new EventEmitter();
   
   constructor(
@@ -31,6 +30,11 @@ export class TarjetasProductoComponent {
   onClickRestar(producto: ProductoInterface) {
     event.stopPropagation();
     this.carritoService.productoRestado.emit(producto);
+  }
+
+  onClickEliminar(producto: ProductoInterface) {
+    event.stopPropagation();
+    this.carritoService.productoEliminado.emit(producto);
   }
   
 }

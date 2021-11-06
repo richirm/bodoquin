@@ -27,11 +27,6 @@ export class TecnologiaListadoComponent implements OnInit {
     this.productos = this.tecnologiaService.obtenerProductos();
   }
   
-  onClickSumar(producto: ProductoInterface) {
-    event.stopPropagation();
-    this.carritoService.productoSumado.emit(producto);
-  }
-  
   onClickRestar(producto: ProductoInterface) {
     event.stopPropagation();
     this.carritoService.productoRestado.emit(producto);

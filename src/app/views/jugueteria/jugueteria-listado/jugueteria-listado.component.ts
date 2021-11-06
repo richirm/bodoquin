@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { ProductoInterface } from '../../../core/interfaces/producto.interface';
-import { CarritoService } from '../../../core/services/carrito.service';
 import { JugueteriaService } from '../jugueteria.service';
 
 @Component({
@@ -16,7 +15,6 @@ export class JugueteriaListadoComponent implements OnInit {
   
   constructor(
     private carritoService: CarritoService,
-    private jugueteriaService: JugueteriaService,
     private router: Router) {}
     
   ngOnInit() {
@@ -25,26 +23,6 @@ export class JugueteriaListadoComponent implements OnInit {
   
   obtenerProductos() {
     this.productos = this.jugueteriaService.obtenerProductos();
-  }
-    
-  onClickAgregar(producto: ProductoInterface) {
-    event.stopPropagation();
-    this.carritoService.productoAgregado.emit(producto);
-  }
-  
-  onClickSumar(producto: ProductoInterface) {
-    event.stopPropagation();
-    this.carritoService.productoSumado.emit(producto);
-  }
-  
-  onClickRestar(producto: ProductoInterface) {
-    event.stopPropagation();
-    this.carritoService.productoRestado.emit(producto);
-  }
-  
-  onClickEliminar(producto: ProductoInterface) {
-    event.stopPropagation();
-    this.carritoService.productoEliminado.emit(producto);
   }
   
   onClickTarjeta(producto: ProductoInterface) {

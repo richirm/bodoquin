@@ -1,6 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { ProductoInterface } from '../../core/interfaces/producto.interface';
+import { CarritoService } from '../../core/services/carrito.service';
 
 @Component({
   selector: 'bodoquin-tarjetas-producto',
@@ -16,5 +17,13 @@ export class TarjetasProductoComponent {
   @Output() onClickRestar: EventEmitter<ProductoInterface> = new EventEmitter();
   @Output() onClickEliminar: EventEmitter<ProductoInterface> = new EventEmitter();
   @Output() onClickTarjeta: EventEmitter<ProductoInterface> = new EventEmitter();
+  
+  constructor(
+    private carritoService: CarritoService){}
+  
+  onClickAgregar2(producto: ProductoInterface) {
+    event.stopPropagation();
+    this.carritoService.productoAgregado.emit(producto);
+  }
 
 }

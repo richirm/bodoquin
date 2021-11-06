@@ -11,8 +11,7 @@ import { CarritoService } from '../../core/services/carrito.service';
 export class TarjetasProductoComponent {
   @Input() productos: Array<ProductoInterface>;
   @Input() fondo: string;
-  
-  @Output() onClickRestar: EventEmitter<ProductoInterface> = new EventEmitter();
+ 
   @Output() onClickEliminar: EventEmitter<ProductoInterface> = new EventEmitter();
   @Output() onClickTarjeta: EventEmitter<ProductoInterface> = new EventEmitter();
   
@@ -28,5 +27,10 @@ export class TarjetasProductoComponent {
     event.stopPropagation();
     this.carritoService.productoSumado.emit(producto);
   }
-
+  
+  onClickRestar(producto: ProductoInterface) {
+    event.stopPropagation();
+    this.carritoService.productoRestado.emit(producto);
+  }
+  
 }

@@ -12,7 +12,6 @@ export class TarjetasProductoComponent {
   @Input() productos: Array<ProductoInterface>;
   @Input() fondo: string;
   
-  @Output() onClickAgregar: EventEmitter<ProductoInterface> = new EventEmitter();
   @Output() onClickSumar: EventEmitter<ProductoInterface> = new EventEmitter();
   @Output() onClickRestar: EventEmitter<ProductoInterface> = new EventEmitter();
   @Output() onClickEliminar: EventEmitter<ProductoInterface> = new EventEmitter();
@@ -21,7 +20,7 @@ export class TarjetasProductoComponent {
   constructor(
     private carritoService: CarritoService){}
   
-  onClickAgregar2(producto: ProductoInterface) {
+  onClickAgregar(producto: ProductoInterface) {
     event.stopPropagation();
     this.carritoService.productoAgregado.emit(producto);
   }

@@ -2,7 +2,7 @@
   <div *ngFor="let producto of productos" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
     <bodoquin-tarjeta-producto 
       [producto]="producto"
-      (onClickAgregar)="onClickAgregar2($event)"
+      (onClickAgregar)="onClickAgregar($event)"
       (onClickSumar)="onClickSumar.emit($event)"
       (onClickRestar)="onClickRestar.emit($event)"
       (onClickEliminar)="onClickEliminar.emit($event)"

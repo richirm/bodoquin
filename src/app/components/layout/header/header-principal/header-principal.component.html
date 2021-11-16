@@ -1,0 +1,16 @@
+<div class="header-principal row">
+  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+    <i class="bi bi-list header_menu" (click)="onClickMenu.emit()"></i>
+    <h1 class="header_titulo">
+      <a routerLink="/inicio">Inicio</a>
+    </h1>
+    
+    <bodoquin-header-buscador></bodoquin-header-buscador>
+    
+  </div>
+  
+  <div class="header_acciones col-xl-6 col-lg-6 col-md-6 col-sm-12">
+    <bodoquin-header-carrito></bodoquin-header-carrito>
+    <bodoquin-header-usuario></bodoquin-header-usuario>
+  </div>
+</div>

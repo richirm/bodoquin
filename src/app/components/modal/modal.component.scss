@@ -1,0 +1,91 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  text-align: initial;
+  z-index: 2;
+  display: block;
+
+  &_backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #0000004d;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  &_contenedor {
+    min-height: 100px;
+    margin-top: 50px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    
+    .modal_header {
+      width: 100%;
+      padding: 10px;
+      border-bottom: 1px solid #ececec;
+      
+      h1 {
+        margin: 0;
+        font-size: 22px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      i {
+        color: #000000;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 28px;
+        cursor: pointer;
+        
+        &:hover {
+          transform: scale3d(1.3, 1.3, 1.3);
+        }
+      }
+    }
+  
+    .modal_body {
+      min-height: 50px;
+      width: 100%;
+      padding: 10px 15px;
+    }
+
+    .modal_footer {
+      width: 100%;
+      padding: 10px 15px;
+      border-top: 1px solid #ececec;
+      text-align: center;
+    }
+  }
+
+  &.modal_confirmacion .modal_footer button {
+    width: 45%;
+  }
+
+  &-sm {
+    width: 300px;
+  }
+
+  &-md {
+    width: 450px;
+  }
+
+  &-lg {
+    width: 700px;
+  }
+
+  &-xl {
+    width: 950px;
+  }
+}
+

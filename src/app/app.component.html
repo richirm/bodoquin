@@ -1,0 +1,15 @@
+<bodoquin-header 
+  (onClickMenu)="onClickMenu()"
+></bodoquin-header>
+
+<bodoquin-nav
+  [(isMenuOpen)]="isMenuOpen"
+></bodoquin-nav>
+
+<main>
+  <router-outlet></router-outlet>
+  
+  <bodoquin-chat></bodoquin-chat>
+</main>
+
+<bodoquin-footer></bodoquin-footer>

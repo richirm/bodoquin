@@ -1,0 +1,18 @@
+.header-buscador {
+  position: relative;
+
+  & input {
+    width: 300px;
+    height: 38px;
+    border: none;
+    outline: none;
+    padding-left: 35px;
+    border-radius: 20px;
+  }
+
+  & i {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+  }
+}

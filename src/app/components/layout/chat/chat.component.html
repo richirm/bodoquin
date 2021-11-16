@@ -1,0 +1,36 @@
+<div class="chat">
+  <bodoquin-popup
+    [(showPopup)]="chatVisible"
+    [elemento]="chatFab"
+    align="top"
+    heightBody="300px"
+    [showFlecha]="false"
+    [showCerrar]="true"
+    [showBackdrop]="false"
+    [templateHeader]="templateChatHeader"
+    [templateBody]="templateChatBody"
+    [templateFooter]="templateChatFooter"
+  ></bodoquin-popup>
+  
+  <ng-template #templateChatHeader>
+    <div class="chat_header">
+      <i class="bi bi-messenger chat_logo"></i>
+      <h1>Bodoquin<br><small>Siempre contigo</small></h1>
+    </div>
+  </ng-template>
+  
+  <ng-template #templateChatBody>
+    Cuerpo
+  </ng-template>
+  
+  <ng-template #templateChatFooter>
+    <div class="chat_footer">
+      <input type="text" required placeholder="¿En que te ayudamos?..."  />
+      <i class="bi bi-arrow-right-circle"></i>
+    </div>
+  </ng-template>
+
+  <div #chatFab class="chat_fab" [class.chat_fab_in]="chatVisible === true">
+    <i class="bi bi-messenger" (click)="mostrarOcultarChat();"></i>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="inicio-oferta-hoy" *ngIf="mostrarOferta">
+  <div class="oferta-hoy_titulo">
+    <span>{{ ofertaHoy.titulo }}</span>
+    <i class="bi bi-x" (click)="ocultarOfertaHoy();"></i>
+  </div>
+  <div class="oferta-hoy_img">
+    <img src="{{ ofertaHoy.img }}"/>
+  </div>
+</div>

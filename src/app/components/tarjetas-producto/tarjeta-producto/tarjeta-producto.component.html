@@ -1,0 +1,34 @@
+<div class="tarjeta-producto">
+  <div class="tarjeta2" (click)="onClickTarjeta.emit(producto)">             
+    <div class="tarjeta2_header">         
+      <img src="assets/img/{{ producto.nombreImg }}">
+    </div>
+    <div class="tarjeta2_body">      
+      <span>{{ producto.nombreCategoria }}</span><br>
+      <span><b>{{ producto.nombreProducto }}</b></span>
+      <p>{{ producto.descripcionProducto }}</p>
+      <span class="tarjeta2_body_precio">S/. {{ producto.precioProducto }}</span>
+    </div>
+    
+    <div class="tarjeta2_footer">
+      <button *ngIf="producto.cantidadProducto === 0" type="button" (click)="onClickAgregar.emit(producto)">AGREGAR</button>
+      
+      <div *ngIf="producto.cantidadProducto !== 0" class="tarjeta2_footer_contador">
+        <div *ngIf="producto.cantidadProducto === 1" class="tarjeta2_footer_contador_agregar" (click)="onClickEliminar.emit(producto)">
+          <i class="bi bi-trash"></i>
+        </div>
+        
+        <div *ngIf="producto.cantidadProducto > 1" class="tarjeta2_footer_contador_agregar" (click)="onClickRestar.emit(producto)">
+          <i class="bi bi-dash-lg"></i>
+        </div>
+        
+        <div class="tarjeta2_footer_contador_unidades">
+          <span><b>{{ producto.cantidadProducto }}</b> un</span>
+        </div>
+        <div class="tarjeta2_footer_contador_agregar" (click)="onClickSumar.emit(producto)">
+          <i class="bi bi-plus-lg"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,94 @@
+.inicio-carousel {
+  position: relative;
+  overflow: hidden;
+
+  &_banners {
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+    left: 0%;
+    border-bottom: 1px solid #cccccc;
+    font-size: 0px;
+
+    &--transicion {
+      transition: all 500ms ease 0s;
+    }
+
+    .inicio-carousel_banner {
+      transition: transform 0.5s;
+      display: inline-block;
+      width: 100%;
+      
+      img {
+        width: 100%; 
+      }
+    }
+  }
+
+  &_accion-izquierda {
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    font-size: 35px;
+    
+    i {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      margin-left: 6px;
+      
+      &:hover {
+        background-color: #ececec;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &_accion-derecha {
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    font-size: 35px;
+    
+    i {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      
+      &:hover {
+        background-color: #ececec;
+        border-radius: 4px;
+      }
+    }
+  }
+  
+  &_pasos {
+    position: relative ;
+    text-align: center ;
+    background-color: #e3ecff;
+    user-select: none;
+    
+    &_acceso {
+      width: 10px;
+      height: 10px;
+      background-color: #585454;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 10px;
+      cursor : pointer ;
+      
+      &.seleccionado {
+        background-color: #e73c35;
+        width: 15px;
+        height: 15px;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+}

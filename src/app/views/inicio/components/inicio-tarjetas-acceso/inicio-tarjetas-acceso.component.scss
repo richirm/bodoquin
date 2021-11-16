@@ -1,0 +1,38 @@
+.inicio-tarjetas-acceso {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;  
+  background-color: #e3ecff;
+
+  .tarjeta-acceso {
+    width: 375px;
+    box-shadow: 0 4px 20px rgb(0 0 0 / 16%);
+    height: 220px;
+    border: 1px solid #e7e7e7;
+    padding: 0 20px;
+    margin-right: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    
+    &:hover {
+      background-color: #f6f6f6;
+      transform: scale3d(1.05, 1.05, 1.05);
+      border: 1px solid #a7ae3e;
+    }
+    
+    button {
+      width: 50%;
+      vertical-align: middle;
+    }
+
+    img {
+      width: 100px;
+      vertical-align: middle;
+      position: relative;
+      right: -60px;
+      height: 70px;
+    }
+  }   
+}
+  

@@ -1,0 +1,25 @@
+<div class="popup" [ngStyle]="{
+    opacity: popupActivo === true ? 1 : 0
+  }">
+  <div [hidden]="showPopup === false" [class.popup_backdrop--invisible]="showBackdrop===false" class="popup_backdrop" (click)="closePopup();"></div>
+  <div class="popup_flecha" [ngStyle]="{
+    opacity: showPopup === false || showFlecha !== true ? 0 : 1 
+  }"></div>
+  <div 
+    class="popup_contenedor" 
+    [class.popup_in]="showPopup === true" 
+    [class.popup_out]="showPopup === false"
+    [class.animation-top]="align === 'bottom'"
+    [class.animation-bottom]="align === 'top'">
+    <div class="popup_contenedor_header" *ngIf="!!templateHeader">
+      <ng-template [ngTemplateOutlet]="templateHeader"></ng-template>
+      <i *ngIf="showCerrar === true" class="bi bi-x popup_contenedor_header_cerrar" (click)="closePopup();"></i>
+    </div>
+    <div class="popup_contenedor_body" [ngStyle]="{height: heightBody}">
+      <ng-template [ngTemplateOutlet]="templateBody"></ng-template>
+    </div>
+    <div class="popup_contenedor_footer" *ngIf="!!templateFooter">
+      <ng-template [ngTemplateOutlet]="templateFooter"></ng-template>
+    </div>
+  </div>
+</div>

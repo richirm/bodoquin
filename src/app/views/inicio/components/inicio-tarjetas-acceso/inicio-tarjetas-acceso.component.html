@@ -1,0 +1,10 @@
+<div class="inicio-tarjetas-acceso">
+  <div *ngFor="let modulo of modulos" class="tarjeta-acceso" onclick="mostrarToast(1)">
+    <h2>{{ modulo.titulo }}</h2>
+    <p>{{ modulo.descripcion }}</p>
+    <button type="button" class="btn btn-primary">
+      <a href="{{ modulo.url }}">!Has tu pedido!</a>
+    </button>
+    <img src="../../../assets/img/{{ modulo.img }}">
+  </div>
+</div>

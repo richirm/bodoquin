@@ -1,0 +1,107 @@
+.producto-detalle {
+  .container {
+    padding-top: 20px;
+  }
+  
+  &-principal {
+    &_imagen--secundario {
+      padding: 10px;
+      
+      img {
+        width: 100%;
+        border: 1px solid red;
+      } 
+    }
+
+    &_imagen--principal {        
+      overflow: hidden;
+      height: 350px;                         
+                                  
+      &:hover img {
+        width: auto;    
+      }                      
+                                  
+      img {
+        width: 100%;
+      }        
+    }  
+
+    &_informacion {
+      h3 {
+        font-size: 18px;
+      }
+      
+      h1 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      
+      p {
+        margin-bottom: 25px;
+      }
+            
+      &_precio {
+        background-color: #FFF1F1;
+        border-radius: 15px;
+        margin-top: 10px;
+        font-size: 25px;
+        padding: 10px;
+        color: #FF0000;
+        font-weight: bold;
+        margin-left: 15px;
+        
+        &-etiqueta {
+          margin-left: 70px;
+        }
+      }
+      
+      &_contador {
+        margin-left: 70px;
+        width: 150px;
+        margin-top: 22px;
+      }
+      
+      &_agregar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 2px solid #80A3EA;
+        text-align: center;
+        color: #80A3EA;
+        user-select: none;
+        display: inline-block;
+        cursor: pointer;
+        
+        i {
+          position: relative;
+          top: 5px;
+          font-size: 16px;
+        }
+      }
+      
+      &_unidades {
+        display: inline-block;
+        width: calc(100% - 80px);
+        text-align: center;
+        user-select: none;
+        
+        span {
+          position: relative;
+          top: 6px;
+        }
+      }
+    }
+  }
+
+  &-secundario {
+    margin-bottom: 15px;
+    
+    h1 {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      font-size: 25px;
+    }
+  }
+}

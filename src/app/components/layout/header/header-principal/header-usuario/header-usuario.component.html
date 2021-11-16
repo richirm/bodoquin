@@ -1,0 +1,96 @@
+<div class="header-usuario">
+  <i #usuarioIcono class="bi bi-person-fill" (click)="onClickUser()"></i>
+
+  <bodoquin-popup
+    [elemento]="usuarioIcono"
+    [(showPopup)]="showPopup"
+    [templateBody]="templateUsuario"
+  ></bodoquin-popup>
+  
+  <ng-template #templateUsuario>
+    <ul class="header-usuario_popup">
+      <li (click)="mostrarModalInicioSesion();">
+        <i class="bi bi-arrow-bar-right"></i>
+        <span>Iniciar sesion</span>
+      </li>
+      
+      <li (click)="mostrarModalRegistrarse();">
+        <i class="bi bi-person"></i>
+        <span>Registrarse</span>
+      </li>
+      
+      <li>
+        <i class="bi bi-basket"></i>
+        <span>Mis pedidos</span>
+      </li>
+    
+      <li (click)="mostrarModalCerrarSesion();">
+        <i class="bi bi-arrow-bar-left"></i>
+        <span>Cerrar sesion</span>
+      </li>
+    </ul>
+  </ng-template>
+  
+  <bodoquin-modal
+    titulo="Iniciar sesión"
+    [(showModal)]="showModalIniciarSesion"
+    textoAceptar="Ingresar"
+    [showCancelar]="false"
+    [templateBody]="templateIniciarSesion"
+  ></bodoquin-modal>
+  
+  <ng-template #templateIniciarSesion>
+    <form>
+      <div class="form-group">
+        <label class="form-label">Correo electrónico:</label>
+        <input type="text" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Contraseña:</label>
+        <input type="text" class="form-control" />
+      </div>      
+    </form>
+  </ng-template>
+  
+  <bodoquin-modal
+    titulo="Registrarse"
+    [(showModal)]="showModalRegistrarse"
+    textoAceptar="Ingresar"
+    [showCancelar]="false"
+    [templateBody]="templateRegistrarse"
+  ></bodoquin-modal>
+  
+  <ng-template #templateRegistrarse>
+    <form>
+      <div class="form-group">
+        <label class="form-label">Nombre usuario:</label>
+        <input type="text" class="form-control" />
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">Correo electrónico:</label>
+        <input type="text" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Contraseña:</label>
+        <input type="text" class="form-control" />
+      </div> 
+    </form>     
+  </ng-template>
+  
+  <bodoquin-modal
+    titulo="Cerrar Sesion"
+    [(showModal)]="showModalCerrarSesion"
+    [templateBody]="templateCerrarSesion"
+  ></bodoquin-modal>
+ 
+  <ng-template #templateCerrarSesion>
+    <p class="texto-centrado">
+      ¿Está seguro que desea<br>
+      cerrar sesión?
+    </p>
+  </ng-template>
+</div>
+

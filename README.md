@@ -133,19 +133,18 @@ Aplicación bodoquin
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13, 21
     - Features: (Lista de tareas - tablero KANBAN) 28
-      - Migrar bodoquin a Angular 24
-        - full JS 5
-        - correcciones generales:
-          - header:
-            - redireccion a la pantalla de inicio 3 (teoria del routerlink)
-            - correccion de la redireccion del menu usando routerLink 2
-          - menu:
-            - correccion de la redireccion usando routerLink 3
-            - correccion del menu al iniciar la aplicacion 5
-          - popup:
-            - correccion del popup al iniciar la aplicacion 3
-          - optimizacion de la vista de listado 5
-          - revisar la optimizacion de la vista de detalle 3
+        - Lunes full JS 5
+        - Introducción a backend y base de datos 
+        - Instalar las herramientas de backend
+        - Crear un proyecto de backend en nodejs
+        - Instalar las herramientas de base datos
+        - Crear la base de datos y tablas
+        - Crear los servicios:
+          - Servicio para obtener productos de reposteria
+          - Servicio para obtener productos de jugueteria
+          - Servicio para obtener productos de tecnologia
+          - Servicio para obtener productos de moda
+        - Pruebas con los servicios en el navegador
         - directivas: CommonModule
             - *ngSwitch
             - *ngIf
@@ -164,7 +163,7 @@ Aplicación bodoquin
     - backlog => conjunto de tareas o mejoras a realizar (features futuros)      
       - Requerimientos funcionales:
         - crear servicios:
-          - servicios para llamar al backend
+          - servicios para llamar al backend, servicios o apis (endpoint)
         - poner un logo
         - implementar sección de anuncios y/o publicidad en el top
         - modal de tiendas de recojo (ubicación)

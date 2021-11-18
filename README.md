@@ -52,6 +52,7 @@ Aplicación bodoquin
         git checkout <nombre-rama> => para posicionarme en una rama
         git fetch => para descargar las ramas que están en el repositorio pero no en mi local
         pull request => para enviar una solicitud de unión de mi rama hacia develop
+        git remote set-url origin url_mi_repositorio => para cambiar la url del repositorio
   - GITHUB: servidor o repositorio web para proyectos git
   - tortoise git: herramienta de interfaz grafica para ejecutar operaciones con GIT de manera simple
   - commits:

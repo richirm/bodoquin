@@ -133,19 +133,18 @@ Aplicación bodoquin
   - SCRUM: es una metodología agil para dividirnos el desarrollo
     - feature => una mejora 
     - pesos: 0.5 1, 2, 3, 5, 8, 13, 21
-    - Features: (Lista de tareas - tablero KANBAN) 28
+    - Features: (Lista de tareas - tablero KANBAN) 39
         - Lunes full JS 5
-        - Introducción a backend y base de datos 
-        - Instalar las herramientas de backend
-        - Crear un proyecto de backend en nodejs
-        - Instalar las herramientas de base datos
-        - Crear la base de datos y tablas
-        - Crear los servicios:
-          - Servicio para obtener productos de reposteria
-          - Servicio para obtener productos de jugueteria
-          - Servicio para obtener productos de tecnologia
-          - Servicio para obtener productos de moda
-        - Pruebas con los servicios en el navegador
+        - Teoría de servicios del frontend 5
+        - Teoría de servicio HttpClient y ejemplos practicos 5
+        - Integrar el servicio de GET /reposteria con el modulo de reposteria 3
+        - Integrar el servicio de GET /jugueteria con el modulo de jugueteria 3 
+        - Integrar el servicio de GET /tecnologia con el modulo de tecnologia 3
+        - Integrar el servicio de GET /moda con el modulo de moda 3
+        - Integrar el servicio de GET /reposteria/id con la pantalla de detalle de reposteria 3
+        - Integrar el servicio de GET /jugueteria/id con la pantalla de detalle de jugueteria 3
+        - Integrar el servicio de GET /tecnologia/id con la pantalla de detalle de tecnologia 3
+        - Integrar el servicio de GET /moda/id con la pantalla de detalle de moda 3
         - directivas: CommonModule
             - *ngSwitch
             - *ngIf

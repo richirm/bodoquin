@@ -6,6 +6,7 @@ import { ProductoDetalleModule } from '../../components/producto-detalle/product
 
 import { ReposteriaComponent } from './reposteria.component';
 import { ReposteriaService } from './reposteria.service';
+import { Reposteria2Service } from './reposteria2.service';
 import { ReposteriaRoutingModule } from './reposteria-routing.module';
 import { ReposteriaListadoComponent } from './reposteria-listado/reposteria-listado.component';
 import { ReposteriaDetalleComponent } from './reposteria-detalle/reposteria-detalle.component';
@@ -30,6 +31,7 @@ import { ReposteriaDetalleComponent } from './reposteria-detalle/reposteria-deta
   ],
   providers: [
     ReposteriaService,
+    Reposteria2Service
   ]
 })
 export class ReposteriaModule {}

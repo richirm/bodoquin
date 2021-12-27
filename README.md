@@ -217,6 +217,26 @@ Aplicación bodoquin
         Para usar un servicio, debemos crear una instancia de ese servicio 
         usando el contructor de la clase donde vamos a utilizar el servicio
   - Nomenclatura de variables y funciones explicita
+  
+9. Navegador:
+  - Memoria:
+      - Memoria cache: es la memoria donde se almacena los valores o datos que hay en 
+          las variables o las constantes, estos datos se destruyen cuando la memoria cache
+          destruye. Hay una memoria cache por cada pestaña del navegador, por lo tanto, cuando
+          se cierra o se refresca la pestaña del navegador, la memoría cache se destruye
+          y luego se crea una nueva.
+          
+      - Storage
+        - Local storage: es una memoria de largo plazo, permanente por aplicación o dominio. 
+            Entonces si la aplicación de cierra, se refresca o se abre un navegador con la 
+            aplicación, el local storage mostrará los valores que tuvo.
+            Normalmente aquí se almacenan datos del backend que no cambian con frecuencia
+            
+        - Session storage: es una memoria de corto plazo, por pestaña. 
+            Entonces si la aplicación se refresca, el session storage sigue con sus valores; pero
+            si se abre otra pestaña o se cierra la pestaña actual, la memoria session storage se borra.
+            Normalmente aquí se almacenan datos sensibles, como por ejemplo el token de sesion
+            
     
 Javascript
 ------------------------   

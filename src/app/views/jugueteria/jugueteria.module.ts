@@ -6,6 +6,7 @@ import { ProductoDetalleModule } from '../../components/producto-detalle/product
 
 import { JugueteriaComponent } from './jugueteria.component';
 import { JugueteriaService } from './jugueteria.service';
+import { Jugueteria2Service } from './jugueteria2.service';
 import { JugueteriaRoutingModule } from './jugueteria-routing.module';
 import { JugueteriaListadoComponent } from './jugueteria-listado/jugueteria-listado.component';
 import { JugueteriaDetalleComponent } from './jugueteria-detalle/jugueteria-detalle.component';
@@ -30,6 +31,7 @@ import { JugueteriaDetalleComponent } from './jugueteria-detalle/jugueteria-deta
   ],
   providers: [
     JugueteriaService,
+	Jugueteria2Service
   ]
 })
 export class JugueteriaModule {}

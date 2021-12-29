@@ -5,6 +5,8 @@ import { ProductoInterface } from '../../../core/interfaces/producto.interface';
 import { ReposteriaService } from '../reposteria.service';
 import { Reposteria2Service } from '../reposteria2.service';
 
+import { AlumnoInterface } from '../interfaces/alumno.interface';
+
 @Component({
   selector: 'bodoquin-reposteria-listado',
   templateUrl: './reposteria-listado.component.html',
@@ -13,6 +15,7 @@ import { Reposteria2Service } from '../reposteria2.service';
 export class ReposteriaListadoComponent implements OnInit {
   
   productos: Array<ProductoInterface> = [];
+  alumnos: Array<AlumnoInterface> = [];
   
   constructor(
     private reposteriaService: ReposteriaService,
@@ -31,7 +34,15 @@ export class ReposteriaListadoComponent implements OnInit {
     const apellidos = this.reposteria2Service.getApellidosSession();
     console.log(apellidos);
     
-    // this.reposteria2Service.getAlumnosBackend();
+    this.reposteria2Service.getAlumnosBackend().subscribe(
+      (response) => {
+        console.log(response);
+        this.alumnos = response;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
   
   obtenerProductos() {

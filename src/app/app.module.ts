@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 //Components
 import { HeaderModule } from './components/layout/header/header.module';
@@ -16,6 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     
     //Components

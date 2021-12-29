@@ -1,7 +1,14 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+import { AlumnoInterface } from './interfaces/alumno.interface';
 
 @Injectable()
 export class Reposteria2Service {
+  
+  constructor( //Injección de dependencias
+    private httpClient: HttpClient) {}
   
   getAlumnosCache() {
     const alumnos = [
@@ -28,18 +35,18 @@ export class Reposteria2Service {
     return alumnos;
   }
 
-  getNombreLocal() {
+  getNombreLocal(): string {
     const nombre = localStorage.getItem('nombre');
     return nombre;
   }
   
-  getApellidosSession() {
+  getApellidosSession(): string {
     const apellidos = sessionStorage.getItem('apellidos');
     return apellidos;
   }
  
-  // getAlumnosBackend() {
-    
-  // }
+  getAlumnosBackend() {
+    return this.httpClient.get<Array<AlumnoInterface>>('http://localhost:3000/educacion/alumnos?edadMin=1&edadMax=250');
+  }
   
 }

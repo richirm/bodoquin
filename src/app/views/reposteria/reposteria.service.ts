@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 import { ProductoInterface } from '../../core/interfaces/producto.interface';
 import { ReposteriaConstants } from './reposteria.constants';
@@ -8,8 +10,11 @@ export class ReposteriaService {
   
   productos: Array<ProductoInterface> = ReposteriaConstants.PRODUCTOS;
   
-  obtenerProductos(): Array<ProductoInterface> {
-    return this.productos;
+  constructor(
+    private httpClient: HttpClient) {}
+  
+  obtenerProductos() {
+    return this.httpClient.get<Array<ProductoInterface>>('http://localhost:3000/productos/reposteria');
   }
   
   obtenerProducto(idProducto: number): ProductoInterface {

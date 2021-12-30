@@ -25,15 +25,28 @@ export class ReposteriaListadoComponent implements OnInit {
   ngOnInit() {
     this.obtenerProductos();
     
+    this.getAlumnosCache();
+    this.getAlumnosBackend();     
+    this.getApellidosSession();
+    this.getNombreLocal();
+  }
+  
+  getAlumnosCache() {
     const alumnos = this.reposteria2Service.getAlumnosCache();
     console.log(alumnos);
-    
+  }
+  
+  getNombreLocal() {
     const nombre = this.reposteria2Service.getNombreLocal();
     console.log(nombre);
-    
+  }
+  
+  getApellidosSession() {
     const apellidos = this.reposteria2Service.getApellidosSession();
     console.log(apellidos);
-    
+  }
+  
+  getAlumnosBackend() {
     this.reposteria2Service.getAlumnosBackend().subscribe(
       (response) => {
         console.log(response);

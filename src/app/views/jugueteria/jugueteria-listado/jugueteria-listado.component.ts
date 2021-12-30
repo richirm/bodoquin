@@ -6,6 +6,7 @@ import { JugueteriaService } from '../jugueteria.service';
 import { Jugueteria2Service } from '../jugueteria2.service';
 
 import { MusicaInterface } from '../interfaces/musica.interface';
+import { CentroTuristicoInterface } from '../interfaces/centro-turistico.interface';
 
 @Component({
   selector: 'bodoquin-jugueteria-listado',
@@ -16,6 +17,7 @@ export class JugueteriaListadoComponent implements OnInit {
   
   productos : Array<ProductoInterface> = [];
   musicas: Array<MusicaInterface> = [];
+  centrosTuristicos: Array<CentroTuristicoInterface> = [];
   
   constructor(
     private jugueteriaService: JugueteriaService,
@@ -23,21 +25,46 @@ export class JugueteriaListadoComponent implements OnInit {
     private router: Router) {}
     
   ngOnInit() {
-    this.obtenerProductos();    
-	
+    this.obtenerProductos(); 
+    this.getMusicasCache();
+    this.getMusicaPrecioLocal();
+    this.getMusicaGeneroSession();
+    this.getMusicaBackend();
+    this.getCentrosTuristicosBackend();
+  } 
+  
+  getMusicasCache() {
     const musicas = this.jugueteria2Service.getMusicasCache();
     console.log(musicas);
-
+  }
+  
+  getMusicaPrecioLocal() {
     const precio = this.jugueteria2Service.getMusicaPrecioLocal();
     console.log(precio);
-
+  }
+  
+  getMusicaGeneroSession() {
     const genero = this.jugueteria2Service.getMusicaGeneroSession();
     console.log(genero);
-
+  }
+  
+  getMusicaBackend() {
     this.jugueteria2Service.getMusicaBackend().subscribe(
       (response) => {
         console.log(response);
         this.musicas = response;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+  
+  getCentrosTuristicosBackend() {
+    this.jugueteria2Service.getCentrosTuristicosBackend().subscribe(
+      (response) => {
+        console.log(response);
+        this.centrosTuristicos = response;
       },
       (error) => {
         console.log(error);

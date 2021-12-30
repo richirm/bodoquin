@@ -93,9 +93,13 @@ Aplicación bodoquin
     - Servicios: Nos permite gestionar los datos de la aplicación
       - Servicio para comunicar componentes: Envío de datos entre componentes
       - Servicio para proveer de datos a la vista:
-        - Datos provenientes del storage (memoria del navegador) (local storage , session storage)
+        - Datos provenientes del cache (variables y constantes)
+        - Datos provenientes del storage, memoria del navegador (local storage , session storage)
         - Datos provenientes del backend
         - Datos provenientes de otro componente
+      - Injeccion de dependencias:
+        Para usar un servicio, debemos crear una instancia de ese servicio 
+        usando el contructor de la clase donde vamos a utilizar el servicio
     - Observables: Es un objeto que va a transmitir el cambio de flujo de datos
       - Evento: Para detectar envio de datos de un componente de otro
       - Outputs: Para detectar envio de datos de un componente hijo hacia el padre
@@ -136,6 +140,7 @@ Aplicación bodoquin
     - Features: (Lista de tareas - tablero KANBAN) 39
         - Lunes full JS 5
         - Teoría de servicios del frontend 5
+        - Practica con debug 3
         - Teoría de servicio HttpClient y ejemplos practicos 5
         - Integrar el servicio de GET /reposteria con el modulo de reposteria 3
         - Integrar el servicio de GET /jugueteria con el modulo de jugueteria 3 

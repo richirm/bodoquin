@@ -22,7 +22,14 @@ export class TecnologiaListadoComponent implements OnInit {
   }
   
   obtenerProductos() {
-    this.productos = this.tecnologiaService.obtenerProductos();
+    this.tecnologiaService.obtenerProductos().subscribe(
+      (response) => {
+        this.productos = response;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
   
   onClickTarjeta(producto: ProductoInterface) {

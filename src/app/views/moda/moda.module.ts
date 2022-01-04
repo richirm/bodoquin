@@ -6,6 +6,7 @@ import { ProductoDetalleModule } from '../../components/producto-detalle/product
 
 import { ModaComponent } from './moda.component';
 import { ModaService } from './moda.service';
+import { Moda2Service } from './moda2.service';
 import { ModaRoutingModule } from './moda-routing.module';
 import { ModaListadoComponent } from './moda-listado/moda-listado.component';
 import { ModaDetalleComponent } from './moda-detalle/moda-detalle.component';
@@ -30,6 +31,7 @@ import { ModaDetalleComponent } from './moda-detalle/moda-detalle.component';
   ],
   providers: [
     ModaService,
+    Moda2Service,
   ]
 })
 export class ModaModule {}

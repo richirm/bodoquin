@@ -6,6 +6,7 @@ import { ProductoDetalleModule } from '../../components/producto-detalle/product
 
 import { TecnologiaComponent } from './tecnologia.component';
 import { TecnologiaService } from './tecnologia.service';
+import { Tecnologia2Service } from './tecnologia2.service';
 import { TecnologiaRoutingModule } from './tecnologia-routing.module';
 import { TecnologiaListadoComponent } from './tecnologia-listado/tecnologia-listado.component';
 import { TecnologiaDetalleComponent } from './tecnologia-detalle/tecnologia-detalle.component';
@@ -30,6 +31,7 @@ import { TecnologiaDetalleComponent } from './tecnologia-detalle/tecnologia-deta
   ],
   providers: [
     TecnologiaService,
+    Tecnologia2Service,
   ]
 })
 export class TecnologiaModule {}

@@ -11,7 +11,7 @@ import { JugueteriaService } from '../jugueteria.service';
 })
 export class JugueteriaListadoComponent implements OnInit {
   
-  productos : Array<ProductoInterface> = [];
+  productos: Array<ProductoInterface> = [];
   
   constructor(
     private jugueteriaService: JugueteriaService,
@@ -22,7 +22,14 @@ export class JugueteriaListadoComponent implements OnInit {
   }
   
   obtenerProductos() {
-    this.productos = this.jugueteriaService.obtenerProductos();
+    this.jugueteriaService.obtenerProductos().subscribe(
+      (response) => {
+        this.productos = response;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
   
   onClickTarjeta(producto: ProductoInterface) {

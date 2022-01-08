@@ -26,7 +26,13 @@ export class JugueteriaDetalleComponent implements OnInit {
     const idProducto = this.route.snapshot.params.idProducto;
 
     // Obtener la información del producto de acuerdo a su id
-    this.producto = this.jugueteriaService.obtenerProducto(idProducto);
+    this.jugueteriaService.obtenerProducto(idProducto).subscribe(
+      (response) => {
+        this.producto = response;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
- 
 }

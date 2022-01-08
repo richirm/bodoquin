@@ -22,7 +22,14 @@ export class ModaListadoComponent implements OnInit {
   }
   
   obtenerProductos() {
-    this.productos = this.modaService.obtenerProductos();
+    this.modaService.obtenerProductos().subscribe(
+      (response) => {
+        this.productos = response;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
   
   onClickTarjeta(producto: ProductoInterface) {

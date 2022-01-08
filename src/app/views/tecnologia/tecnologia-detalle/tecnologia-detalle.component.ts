@@ -26,7 +26,14 @@ export class TecnologiaDetalleComponent implements OnInit {
     const idProducto = this.route.snapshot.params.idProducto;
     
     // Obtener la información del producto de acuerdo a su id => Ok
-    this.producto = this.tecnologiaService.obtenerProducto(idProducto);
+    this.tecnologiaService.obtenerProducto(idProducto).subscribe(
+      (response) => {
+        this.producto = response;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
   
 }

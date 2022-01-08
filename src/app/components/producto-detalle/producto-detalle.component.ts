@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild } from '@angular/core';
+import { Component, Input, ViewChild, OnChanges } from '@angular/core';
 
 import { ProductoInterface } from '../../core/interfaces/producto.interface';
 import { CarritoService } from '../../core/services/carrito.service';
@@ -8,7 +8,7 @@ import { CarritoService } from '../../core/services/carrito.service';
   templateUrl: './producto-detalle.component.html',
   styleUrls: ['./producto-detalle.component.scss']
 })
-export class ProductoDetalleComponent {
+export class ProductoDetalleComponent implements OnChanges {
   
   @Input() producto: ProductoInterface;
   
@@ -17,6 +17,12 @@ export class ProductoDetalleComponent {
   
   constructor(
     private carritoService: CarritoService) {}
+    
+  ngOnChanges(changes) {
+    if(changes.producto && !!this.producto) {
+      this.producto.especificaciones = this.producto.especificaciones.toString().split('|');
+    }
+  }
     
   onMouseMove(evento) {
     const elementoContenedorZoom = this.elementoContenedorZoom.nativeElement;

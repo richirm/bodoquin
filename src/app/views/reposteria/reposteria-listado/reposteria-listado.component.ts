@@ -22,7 +22,14 @@ export class ReposteriaListadoComponent implements OnInit {
   }
   
   obtenerProductos() {
-    this.productos = this.reposteriaService.obtenerProductos();
+    this.reposteriaService.obtenerProductos().subscribe(
+      (response) => {
+        this.productos = response;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
   
   onClickTarjeta(producto: ProductoInterface) {

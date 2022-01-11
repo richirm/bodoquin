@@ -135,16 +135,13 @@ Aplicación bodoquin
     - pesos: 0.5 1, 2, 3, 5, 8, 13, 21
     - Features: (Lista de tareas - tablero KANBAN) 39
         - Lunes full JS 5
-        - Teoría de servicios del frontend 5
-        - Teoría de servicio HttpClient y ejemplos practicos 5
-        - Integrar el servicio de GET /reposteria con el modulo de reposteria 3
-        - Integrar el servicio de GET /jugueteria con el modulo de jugueteria 3 
-        - Integrar el servicio de GET /tecnologia con el modulo de tecnologia 3
-        - Integrar el servicio de GET /moda con el modulo de moda 3
-        - Integrar el servicio de GET /reposteria/id con la pantalla de detalle de reposteria 3
-        - Integrar el servicio de GET /jugueteria/id con la pantalla de detalle de jugueteria 3
-        - Integrar el servicio de GET /tecnologia/id con la pantalla de detalle de tecnologia 3
-        - Integrar el servicio de GET /moda/id con la pantalla de detalle de moda 3
+        - Practicas con debug
+        - Teoria de autenticación y autorización
+        - Teoria del token de sesion
+        - Crear lógica para manejar la sessión del usuario en el frontend
+        - Teoría de Guards en los routing
+        - Crear lo lógica y tablas para manejar la sesión del usuario en backend
+        - Integrar los servicios de seguridad con el frontend
         - directivas: CommonModule
             - *ngSwitch
             - *ngIf
@@ -161,9 +158,29 @@ Aplicación bodoquin
           - uppercase
           - lowercase
     - backlog => conjunto de tareas o mejoras a realizar (features futuros)      
-      - Requerimientos funcionales:
-        - crear servicios:
-          - servicios para llamar al backend, servicios o apis (endpoint)
+      - Requerimientos funcionales:        
+        - Crear pantalla de creación de nuevo producto de reposteria para admin
+        - Integrar con los endpoints de creación de productos de reposteria
+        - Crear pantalla de creación de nuevo producto de tecnologia para admin
+        - Integrar con los endpoints de creación de productos de tecnologia
+        - Crear pantalla de creación de nuevo producto de jugueteria para admin
+        - Integrar con los endpoints de creación de productos de jugueteria
+        - Crear pantalla de creación de nuevo producto de moda para admin
+        - Integrar con los endpoints de creación de productos de moda
+        
+        - Pantalla para continuar con la compra y pago del carrito de compras
+        - Crear los endpoints para realizar el pago del carrito de compras
+        
+        - Crear componente de filtros de productos
+        - Integrar el componente de filtros con la pantalla de reposteria
+        - Integrar el componente de filtros con la pantalla de tecnologia
+        - Integrar el componente de filtros con la pantalla de jugueteria
+        - Integrar el componente de filtros con la pantalla de moda
+        - Adecuar e integrar el servicio de reposteria para filtrar los productos
+        - Adecuar e integrar el servicio de jugueteria para filtrar los productos
+        - Adecuar e integrar el servicio de tecnologia para filtrar los productos
+        - Adecuar e integrar el servicio de moda para filtrar los productos
+        
         - poner un logo
         - implementar sección de anuncios y/o publicidad en el top
         - modal de tiendas de recojo (ubicación)

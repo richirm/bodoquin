@@ -1,0 +1,43 @@
+<div class="tecnologia-musicas">
+  <p>Listado de musicas</p>
+  <pre>{{musicas | json}}</pre>
+  
+ <bodoquin-tecnologia-card
+    *ngFor="let musica of musicas"
+    [titulo]="musica.nombre"
+    [valor]="musica.precio"
+    [descripcion]="musica.genero"
+    (clickEditar)="seleccionarMusica(musica)"
+    (clickEliminar)="eliminarMusica(musica)"
+  ></bodoquin-tecnologia-card>  
+  
+  <form>
+    <label for="nombre">Nombre:</label>
+    <input 
+      type="text"
+      [(ngModel)]="musica.nombre"
+      name="nombre"
+      id="nombre"
+    />
+    
+    <label for="precio">precio:</label>
+    <input
+      type="number"
+      [(ngModel)]="musica.precio" 
+      name="precio"
+      id="precio"
+    />
+    
+    <label for="genero">genero:</label>
+    <input
+      type="text"
+      [(ngModel)]="musica.genero" 
+      name="genero"
+      id="genero"
+    />
+    
+    <button type="button" (click)="grabarMusica()">
+      Grabar
+    </button>
+  </form>
+</div>

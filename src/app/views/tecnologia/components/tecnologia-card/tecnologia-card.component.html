@@ -1,0 +1,25 @@
+<div class="tecnologia-card">
+  <div class="tecnologia-card_header">
+    <div class="tecnologia-card_header_titulo">
+      {{ titulo }}
+    </div>
+    <div class="tecnologia-card_header_chip">
+      {{ valor }}
+    </div>
+  </div>
+  <div class="tecnologia-card_body">
+    {{ descripcion }}
+    
+    <i
+      class="bi bi-pencil"
+      tittle="editar"
+      (click)="seleccionarItem()"
+    ></i>
+    
+    <i
+      class="bi bi-trash"
+      tittle="eliminar"
+      (click)="eliminarItem()"
+    ></i>
+  </div>
+</div>

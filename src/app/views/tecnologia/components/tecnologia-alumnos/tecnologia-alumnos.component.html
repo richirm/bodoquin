@@ -1,0 +1,43 @@
+<div class="tecnologia.alumnos">
+  <p>Listado de alumnos</p>
+  <pre>{{alumnos | json}}</pre>
+  
+  <bodoquin-tecnologia-card
+    *ngFor="let alumno of alumnos"
+    [titulo]="alumno.nombre"
+    [valor]="alumno.edad"
+    [descripcion]="alumno.color"
+    (clickEditar)="seleccionarAlumno(alumno)"
+    (clickEliminar)="eliminarAlumno(alumno)"
+  ></bodoquin-tecnologia-card>
+  
+  <form>
+    <label for="nombre">nombre:</label>
+    <input
+      type="text"
+      [(ngModel)]="alumno.nombre"
+      name="nombre"
+      id="nombre"
+    />
+    
+    <label for="edad">edad:</label>
+    <input
+      type="number"
+      [(ngModel)]="alumno.edad"
+      name="edad"
+      id="edad"
+    />
+    
+    <label for="color">color:</label>
+    <input
+      type="text"
+      [(ngModel)]="alumno.color"
+      name="color"
+      id="color"
+    />
+    
+    <button type="button" (click)="grabarAlumno()">
+      Grabar
+    </button>
+  </form>
+</div>

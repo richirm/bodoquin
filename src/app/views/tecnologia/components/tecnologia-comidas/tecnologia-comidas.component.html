@@ -1,0 +1,43 @@
+<div class="tecnologia-comidas">
+  <p>Listado de comidas</p>
+  <pre>{{comidas | json}}</pre>
+  
+  <bodoquin-tecnologia-card
+    *ngFor="let comida of comidas"
+    [titulo]="comida.nombre"
+    [valor]="comida.precio"
+    [descripcion]="comida.ingrediente"
+    (clickEditar)="seleccionarComida(comida)"
+    (clickEliminar)="eliminarComida(comida)"
+  ></bodoquin-tecnologia-card>
+  
+  <form>
+    <label for="nombre">nombre:</label>
+    <input 
+      type="text"
+      [(ngModel)]="comida.nombre"
+      name="nombre"
+      id="nombre"
+    />
+    
+    <label for="precio">precio:</label>
+    <input
+      type="number"
+      [(ngModel)]="comida.precio" 
+      name="precio"
+      id="precio"
+    />
+    
+    <label for="precio">ingrediente:</label>
+    <input
+      type="text"
+      [(ngModel)]="comida.ingrediente" 
+      name="ingrediente"
+      id="ingrediente"
+    />
+    
+    <button type="button" (click)="grabarComida()">
+      grabar
+    </button>
+  </form>
+</div>

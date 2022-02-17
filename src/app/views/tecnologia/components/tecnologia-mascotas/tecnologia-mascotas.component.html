@@ -1,0 +1,44 @@
+<div class="tecnologia-mascotas">
+  <p>listado de mascotas</p>
+  <pre>{{mascotas | json}}</pre>
+  
+  <bodoquin-tecnologia-card
+    *ngFor="let mascota of mascotas"
+    [titulo]="mascota.nombre"
+    [valor]="mascota.edad"
+    [descripcion]="mascota.color"
+    (clickEditar)="seleccionarMascota(mascota)"
+    (clickEliminar)="eliminarMascota(mascota)"
+  ></bodoquin-tecnologia-card>  
+  
+  <form>
+    <label for="nombre">nombre:</label>
+    <input
+      type="text"
+      [(ngModel)]="mascota.nombre"
+      name="nombre"
+      id="nombre"
+    />
+    
+    <label for="edad">edad:</label>
+    <input
+      type="number"
+      [(ngModel)]="mascota.edad"
+      name="edad"
+      id="edad"
+    />
+    
+    <label for="color">color:</label>
+    <input
+      type="text"
+      [(ngModel)]="mascota.color"
+      name="color"
+      id="color"
+    />
+    
+    <button type="button" (click)="grabarMascota()">
+      grabar
+    </button>
+  </form>
+  
+</div>

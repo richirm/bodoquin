@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { TarjetasProductoModule } from '../../components/tarjetas-producto/tarjetas-producto.module';
 import { ProductoDetalleModule } from '../../components/producto-detalle/producto-detalle.module';
+import { TecnologiaMascotasModule } from './components/tecnologia-mascotas/tecnologia-mascotas.module';
+import { TecnologiaComidasModule } from './components/tecnologia-comidas/tecnologia-comidas.module';
+import { TecnologiaMusicasModule } from './components/tecnologia-musicas/tecnologia-musicas.module';
+import { TecnologiaAlumnosModule } from './components/tecnologia-alumnos/tecnologia-alumnos.module';
 
 import { TecnologiaComponent } from './tecnologia.component';
 import { TecnologiaService } from './tecnologia.service';
@@ -17,6 +21,10 @@ import { TecnologiaDetalleComponent } from './tecnologia-detalle/tecnologia-deta
     
     TarjetasProductoModule,
     ProductoDetalleModule,
+    TecnologiaMascotasModule,
+    TecnologiaComidasModule,
+    TecnologiaMusicasModule,
+    TecnologiaAlumnosModule
   ],
   declarations: [
     TecnologiaComponent,

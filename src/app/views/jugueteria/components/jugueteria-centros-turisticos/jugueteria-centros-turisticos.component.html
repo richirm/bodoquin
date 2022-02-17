@@ -1,0 +1,35 @@
+<div class= "jugueteria-centros-turisticos">
+  <p> Listado de centros turisticos:</p>
+  <pre>{{centrosTuristicos | json}}</pre>
+  
+  <bodoquin-jugueteria-card
+    *ngFor="let centro of centrosTuristicos"
+    [titulo]="centro.nombre"
+    [valor]="centro.precio"
+    [descripcion]="centro.pais"
+  ></bodoquin-jugueteria-card>
+  
+  <form>
+    Nombre: <input
+              type="text"
+              [(ngModel)]="nombre"
+              name="nombre"
+            />
+          
+    Precio <input
+            type="number"
+            [(ngModel)]="precio"
+            name="precio"
+            />
+            
+    Pais: <input
+              type="text"
+              [(ngModel)]="pais"
+              name="pais"
+            />
+            
+    <button type="button" (click)="grabarCentroTuristico()">        
+      Grabar
+    </button>
+  </form>  
+</div>

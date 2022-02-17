@@ -1,0 +1,37 @@
+<div class="jugueteria-musica">
+  <p>Listado de musicas:</p>
+  <pre>{{musicas | json}}</pre>
+  
+  <bodoquin-jugueteria-card
+    *ngFor="let musica of musicas"
+    [titulo]="musica.nombre"
+    [valor]="musica.precio"
+    [descripcion]="musica.genero"
+    (clickEliminar)="eliminarMusica(musica)"
+    (clickEditar)="seleccionarMusica(musica)"
+  ></bodoquin-jugueteria-card>
+  
+  <form>
+    Nombre: <input
+              type="text"
+              [(ngModel)]="musica.nombre"
+              name="nombre"
+            />
+          
+    Precio <input
+            type="number"
+            [(ngModel)]="musica.precio"
+            name="precio"
+            />
+            
+    Genero: <input
+              type="text"
+              [(ngModel)]="musica.genero"
+              name="genero"
+            />
+            
+    <button type="button" (click)="grabarMusica()">        
+      Grabar
+    </button>
+  </form>  
+</div>

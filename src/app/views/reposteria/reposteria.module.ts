@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { TarjetasProductoModule } from '../../components/tarjetas-producto/tarjetas-producto.module';
 import { ProductoDetalleModule } from '../../components/producto-detalle/producto-detalle.module';
+import { ReposteriaAlumnosModule } from './components/reposteria-alumnos/reposteria-alumnos.module';
+import { ReposteriaCursosModule } from './components/reposteria-cursos/reposteria-cursos.module';
 
 import { ReposteriaComponent } from './reposteria.component';
 import { ReposteriaService } from './reposteria.service';
@@ -17,6 +19,8 @@ import { ReposteriaDetalleComponent } from './reposteria-detalle/reposteria-deta
     
     TarjetasProductoModule,
     ProductoDetalleModule,
+    ReposteriaAlumnosModule,
+    ReposteriaCursosModule,
   ],
   declarations: [
     ReposteriaComponent,

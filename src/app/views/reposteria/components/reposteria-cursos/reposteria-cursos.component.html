@@ -1,0 +1,31 @@
+<div class="reposteria-cursos">
+  <p>Listado de Cursos:</p>
+  <pre>{{ cursos | json }}</pre>
+  
+  <bodoquin-reposteria-card
+    *ngFor="let curso of cursos"
+    [titulo]="curso.nombre"
+    [valor]="curso.costo"
+    descripcion="---"
+    (clickEditar)="seleccionarCurso(curso)"
+    (clickEliminar)="eliminarCurso(curso)"
+  ></bodoquin-reposteria-card>
+  
+  <form>
+    Nombre: <input 
+              type="text" 
+              [(ngModel)]="nombre" 
+              name="nombre"
+            />
+    
+    Costo: <input 
+            type="number" 
+            [(ngModel)]="costo" 
+            name="costo"
+           />
+    
+    <button type="button" (click)="grabarCurso()">
+      Grabar
+    </button>
+  </form>
+</div>

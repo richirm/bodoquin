@@ -1,0 +1,25 @@
+<div class="reposteria-card">
+  <div class="reposteria-card_header">
+    <div class="reposteria-card_header_titulo">
+      {{ titulo }}
+    </div>
+    <div class="reposteria-card_header_chip">
+      {{ valor }}
+    </div>
+  </div>
+  <div class="reposteria-card_body">
+    {{ descripcion }}
+    
+    <i 
+      class="bi bi-pencil" 
+      title="Editar"
+      (click)="seleccionarItem()"
+    ></i>
+    
+    <i 
+      class="bi bi-trash" 
+      title="Eliminar"
+      (click)="eliminarItem()"
+    ></i>
+  </div>
+</div>

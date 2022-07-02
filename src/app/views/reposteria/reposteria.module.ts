@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { TarjetasProductoModule } from '../../components/tarjetas-producto/tarjetas-producto.module';
 import { ProductoDetalleModule } from '../../components/producto-detalle/producto-detalle.module';
 
+import { ReposteriaRibbonModule } from './components/reposteria-ribbon/reposteria-ribbon.module';
+
 import { ReposteriaComponent } from './reposteria.component';
 import { ReposteriaService } from './reposteria.service';
 import { ReposteriaRoutingModule } from './reposteria-routing.module';
@@ -17,6 +19,8 @@ import { ReposteriaDetalleComponent } from './reposteria-detalle/reposteria-deta
     
     TarjetasProductoModule,
     ProductoDetalleModule,
+    
+    ReposteriaRibbonModule,
   ],
   declarations: [
     ReposteriaComponent,

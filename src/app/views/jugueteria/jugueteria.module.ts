@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { TarjetasProductoModule } from '../../components/tarjetas-producto/tarjetas-producto.module';
 import { ProductoDetalleModule } from '../../components/producto-detalle/producto-detalle.module';
 
+import { JugueteriaRibbonModule } from './components/jugueteria-ribbon/jugueteria-ribbon.module';
+
 import { JugueteriaComponent } from './jugueteria.component';
 import { JugueteriaService } from './jugueteria.service';
 import { JugueteriaRoutingModule } from './jugueteria-routing.module';
@@ -17,6 +19,8 @@ import { JugueteriaDetalleComponent } from './jugueteria-detalle/jugueteria-deta
     
     TarjetasProductoModule,
     ProductoDetalleModule,
+    
+    JugueteriaRibbonModule,
   ],
   declarations: [
     JugueteriaComponent, 

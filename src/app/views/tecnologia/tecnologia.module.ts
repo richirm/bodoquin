@@ -4,6 +4,9 @@ import { CommonModule } from '@angular/common';
 import { TarjetasProductoModule } from '../../components/tarjetas-producto/tarjetas-producto.module';
 import { ProductoDetalleModule } from '../../components/producto-detalle/producto-detalle.module';
 
+import { TecnologiaRibbonModule } from './components/tecnologia-ribbon/tecnologia-ribbon.module';
+
+
 import { TecnologiaComponent } from './tecnologia.component';
 import { TecnologiaService } from './tecnologia.service';
 import { TecnologiaRoutingModule } from './tecnologia-routing.module';
@@ -17,6 +20,8 @@ import { TecnologiaDetalleComponent } from './tecnologia-detalle/tecnologia-deta
     
     TarjetasProductoModule,
     ProductoDetalleModule,
+    
+    TecnologiaRibbonModule,
   ],
   declarations: [
     TecnologiaComponent,

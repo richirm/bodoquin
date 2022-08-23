@@ -1,0 +1,69 @@
+<div class="tecnologia-servicios-reclamos">
+  <div class="header">
+    <h1> {{ titulo }} </h1>
+  </div>
+  <div class="body">
+    <p>{{ descripcion }}</p>
+    <form novalidate="" autocomplete="off">
+      <div  class="form-group">
+        <label class="form-label" for="cliente">Nombre:</label>  
+        <input 
+          type="text" 
+          id="cliente" 
+          name="cliente"
+          class="form-control"
+          [(ngModel)]="cliente.nombre"
+        />         
+      </div>
+    
+      <div class="form-group">
+        <label class="form-label" for="apellidos">Apellidos:</label>
+        <input 
+          type="text" 
+          id="apellidos" 
+          name="apellidos" 
+          class="form-control"
+          [(ngModel)]="cliente.apellidos"
+        />
+      </div>
+    
+      <div class="form-group">
+        <label class="form-label" for="codigoCliente">Código de Cliente:</label>
+        <input 
+          type="text" 
+          id="codigoCliente"
+          name="codigoCliente" 
+          class="form-control"
+          [(ngModel)]="cliente.codigoCliente"
+        />
+      </div>
+    
+      <div class="form-group">
+        <label class="form-label" for="correoReclamo">Correo:</label>
+        <input 
+          type="text" 
+          id="correoReclamo" 
+          name="correo" 
+          class="form-control"
+          [(ngModel)]="cliente.correo"
+        />
+      </div>
+    
+      <div class="form-group">
+        <label class="form-label" for="detalleReclamo">Detalle de Reclamo:</label>
+        <textarea 
+          type="text" 
+          id="detalleReclamo" 
+          name="detalleReclamo" 
+          class="form-control"
+          [(ngModel)]="cliente.detalleReclamo"
+        ></textarea>
+      </div>
+    </form>
+  </div>
+  <div class="footer">
+    <button (click)="clickAcceder()">
+      acceder
+    </button>
+  </div>
+</div>

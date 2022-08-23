@@ -1,0 +1,69 @@
+<div class="tecnologia-servicios-productos">
+  <div class="header">
+    <h1> {{ titulo }}</h1>
+  </div>
+  <div class="body">
+    <p>{{ descripcion }}</p>
+    <form novalidate="" autocomplete="off">
+      <div  class="form-group">
+        <label class="form-label" for="dni">DNI:</label>  
+        <input 
+          type="text" 
+          id="dni" 
+          name="dni"
+          class="form-control"
+          [(ngModel)]="producto.dni"
+        />         
+      </div>
+    
+      <div class="form-group">
+        <label class="form-label" for="nombreProducto">Nombre Producto:</label>
+        <input 
+          type="text" 
+          id="nombreProducto" 
+          name="nombre producto" 
+          class="form-control"
+          [(ngModel)]="producto.nombreProducto"
+        />
+      </div>
+    
+      <div class="form-group">
+        <label class="form-label" for="numeroSerie">Numero serie:</label>
+        <input 
+          type="text" 
+          id="numeroSerie"
+          name="numeroSerie" 
+          class="form-control"
+          [(ngModel)]="producto.numeroSerie"
+        />
+      </div>
+    
+      <div class="form-group">
+        <label class="form-label" for="fechaCompra">Fecha de compra:</label>
+        <input 
+          type="text" 
+          id="fechaCompra" 
+          name="fechaCompra" 
+          class="form-control"
+          [(ngModel)]="producto.fechaCompra"
+        />
+      </div>
+    
+      <div class="form-group">
+        <label class="form-label" for="descripcion">Descripcion:</label>
+        <textarea 
+          type="text" 
+          id="descripcion" 
+          name="descripcion" 
+          class="form-control"
+          [(ngModel)]="producto.descripcion"
+        ></textarea>
+      </div>
+    </form>
+  </div>
+  <div class="footer">
+    <button (click)="clickAcceder()">
+      acceder
+    </button>
+  </div>
+</div>

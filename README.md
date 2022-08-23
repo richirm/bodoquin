@@ -53,6 +53,7 @@ Aplicación bodoquin
         git fetch => para descargar las ramas que están en el repositorio pero no en mi local
         pull request => para enviar una solicitud de unión de mi rama hacia develop
         git remote set-url origin url_mi_repositorio => para cambiar la url del repositorio
+        git reset --soft HEAD~1 => elimina el ultimo commit (-1)
   - GITHUB: servidor o repositorio web para proyectos git
   - tortoise git: herramienta de interfaz grafica para ejecutar operaciones con GIT de manera simple
   - commits:
@@ -136,11 +137,10 @@ Aplicación bodoquin
     - Features: (Lista de tareas - tablero KANBAN) 39
         - Lunes full JS 5
         - Practicas con debug
-        - Teoria de autenticación y autorización
-        - Teoria del token de sesion
-        - Crear lógica para manejar la sessión del usuario en el frontend
+        - Crear lógica para iniciar la sessión del usuario en el frontend
         - Teoría de Guards en los routing
-        - Crear lo lógica y tablas para manejar la sesión del usuario en backend
+        - Crear lógica para manejar la sessión del usuario en el frontend
+        - Teoria de interceptores de peticiones
         - Integrar los servicios de seguridad con el frontend
         - directivas: CommonModule
             - *ngSwitch
@@ -234,6 +234,68 @@ Aplicación bodoquin
         Para usar un servicio, debemos crear una instancia de ese servicio 
         usando el contructor de la clase donde vamos a utilizar el servicio
   - Nomenclatura de variables y funciones explicita
+  
+9. Pasos para la creación de un componente:
+   *Tipos de componentes:
+    1. Componente vista
+    2. Componente de negocio
+    3. Componente atomico
+    
+   *Creación del componente
+    1. Definir del component
+      - Crear su carpeta contenedora
+      - Crear sus archivos
+      - Poner el codigo minimo necesario
+      - Integrarlo en un component padre
+      
+    2. Diseñar el componente
+        - Definir su HTML
+        - Definir sus CSS
+        
+    3. Implementar el componente 
+        - Definir la lógica en JS o TS
+        - Definido los inputs
+        - Definido los outputs
+        
+    4. Probar el componente
+        - verificar que no hayan errores en la consola del Angular
+        - verificar que no hayan errores en la consola del Navegador
+        - Verificar que funciona correctamente en la pantalla de forma manual
+        - Creando los test unitarios - Karma y Jasmine
+ 
+   *Definir variables:
+      1. Definir el nombre;
+      2. Definir el tipo de dato (tipado);
+      3. Ponerle un valor de ejemplo;
+      4. Usar la variable
+ 
+   *Tipos de datos por defecto:
+      1. string = '';
+      2. number = 1;
+      3. boolean = true o false;
+      4. object = {...};
+      5. array = [...];
+      6. undefined;
+      7. interfaces = {}
+    
+   *Optimizar el codigo:
+      1. Identificar el problema
+      2. Identificar lo que se repite
+      3. Identificar las pequeñas diferencias
+      4. Lograr que el código no se repita o corregir el problema, 
+          tiene que ser reutilizable y que tenga en consideración
+          las pequeñas diferencias
+   
+   *Ciclo de vida de los componentes:
+      Son un conjunto de metodos que Angular ejecuta en un componente en un determinado momento
+      
+      1. ngOnInit: 
+            el metodo que Angular ejecuta al iniciar el componente en la pantalla
+      2. ngOnDestroy: 
+            el metodo que Angular ejecuta al destruir el componente de la pantalla, 
+            sirve para evitar fuga de memoria, ocasionado por timeouts, intervals y servicios
+      3. ngOnChanges: 
+            el metodo que Angular ejecuta al cambiar cualquier input
     
 Javascript
 ------------------------   

@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { TarjetasProductoModule } from '../../components/tarjetas-producto/tarjetas-producto.module';
 import { ProductoDetalleModule } from '../../components/producto-detalle/producto-detalle.module';
 
 import { ReposteriaRibbonModule } from './components/reposteria-ribbon/reposteria-ribbon.module';
+import { ReposteriaServiciosModule } from './components/reposteria-servicios/reposteria-servicios.module';
 
 import { ReposteriaComponent } from './reposteria.component';
 import { ReposteriaService } from './reposteria.service';
@@ -15,12 +17,15 @@ import { ReposteriaDetalleComponent } from './reposteria-detalle/reposteria-deta
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
+    
     ReposteriaRoutingModule,
     
     TarjetasProductoModule,
     ProductoDetalleModule,
     
     ReposteriaRibbonModule,
+    ReposteriaServiciosModule,
   ],
   declarations: [
     ReposteriaComponent,

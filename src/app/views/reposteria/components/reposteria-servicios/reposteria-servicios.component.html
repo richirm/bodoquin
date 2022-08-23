@@ -1,0 +1,36 @@
+<div class="reposteria-servicios">
+  <h1>{{ titulo }} 23:01:</h1>
+  
+  <div class="servicios">    
+    <bodoquin-reposteria-servicios-asistencia
+      [titulo]="tituloAsistencia"
+      descripcion="Garantías"
+      boton="Acceder"
+      confirmacion="¿Está seguro que desea acceder al servicio de asistencia?"
+      mensaje="Ir al servicio de asistencia" 
+      [formulario]="formularioAsistencia"
+      (onMensaje)="ejecutarServicio($event)"
+    ></bodoquin-reposteria-servicios-asistencia>
+    
+    <bodoquin-reposteria-servicios-asistencia
+      titulo="Servicios de soporte"
+      descripcion="Soporte"
+      boton="Acceder"
+      confirmacion="¿Está seguro que desea acceder al servicio de soporte?"
+      mensaje="Ir al servicio de soporte"
+      [formulario]="formularioSoporte"      
+      (onMensaje)="ejecutarServicio($event)"
+    ></bodoquin-reposteria-servicios-asistencia>
+    
+    <!-- <bodoquin-reposteria-servicios-asistencia -->
+      <!-- titulo="Servicios de panadería" -->
+      <!-- descripcion="Panes a tu gusto" -->
+      <!-- boton="Acceder" -->
+      <!-- confirmacion="¿Está seguro que desea acceder al servicio de asistencia?" -->
+      <!-- mensaje="Ir al servicio de asistencia" -->
+      <!-- (onMensaje)="ejecutarServicio($event)" -->
+    <!-- ></bodoquin-reposteria-servicios-asistencia> -->
+    
+    <bodoquin-reposteria-servicios-productos></bodoquin-reposteria-servicios-productos>
+  </div>
+</div>

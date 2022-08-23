@@ -15,8 +15,9 @@ export class TecnologiaServiciosComponent implements OnInit, OnDestroy, OnChange
   @Input() usuario: string;
   @Input() nickname: string;
   
-  formularioAsistencia: Array<ControlFormularioInterface> = AsistenciaConstants.FORMULARIO_CONTROLES;
-  formularioSoporte: Array<ControlFormularioInterface> = SoporteConstants.FORMULARIO_CONTROLES;
+  formularioAsistencia: Array<ControlFormularioInterface>;
+  formularioSoporte: Array<ControlFormularioInterface>;
+  formularioReparacion: Array<ControlFormularioInterface>;
   
   titulo: string;
   tituloAsistencia: string;

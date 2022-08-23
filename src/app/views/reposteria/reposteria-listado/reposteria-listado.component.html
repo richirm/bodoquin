@@ -6,4 +6,12 @@
     fondo="#eee4ddeb"
     (onClickTarjeta)="onClickTarjeta($event)"
   ></bodoquin-tarjetas-producto>
+  
+  Usuario: <input type="text" name="usuario" [(ngModel)]="username"/>
+  Nickname: <input type="text" name="nickname" [(ngModel)]="nickname"/>
+  
+  <bodoquin-reposteria-servicios
+    [usuario]="username"
+    [nickname]="nickname"
+  ></bodoquin-reposteria-servicios>
 </div>

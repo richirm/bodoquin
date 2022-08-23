@@ -13,6 +13,9 @@ export class ReposteriaListadoComponent implements OnInit {
   
   productos: Array<ProductoInterface> = [];
   
+  username: string = '';
+  nickname: string = '';
+  
   constructor(
     private reposteriaService: ReposteriaService,
     private router: Router) {}

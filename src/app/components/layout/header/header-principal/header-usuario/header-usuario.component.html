@@ -37,18 +37,29 @@
     textoAceptar="Ingresar"
     [showCancelar]="false"
     [templateBody]="templateIniciarSesion"
+    (clickAceptar)="iniciarSesion()"
   ></bodoquin-modal>
   
   <ng-template #templateIniciarSesion>
-    <form>
+    <form autocomplete="off">
       <div class="form-group">
-        <label class="form-label">Correo electrónico:</label>
-        <input type="text" class="form-control" />
+        <label class="form-label">Nombre de Usuario:</label>
+        <input 
+          type="text"
+          class="form-control" 
+          [(ngModel)]="usuario.username"
+          name="username" 
+        />
       </div>
 
       <div class="form-group">
         <label class="form-label">Contraseña:</label>
-        <input type="text" class="form-control" />
+        <input 
+          type="password" 
+          class="form-control" 
+          [(ngModel)]="usuario.password"
+          name="password" 
+        />
       </div>      
     </form>
   </ng-template>
@@ -65,7 +76,8 @@
     <form>
       <div class="form-group">
         <label class="form-label">Nombre usuario:</label>
-        <input type="text" class="form-control" />
+        <input 
+        type="text" class="form-control" />
       </div>
       
       <div class="form-group">

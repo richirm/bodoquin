@@ -27,6 +27,8 @@ export class ModalComponent  {
   @Input() templateBody: TemplateRef<any>;
   @Input() templateFooter: TemplateRef<any>;
   
+  @Output() clickAceptar: EventEmitter<null> = new EventEmitter();
+  
   mostrarOcultarModal() {
     this.showModal = false;
     this.showModalChange.emit(this.showModal);

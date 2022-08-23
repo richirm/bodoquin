@@ -1,0 +1,27 @@
+.tecnologia-servicios {
+  padding-top: 10px;
+ 
+  h1 {
+    color: red;
+    font-size: 30px;
+    border-left: 5px solid blue;
+    padding-left: 8px;
+    
+    &:hover {
+      color: blue;
+      font-size: 35px;
+    }
+  }
+  
+  .servicios {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    
+    > * {
+      width: 30%;
+    }
+  }
+}

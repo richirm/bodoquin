@@ -13,6 +13,9 @@ export class JugueteriaListadoComponent implements OnInit {
   
   productos: Array<ProductoInterface> = [];
   
+  username: string = '';
+  nickname: string = '';
+  
   constructor(
     private jugueteriaService: JugueteriaService,
     private router: Router) {}

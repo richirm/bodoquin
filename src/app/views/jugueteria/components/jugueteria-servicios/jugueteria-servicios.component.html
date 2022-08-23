@@ -1,0 +1,46 @@
+<div class="jugueteria-servicios">
+  <h1>{{ titulo }} 23:01:</h1>
+  <div class="servicios">
+      <bodoquin-jugueteria-servicios-asistencia
+        titulo="Servicios de asistencia"
+        descripcion="Garantías"
+        boton="Acceder"
+        confirmacion="¿Está seguro que desea acceder al servicio de asitencia?"
+        mensaje="Ir al servicio de asistencia general"
+        [formulario]="formularioAsistencia"
+        (onMensaje)="ejecutarServicio($event)"
+      ></bodoquin-jugueteria-servicios-asistencia>
+      
+      <bodoquin-jugueteria-servicios-asistencia
+        titulo="Servicios de averias"
+        descripcion="Averías"
+        boton="Acceder"
+        confirmacion="¿Está seguro que desea acceder al servicio de averias?"
+        mensaje="Ir al servicio de averias general"
+        [formulario]="formularioAverias"
+        (onMensaje)="ejecutarServicio($event)"
+      ></bodoquin-jugueteria-servicios-asistencia>
+      
+      <bodoquin-jugueteria-servicios-asistencia
+        titulo="Servicios de artefactos"
+        descripcion="Artefactos"
+        boton="Acceder"
+        confirmacion="¿Está seguro que desea acceder al servicio de artefactos?"
+        mensaje="Ir al servicio de artefactos general"
+        [formulario]="formularioArtefactos"
+        (onMensaje)="ejecutarServicio($event)"
+      ></bodoquin-jugueteria-servicios-asistencia>
+ 
+      <!-- <bodoquin-jugueteria-servicios-productos -->
+        <!-- titulo="Servicios de productos" -->
+        <!-- descripcion="Configuraciones" -->
+        <!-- (onMensaje)="ejecutarServicio($event)" -->
+      <!-- ></bodoquin-jugueteria-servicios-productos> -->
+      
+      <!-- <bodoquin-jugueteria-servicios-soporte -->
+        <!-- titulo="Servicio de soporte" -->
+        <!-- descripcion="Soporte" -->
+        <!-- (onMensaje)="ejecutarServicio($event)" -->
+      <!-- ></bodoquin-jugueteria-servicios-soporte> -->
+  </div>
+</div>

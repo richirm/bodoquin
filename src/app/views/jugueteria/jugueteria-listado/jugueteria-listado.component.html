@@ -5,4 +5,12 @@
     fondo="#ffe00773"
     (onClickTarjeta)="onClickTarjeta($event)"
   ></bodoquin-tarjetas-producto>
+  
+  Usuario: <input type="text" name="usuario" [(ngModel)]="username"/>
+  Nickname: <input type="text" name="nickname" [(ngModel)]="nickname"/>
+  
+  <bodoquin-jugueteria-servicios
+    [usuario]="username"
+    [nickname]="nickname"
+  ></bodoquin-jugueteria-servicios>
 </div>

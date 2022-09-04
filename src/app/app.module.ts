@@ -9,7 +9,11 @@ import { FooterModule } from './components/layout/footer/footer.module';
 import { ChatModule } from './components/layout/chat/chat.module';
 
 //Services
+import { AuthService } from './core/services/auth.service';
 import { CarritoService } from './core/services/carrito.service';
+
+// Guards
+import { AuthGuard } from './core/guards/auth.guard'
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -30,7 +34,10 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
   ],
   providers: [
+    AuthService,
     CarritoService,
+    
+    AuthGuard,
   ],
   bootstrap: [AppComponent]
 })

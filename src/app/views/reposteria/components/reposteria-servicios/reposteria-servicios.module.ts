@@ -7,6 +7,9 @@ import { ReposteriaServiciosProductosModule } from './components/reposteria-serv
 import { ReposteriaServiciosComponent } from './reposteria-servicios.component';
 import { ReposteriaServiciosService } from './reposteria-servicios.service';
 
+import { CamelCasePipe } from './pipes/camel-case.pipe';
+import { MayorEdadPipe } from './pipes/mayor-edad.pipe';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -16,6 +19,8 @@ import { ReposteriaServiciosService } from './reposteria-servicios.service';
   ],
   declarations: [
     ReposteriaServiciosComponent,
+    CamelCasePipe,
+    MayorEdadPipe,
   ],
   exports: [
     ReposteriaServiciosComponent,

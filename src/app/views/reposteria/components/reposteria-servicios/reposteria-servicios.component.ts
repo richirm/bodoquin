@@ -25,6 +25,15 @@ export class ReposteriaServiciosComponent implements OnInit, OnDestroy, OnChange
   intervaloContador: ReturnType<typeof setInterval>;
   timeoutTitulo: ReturnType<typeof setTimeout>;
   
+  nombre: string = 'Ricardo Rosales';
+  precio: number = 5324.75;
+  persona = {
+    nombre: 'Rufo',
+    edad: 12
+  };
+  fechaNacimiento: Date = new Date(1989, 10, 1);
+  parrafo: string = 'hola estamos esperando, por favor llega temprano';
+  
   //Patron de injección de dependencias
   constructor(
     private reposteriaServiciosService: ReposteriaServiciosService) {}

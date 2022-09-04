@@ -62,14 +62,14 @@ export class HeaderUsuarioComponent {
       return;
     }
     
-    //endpoint autenticacion
     this.authService.iniciarSesion(this.usuario).subscribe(
       (response) => {
         localStorage.setItem('token', response.token);
+        alert('A iniciado sesion con exito');
       },
       (error) => {
-        console.log(error);
-      } 
+        alert('Ocurrio un error al iniciar sesion');
+      }
     );
     
   }

@@ -8,6 +8,10 @@ import { JugueteriaServiciosSoporteModule } from './components/jugueteria-servic
 import { JugueteriaServiciosComponent } from './jugueteria-servicios.component';
 import { JugueteriaServiciosService } from './jugueteria-servicios.service';
 
+import { CamelCasePipe } from './pipes/camel-case.pipe';
+import { MayorEdadPipe } from './pipes/mayor-edad.pipe';
+import { CantidadCaracteresPipe } from './pipes/cantidad-caracteres.pipe';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -18,6 +22,9 @@ import { JugueteriaServiciosService } from './jugueteria-servicios.service';
   ],
   declarations: [
     JugueteriaServiciosComponent,
+    CamelCasePipe,
+    MayorEdadPipe,
+    CantidadCaracteresPipe,
   ],
   exports: [
     JugueteriaServiciosComponent,

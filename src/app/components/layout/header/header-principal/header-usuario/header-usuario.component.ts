@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+
 import { UsuarioInterface } from 'src/app/core/interfaces/usuario.interface';
+import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
   selector: 'bodoquin-header-usuario',
@@ -14,6 +16,9 @@ export class HeaderUsuarioComponent {
   showModalCerrarSesion: boolean = false;
   
   usuario: UsuarioInterface = {};
+  
+  constructor(
+    private authService: AuthService) {}
   
   onClickUser() {
     this.showPopup = true;  
@@ -57,6 +62,15 @@ export class HeaderUsuarioComponent {
       return;
     }
     
-    alert('ok');
+    this.authService.iniciarSesion(this.usuario).subscribe(
+      (response) => {
+        localStorage.setItem('token', response.token);
+        alert('A iniciado sesion con exito');
+      },
+      (error) => {
+        alert('Ocurrio un error al iniciar sesion');
+      }
+    );
+    
   }
 }

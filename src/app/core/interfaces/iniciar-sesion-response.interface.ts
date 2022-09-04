@@ -1,3 +1,3 @@
 export interface IniciarSesionResponseInterface {
- token: string;
+  token: string;
 }

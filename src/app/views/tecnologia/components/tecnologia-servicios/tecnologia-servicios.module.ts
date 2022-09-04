@@ -8,6 +8,10 @@ import { TecnologiaServiciosReclamosModule } from './components/tecnologia-servi
 import { TecnologiaServiciosComponent } from './tecnologia-servicios.component';
 import { TecnologiaServiciosService } from './tecnologia-servicios.service';
 
+import { CamelCasePipe } from './pipes/camel-case.pipe';
+import { MayorEdadPipe } from './pipes/mayor-edad.pipe';
+import { CantidadCaracteresPipe } from './pipes/cantidad-caracteres.pipe';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -17,7 +21,10 @@ import { TecnologiaServiciosService } from './tecnologia-servicios.service';
     TecnologiaServiciosReclamosModule,
   ],
   declarations: [
-    TecnologiaServiciosComponent
+    TecnologiaServiciosComponent,
+    CamelCasePipe,
+    MayorEdadPipe,
+    CantidadCaracteresPipe,
   ],
   exports: [
     TecnologiaServiciosComponent

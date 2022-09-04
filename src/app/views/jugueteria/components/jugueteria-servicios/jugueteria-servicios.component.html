@@ -1,5 +1,31 @@
 <div class="jugueteria-servicios">
   <h1>{{ titulo }} 23:01:</h1>
+  
+  Normal: {{ nombre }} <br>
+  Uppercase: {{ nombre | uppercase }} <br>
+  Lowercase: {{ nombre | lowercase }} <br><br>
+  
+  Normal: {{ precio }} <br>
+  Currency: {{ precio | currency:'S/ ' }} <br><br>
+  
+  Normal: {{ persona }} <br>
+  Json: {{ persona | json }} <br><br>
+  
+  Normal: {{ fechaNacimiento }} <br>
+  Date: {{ fechaNacimiento | date:'dd/M/yyyy' }}<br><br>
+
+  Normal: {{ parrafo }} <br>
+  Objetivo: Hola Estamos Esperando <br>
+  CamelCase: {{ parrafo | camelCase }} <br>
+  CamelCase: {{ parrafo | camelCase:'-' }}<br><br>
+  
+  Normal: {{ fechaNacimiento }} <br>
+  Objetivo: Es mayor de Edad | Es menor de Edad <br>
+  MayorEdad: {{ fechaNacimiento | mayorEdad }}<br><br>
+  
+  Normal: {{ parrafo }} <br>
+  Objetivo: Tu parrafo tiene 15 caracteres<br>
+  CantidadCaracteres: {{ parrafo | cantidadCaracteres }}
   <div class="servicios">
       <bodoquin-jugueteria-servicios-asistencia
         titulo="Servicios de asistencia"

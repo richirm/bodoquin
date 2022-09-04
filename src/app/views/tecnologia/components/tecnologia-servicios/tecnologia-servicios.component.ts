@@ -25,6 +25,16 @@ export class TecnologiaServiciosComponent implements OnInit, OnDestroy, OnChange
   intervaloContador: ReturnType<typeof setInterval>;
   timeoutTitulo: ReturnType<typeof setTimeout>;
   
+  nombre: string ='David Rosales';
+  precio: number = 2899.99;
+  persona = {
+    nombre: 'Manolo',
+    edad: 18,
+  };
+  fechaNacimiento: Date = new Date(1966
+  , 9, 25);
+  parrafo: string = 'hola estamos esperando, gracias por asistir';
+  
   constructor(
     private tecnologiaServiciosService: TecnologiaServiciosService){}
   

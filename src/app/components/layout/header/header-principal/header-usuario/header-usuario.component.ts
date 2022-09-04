@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { UsuarioInterface } from 'src/app/core/interfaces/usuario.interface';
 import { AuthService } from 'src/app/core/services/auth.service';
 
@@ -18,7 +19,7 @@ export class HeaderUsuarioComponent {
   
   constructor(
     private authService: AuthService) {}
-    
+  
   onClickUser() {
     this.showPopup = true;  
   }
@@ -61,15 +62,15 @@ export class HeaderUsuarioComponent {
       return;
     }
     
-    //endpoint autentication
     this.authService.iniciarSesion(this.usuario).subscribe(
       (response) => {
         localStorage.setItem('token', response.token);
-        alert('Ha iniciado sesión con éxito');
+        alert('A iniciado sesion con exito');
       },
       (error) => {
-        alert('Ocurrió un error al iniciar sesión');
+        alert('Ocurrio un error al iniciar sesion');
       }
     );
+    
   }
 }

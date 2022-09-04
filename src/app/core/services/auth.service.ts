@@ -7,12 +7,11 @@ import { IniciarSesionResponseInterface } from '../interfaces/iniciar-sesion-res
 
 @Injectable()
 export class AuthService {
-  
+
   constructor(
     private httpClient: HttpClient) {}
   
   iniciarSesion(params: UsuarioInterface): Observable<IniciarSesionResponseInterface> {
     return this.httpClient.post<IniciarSesionResponseInterface>('http://localhost:3000/seguridad/iniciarSesion', params);
   }
-  
 }

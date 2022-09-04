@@ -25,6 +25,14 @@ export class JugueteriaServiciosComponent implements OnInit, OnDestroy, OnChange
   intervaloSecundero: ReturnType<typeof setInterval>;
   timeoutTitulo: ReturnType<typeof setTimeout>;
   
+  nombre: string = 'Vanessa Chipana';
+  precio: number = 17498.22;
+  persona = {
+    nombre: 'Cintya',
+    edad: 95
+  };
+  fechaNacimiento: Date = new Date(2008, 10, 4);
+  parrafo: string = 'hola estamos esperando bienvenido eres pase adelante';
   //Patron de injección de dependencias
   constructor(
     private jugueteriaServiciosService: JugueteriaServiciosService) {}

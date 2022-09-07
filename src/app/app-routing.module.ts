@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { AuthGuard } from './core/guards/auth.guard';
+
 const routes: Routes = [
   {
     path: '',
@@ -13,7 +15,9 @@ const routes: Routes = [
   },
   {
     path: 'reposteria',
-    loadChildren: () => import('./views/reposteria/reposteria.module').then(m => m.ReposteriaModule)
+    loadChildren: () => import('./views/reposteria/reposteria.module').then(m => m.ReposteriaModule),
+    canActivate: [AuthGuard],
+    canDeactivate: [AuthGuard]
   },
   {
     path: 'tecnologia',

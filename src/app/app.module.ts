@@ -12,11 +12,11 @@ import { ChatModule } from './components/layout/chat/chat.module';
 import { AuthService } from './core/services/auth.service';
 import { CarritoService } from './core/services/carrito.service';
 
-//Guards
+// Guards
 import { AuthGuard } from './core/guards/auth.guard';
 
-//Interceptors
-import { AuthInterceptor } from './core/interceptor/auth.interceptor';
+// interceptors
+import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -37,19 +37,18 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
   ],
   providers: [
-      //Servicios
-    CarritoService,
     AuthService,
+    CarritoService,
     
-      //Guars
+    // Guards
     AuthGuard,
     
-    //Interceptors
+    // interceptors
     {
-      provide: HTTP_INTERCEPTORS,
+      provide:HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
       multi: true
-    }      
+    }
   ],
   bootstrap: [AppComponent]
 })

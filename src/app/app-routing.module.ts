@@ -27,7 +27,9 @@ const routes: Routes = [
   },
   {
     path: 'jugueteria',
-    loadChildren: () => import('./views/jugueteria/jugueteria.module').then(m => m.JugueteriaModule)
+    loadChildren: () => import('./views/jugueteria/jugueteria.module').then(m => m.JugueteriaModule),
+    canActivate: [AuthGuard],
+    canDeactivate: [AuthGuard]
   },
   {
     path: 'moda',

@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { AuthGuard } from './core/guards/auth.guard';
+
 const routes: Routes = [
   {
     path: '',
@@ -21,7 +23,9 @@ const routes: Routes = [
   },
   {
     path: 'jugueteria',
-    loadChildren: () => import('./views/jugueteria/jugueteria.module').then(m => m.JugueteriaModule)
+    loadChildren: () => import('./views/jugueteria/jugueteria.module').then(m => m.JugueteriaModule),
+    canActivate: [AuthGuard],
+    canDeactivate: [AuthGuard]
   },
   {
     path: 'moda',

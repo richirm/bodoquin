@@ -10,14 +10,12 @@ import { VideojuegosDetalleComponent } from './videojuegos-detalle/videojuegos-d
   imports: [
     CommonModule,
     FormsModule,
-  ],
-  
+  ], 
   declarations: [
     VideojuegosComponent,
     VideojuegosListadoComponent,
     VideojuegosDetalleComponent
-  ],
-  
+  ], 
   exports: [
     VideojuegosComponent,
     VideojuegosListadoComponent,

@@ -6,10 +6,14 @@ import { VideojuegosComponent } from './Videojuegos.component';
 import { VideojuegosListadoComponent } from './videojuegos-listado/videojuegos-listado.component';
 import { VideojuegosDetalleComponent } from './videojuegos-detalle/videojuegos-detalle.component';
 
+import { VideojuegosRoutingModule } from './videojuegos-routing.module';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
+    
+    VideojuegosRoutingModule,
   ], 
   declarations: [
     VideojuegosComponent,

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { TarjetasProductoModule } from '../../components/tarjetas-producto/tarjetas-producto.module';
+import { VideojuegosServiciosModule } from './components/videojuegos-servicios/videojuegos-servicios.module';
 
 import { VideojuegosComponent } from './Videojuegos.component';
 import { VideojuegosListadoComponent } from './videojuegos-listado/videojuegos-listado.component';
@@ -17,6 +18,7 @@ import { VideojuegosService } from './videojuegos.service';
     FormsModule,
     
     TarjetasProductoModule,
+    VideojuegosServiciosModule,
     
     VideojuegosRoutingModule,
   ], 

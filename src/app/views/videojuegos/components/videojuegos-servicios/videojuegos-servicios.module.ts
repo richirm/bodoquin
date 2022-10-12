@@ -18,5 +18,3 @@ import { PanelServiciosModule } from 'src/app/components/panel-servicios/panel-s
   ]
 })
 export class VideojuegosServiciosModule { }
-
-

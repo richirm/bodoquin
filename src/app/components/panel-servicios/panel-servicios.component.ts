@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnChanges } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { ControlFormularioInterface } from 'src/app/core/interfaces/control-formulario.interface';
 
@@ -7,7 +7,7 @@ import { ControlFormularioInterface } from 'src/app/core/interfaces/control-form
   templateUrl: './panel-servicios.component.html',
   styleUrls: ['./panel-servicios.component.scss']
 })
-export class PanelServiciosComponent implements OnChanges {
+export class PanelServiciosComponent {
   
   @Input() titulo: string;
   @Input() descripcion: string;
@@ -19,14 +19,6 @@ export class PanelServiciosComponent implements OnChanges {
   @Output() onMensaje = new EventEmitter<string>();
   
   formulario = {};
-  
-  ngOnChanges(changes) {
-    console.log(changes);
-    
-    if(!!changes.titulo) {
-      //llamar al servicio de backend que valide el titulo
-    }
-  }
   
   clickAcceder() {
     const estaConfirmado = confirm(this.confirmacion);

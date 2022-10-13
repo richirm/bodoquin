@@ -37,7 +37,9 @@ const routes: Routes = [
   },
   {
     path: 'videojuegos',
-    loadChildren: () => import('./views/videojuegos/videojuegos.module').then(m => m.VideojuegosModule)
+    loadChildren: () => import('./views/videojuegos/videojuegos.module').then(m => m.VideojuegosModule),
+    canActivate: [AuthGuard],
+    canDeactivate: [AuthGuard]
   },
 ];
 

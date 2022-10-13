@@ -35,6 +35,12 @@ const routes: Routes = [
     path: 'moda',
     loadChildren: () => import('./views/moda/moda.module').then(m => m.ModaModule)
   },
+  {
+    path: 'videojuegos',
+    loadChildren: () => import('./views/videojuegos/videojuegos.module').then(m => m.VideojuegosModule),
+    canActivate: [AuthGuard],
+    canDeactivate: [AuthGuard]
+  },
 ];
 
 @NgModule({

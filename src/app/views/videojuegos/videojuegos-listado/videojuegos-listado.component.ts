@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { ProductoInterface } from '../../../core/interfaces/producto.interface';
 import { VideojuegosService } from '../videojuegos.service';
@@ -13,7 +14,8 @@ export class VideojuegosListadoComponent implements OnInit {
   productos: Array<ProductoInterface> = [];
 
   constructor(
-    private videojuegosService: VideojuegosService) {}
+    private videojuegosService: VideojuegosService,
+    private router: Router) {}
     
   ngOnInit() {
     this.obtenerProductos();
@@ -29,4 +31,8 @@ export class VideojuegosListadoComponent implements OnInit {
       }
     );
   }
+  
+  onClickTarjeta(producto: ProductoInterface) {
+    this.router.navigate(['/videojuegos/detalle', producto.idProducto]);
+  } 
 }

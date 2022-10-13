@@ -13,4 +13,8 @@ export class VideojuegosService {
   obtenerProductos(): Observable<Array<ProductoInterface>> {
     return this.httpClient.get<Array<ProductoInterface>>('http://localhost:3000/productos/videojuegos');
   }
+  
+  obtenerProducto(idProducto: number): Observable<ProductoInterface> {
+    return this.httpClient.get<ProductoInterface>(`http://localhost:3000/productos/videojuegos/${idProducto}`);
+  }
 }

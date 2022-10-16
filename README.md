@@ -53,6 +53,7 @@ Aplicación bodoquin
         git fetch => para descargar las ramas que están en el repositorio pero no en mi local
         pull request => para enviar una solicitud de unión de mi rama hacia develop
         git remote set-url origin url_mi_repositorio => para cambiar la url del repositorio
+        git reset --soft HEAD~1 => elimina el ultimo commit (-1)
   - GITHUB: servidor o repositorio web para proyectos git
   - tortoise git: herramienta de interfaz grafica para ejecutar operaciones con GIT de manera simple
   - commits:
@@ -135,16 +136,12 @@ Aplicación bodoquin
     - pesos: 0.5 1, 2, 3, 5, 8, 13, 21
     - Features: (Lista de tareas - tablero KANBAN) 39
         - Lunes full JS 5
-        - Teoría de servicios del frontend 5
-        - Teoría de servicio HttpClient y ejemplos practicos 5
-        - Integrar el servicio de GET /reposteria con el modulo de reposteria 3
-        - Integrar el servicio de GET /jugueteria con el modulo de jugueteria 3 
-        - Integrar el servicio de GET /tecnologia con el modulo de tecnologia 3
-        - Integrar el servicio de GET /moda con el modulo de moda 3
-        - Integrar el servicio de GET /reposteria/id con la pantalla de detalle de reposteria 3
-        - Integrar el servicio de GET /jugueteria/id con la pantalla de detalle de jugueteria 3
-        - Integrar el servicio de GET /tecnologia/id con la pantalla de detalle de tecnologia 3
-        - Integrar el servicio de GET /moda/id con la pantalla de detalle de moda 3
+        - Practicas con debug
+        - Crear lógica para iniciar la sessión del usuario en el frontend
+        - Teoría de Guards en los routing
+        - Crear lógica para manejar la sessión del usuario en el frontend
+        - Teoria de interceptores de peticiones
+        - Integrar los servicios de seguridad con el frontend
         - directivas: CommonModule
             - *ngSwitch
             - *ngIf
@@ -161,9 +158,29 @@ Aplicación bodoquin
           - uppercase
           - lowercase
     - backlog => conjunto de tareas o mejoras a realizar (features futuros)      
-      - Requerimientos funcionales:
-        - crear servicios:
-          - servicios para llamar al backend, servicios o apis (endpoint)
+      - Requerimientos funcionales:        
+        - Crear pantalla de creación de nuevo producto de reposteria para admin
+        - Integrar con los endpoints de creación de productos de reposteria
+        - Crear pantalla de creación de nuevo producto de tecnologia para admin
+        - Integrar con los endpoints de creación de productos de tecnologia
+        - Crear pantalla de creación de nuevo producto de jugueteria para admin
+        - Integrar con los endpoints de creación de productos de jugueteria
+        - Crear pantalla de creación de nuevo producto de moda para admin
+        - Integrar con los endpoints de creación de productos de moda
+        
+        - Pantalla para continuar con la compra y pago del carrito de compras
+        - Crear los endpoints para realizar el pago del carrito de compras
+        
+        - Crear componente de filtros de productos
+        - Integrar el componente de filtros con la pantalla de reposteria
+        - Integrar el componente de filtros con la pantalla de tecnologia
+        - Integrar el componente de filtros con la pantalla de jugueteria
+        - Integrar el componente de filtros con la pantalla de moda
+        - Adecuar e integrar el servicio de reposteria para filtrar los productos
+        - Adecuar e integrar el servicio de jugueteria para filtrar los productos
+        - Adecuar e integrar el servicio de tecnologia para filtrar los productos
+        - Adecuar e integrar el servicio de moda para filtrar los productos
+        
         - poner un logo
         - implementar sección de anuncios y/o publicidad en el top
         - modal de tiendas de recojo (ubicación)
@@ -217,6 +234,68 @@ Aplicación bodoquin
         Para usar un servicio, debemos crear una instancia de ese servicio 
         usando el contructor de la clase donde vamos a utilizar el servicio
   - Nomenclatura de variables y funciones explicita
+  
+9. Pasos para la creación de un componente:
+   *Tipos de componentes:
+    1. Componente vista
+    2. Componente de negocio
+    3. Componente atomico
+    
+   *Creación del componente
+    1. Definir del component
+      - Crear su carpeta contenedora
+      - Crear sus archivos
+      - Poner el codigo minimo necesario
+      - Integrarlo en un component padre
+      
+    2. Diseñar el componente
+        - Definir su HTML
+        - Definir sus CSS
+        
+    3. Implementar el componente 
+        - Definir la lógica en JS o TS
+        - Definido los inputs
+        - Definido los outputs
+        
+    4. Probar el componente
+        - verificar que no hayan errores en la consola del Angular
+        - verificar que no hayan errores en la consola del Navegador
+        - Verificar que funciona correctamente en la pantalla de forma manual
+        - Creando los test unitarios - Karma y Jasmine
+ 
+   *Definir variables:
+      1. Definir el nombre;
+      2. Definir el tipo de dato (tipado);
+      3. Ponerle un valor de ejemplo;
+      4. Usar la variable
+ 
+   *Tipos de datos por defecto:
+      1. string = '';
+      2. number = 1;
+      3. boolean = true o false;
+      4. object = {...};
+      5. array = [...];
+      6. undefined;
+      7. interfaces = {}
+    
+   *Optimizar el codigo:
+      1. Identificar el problema
+      2. Identificar lo que se repite
+      3. Identificar las pequeñas diferencias
+      4. Lograr que el código no se repita o corregir el problema, 
+          tiene que ser reutilizable y que tenga en consideración
+          las pequeñas diferencias
+   
+   *Ciclo de vida de los componentes:
+      Son un conjunto de metodos que Angular ejecuta en un componente en un determinado momento
+      
+      1. ngOnInit: 
+            el metodo que Angular ejecuta al iniciar el componente en la pantalla
+      2. ngOnDestroy: 
+            el metodo que Angular ejecuta al destruir el componente de la pantalla, 
+            sirve para evitar fuga de memoria, ocasionado por timeouts, intervals y servicios
+      3. ngOnChanges: 
+            el metodo que Angular ejecuta al cambiar cualquier input
     
 Javascript
 ------------------------   

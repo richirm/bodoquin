@@ -13,6 +13,9 @@ export class TecnologiaListadoComponent implements OnInit {
   
   productos: Array<ProductoInterface> = [];
   
+  username: string = '';
+  nickname: string = '';
+  
   constructor(
     private tecnologiaService: TecnologiaService,
     private router: Router) {}

@@ -1,7 +1,16 @@
 <div class="tecnologia-listado">
+  <bodoquin-tecnologia-ribbon></bodoquin-tecnologia-ribbon>
   <bodoquin-tarjetas-producto 
     [productos]="productos"
     fondo="#eee4ddeb"
     (onClickTarjeta)="onClickTarjeta($event)"
   ></bodoquin-tarjetas-producto>
+  
+  Usuario: <input type="text" name="usuario"  [(ngModel)]="username"/>
+  Nickname: <input type="text" name="nickname"  [(ngModel)]="nickname"/>
+  
+  <bodoquin-tecnologia-servicios
+    [usuario]="username"
+    [nickname]="nickname"
+  ></bodoquin-tecnologia-servicios>
 </div>

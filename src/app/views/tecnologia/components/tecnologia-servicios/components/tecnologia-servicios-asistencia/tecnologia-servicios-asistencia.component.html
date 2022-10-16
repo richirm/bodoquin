@@ -1,0 +1,34 @@
+<div class="tecnologia-servicios-asistencia">
+  <div class="header">
+    <h1> {{ titulo }} </h1>
+  </div>
+  <div class="body">
+    <p>{{ descripcion }}</p>
+    
+    <form novalidate="" autocomplete="off">
+      <div *ngFor="let control of formulario" class="form-group">
+        <label class="form-label" for="{{ control.id }}">{{ control.label }}:</label>  
+        <input 
+          *ngIf="control.tipo === 'input'"
+          type="text" 
+          id="{{ control.id }}" 
+          name="{{ control.id }}"
+          class="form-control"
+          [(ngModel)]="persona[control.id]"
+        />
+             
+        <textarea
+          *ngIf="control.tipo === 'textarea'"
+          id="{{ control.id }}" 
+          name="{{ control.id }}"
+          class="form-control"
+          [(ngModel)]="persona[control.id]"
+        ></textarea>
+      </div>
+    </form>
+  </div>
+  
+  <div class="footer">
+    <button (click)="clickAcceder()">{{ boton }}</button>
+  </div>
+</div>

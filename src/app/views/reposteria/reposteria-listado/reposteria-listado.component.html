@@ -1,7 +1,17 @@
 <div class="reposteria-listado">
+  <bodoquin-reposteria-ribbon></bodoquin-reposteria-ribbon>
+  
   <bodoquin-tarjetas-producto 
     [productos]="productos"
     fondo="#eee4ddeb"
     (onClickTarjeta)="onClickTarjeta($event)"
   ></bodoquin-tarjetas-producto>
+  
+  Usuario: <input type="text" name="usuario" [(ngModel)]="username"/>
+  Nickname: <input type="text" name="nickname" [(ngModel)]="nickname"/>
+  
+  <bodoquin-reposteria-servicios
+    [usuario]="username"
+    [nickname]="nickname"
+  ></bodoquin-reposteria-servicios>
 </div>

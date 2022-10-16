@@ -1,0 +1,73 @@
+<div class="tecnologia-servicios">
+  <h1>{{ titulo }} 23:01:</h1>
+  
+  Normal: {{ nombre }} <br>
+  Uppercase: {{ nombre | uppercase }} <br>
+  Lowercase: {{ nombre | lowercase }} <br><br>
+  
+  Normal: {{ precio }} <br>
+  Currency: {{ precio | currency: 'S/ ' }} <br><br>
+  
+  Normal: {{ persona }} <br>
+  Json: {{ persona | json }} <br><br>
+  
+  Normal: {{ fechaNacimiento }} <br>
+  Date: {{ fechaNacimiento | date: 'dd/M/yyyy' }} <br><br>
+  
+  Normal: {{ parrafo }} <br>
+  Objetivo: Hola Estamos Esperando <br>
+  CamelCase: {{ parrafo | camelCase }} <br>
+  CamelCase: {{ parrafo | camelCase:'-'}} <br><br>
+  
+  Normal: {{ parrafo }} <br>
+  Objetivo: Es mayor de edad | Es menor de edad <br>
+  MayorEdad: {{ fechaNacimiento | mayorEdad }} <br><br>
+  
+  Normal: {{ parrafo }} <br>
+  Objetivo: Tu parrafo tiene 15 caracteres <br>
+  CantidadCaracteres: {{ parrafo | cantidadCaracteres }}
+  
+  <div class="servicios">
+    <bodoquin-tecnologia-servicios-asistencia
+      titulo="Servicios de asistencia"
+      descripcion="garantias"
+      boton="Acceder"
+      confirmacion="¿Esta seguro que desea acceder al servicios de asistencia?"
+      mensaje="Ir al servicio de asistencia"
+      (onMensaje)="ejecutarServicio($event)"
+      [formulario]="formularioAsistencia"
+    ></bodoquin-tecnologia-servicios-asistencia>
+    
+    <bodoquin-tecnologia-servicios-asistencia
+      titulo="Servicios de soporte"
+      descripcion="soporte"
+      boton="Acceder"
+      confirmacion="¿Esta seguro que desea acceder al servicios de soporte?"
+      mensaje="Ir al servicio de soporte"
+      (onMensaje)="ejecutarServicio($event)"
+      [formulario]="formularioSoporte"
+    ></bodoquin-tecnologia-servicios-asistencia>
+    
+    <bodoquin-tecnologia-servicios-asistencia
+      titulo="Servicios de reparacion"
+      descripcion="reparacion"
+      boton="Acceder"
+      confirmacion="¿Esta seguro que desea acceder al servicios de reparacion?"
+      mensaje="Ir al servicio de reparacion"
+      (onMensaje)="ejecutarServicio($event)"
+      [formulario]="formularioReparacion"
+    ></bodoquin-tecnologia-servicios-asistencia>
+      
+    <!-- <bodoquin-tecnologia-servicios-productos -->
+      <!-- titulo="Servicios de productos" -->
+      <!-- descripcion="configuraciones" -->
+      <!-- (onMensaje)="ejecutarServicio($event)" -->
+    <!-- ></bodoquin-tecnologia-servicios-productos> -->
+    
+    <!-- <bodoquin-tecnologia-servicios-reclamos -->
+      <!-- titulo="Servicios de reclamos" -->
+      <!-- descripcion="Inicio de sesion" -->
+      <!-- (onMensaje)="ejecutarServicio($event)" -->
+    <!-- ></bodoquin-tecnologia-servicios-reclamos> -->
+  </div>
+</div>

@@ -1,15 +1,35 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { ProductoInterface } from '../../../core/interfaces/producto.interface';
+import { FerreteriaService } from '../ferreteria.service';
 
 @Component({
-  selector: 'app-ferreteria-listado',
+  selector: 'bodoquin-ferreteria-listado',
   templateUrl: './ferreteria-listado.component.html',
   styleUrls: ['./ferreteria-listado.component.scss']
 })
 export class FerreteriaListadoComponent implements OnInit {
 
-  constructor() { }
+  productos: Array<ProductoInterface> = [];
 
-  ngOnInit(): void {
+  constructor(
+    private ferreteriaService: FerreteriaService,
+    private router: Router) {}
+
+  ngOnInit() {
+    this.obtenerProductos();
+  }
+  
+  obtenerProductos() {
+    this.ferreteriaService.obtenerProductos().subscribe(
+      (response) => {
+        this.productos = response;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
 }

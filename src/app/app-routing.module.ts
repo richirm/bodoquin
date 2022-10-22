@@ -41,6 +41,12 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     canDeactivate: [AuthGuard]
   },
+  {
+    path: 'ferreteria',
+    loadChildren: () => import('./views/ferreteria/ferreteria.module').then(m => m.FerreteriaModule),
+    canActivate: [AuthGuard],
+    canDeactivate: [AuthGuard]
+  },
 ];
 
 @NgModule({

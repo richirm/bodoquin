@@ -13,4 +13,8 @@ export class FerreteriaService {
   obtenerProductos(): Observable<Array<ProductoInterface>> {
     return this.httpClient.get<Array<ProductoInterface>>('http://localhost:3000/productos/ferreteria');
   }
+  
+  obtenerProducto(idProducto: number): Observable<ProductoInterface> {
+    return this.httpClient.get<ProductoInterface>(`http://localhost:3000/productos/ferreteria/${idProducto}`);
+  }
 }

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { TarjetasProductoModule } from '../../components/tarjetas-producto/tarjetas-producto.module';
 import { FerreteriaServiciosModule } from './components/ferreteria-servicios/ferreteria-servicios.module';
+import { ProductoDetalleModule } from '../../components/producto-detalle/producto-detalle.module';
 
 import { FerreteriaComponent } from './ferreteria.component';
 import { FerreteriaListadoComponent } from './ferreteria-listado/ferreteria-listado.component';
@@ -20,6 +21,7 @@ import { FerreteriaService } from './ferreteria.service';
     FerreteriaRoutingModule,
     TarjetasProductoModule,
     FerreteriaServiciosModule,
+    ProductoDetalleModule,
   ],
   declarations: [
     FerreteriaComponent, 

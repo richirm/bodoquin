@@ -31,5 +31,9 @@ export class FerreteriaListadoComponent implements OnInit {
       }
     );
   }
+  
+  onClickTarjeta(producto: ProductoInterface) {
+    this.router.navigate(['/ferreteria/detalle', producto.idProducto]);
+  } 
 
 }

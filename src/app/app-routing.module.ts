@@ -47,6 +47,10 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     canDeactivate: [AuthGuard]
   },
+  {
+    path: 'electrodomesticos',
+    loadChildren: () => import('./views/electrodomesticos/electrodomesticos.module').then(m => m.ElectrodomesticosModule),
+  },
 ];
 
 @NgModule({

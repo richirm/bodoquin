@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ElectrodomesticosComponent } from './electrodomesticos.component';
 import { ElectrodomesticosListadoComponent } from './electrodomesticos-listado/electrodomesticos-listado.component';
-
+import { ElectrodomesticosDetalleComponent } from './electrodomesticos-detalle/electrodomesticos-detalle.component';
 
 const routes: Routes = [
   {
@@ -14,6 +14,10 @@ const routes: Routes = [
         path: '',
         component: ElectrodomesticosListadoComponent
       }, 
+      {
+        path: 'detalle/:idProducto',
+        component: ElectrodomesticosDetalleComponent
+      }
     ]
   },
 ];

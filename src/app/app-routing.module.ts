@@ -50,6 +50,8 @@ const routes: Routes = [
   {
     path: 'electrodomesticos',
     loadChildren: () => import('./views/electrodomesticos/electrodomesticos.module').then(m => m.ElectrodomesticosModule),
+    canActivate: [AuthGuard],
+    canDeactivate: [AuthGuard],
   },
 ];
 

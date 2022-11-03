@@ -36,6 +36,8 @@ nav {
       & ul {
         padding: 0;
         margin: 0;
+        height: calc(100vh - 60.65px - 62.58px);
+        overflow-y: auto;
           
         & li {
           list-style-type: none;

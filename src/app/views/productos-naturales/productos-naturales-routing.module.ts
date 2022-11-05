@@ -2,11 +2,18 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ProductosNaturalesComponent } from './productos-naturales.component';
+import { ProductosNaturalesListadoComponent } from './productos-naturales-listado/productos-naturales-listado.component';
 
 const routes: Routes = [
   {
     path: '',
     component: ProductosNaturalesComponent,
+    children: [
+      {
+        path: '',
+        component: ProductosNaturalesListadoComponent
+      }, 
+    ]
   },
 ];
 

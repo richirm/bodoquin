@@ -1,9 +1,16 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+import { ProductoInterface } from '../../core/interfaces/producto.interface';
+
+@Injectable()
 export class ProductosNaturalesService {
 
-  constructor() { }
+  constructor(
+    private httpClient: HttpClient) {}
+  
+  obtenerProductos(): Observable<Array<ProductoInterface>> {
+    return this.httpClient.get<Array<ProductoInterface>>('...');
+  }
 }

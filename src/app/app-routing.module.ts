@@ -53,6 +53,10 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     canDeactivate: [AuthGuard],
   },
+  {
+    path: 'productos-naturales',
+    loadChildren: () => import('./views/productos-naturales/productos-naturales.module').then(m => m.ProductosNaturalesModule),
+  },
 ];
 
 @NgModule({

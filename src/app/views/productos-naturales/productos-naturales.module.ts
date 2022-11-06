@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { TarjetasProductoModule } from '../../components/tarjetas-producto/tarjetas-producto.module';
+import { ProductosNaturalesServiciosModule } from './components/productos-naturales-servicios/productos-naturales-servicios.module';
 
 import { ProductosNaturalesRoutingModule } from './productos-naturales-routing.module';
 import { ProductosNaturalesComponent } from './productos-naturales.component';
@@ -14,6 +15,7 @@ import { ProductosNaturalesService } from './productos-naturales.service';
     CommonModule,
     
     TarjetasProductoModule,
+    ProductosNaturalesServiciosModule,
     
     ProductosNaturalesRoutingModule
   ],

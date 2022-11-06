@@ -10,34 +10,13 @@ import { ProductosNaturalesService } from '../productos-naturales.service';
 })
 export class ProductosNaturalesListadoComponent implements OnInit {
 
-  productos: Array<ProductoInterface> = [
-    {
-      idProducto: 100,
-      nombreImg: "una-de-gato.jpg",
-      nombreCategoria: "plantas",
-      nombreProducto: "uña de gato",
-      descripcionProducto: "producto natural para resolver problemas gastricos",
-      precioProducto: 299,
-      cantidadProducto: 0,
-      especificaciones: ""
-    },
-    {
-      idProducto: 101,
-      nombreImg: "chancapiedra.jpg",
-      nombreCategoria: "plantas",
-      nombreProducto: "chanca piedra",
-      descripcionProducto: "producto natural para resolver problemas renales",
-      precioProducto: 25,
-      cantidadProducto: 0,
-      especificaciones: ""
-    }
-  ];
+  productos: Array<ProductoInterface> = [];
 
   constructor(
     private productosNaturalesService: ProductosNaturalesService) { }
 
   ngOnInit() {
-    // this.obtenerProductos();
+    this.obtenerProductos();
   }
 
   obtenerProductos() {

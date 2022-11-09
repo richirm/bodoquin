@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { ProductoInterface } from '../../../core/interfaces/producto.interface';
 import { ProductosNaturalesService } from '../productos-naturales.service';
@@ -13,7 +14,8 @@ export class ProductosNaturalesListadoComponent implements OnInit {
   productos: Array<ProductoInterface> = [];
 
   constructor(
-    private productosNaturalesService: ProductosNaturalesService) { }
+    private productosNaturalesService: ProductosNaturalesService,
+    private router: Router) {}
 
   ngOnInit() {
     this.obtenerProductos();
@@ -29,4 +31,8 @@ export class ProductosNaturalesListadoComponent implements OnInit {
       }
     );
   }
+  
+  onClickTarjeta(producto: ProductoInterface) {
+    this.router.navigate(['/productos-naturales/detalle', producto.idProducto]);
+  } 
 }

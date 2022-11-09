@@ -56,6 +56,8 @@ const routes: Routes = [
   {
     path: 'productos-naturales',
     loadChildren: () => import('./views/productos-naturales/productos-naturales.module').then(m => m.ProductosNaturalesModule),
+    canActivate: [AuthGuard],
+    canDeactivate: [AuthGuard],
   },
 ];
 

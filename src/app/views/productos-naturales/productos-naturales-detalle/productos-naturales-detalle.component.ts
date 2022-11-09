@@ -11,23 +11,14 @@ import { ProductoInterface } from '../../../core/interfaces/producto.interface';
 })
 export class ProductosNaturalesDetalleComponent implements OnInit {
 
-  producto: ProductoInterface = {
-    idProducto: 1,
-    nombreImg: "una-de-gato.jpg",
-    nombreCategoria: "plantas",
-    nombreProducto: "Uña de gato",
-    descripcionProducto: "Planta medicinal para problemas digestivos",
-    precioProducto: 59,
-    cantidadProducto: 0,
-    especificaciones: "Fecha de produccion: 01/05/2018|Elaborado por: naturales.",
-  };
+  producto: ProductoInterface;
 
   constructor(
     private route: ActivatedRoute,
     private productosNaturalesService: ProductosNaturalesService) {}
 
   ngOnInit() {
-    // this.getInfoProducto();
+    this.getInfoProducto();
   }
 
   getInfoProducto() {

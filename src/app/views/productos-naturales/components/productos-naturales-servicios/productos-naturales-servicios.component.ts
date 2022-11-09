@@ -10,49 +10,13 @@ import { ProductosNaturalesServiciosService } from './productos-naturales-servic
 })
 export class ProductosNaturalesServiciosComponent implements OnInit {
 
-  formularioSoporte: ControlFormularioInterface[] = [
-    {
-      id: 'nombre',
-      label: 'Nombre',
-      tipo: 'input'
-    },
-    {
-      id: 'apellidoP',
-      label: 'Apellido P',
-      tipo: 'input'
-    },
-    {
-      id: 'apellidoM',
-      label: 'Apellido M',
-      tipo: 'input'
-    },
-    {
-      id: 'direccion',
-      label: 'Direccion',
-      tipo: 'input'
-    },
-    {
-      id: 'correo',
-      label: 'Correo',
-      tipo: 'input'
-    },
-    {
-      id: 'telefono',
-      label: 'Teléfono',
-      tipo: 'input'
-    },
-    {
-      id: 'descripcion',
-      label: 'Descripcion',
-      tipo: 'textarea'
-    }
-  ];
+  formularioSoporte: Array<ControlFormularioInterface>;
 
   constructor(
     private productosNaturalesServiciosService: ProductosNaturalesServiciosService) {}
 
   ngOnInit() {
-    // this.obtenerFormularioSoporte();
+    this.obtenerFormularioSoporte();
   }
   
   obtenerFormularioSoporte() {

@@ -11,7 +11,7 @@ export class ProductosNaturalesServiciosService {
     private httpClient: HttpClient) {}
     
   obtenerFormularioSoporte(): Observable<Array<ControlFormularioInterface>> {
-    return this.httpClient.get<Array<ControlFormularioInterface>>('...');
+    return this.httpClient.get<Array<ControlFormularioInterface>>('http://localhost:3000/productos/productos-naturales/servicios/soporte/controles');
   }
   
 }

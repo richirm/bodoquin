@@ -13,4 +13,8 @@ export class ProductosNaturalesService {
   obtenerProductos(): Observable<Array<ProductoInterface>> {
     return this.httpClient.get<Array<ProductoInterface>>('http://localhost:3000/productos/productos-naturales');
   }
+  
+  obtenerProducto(idProducto: number): Observable<ProductoInterface> {
+    return this.httpClient.get<ProductoInterface>(`...`);
+  }
 }

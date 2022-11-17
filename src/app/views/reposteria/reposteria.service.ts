@@ -18,4 +18,8 @@ export class ReposteriaService {
     return this.httpClient.get<ProductoInterface>(`http://localhost:3000/productos/reposteria/${idProducto}`);
   }
   
+  grabarProducto(producto: ProductoInterface): Observable<ProductoInterface> {
+    return this.httpClient.post<ProductoInterface>(`http://localhost:3000/productos/reposteria`, producto);
+  }
+  
 }

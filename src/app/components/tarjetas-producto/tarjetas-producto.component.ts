@@ -13,6 +13,7 @@ export class TarjetasProductoComponent {
   @Input() fondo: string;
  
   @Output() onClickTarjeta: EventEmitter<ProductoInterface> = new EventEmitter();
+  @Output() onClickEditar: EventEmitter<ProductoInterface> = new EventEmitter();
   
   constructor(
     private carritoService: CarritoService){}

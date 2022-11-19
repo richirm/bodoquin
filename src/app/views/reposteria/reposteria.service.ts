@@ -22,4 +22,8 @@ export class ReposteriaService {
     return this.httpClient.post<ProductoInterface>(`http://localhost:3000/productos/reposteria`, producto);
   }
   
+  actualizarProducto(producto: ProductoInterface): Observable<ProductoInterface> {
+    return this.httpClient.put<ProductoInterface>(`http://localhost:3000/productos/reposteria`, producto);
+  }
+  
 }

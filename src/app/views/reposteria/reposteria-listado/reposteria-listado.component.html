@@ -4,7 +4,7 @@
   <button 
     type="button" 
     class="btn btn-outline-secondary" 
-    (click)="toggleModalRegisterProduct()"
+    (click)="onClickNuevo()"
   >Agregar Producto</button>
   
   <bodoquin-modal 
@@ -79,6 +79,7 @@
     [productos]="productos"
     fondo="#eee4ddeb"
     (onClickTarjeta)="onClickTarjeta($event)"
+    (onClickEditar)="onClickEditar($event)"
   ></bodoquin-tarjetas-producto>
   
   Usuario: <input type="text" name="usuario" [(ngModel)]="username"/>

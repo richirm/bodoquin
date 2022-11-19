@@ -32,6 +32,7 @@ export class ReposteriaListadoComponent implements OnInit {
   
   crearFormulario() {
      this.formGroupReposteria = new FormGroup({
+       id: new FormControl(),
        nombreProducto: new FormControl(),
        nombreCategoria: new FormControl(),
        precio: new FormControl(),
@@ -55,13 +56,14 @@ export class ReposteriaListadoComponent implements OnInit {
     this.router.navigate(['/reposteria/detalle', producto.idProducto]);
   }
   
-  toggleModalRegisterProduct() {
+  onClickNuevo() {
+     this.formGroupReposteria.reset();
      this.showModalRegisterProduct = true;
   }
   
   grabarProducto() {
     const producto = {
-        idProducto: null,
+        idProducto: this.formGroupReposteria.get('id').value,
         nombreImg: this.formGroupReposteria.get('image').value,
         nombreCategoria: this.formGroupReposteria.get('nombreCategoria').value,
         nombreProducto: this.formGroupReposteria.get('nombreProducto').value,
@@ -71,15 +73,36 @@ export class ReposteriaListadoComponent implements OnInit {
         especificaciones: "Fecha vencimiento: 01/01/2022|Conservación: Refrigerar hasta antes de comer"
     };
     
-    this.reposteriaService.grabarProducto(producto).subscribe(
+    if(!!producto.idProducto) {
+      this.reposteriaService.actualizarProducto(producto).subscribe(
         () => {
           this.obtenerProductos();
-        },
-        () => {
-          
+          this.showModalRegisterProduct = false;
         }
-    )
+      );
+    } else {
+      this.reposteriaService.grabarProducto(producto).subscribe(
+        () => {
+          this.obtenerProductos();
+          this.showModalRegisterProduct = false;
+        }
+      )
+    }    
+  }
+  
+  onClickEditar(producto: ProductoInterface) {
+    event.stopPropagation();
     
+    this.showModalRegisterProduct = true; 
+
+    this.formGroupReposteria.patchValue({
+      id: producto.idProducto,
+      nombreProducto: producto.nombreProducto,
+      nombreCategoria: producto.nombreCategoria,
+      precio: producto.precioProducto,
+      image: producto.nombreImg,
+      descripcion: producto.descripcionProducto
+    });
   }
   
 }

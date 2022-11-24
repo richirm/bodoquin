@@ -34,6 +34,14 @@
         &:hover {
           background-color: #e9e9e9;          
         }
+        
+        &.bi-pencil {
+          right: 35px;   
+        }
+        
+        &.bi-trash {
+          right: 10px;
+        }
       }
     }
 

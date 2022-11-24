@@ -26,4 +26,8 @@ export class ReposteriaService {
     return this.httpClient.put<ProductoInterface>(`http://localhost:3000/productos/reposteria`, producto);
   }
   
+  deleteProducto(idProducto: number): Observable<null> {
+    return this.httpClient.delete<null>(`http://localhost:3000/productos/reposteria/${idProducto}`);
+  }
+  
 }

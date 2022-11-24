@@ -105,4 +105,17 @@ export class ReposteriaListadoComponent implements OnInit {
     });
   }
   
+  onClickRemove(producto: ProductoInterface) {
+    event.stopPropagation();
+    
+    if(confirm('¿Está seguro que desea eliminiar?')) {      
+      this.reposteriaService.deleteProducto(producto.idProducto).subscribe(
+        () => {
+          this.obtenerProductos();
+        }
+      )
+    }
+    
+  }
+  
 }
